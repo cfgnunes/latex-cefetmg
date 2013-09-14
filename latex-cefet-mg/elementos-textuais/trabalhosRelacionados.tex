@@ -1,0 +1,55 @@
+%
+% Documento: Trabalhos Relacionados
+%
+
+\chapter{Trabalhos Relacionados}
+
+Este capítulo inclui muitas citações bibliográficas. Os principais
+itens de bibliografia citados são livros, artigos em conferências,
+artigos em {\textit journals} e páginas Web. A bibliografia deve seguir o
+padrão ABNT\footnote{Este não é o endereço oficial da
+ABNT pois as Normas Técnicas oficiais são pagas e não estão disponíveis na Web.}.
+
+A bibliografia é feita no padrão {\ttfamily bibtex}.  As referências são
+colocadas em um arquivo separado. Os elementos de
+cada item bibliográfico que devem constar na bibliografia são
+apresentados a seguir.
+
+Para livros, o formato da bibliografia no arquivo fonte é o seguinte:
+
+\begin{verbatim}
+    @Book{linked,
+      author =       {A. L. Barabasi},
+      title =        "{Linked: The New Science of Networks}",
+      publisher =    {Perseus Publishing},
+      year =         {2002},
+    }
+\end{verbatim}
+
+A citação deste livro se faz da seguinte forma \verb#\cite{linked}# e o resultado fica assim \cite{linked}.
+Para os artigos em {\textit journals}, veja por exemplo \cite{acmsurveys},
+descrito da seguinte forma no arquivo {\ttfamily .bib}:
+
+\begin{verbatim}
+   @article{acmsurveys,
+     author = {Deepayan Chakrabarti and Christos Faloutsos},
+     title = {Graph mining: Laws, generators, and algorithms},
+     journal = {ACM Computing Surveys},
+     volume = {38},
+     number = {1},
+     year = {2006},
+     pages = {2-59},
+     publisher = {ACM},
+     address = {New York, NY, USA},
+   }
+\end{verbatim}
+
+O artigo \cite{3faloutsos} foi publicado em conferência.  Embora
+às vezes seja difícil distinguir um artigo publicado em {\textit
+  journal} de um artigo publicado em conferência, esta distinção é
+fundamental.  Em caso de dúvida, procure ajuda de seu orientador.
+
+Veja também duas citações juntas \cite{rp99,mar00}  e como citar
+endereços Web \cite{irl:06}. 
+O trabalho realizado para editar as citações no formato correto é
+compensado por uma bibliografia impecável.

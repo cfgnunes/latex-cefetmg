@@ -1,0 +1,118 @@
+%
+% Modelo de trabalhos acadêmicos
+% Documento principal
+%
+% Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
+% Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
+%
+%
+% Para melhor visualização deste código, altere as configurações
+% de seu editor para largura da tabulação igual a 8
+%
+
+% TODO: conferir margens
+% TODO: criar glossário
+% TODO: criar índice remissivo
+
+\documentclass[logo, oneside]{abnt-cefetmg}			% oneside = apenas frente da folha
+%\documentclass[logo, openright, twoside]{abnt-cefetmg}		% openright = frente e verso (o capitulo começa sempre em páginas ípares)
+%\documentclass[logo, oneside, trabalhos]{abnt-cefetmg}		% modelo de trabalhos comuns
+
+% importações de pacotes
+	\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntcite}	% fazer citações no padrão da ABNT
+	\usepackage[algoruled, portuguese]{algorithm2e}		% escrever algoritmos
+	\usepackage{bookmark}					% cria menu de bookmarks
+	\usepackage[brazil]{babel}				% escrita em português brasileiro
+	\usepackage[utf8]{inputenc}				% acentuação direta
+	\usepackage[T1]{fontenc}				% codificação da fonte em 8 bits
+	\usepackage[dvips]{graphicx}				% inserir figuras
+	\usepackage{subfig}					% posicionamento de figuras
+	\usepackage{amsfonts, amssymb, amsmath, dsfont}		% fonte e simbolos matemáticos
+	\usepackage{booktabs}					% comandos para tabelas
+	\usepackage{verbatim}					% texto é interpretado no compilador como escrito no documento
+	\usepackage{multirow, array}				% múltiplas linhas e colunas em tabelas
+	\usepackage[bottom]{footmisc}				% mantem as notas de rodapé sempre na mesma posicao
+	%\usepackage{acronym}					% produzir acrônimos
+	%\usepackage{scalefnt}					% permite redimensionar tamanho da fonte
+	%\usepackage{color, colortbl}				% comandos de cores
+	%\usepackage{lscape}					% permite páginas em modo "paisagem"
+	%\usepackage{breakurl}					% permite quebra de linha em urls
+	%\usepackage{ae,aecompl}				% fontes de alta qualidade
+	%\usepackage{picinpar}					% dispor imagens em parágrafos
+	%\usepackage{latexsym}					% simbolos matematicos
+	%\usepackage{upgreek}					% fonte letras gregas
+	%\usepackage{dsfont}					% fonte matematica
+	%\usepackage{type1ec}					% fonte Times
+	%\usepackage{pxfonts}					% fonte
+	%\usepackage{palatino}					% fonte palatino
+	%\usepackage{psfrag}					% símbolos latex em figuras eps
+	%\usepackage{subeqnarray}				% sub enumeração de equações
+	%\usepackage{bibentry}					% uso de bibtex inline
+	%\usepackage{makeidx}					% produzir índice remissivo (glossario)
+	%\usepackage{multind}					% produzir índices múltiplos 
+
+% inclui o prêambulo do documento
+	\include{./elementos-pre-textuais/preambulo}
+
+% pode-se utilizar os comandos abaixo para realizar ajustes das margens se necessário
+%\usepackage{geometry}
+%\geometry{left=3.0cm, right=2.0cm, top=3.0cm, bottom=2.0cm} 
+
+% hifenização de palavras desconhecidas
+%	\hyphenation{
+%		Na-ra-ya-nan
+%		qua-dros-cha-ves
+%		Bras-nett
+%		Kat-sa-gge-los
+%	}
+
+% define as cores dos links e informações do pdf
+\hypersetup{
+	colorlinks,
+	linkcolor=black,
+	citecolor=black,
+	filecolor=black,
+	urlcolor=black,
+	breaklinks=true,
+	pdftitle={\ABNTtitulodata},
+	pdfauthor={\ABNTautordata},
+	pdfsubject={\ABNTcomentariodata},
+	pdfkeywords={\DOCpalavraschavedata}
+}
+
+% início do documento
+\begin{document}
+
+% elementos pré textuais
+	\capa							% Capa
+	\folhaderosto						% Folha de rosto
+        %\folhadeaprovacao					% Folha de aprovação
+        %\include{./elementos-pre-textuais/dedicatoria}		% Dedicatória
+	\include{./elementos-pre-textuais/agradecimentos}	% Agradecimentos
+        %\include{./elementos-pre-textuais/epigrafe}		% Epígrafe
+	\include{./elementos-pre-textuais/resumoPt}		% Resumo na língua vernácula
+	\include{./elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
+	\listadefiguras						% Lista de figuras
+	\listadequadros						% Lista de quadros
+	\listadegraficos					% Lista de gráficos
+	\listadetabelas						% Lista de tabelas
+	\listadesiglas						% Lista de abreviaturas e siglas
+	\listadesimbolos					% Lista de símbolos
+	\sumario						% Sumário
+
+% elementos textuais
+	\include{./elementos-textuais/introducao}		% Introdução
+	\include{./elementos-textuais/trabalhosRelacionados}	% Trabalhos relacionados
+	\include{./elementos-textuais/fundamentacaoTeorica}	% Fundamentação teórica
+	\include{./elementos-textuais/metodologia}		% Metodologia
+	\include{./elementos-textuais/resultados}		% Resultados
+	\include{./elementos-textuais/conclusoes}		% Conclusões
+
+% elementos pós textuais
+	\include{./elementos-pos-textuais/referencias}		% Referências
+	%\include{./elementos-pos-textuais/glossario}		% Glossário
+	\include{./elementos-pos-textuais/apendices}		% Apêndices
+	\include{./elementos-pos-textuais/anexos}		% Anexos
+	%\include{./elementos-pos-textuais/indices}		% Índices
+
+\end{document}

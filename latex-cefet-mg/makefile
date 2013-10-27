@@ -15,7 +15,7 @@ all:
 # Remove os arquivos temporarios
 clean:
 	@echo "Limpando arquivos temporários..."
-	@find . -type f -iname "*.aux" -delete	
+	@find . -type f -iname "*.aux" -delete
 	@find . -type f -iname "*.log" -delete
 	@find . -type f -iname "*.fdb_latexmk" -delete
 	@find . -type f -iname "*.*~" -delete

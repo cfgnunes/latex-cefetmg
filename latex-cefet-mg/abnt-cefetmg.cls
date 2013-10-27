@@ -143,14 +143,14 @@
 		\pagestyle{empty}
 
 		\begin{center}
-		
+
 		\ifthenelse{\boolean{@myopt@logo}}
 			{
 				\vspace*{-2.7cm}
 				\includegraphics[width=0.15\textwidth]{./figuras/cefet_logo.eps}
 			}
 			{}
-		
+
 			\normalfont\scshape{\ABNTinstituicaodata}\\
 			\normalfont\scshape{\DOCprogramadata}\\
 			\ABNTifnotempty{\DOCdepartamentodata}
@@ -1071,7 +1071,7 @@
          \ifthenelse{\equal{#1}{}}
             {\def\thechapter{\anapchaptername{} \Alph{chapter}}}
             {\def\thechapter{\anapchaptername{} \Alph{chapter}{}
-                                \ABNTtravessao{} #1}} 
+                                \ABNTtravessao{} #1}}
          \ABNTchaptermark{}
          \endgroup
          \if@twocolumn
@@ -1102,7 +1102,7 @@
          {
           \ABNTaddcontentsline{toc}{chapter}
                    {\protect\numberline{\thechapter}#1}
-         }  
+         }
        \else
          \ABNTaddcontentsline{toc}{chapter}{#1}
        \fi
@@ -1135,11 +1135,11 @@
        \setlength{\parsep}{0pt}}
 
     \item
-            \begin{center} 
+            \begin{center}
       \ifthenelse{\equal{#1}{}}
          {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
             {\MakeUppercase{\anapchaptername}}
-            {\anapchaptername} 
+            {\anapchaptername}
           \thechapter \ABNTaposindicativoanap}
          {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
             {\MakeUppercase{\anapchaptername}}
@@ -1150,7 +1150,7 @@
               {#1}}
               \end{center}
   \end{list}
-  
+
   \par\vspace{35pt}
   }
 }

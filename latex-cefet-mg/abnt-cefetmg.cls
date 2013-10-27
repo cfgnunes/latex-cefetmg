@@ -9,20 +9,20 @@
 %			normas-utf-tex.cls
 %
 %	Agradecimentos:
-%		Miguel Vinicius Santini Frasson
+%		Miguel Vinicius Santini Frasson <frasson@icmc.usp.br>
 %		Diogo Rosa Kuiaski <diogo.kuiaski@gmail.com>
 %		Hugo Vieira Neto <hvieir@utfpr.edu.br>
 %		César M. Vargas Benítez <cesarvargasb@gmail.com>
 %		Marcos Talau <talau@users.sourceforge.net>
 %
-%	dependência: abntex >= 0.9-beta2
+%	Dependência: abntex >= 0.9-beta2
 
 \NeedsTeXFormat{LaTeX2e}
 
 \RequirePackage{silence}
 \WarningFilter{relsize}{Failed to get list of defined font sizes.} % ignora o warning causado pelo abnt.cls + relsize.sty
 
-\RequirePackage{float} % utilizado para construir lista de graficos e quadros
+\RequirePackage{float} % utilizado para construir lista de gráficos e quadros
 \RequirePackage{ifthen}
 \RequirePackage{lastpage}
 \RequirePackage{uniquecounter}

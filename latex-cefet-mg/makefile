@@ -12,7 +12,7 @@ all:
 	@ps2pdf -dPDFSETTINGS=/prepress -dSubsetFonts=true -dEmbedAllFonts=true $(SOURCE).ps
 	@echo "Terminado."
 
-# Remove os arquivos temporarios
+# Remove arquivos temporarios
 clean:
 	@echo "Limpando arquivos temporários..."
 	@find . -type f -iname "*.aux" -delete
@@ -24,4 +24,3 @@ clean:
 
 pdf: clean all
 	@evince $(SOURCE).pdf
-

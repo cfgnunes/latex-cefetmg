@@ -4,9 +4,9 @@
 %
 %	Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 %	Baseado nas classes:
-%				abnt.cls
-%				abnt-UTFPR.cls
-%				normas-utf-tex.cls
+%			abnt.cls
+%			abnt-UTFPR.cls
+%			normas-utf-tex.cls
 %
 %	Agradecimentos:
 %		Miguel Vinicius Santini Frasson
@@ -20,9 +20,9 @@
 \NeedsTeXFormat{LaTeX2e}
 
 \RequirePackage{silence}
-\WarningFilter{relsize}{Failed to get list of defined font sizes.}	% ignora o warning causado pelo abnt.cls + relsize.sty
+\WarningFilter{relsize}{Failed to get list of defined font sizes.} % ignora o warning causado pelo abnt.cls + relsize.sty
 
-\RequirePackage{float}	% utilizado para construir lista de graficos e quadros
+\RequirePackage{float} % utilizado para construir lista de graficos e quadros
 \RequirePackage{ifthen}
 \RequirePackage{lastpage}
 \RequirePackage{uniquecounter}
@@ -50,12 +50,11 @@
 
 \LoadClass{abnt}
 
-
 \RequirePackage{hyperref}
 \RequirePackage{hypdvips}
 \footnotecolor{black}
 
-\makeatletter	% para interpretação do símbolo @
+\makeatletter % para interpretação do símbolo @
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,16 +140,14 @@
 \renewcommand{\capa}{
 	\begin{titlepage}
 		\pagestyle{empty}
-
 		\begin{center}
-
-		\ifthenelse{\boolean{@myopt@logo}}
+			\ifthenelse{\boolean{@myopt@logo}}
 			{
 				\vspace*{-2.7cm}
 				\includegraphics[width=0.15\textwidth]{./figuras/cefet_logo.eps}
 			}
 			{}
-
+			\par
 			\normalfont\scshape{\ABNTinstituicaodata}\\
 			\normalfont\scshape{\DOCprogramadata}\\
 			\ABNTifnotempty{\DOCdepartamentodata}
@@ -158,23 +155,19 @@
 				\normalfont\scshape{\DOCdepartamentodata}
 			}
 		\end{center}
-
 		\ifthenelse{\boolean{@myopt@trabalhos}}
 		{
 			\vspace{180pt}
-
 			\begin{center}
 				\begin{espacosimples}
 					\ABNTchapterfont\Large\scshape{\ABNTtitulodata}
 				\end{espacosimples}
 			\end{center}
-
 			\begin{center}
 				\begin{espacosimples}
 					\DOCifnotempty{\DOCsubtitulodata}{\Large\scshape\DOCsubtitulodata}{\vspace{28pt}}
 				\end{espacosimples}
 			\end{center}
-
 			\vspace{60pt}
 			\hspace{-40pt}
 			\begin{tabular}{r l}
@@ -190,7 +183,6 @@
 		}
 		{
 			\vspace{40pt}
-
 			\begin{center}
 				\begin{espacosimples}
 					\large\normalfont\scshape\textbf{\ABNTautordata}\\
@@ -202,24 +194,19 @@
 					\DOCifnotempty{\DOCautorsetedata}{\large\normalfont\scshape\textbf{\DOCautorsetedata}\\}{\vspace{18pt}}
 				\end{espacosimples}
 			\end{center}
-
 			\vspace{40pt}
-
 			\begin{center}
 				\begin{espacosimples}
 					\ABNTchapterfont\Large\scshape{\ABNTtitulodata}
 				\end{espacosimples}
 			\end{center}
-
 			\begin{center}
 				\begin{espacosimples}
 					\DOCifnotempty{\DOCsubtitulodata}{\Large\scshape\DOCsubtitulodata}{\vspace{28pt}}
 				\end{espacosimples}
 			\end{center}
 		}
-
 		\vfill
-
 		\begin{center}
 			\normalfont\scshape{\ABNTlocaldata}\\
 			\normalfont\scshape{\ABNTdatadata}
@@ -254,38 +241,31 @@
 				\DOCifnotempty{\DOCautordoisdata}{\large\normalfont\scshape\textbf{\DOCautordoisdata}\\}{\vspace{18pt}}
 				\DOCifnotempty{\DOCautortresdata}{\large\normalfont\scshape\textbf{\DOCautortresdata}\\}{\vspace{18pt}}
 				\DOCifnotempty{\DOCautorquatrodata}{\large\normalfont\scshape\textbf{\DOCautorquatrodata}\\}{\vspace{18pt}}
- 				\DOCifnotempty{\DOCautorcincodata}{\large\normalfont\scshape\textbf{\DOCautorcincodata}\\}{\vspace{18pt}}
+				\DOCifnotempty{\DOCautorcincodata}{\large\normalfont\scshape\textbf{\DOCautorcincodata}\\}{\vspace{18pt}}
 				\DOCifnotempty{\DOCautorseisdata}{\large\normalfont\scshape\textbf{\DOCautorseisdata}\\}{\vspace{18pt}}
 				\DOCifnotempty{\DOCautorsetedata}{\large\normalfont\scshape\textbf{\DOCautorsetedata}\\}{\vspace{18pt}}
 			\end{espacosimples}
 		\end{center}
-
 		\vspace{40pt}
-
 		\begin{center}
 			\begin{espacosimples}
 				\ABNTchapterfont\Large\scshape{\ABNTtitulodata}
 			\end{espacosimples}
 		\end{center}
-
 		\vspace{80pt}
-
 		\begin{flushright}
 			\begin{minipage}{.5\textwidth}
 				\begin{espacosimples}
-
 					\hyphenpenalty=10000{\ABNTcomentariodata\par} % evita hifenizacao
-
 					\DOCifnotempty{\DOCareadata}
 					{
 						\campoduplo{\'Area de concentra\c{c}\~ao: }{\DOCareadata}\par
 					}
-
 					\DOCifnotempty{\DOCcoorientadorbdata}
 					{	% se houver mais de um co-orientador
 						\campoduplo{\numberline{\ABNTorientadorname}}{\hspace{15pt}\ABNTorientadordata}\par	% orientador
 						\campoduplo{\numberline{\ABNTcoorientadorname}}{\hspace{15pt}\ABNTcoorientadordata}\\	% co-orientador A
-						\campoduplo{}{\hspace{93pt}\DOCcoorientadorbdata}	% co-orientador B
+						\campoduplo{}{\hspace{93pt}\DOCcoorientadorbdata}					% co-orientador B
 					}
 					{	% caso contrário, se houver apenas um ou nenhum orientador
 						\campoduplo{\numberline{\ABNTorientadorname}}{\ignorespaces\ABNTorientadordata}\par	% orientador
@@ -294,13 +274,10 @@
 							\campoduplo{\numberline{\ABNTcoorientadorname}}{\ignorespaces\ABNTcoorientadordata}	% coorientador
 						}
 					}
-
 				\end{espacosimples}
 			\end{minipage}
 		\end{flushright}
-
 		\vfill
-
 		\begin{center}
 			\normalfont\scshape{\ABNTlocaldata}\\
 			\normalfont\scshape{\ABNTdatadata}
@@ -328,17 +305,13 @@
 				\DOCifnotempty{\DOCautorquatrodata}{\large\normalfont\scshape\textbf{\DOCautorquatrodata}\\}{\vspace{18pt}}
 			\end{espacosimples}
 		\end{center}
-
 		\vspace{20pt}
-
 		\begin{center}
 			\begin{espacosimples}
 				\ABNTchapterfont\Large\scshape{\ABNTtitulodata}
 			\end{espacosimples}
 		\end{center}
-
 		\vspace{80pt}
-
 		\begin{flushright}
 			\begin{minipage}{.5\textwidth}
 				\begin{espacosimples}
@@ -346,13 +319,10 @@
 				\end{espacosimples}
 			\end{minipage}
 		\end{flushright}
-
 		\vspace{20pt}
-
 		\begin{center}
 			\ABNTlocaldiadata
 		\end{center}
-
 		\setlength{\ABNTsignthickness}{0.4pt}
 		\setlength{\ABNTsignskip}{1.5cm}
 		\ABNTifnotempty{\ABNTprimeiroassinadata}
@@ -383,6 +353,7 @@
 				\assinatura{\ABNTquartoassinadata}
 			\end{center}
 		}
+
 		\if@openright\cleardoublepage\else\clearpage\fi
 	\end{titlepage}
 	\if@twoside\else\addtocounter{page}{1}\fi
@@ -397,9 +368,7 @@
 {
 	\setchaptertype{}
 	\pretextualchapter{}
-
 	\vfill
-
 	\begin{flushright}
 		\begin{minipage}{.5\textwidth}
 			\begin{espacosimples}
@@ -436,9 +405,7 @@
 {
 	\setchaptertype{}
 	\pretextualchapter{}
-
 	\vfill
-
 	\begin{flushright}
 		\begin{minipage}{.5\textwidth}
 			\begin{espacosimples}
@@ -725,35 +692,32 @@
 \renewcommand{\sumario}{
 	\pretextualchapter{Sum\'ario}
 	\ifthenelse{\boolean{@twocolumn}}
-	{
-		\setboolean{ABNTrestorecol}{true}\onecolumn
-	}
-	{
-		\setboolean{ABNTrestorecol}{false}
-	}
+		{\setboolean{ABNTrestorecol}{true}\onecolumn}
+		{\setboolean{ABNTrestorecol}{false}}
 	\thispagestyle{\chaptertitlepagestyle}
 	\global\@topnum\z@
 	\@afterindentfalse
 	\@afterheading
 	\@mkboth{\contentsname}{\contentsname}
 	\@starttoc{toc}
-	\ifthenelse{\boolean{ABNTrestorecol}}{\twocolumn}{}
+	\ifthenelse{\boolean{ABNTrestorecol}}
+		{\twocolumn}
+		{}
 	\setboolean{ABNTaftertoc}{true}
 }
 
 % altera forma de montagem dos capitulos
 \renewcommand{\l@chapter}[2]
 {
-	\vspace{0.5cm}	% espaço entre os capitulos no sumário
+	\vspace{0.5cm} % espaço entre os capitulos no sumário
 	\ifnum
 		\c@tocdepth > \m@ne
 		\addpenalty{-\@highpenalty}
 		\setlength\@tempdima{1.5em}
 		\begingroup
 			\ifthenelse{\boolean{ABNTpagenumstyle}}
-			{
-				\renewcommand{\@pnumwidth}{7mm}
-			}{}
+				{\renewcommand{\@pnumwidth}{7mm}}
+				{}
 			\parindent \z@ \rightskip \@pnumwidth
 			\parfillskip -\@pnumwidth
 			\leavevmode \normalsize \ABNTtocchapterfont
@@ -765,7 +729,9 @@
 			{
 				\hb@xt@\@pnumwidth{\hss
 				\ifthenelse{\not\equal{#2}{}}{{#2}}{}}
-				\begin{espacosimples}\par\end{espacosimples}
+				\begin{espacosimples}
+					\par
+				\end{espacosimples}
 			}
 			{
 				\hb@xt@\@pnumwidth{\hss #2}\par
@@ -792,7 +758,9 @@
 			\hspace*{0.5cm}
 			#1\nobreak\leaders\hbox{$\m@th \mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\nobreak
 			\hb@xt@\@pnumwidth{\hss{#2}}
-			\begin{espacosimples}\par\end{espacosimples}
+			\begin{espacosimples}
+				\par
+			\end{espacosimples}
 			\penalty\@highpenalty
 		\endgroup
 	\fi
@@ -830,7 +798,9 @@
 			\hspace*{1.0cm}
 			#1\nobreak\leaders\hbox{$\m@th \mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\nobreak
 			\hb@xt@\@pnumwidth{\hss{#2}}
-			\begin{espacosimples}\par\end{espacosimples}
+			\begin{espacosimples}
+				\par
+			\end{espacosimples}
 			\penalty\@highpenalty
 		\endgroup
 	\fi
@@ -851,7 +821,9 @@
 			\hspace*{1.5cm}
 			#1\nobreak\leaders\hbox{$\m@th \mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill\nobreak
 			\hb@xt@\@pnumwidth{\hss{#2}}
-			\begin{espacosimples}\par\end{espacosimples}
+			\begin{espacosimples}
+				\par
+			\end{espacosimples}
 			\penalty\@highpenalty
 		\endgroup
 	\fi
@@ -886,44 +858,52 @@
 
 % altera titulo das subsecoes (lowercase)
 \def\ABNTsect#1#2#3#4#5#6[#7]#8{%
-\ifnum #2>\c@secnumdepth
+	\ifnum #2>\c@secnumdepth
 		\let\@svsec\@empty
 	\else
 		\refstepcounter{#1}%
 		\protected@edef\@svsec{\@seccntformat{#1}\relax}%
 	\fi
-\@tempskipa #5\relax
+	\@tempskipa #5\relax
 	\ifdim \@tempskipa>\z@
 		\begingroup
-			#6{%
-			\@hangfrom{\hskip #3\relax\@svsec}%
+			#6{
+			\@hangfrom{\hskip #3\relax\@svsec}
 			\interlinepenalty \@M
-				\ifnum #2<\c@secnumdepth%
-					\ifthenelse{\boolean{ABNTcapsec}}
-						{\MakeUppercase{#8}}{#8}\@@par%
-				\else%
-					{#8}\@@par% lowercase
-				\fi}%
+			\ifnum #2<\c@secnumdepth
+				\ifthenelse{\boolean{ABNTcapsec}}
+					{\MakeUppercase{#8}}
+					{#8}
+					\@@par
+			\else
+				{#8}\@@par % lowercase
+			\fi}
 		\endgroup
 		\@ifundefined{ABNT#1mark}{}{\csname ABNT#1mark\endcsname{#7}}
-		\ABNTaddcontentsline{toc}{#1}{%
+		\ABNTaddcontentsline{toc}{#1}
+		{
 			\ifnum #2>\c@secnumdepth \else
-				\protect\numberline{\csname the#1\endcsname}%
+				\protect\numberline{\csname the#1\endcsname}
 			\fi
-		#7}%
+		#7}
 	\else
-		\def\@svsechd{%
-		#6{\hskip #3\relax
-		\@svsec \ifthenelse{\boolean{ABNTcapsec}}
-		{\MakeUppercase{#8}}{#8}}%
-		\@ifundefined{ABNT#1mark}{}{\csname ABNT#1mark\endcsname{#7}}
-	\ABNTaddcontentsline{toc}{#1}{%
-		\ifnum #2>\c@secnumdepth \else
-			\protect\numberline{\csname the#1\endcsname}%
-		\fi
-		#7}}%
+		\def\@svsechd
+		{
+			#6{\hskip #3\relax
+			\@svsec \ifthenelse{\boolean{ABNTcapsec}}
+				{\MakeUppercase{#8}}
+				{#8}
+			}
+			\@ifundefined{ABNT#1mark}{}{\csname ABNT#1mark\endcsname{#7}}
+			\ABNTaddcontentsline{toc}{#1}{
+				\ifnum #2>\c@secnumdepth \else
+					\protect\numberline{\csname the#1\endcsname}
+				\fi
+			#7}
+		}
 	\fi
-	\@xsect{#5}}
+	\@xsect{#5}
+}
 
 % define como será a escrita de \chapter [modificado do abnt.cls]
 \def\@makechapterhead#1{
@@ -935,9 +915,9 @@
     \parbox[t]{2.5ex}{\thechapter}
     \parbox[t]{\textwidth-4ex-1ex}
       {\interlinepenalty\@M\raggedright
-        \ifthenelse{\boolean{ABNTcapchap}}
-          {\MakeUppercase{#1}}
-          {#1}
+	\ifthenelse{\boolean{ABNTcapchap}}
+	  {\MakeUppercase{#1}}
+	  {#1}
       }
     \vspace*{0cm}
     }
@@ -968,10 +948,11 @@
 \renewcommand{\theequation}{\arabic{equation}}
 \def\ABNTeatbrackets[#1]{\relax}
 \renewcommand{\newcounter}[1]
-	{\ifthenelse{\equal{#1}{figure}\or\equal{#1}{table}\or\equal{#1}{equation}}
+{
+	\ifthenelse{\equal{#1}{figure}\or\equal{#1}{table}\or\equal{#1}{equation}}
 		{\ABNToldnewcounter{#1}\@ifnextchar[{\ABNTeatbrackets}{}}
 		{\ABNToldnewcounter{#1}}
-	}
+}
 
 
 % define o tipo de numeracao das paginas
@@ -1004,7 +985,7 @@
 % Redefine o tipo de numeracao das paginas
 \renewcommand{\ABNTBeginOfTextualPart}
 {
-  \if@twoside
+	\if@twoside
 		\@twosidetrue \@mparswitchtrue
 			%\addtocounter{page}{-1}
 			\raggedbottom
@@ -1062,122 +1043,125 @@
 
 \renewcommand*{\ABNTtravessao}{--}
 
-\def\@anapchapter[#1]#2
-      {
-       \refstepcounter{chapter}
-       \ifthenelse{\boolean{ABNTAnApName}}
-        {
-         \begingroup
-         \ifthenelse{\equal{#1}{}}
-            {\def\thechapter{\anapchaptername{} \Alph{chapter}}}
-            {\def\thechapter{\anapchaptername{} \Alph{chapter}{}
-                                \ABNTtravessao{} #1}}
-         \ABNTchaptermark{}
-         \endgroup
-         \if@twocolumn
-           \@topnewpage[\@makeanapchapterhead{#2}]
-         \else
-           \@makeanapchapterhead{#2}
-           \@afterheading
-         \fi
-        }
-        {
-         \ABNTchaptermark{#1}
-         \if@twocolumn
-            \@topnewpage[\@makechapterhead{#2}]
-         \else
-            \@makechapterhead{#2}
-            \@afterheading
-         \fi
-        }
-       \ifnum \c@secnumdepth >\m@ne
-         \typeout{\@chapapp\space\thechapter.}
-         \ifthenelse{\boolean{ABNTAnApName}}{
-           \ifthenelse{\equal{#1}{}}
-              {\ABNTaddcontentsline{toc}{chapter}
-                  {\anapchaptername{} \thechapter}}
-              {\ABNTaddcontentsline{toc}{chapter}
-                  {\anapchaptername{} \thechapter{} \ABNTtravessao{} #1}}
-         }
-         {
-          \ABNTaddcontentsline{toc}{chapter}
-                   {\protect\numberline{\thechapter}#1}
-         }
-       \else
-         \ABNTaddcontentsline{toc}{chapter}{#1}
-       \fi
-       \par
-      }
+\def\@anapchapter[#1]#2{
+	\refstepcounter{chapter}
+	\ifthenelse{\boolean{ABNTAnApName}}
+	{
+		\begingroup
+			\ifthenelse{\equal{#1}{}}
+				{\def\thechapter{\anapchaptername{} \Alph{chapter}}}
+				{\def\thechapter{\anapchaptername{} \Alph{chapter}{}\ABNTtravessao{} #1}}
+			\ABNTchaptermark{}
+		\endgroup
 
+		\if@twocolumn
+			\@topnewpage[\@makeanapchapterhead{#2}]
+		\else
+			\@makeanapchapterhead{#2}
+			\@afterheading
+		\fi
+	}
+	{
+		\ABNTchaptermark{#1}
+	 	\if@twocolumn
+			\@topnewpage[\@makechapterhead{#2}]
+		 \else
+			\@makechapterhead{#2}
+			\@afterheading
+		\fi
+	}
+
+	\ifnum \c@secnumdepth >\m@ne
+		\typeout{\@chapapp\space\thechapter.}
+		\ifthenelse{\boolean{ABNTAnApName}}
+		{
+			\ifthenelse{\equal{#1}{}}
+				{\ABNTaddcontentsline{toc}{chapter}{\anapchaptername{} \thechapter}}
+				{\ABNTaddcontentsline{toc}{chapter}{\anapchaptername{} \thechapter{} \ABNTtravessao{} #1}}
+		}
+		{
+			\ABNTaddcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
+		}
+	\else
+		\ABNTaddcontentsline{toc}{chapter}{#1}
+	\fi
+	\par
+}
 
 \renewcommand{\ABNTaposindicativoanap}{\relax}
 
 \def\@makeanapchapterhead#1{
-  {
-  \normalfont\ABNTchapterfont\ABNTanapsize
-  \espaco{simples}
-  \ifthenelse{\boolean{ABNTAnApIndicativoIndent}}
-    {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
-       {\settowidth{\ABNTanapindent}{\MakeUppercase{\anapchaptername}
-          \thechapter{} \ABNTtravessao{}}}
-       {\settowidth{\ABNTanapindent}{\anapchaptername
-          \thechapter{} \ABNTtravessao{}}}
-    }
-    {}
-  %\vspace*{80pt}
- % \raggedright\espaco{1.2}\par
+	{
+		\normalfont\ABNTchapterfont\ABNTanapsize
+		\espaco{simples}
+		\ifthenelse{\boolean{ABNTAnApIndicativoIndent}}
+			{
+				\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
+					{\settowidth{\ABNTanapindent}{\MakeUppercase{\anapchaptername}\thechapter{} \ABNTtravessao{}}}
+					{\settowidth{\ABNTanapindent}{\anapchaptername\thechapter{} \ABNTtravessao{}}}
+			}
+			{}
 
-  \begin{list}{}{
-       \setlength{\listparindent}{0cm}
-       \setlength{\itemindent}{-\ABNTanapindent}
-       \setlength{\rightmargin}{0cm}
-       \setlength{\leftmargin}{\ABNTanapindent}
-       \setlength{\parsep}{0pt}}
-
-    \item
-            \begin{center}
-      \ifthenelse{\equal{#1}{}}
-         {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
-            {\MakeUppercase{\anapchaptername}}
-            {\anapchaptername}
-          \thechapter \ABNTaposindicativoanap}
-         {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
-            {\MakeUppercase{\anapchaptername}}
-            {\anapchaptername}
-          \thechapter{} \ABNTtravessao{} \ABNTaposindicativoanap
-            \ifthenelse{\boolean{ABNTcapchap}}
-              {\MakeUppercase{#1}}
-              {#1}}
-              \end{center}
-  \end{list}
-
-  \par\vspace{35pt}
-  }
+		\begin{list}
+			{}
+			{
+				\setlength{\listparindent}{0cm}
+				\setlength{\itemindent}{-\ABNTanapindent}
+				\setlength{\rightmargin}{0cm}
+				\setlength{\leftmargin}{\ABNTanapindent}
+				\setlength{\parsep}{0pt}
+			}
+			\item
+			\begin{center}
+				\ifthenelse{\equal{#1}{}}
+					{
+						\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
+							{\MakeUppercase{\anapchaptername}}
+							{\anapchaptername}
+						\thechapter \ABNTaposindicativoanap
+					}
+			 		{
+						\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
+							{\MakeUppercase{\anapchaptername}}
+							{\anapchaptername}
+						\thechapter{} \ABNTtravessao{} \ABNTaposindicativoanap
+						\ifthenelse{\boolean{ABNTcapchap}}
+							{\MakeUppercase{#1}}
+							{#1}
+					}
+			\end{center}
+		\end{list}
+		\par\vspace{35pt}
+	}
 }
 
-\renewcommand{\appendix}{
-  \setcounter{chapter}{0}
-  \resetsubcounters{chapter}
-  \gdef\thechapter{\Alph{chapter}}
-  \setchaptertype{appendix}
-  \gdef\@chapapp{Apendice}
+\renewcommand{\appendix}
+{
+	\setcounter{chapter}{0}
+	\resetsubcounters{chapter}
+	\gdef\thechapter{\Alph{chapter}}
+	\setchaptertype{appendix}
+	\gdef\@chapapp{Apendice}
 	\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
 		{\renewcommand{\appendixname}{\texorpdfstring{\MakeUppercase{Ap\^endice}}{Ap\^endice}}}
 		{\renewcommand{\appendixname}{Ap\^endice}}
-  \renewcommand{\anapchaptername}{\appendixname}
-  \global\let\@chapter\@anapchapter}
+	\renewcommand{\anapchaptername}{\appendixname}
+	\global\let\@chapter\@anapchapter
+}
 
 \let\apendice\appendix
 
-\renewcommand{\annex}{
-  \setcounter{chapter}{0}
-  \resetsubcounters{chapter}
-  \gdef\thechapter{\Alph{chapter}}
-  \setchaptertype{annex}
+\renewcommand{\annex}
+{
+	\setcounter{chapter}{0}
+	\resetsubcounters{chapter}
+	\gdef\thechapter{\Alph{chapter}}
+	\setchaptertype{annex}
 	\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
 		{\renewcommand{\annexname}{\texorpdfstring{\MakeUppercase{Anexo}}{Anexo}}}
 		{\renewcommand{\annexname}{Anexo}}
-  \renewcommand{\anapchaptername}{\annexname}
-  \global\let\@chapter\@anapchapter}
+	\renewcommand{\anapchaptername}{\annexname}
+	\global\let\@chapter\@anapchapter
+}
 
 \let\anexo\annex

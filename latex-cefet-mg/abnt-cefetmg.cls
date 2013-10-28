@@ -58,7 +58,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DEFINICOES DE COMANDOS
+% DEFINIÇÕES DE COMANDOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \providecommand{\DOCdepartamentodata}{}
@@ -256,7 +256,7 @@
 		\begin{flushright}
 			\begin{minipage}{.55\textwidth}
 				\begin{espacosimples}
-					\hyphenpenalty=10000{\ABNTcomentariodata\par} % evita hifenizacao
+					\hyphenpenalty=10000{\ABNTcomentariodata\par} % evita hifenização
 					\DOCifnotempty{\DOCareadata}
 					{
 						\campoduplo{\'Area de concentra\c{c}\~ao: }{\DOCareadata}\par
@@ -289,7 +289,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FOLHA DE APROVACAO
+% FOLHA DE APROVAÇÃO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\folhadeaprovacao}
@@ -361,7 +361,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DEDICATORIA
+% DEDICATÓRIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newenvironment{dedicatoria}
@@ -398,7 +398,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% EPIGRAFE
+% EPÍGRAFE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newenvironment{epigrafe}
@@ -543,7 +543,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LISTA DE GRAFICOS
+% LISTA DE GRÁFICOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \floatstyle{plain}
@@ -627,7 +627,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LISTA DE SIMBOLOS
+% LISTA DE SÍMBOLOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % define os comandos que montam a lista de simbolos
@@ -682,13 +682,13 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SUMARIO
+% SUMÁRIO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % altera o espacamento entre dots
 \renewcommand\@dotsep{2}
 
-% altera a forma do sumario
+% altera a forma do sumário
 \renewcommand{\sumario}{
 	\pretextualchapter{Sum\'ario}
 	\ifthenelse{\boolean{@twocolumn}}
@@ -706,10 +706,10 @@
 	\setboolean{ABNTaftertoc}{true}
 }
 
-% altera forma de montagem dos capitulos
+% altera forma de montagem dos capítulos
 \renewcommand{\l@chapter}[2]
 {
-	\vspace{0.5cm} % espaço entre os capitulos no sumário
+	\vspace{0.5cm} % espaço entre os capítulos no sumário
 	\ifnum
 		\c@tocdepth > \m@ne
 		\addpenalty{-\@highpenalty}
@@ -741,7 +741,7 @@
 	\fi
 }
 
-% altera forma de montagem das secoes
+% altera forma de montagem das seções
 \renewcommand{\l@section}[2]
 {
 	\ifnum \c@tocdepth >\m@ne
@@ -766,7 +766,7 @@
 	\fi
 }
 
-% capítulos e sessões maiusculas no sumário
+% capítulos e sessões maiúsculas no sumário
 \let\realchapter\chapter
 \renewcommand{\chapter}[1]
 {
@@ -783,7 +783,7 @@
 		{\realsection{#1}}
 }
 
-% altera forma de montagem das subsecoes
+% altera forma de montagem das subseções
 \renewcommand{\l@subsection}[2]
 {
 	\ifnum \c@tocdepth >\m@ne
@@ -806,7 +806,7 @@
 	\fi
 }
 
-% altera forma de montagem das subsubsecoes
+% altera forma de montagem das subseções
 \renewcommand{\l@subsubsection}[2]
 {
 	\ifnum \c@tocdepth >\m@ne
@@ -831,7 +831,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CAPITULOS
+% CAPÍTULOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % altera o tamanho das fontes
@@ -856,7 +856,7 @@
 %\renewcommand{\sfdefault}{phv}
 %\renewcommand{\ttdefault}{phv}
 
-% altera titulo das subsecoes (lowercase)
+% altera título das subseções (lowercase)
 \def\ABNTsect#1#2#3#4#5#6[#7]#8{%
 	\ifnum #2>\c@secnumdepth
 		\let\@svsec\@empty
@@ -938,10 +938,10 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% NUMERACAO
+% NUMERAÇÃO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% define o tipo de numeracao de figuras, tabelas e equacoes como contínuo
+% define o tipo de numeração de figuras, tabelas e equações como contínuo
 \let\newcounter\ABNToldnewcounter\relax
 \renewcommand{\thefigure}{\arabic{figure}}
 \renewcommand{\thetable}{\arabic{table}}
@@ -955,10 +955,10 @@
 }
 
 
-% define o tipo de numeracao das paginas
+% define o tipo de numeração das páginas
 \renewcommand{\chaptertitlepagestyle}{plain}
 
-% altera a posicao da numeracao de paginas dos elementos pre-textuais
+% altera a posição da numeração de páginas dos elementos pré-textuais
 \renewcommand{\pretextualchapter}
 {
 	\pagestyle{empty}
@@ -969,7 +969,7 @@
 	\@schapter
 }
 
-% altera a posicao da numeracao de paginas dos elementos textuais
+% altera a posição da numeração de páginas dos elementos textuais
 \renewcommand{\ABNTchaptermark}[1]
 {
 	\ifthenelse{\boolean{ABNTNextOutOfTOC}}
@@ -982,7 +982,7 @@
 		}
 }
 
-% Redefine o tipo de numeracao das paginas
+% redefine o tipo de numeração das páginas
 \renewcommand{\ABNTBeginOfTextualPart}
 {
 	\if@twoside
@@ -1013,7 +1013,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% REFERENCIAS
+% REFERÊNCIAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifthenelse{\boolean{ABNTcapsec}}
@@ -1024,14 +1024,14 @@
 % AJUSTES DIVERSOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ajuste para citacao direta: para mais de 3 linhas, deve estar em um parágrafo próprio, com recuo de 4cm, espacamento simples e fonte tamanho 10
+% ajuste para citação direta: para mais de 3 linhas, deve estar em um parágrafo próprio, com recuo de 4cm, espacamento simples e fonte tamanho 10
 \renewenvironment{quote}{\list{}{\leftmargin=4cm\rightmargin=0cm\footnotesize\singlespace}\item[]}{\endlist}
 
 % permite mais de três níveis no sumário
 \setcounter{secnumdepth}{10}
 \setcounter{tocdepth}{10}
 
-% altera o tamanho da indentacao do paragrafo
+% altera o tamanho da indentação do parágrafo
 \setlength{\parindent}{1.5cm}
 
 

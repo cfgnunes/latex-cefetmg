@@ -254,7 +254,7 @@
 		\end{center}
 		\vspace{80pt}
 		\begin{flushright}
-			\begin{minipage}{.5\textwidth}
+			\begin{minipage}{.55\textwidth}
 				\begin{espacosimples}
 					\hyphenpenalty=10000{\ABNTcomentariodata\par} % evita hifenizacao
 					\DOCifnotempty{\DOCareadata}
@@ -313,7 +313,7 @@
 		\end{center}
 		\vspace{80pt}
 		\begin{flushright}
-			\begin{minipage}{.5\textwidth}
+			\begin{minipage}{.55\textwidth}
 				\begin{espacosimples}
 					\hyphenpenalty=10000{\noindent\ABNTtextoaprovacaodata\par}
 				\end{espacosimples}
@@ -370,7 +370,7 @@
 	\pretextualchapter{}
 	\vfill
 	\begin{flushright}
-		\begin{minipage}{.5\textwidth}
+		\begin{minipage}{.55\textwidth}
 			\begin{espacosimples}
 				\setlength\parindent{0pt}
 				\setlength\parskip{12pt}
@@ -407,7 +407,7 @@
 	\pretextualchapter{}
 	\vfill
 	\begin{flushright}
-		\begin{minipage}{.5\textwidth}
+		\begin{minipage}{.55\textwidth}
 			\begin{espacosimples}
 				\setlength\parindent{0pt}
 				\setlength\parskip{12pt}

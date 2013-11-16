@@ -9,17 +9,13 @@
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefet-mg
 %
 
-% Largura da tabulação dos arquivos igual a 8 (utilizar Tab ao invés de Espaços)
-% TODO: conferir margens
+% Largura da tabulação dos arquivos igual a 8 (utilizar 'Tab' ao invés de 'Espaços')
 % TODO: criar glossário
 % TODO: criar índice remissivo
 
-\documentclass[logo, oneside]{abnt-cefetmg}			% oneside = apenas frente da folha
-%\documentclass[logo, openright, twoside]{abnt-cefetmg}		% openright = frente e verso (o capitulo começa sempre em páginas ípares)
-%\documentclass[logo, oneside, trabalhos]{abnt-cefetmg}		% modelo de trabalhos comuns
+\documentclass{abntex2-cefetmg}
 
 % importações de pacotes
-	\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntcite}	% fazer citações no padrão da ABNT
 	\usepackage{bookmark}					% cria menu de bookmarks
 	\usepackage[brazil]{babel}				% escrita em português brasileiro
 	\usepackage[utf8]{inputenc}				% acentuação direta
@@ -27,10 +23,13 @@
 	\usepackage[dvips]{graphicx}				% inserir figuras
 	\usepackage{subfig}					% posicionamento de figuras
 	\usepackage{amsfonts, amssymb, amsmath, dsfont}		% fonte e simbolos matemáticos
+	\usepackage[alf]{abntex2cite}				% citações padrão ABNT
 	\usepackage{booktabs}					% comandos para tabelas
 	\usepackage{verbatim}					% texto é interpretado no compilador como escrito no documento
 	\usepackage{multirow, array}				% múltiplas linhas e colunas em tabelas
 	\usepackage[bottom]{footmisc}				% mantem as notas de rodapé sempre na mesma posicao
+	\usepackage{microtype}					% para melhorias de justificação
+	\usepackage{indentfirst}				% indenta o primeiro parágrafo de cada seção.
 	%\usepackage[algoruled, portuguese]{algorithm2e}	% escrever algoritmos
 	%\usepackage{acronym}					% produzir acrônimos
 	%\usepackage{scalefnt}					% permite redimensionar tamanho da fonte
@@ -54,10 +53,6 @@
 % inclui o prêambulo do documento
 	\include{./elementos-pre-textuais/preambulo}
 
-% pode-se utilizar os comandos abaixo para realizar ajustes das margens se necessário
-%\usepackage{geometry}
-%\geometry{left=3.0cm, right=2.0cm, top=3.0cm, bottom=2.0cm}
-
 % hifenização de palavras desconhecidas
 %	\hyphenation{
 %		Na-ra-ya-nan
@@ -74,41 +69,43 @@
 	filecolor=black,
 	urlcolor=black,
 	breaklinks=true,
-	pdftitle={\ABNTtitulodata},
-	pdfauthor={\ABNTautordata},
-	pdfsubject={\ABNTcomentariodata},
-	pdfkeywords={\DOCpalavraschavedata}
+	pdftitle={\@title},
+	pdfauthor={\@author},
+%	pdfsubject={\ABNTcomentariodata},
+%	pdfkeywords={\DOCpalavraschavedata}
 }
 
 % início do documento
 \begin{document}
 
 % elementos pré textuais
-	\capa							% Capa
-	\folhaderosto						% Folha de rosto
+	\pretextual
+	\imprimircapa						% Capa
+%	\imprimirfolhaderosto					% Folha de rosto
 	%\folhadeaprovacao					% Folha de aprovação
 	\include{./elementos-pre-textuais/dedicatoria}		% Dedicatória
 	\include{./elementos-pre-textuais/agradecimentos}	% Agradecimentos
 	\include{./elementos-pre-textuais/epigrafe}		% Epígrafe
 	\include{./elementos-pre-textuais/resumoPt}		% Resumo na língua vernácula
-	\include{./elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
-	\listadefiguras						% Lista de figuras
-	\listadequadros						% Lista de quadros
-	\listadegraficos					% Lista de gráficos
-	\listadetabelas						% Lista de tabelas
-	\listadesiglas						% Lista de abreviaturas e siglas
-	\listadesimbolos					% Lista de símbolos
-	\sumario						% Sumário
+%	\include{./elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
+	\include{./elementos-pre-textuais/listaIlustracoes}	% Lista de ilustrações
+%	\listadequadros						% Lista de quadros
+	\include{./elementos-pre-textuais/listaTabelas}		% Lista de tabelas
+	\include{./elementos-pre-textuais/listaSiglas}		% Lista de abreviaturas e siglas
+	\include{./elementos-pre-textuais/listaSimbolos}	% Lista de símbolos
+	\include{./elementos-pre-textuais/sumario}		% Sumário
 
 % elementos textuais
+	\textual
 	\include{./elementos-textuais/introducao}		% Introdução
 	\include{./elementos-textuais/trabalhosRelacionados}	% Trabalhos relacionados
 	\include{./elementos-textuais/fundamentacaoTeorica}	% Fundamentação teórica
 	\include{./elementos-textuais/metodologia}		% Metodologia
 	\include{./elementos-textuais/resultados}		% Resultados
-	\include{./elementos-textuais/conclusoes}		% Conclusões
+%	\include{./elementos-textuais/conclusoes}		% Conclusões
 
 % elementos pós textuais
+	\postextual
 	\include{./elementos-pos-textuais/referencias}		% Referências
 	%\include{./elementos-pos-textuais/glossario}		% Glossário
 	\include{./elementos-pos-textuais/apendices}		% Apêndices

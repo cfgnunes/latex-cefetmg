@@ -7,14 +7,11 @@ Modelo para trabalhos acadêmicos do CEFET-MG em LaTex baseado nas normas da ABN
 Para instalar os pacotes necessários,
 execute os seguintes comandos no terminal: 
 
-<code> # apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-science </code>
+<code> # apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-science texlive-publishers</code>
 
-<code> # apt-get install abntex cm-super </code>
+<code> # apt-get install make cm-super </code>
 
 <code> # apt-get install latexila </code>
-
-<code> # apt-get install make </code>
-
 
 ## Comandos
 

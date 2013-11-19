@@ -1,5 +1,5 @@
 %
-% Modelo de trabalhos acadêmicos
+% Modelo de trabalho acadêmico
 % Documento principal
 %
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
@@ -16,20 +16,20 @@
 \documentclass{abntex2-cefetmg}
 
 % importações de pacotes
+	\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntex2cite}	% citações padrão ABNT
 	\usepackage{bookmark}					% cria menu de bookmarks
-	\usepackage[brazil]{babel}				% escrita em português brasileiro
 	\usepackage[utf8]{inputenc}				% acentuação direta
 	\usepackage[T1]{fontenc}				% codificação da fonte em 8 bits
 	\usepackage[dvips]{graphicx}				% inserir figuras
 	\usepackage{subfig}					% posicionamento de figuras
 	\usepackage{amsfonts, amssymb, amsmath, dsfont}		% fonte e simbolos matemáticos
-	\usepackage[alf]{abntex2cite}				% citações padrão ABNT
 	\usepackage{booktabs}					% comandos para tabelas
-	\usepackage{verbatim}					% texto é interpretado no compilador como escrito no documento
+	\usepackage{verbatim}					% texto é interpretado como escrito no documento
 	\usepackage{multirow, array}				% múltiplas linhas e colunas em tabelas
 	\usepackage[bottom]{footmisc}				% mantem as notas de rodapé sempre na mesma posicao
-	\usepackage{microtype}					% para melhorias de justificação
 	\usepackage{indentfirst}				% indenta o primeiro parágrafo de cada seção.
+	\usepackage{lmodern}					% usa a fonte Latin Modern
+	\usepackage{microtype}					% para melhorias de justificação?
 	%\usepackage[algoruled, portuguese]{algorithm2e}	% escrever algoritmos
 	%\usepackage{acronym}					% produzir acrônimos
 	%\usepackage{scalefnt}					% permite redimensionar tamanho da fonte
@@ -62,6 +62,7 @@
 %	}
 
 % define as cores dos links e informações do pdf
+\makeatletter
 \hypersetup{
 	colorlinks,
 	linkcolor=black,
@@ -71,25 +72,29 @@
 	breaklinks=true,
 	pdftitle={\@title},
 	pdfauthor={\@author},
-%	pdfsubject={\ABNTcomentariodata},
-%	pdfkeywords={\DOCpalavraschavedata}
+	pdfsubject={\imprimirpreambulo},
+	pdfkeywords=pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}
 }
+\makeatother
 
 % início do documento
 \begin{document}
 
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
 % elementos pré textuais
 	\pretextual
 	\imprimircapa						% Capa
-%	\imprimirfolhaderosto					% Folha de rosto
-	%\folhadeaprovacao					% Folha de aprovação
+	%\imprimirfolhaderosto					% Folha de rosto
+	\include{./elementos-pre-textuais/folhaAprovacao}	% Folha de aprovação
 	\include{./elementos-pre-textuais/dedicatoria}		% Dedicatória
 	\include{./elementos-pre-textuais/agradecimentos}	% Agradecimentos
 	\include{./elementos-pre-textuais/epigrafe}		% Epígrafe
 	\include{./elementos-pre-textuais/resumoPt}		% Resumo na língua vernácula
-%	\include{./elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
+	\include{./elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
 	\include{./elementos-pre-textuais/listaIlustracoes}	% Lista de ilustrações
-%	\listadequadros						% Lista de quadros
+	%\listadequadros					% Lista de quadros
 	\include{./elementos-pre-textuais/listaTabelas}		% Lista de tabelas
 	\include{./elementos-pre-textuais/listaSiglas}		% Lista de abreviaturas e siglas
 	\include{./elementos-pre-textuais/listaSimbolos}	% Lista de símbolos
@@ -102,7 +107,7 @@
 	\include{./elementos-textuais/fundamentacaoTeorica}	% Fundamentação teórica
 	\include{./elementos-textuais/metodologia}		% Metodologia
 	\include{./elementos-textuais/resultados}		% Resultados
-%	\include{./elementos-textuais/conclusoes}		% Conclusões
+	\include{./elementos-textuais/conclusoes}		% Conclusões
 
 % elementos pós textuais
 	\postextual

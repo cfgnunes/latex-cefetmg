@@ -4,7 +4,7 @@
 %
 %	Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 %
-%	dependência: abntex2
+%	dependência: abntex2 >= 1.7
 
 \NeedsTeXFormat{LaTeX2e}
 
@@ -14,15 +14,13 @@
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	oneside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
+	sumario=tradicional,		% seleciona o sumário tradicional
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
 	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
-	english,			% idioma adicional para hifenização
-	french,				% idioma adicional para hifenização
-	spanish,			% idioma adicional para hifenização
 	brazil,				% o último idioma é o principal do documento
 	}{abntex2}
 

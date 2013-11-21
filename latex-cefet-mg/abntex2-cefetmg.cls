@@ -31,3 +31,11 @@
 
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}
+
+% Quadros
+\newcommand{\quadroname}{Quadro}
+\newfloat[chapter]{quadro}{lof}{\quadroname}
+\newlistentry{quadro}{lof}{0}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}

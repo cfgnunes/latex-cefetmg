@@ -126,6 +126,7 @@
 }
 \makeatother
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FOLHA DE ROSTO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -167,3 +168,54 @@
 	\end{center}
 }
 \makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEDICATORIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewenvironment{dedicatoria}[1][]
+{
+	\ifthenelse{\equal{#1}{}}{
+		\PRIVATEbookmarkthis{\dedicatorianame}
+	}{\pretextualchapter{#1}}
+
+	\vspace*{\fill}
+
+	\begin{flushright}
+		\begin{minipage}{.5\textwidth}
+			\begin{SingleSpacing}
+				\setlength\parindent{0pt}
+				\setlength\parskip{12pt}
+}
+{
+			\end{SingleSpacing}
+		\end{minipage}
+	\end{flushright}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EPIGRAFE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewenvironment{epigrafe}[1][]
+{
+	\ifthenelse{\equal{#1}{}}{
+		\PRIVATEbookmarkthis{\epigraphname}
+	}{\pretextualchapter{#1}}
+
+	\vspace*{\fill}
+	
+	\begin{flushright}
+		\begin{minipage}{.5\textwidth}
+			\begin{SingleSpacing}
+				\setlength\parindent{0pt}
+				\setlength\parskip{12pt}
+}
+{
+			\end{SingleSpacing}
+		\end{minipage}
+	\end{flushright}
+}
+

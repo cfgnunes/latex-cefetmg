@@ -16,10 +16,10 @@
 	a4paper,			% tamanho do papel.
 	sumario=tradicional,		% seleciona o sumário tradicional
 	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	%chapter=TITLE,			% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,			% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,		% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,		% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
 	brazil,				% o último idioma é o principal do documento
 	}{abntex2}
@@ -218,4 +218,3 @@
 		\end{minipage}
 	\end{flushright}
 }
-

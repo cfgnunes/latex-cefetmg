@@ -13,7 +13,7 @@
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	oneside,			% para impressão em verso e anverso. Oposto a oneside
-	a4paper,			% tamanho do papel. 
+	a4paper,			% tamanho do papel.
 	sumario=tradicional,		% seleciona o sumário tradicional
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -84,7 +84,7 @@
 \newfloat[chapter]{quadro}{lof}{\quadroname}
 \newlistentry{quadro}{lof}{0}
 \counterwithout{quadro}{chapter}
-\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 
@@ -92,6 +92,7 @@
 % CAPA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\makeatletter
 \renewcommand{\imprimircapa}{
 	\begin{capa}
 
@@ -108,13 +109,10 @@
 		\end{center}
 
 		\vspace{50pt}
-
 		\center
 		\large\normalfont\scshape\textbf\imprimirautor
 
-		
 		\vfill
-
 		\ABNTEXchapterfont\Large\scshape\imprimirtitulo
 
 		\vfill
@@ -126,3 +124,46 @@
 
 	\end{capa}
 }
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FOLHA DE ROSTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+	\begin{center}
+
+		{\large\normalfont\scshape\textbf\imprimirautor}
+	
+		\vspace*{\fill}\vspace*{\fill}
+		\begin{center}
+			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
+		\end{center}
+		\vspace*{\fill}
+	
+		\abntex@ifnotempty{\imprimirpreambulo}{
+			\hspace{.45\textwidth}
+			\begin{minipage}{.5\textwidth}
+				\SingleSpacing
+				\imprimirpreambulo
+			\end{minipage}
+			\vspace*{\fill}
+		}
+
+		{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
+	
+		{\large\imprimirorientadorRotulo~\imprimirorientador\par}
+		\abntex@ifnotempty{\imprimircoorientador}{
+			{\large\imprimircoorientadorRotulo~\imprimircoorientador}
+		}
+		\vspace*{\fill}
+
+		\begin{center}
+			\normalfont\scshape\normalsize{\imprimirlocal}\\
+			\normalfont\scshape\normalsize{\imprimirdata}
+		\end{center}
+
+	\end{center}
+}
+\makeatother

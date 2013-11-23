@@ -75,31 +75,3 @@ A transformada de Laplace é dada na equação (\ref{eq:laplace}), enquanto a eq
 	F(u, v) = \sum_{m = 0}^{M - 1} \sum_{n = 0}^{N - 1} f(m, n) \exp \left[ -j 2 \pi \left( \frac{u m}{M} + \frac{v n}{N} \right) \right]
 	\label{eq:dft}
 \end{equation}
-
-\section{Siglas e símbolos}
-\label{sec:siglas}
-
-%O pacote ABNTEX permite ainda a definição de siglas e símbolos com indexação automática através dos comandos \verb#\sigla{}{}# e \verb#\simbolo{}{}#. Por exemplo, o significado das siglas \sigla{ABNT}{Associação Brasileira de Normas Técnicas} e \sigla{DECOM}{Departamento de Computação} aparecem automaticamente na lista de siglas, bem como o significado dos símbolos\simbolo{$\lambda$}{comprimento de onda},\simbolo{$v$}{velocidade} e\simbolo{$f$}{frequência}aparecem automaticamente na lista de símbolos. Mais detalhes sobre o uso destes e outros comandos do ABNTEX são encontrados em sua documentação específica\cite{abnTeX2009}.
-
-%\section{Algoritmos}
-%\label{sec:algoritmos}
-%
-%Os algoritmos devem ser feitos segundo o modelo abaixo.
-%Para isso, utilizar o pacote {\ttfamily algorithm2e} no início do arquivo principal como neste exemplo.
-%
-%\begin{algorithm}
-%\KwIn{o número $n$ de vértices a remover, grafo original $G(V, E)$}
-%\KwOut{grafo reduzido $G'(V,E)$}
-%$removidos \leftarrow 0$ \\
-%\While {removidos $<$ n } {
-%	$v \leftarrow$ Random$(1, ..., k) \in V$ \\
-%	\For {$u \in adjacentes(v)$} {
-%		remove aresta (u, v)\\
-%		$removidos \leftarrow removidos + 1$\\
-%	}
-%	\If {há componentes desconectados} {
-%		remove os componentes desconectados\\
-%	}
-%}
-%\caption{Algoritmo para remoção aleatória de vértices}
-%\end{algorithm}

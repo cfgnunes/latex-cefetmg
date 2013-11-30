@@ -98,7 +98,7 @@
 
 		\begin{center}
 			\vspace*{-2.7cm}
-			\includegraphics[width=0.15\textwidth]{./figuras/cefet_logo.eps}
+			\includegraphics[width=0.15\textwidth]{./04-figuras/cefet_logo.eps}
 
 			\normalfont\scshape{\imprimirinstituicao}\\
 			\normalfont\scshape{\imprimirprograma}\\

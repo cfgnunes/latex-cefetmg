@@ -83,11 +83,18 @@
 % LISTAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% lista de quadros
-
-\newcommand{\quadroname}{Quadro}
+% define os títulos das listas
+\addto\captionsbrazil{
+	\renewcommand{\listadesiglasname}{Lista de abreviaturas e siglas}
+	\renewcommand{\listadesimbolosname}{Lista de s\'imbolos}
+	\renewcommand{\listfigurename}{Lista de figuras}
+	\renewcommand{\listtablename}{Lista de tabelas}
+}
 \newcommand{\listofquadrosname}{Lista de quadros}
+\newcommand{\listofalgoritmosname}{Lista de algoritmos}
 
+% cria a lista de quadros
+\newcommand{\quadroname}{Quadro}
 \newfloat[chapter]{quadro}{loq}{\quadroname}
 \newlistof{listofquadros}{loq}{\listofquadrosname}
 \newlistentry{quadro}{loq}{0}
@@ -95,6 +102,16 @@
 \counterwithout{quadro}{chapter}
 \renewcommand{\cftquadroname}{\quadroname\space} 
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+% cria a lista de algoritmos
+\newcommand{\algoritmoname}{Algoritmo}
+\newfloat[chapter]{algoritmo}{loa}{\algoritmoname}
+\newlistof{listofalgoritmos}{loa}{\listofalgoritmosname}
+\newlistentry{algoritmo}{loa}{0}
+
+\counterwithout{algoritmo}{chapter}
+\renewcommand{\cftalgoritmoname}{\algoritmoname\space} 
+\renewcommand*{\cftalgoritmoaftersnum}{\hfill--\hfill}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -28,20 +28,16 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% COMANDO DE DADOS
+% COMANDOS DE DADOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % comandos de dados - programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
-% comandos de dados - departamento
-\providecommand{\imprimirdepartamento}{}
-\newcommand{\departamento}[1]{\renewcommand{\imprimirdepartamento}{#1}}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AJUSTES
+% PARÁGRAFOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % tamanho da identação do parágrafo
@@ -76,15 +72,28 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% QUADROS
+% SUMÁRIO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% define o tipo "quadros"
+% travessão no sumário para apêndices e anexos
+\renewcommand{\cftchapteraftersnum}{\hfill{} -- \hfill{}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% lista de quadros
+
 \newcommand{\quadroname}{Quadro}
-\newfloat[chapter]{quadro}{lof}{\quadroname}
-\newlistentry{quadro}{lof}{0}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
 \counterwithout{quadro}{chapter}
-\renewcommand{\cftquadroname}{\quadroname\space}
+\renewcommand{\cftquadroname}{\quadroname\space} 
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 
@@ -101,11 +110,7 @@
 			\includegraphics[width=0.15\textwidth]{./04-figuras/cefet_logo.eps}
 
 			\normalfont\scshape{\imprimirinstituicao}\\
-			\normalfont\scshape{\imprimirprograma}\\
-			\abntex@ifnotempty{\imprimirdepartamento}
-			{
-				\normalfont\scshape{\imprimirdepartamento}
-			}
+			\normalfont\scshape{\imprimirprograma}
 		\end{center}
 
 		\vspace{50pt}

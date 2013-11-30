@@ -21,7 +21,6 @@
 	\usepackage[utf8]{inputenc}				% acentuação direta
 	\usepackage[T1]{fontenc}				% codificação da fonte em 8 bits
 	\usepackage[dvips]{graphicx}				% inserir figuras
-	\usepackage{subfig}					% posicionamento de figuras
 	\usepackage{amsfonts, amssymb, amsmath, dsfont}		% fonte e simbolos matemáticos
 	\usepackage{booktabs}					% comandos para tabelas
 	\usepackage{verbatim}					% texto é interpretado como escrito no documento
@@ -29,8 +28,10 @@
 	\usepackage[bottom]{footmisc}				% mantem as notas de rodapé sempre na mesma posicao
 	\usepackage{indentfirst}				% indenta o primeiro parágrafo de cada seção.
 	\usepackage{microtype}					% para melhorias de justificação?
-	\usepackage{times}					% usa a fonte Times
+	\usepackage{palatino}					% usa a fonte Palatino
+	%\usepackage{times}					% usa a fonte Times
 	%\usepackage{lmodern}					% usa a fonte Latin Modern
+	%\usepackage{subfig}					% posicionamento de figuras
 	%\usepackage[algoruled, portuguese]{algorithm2e}	% escrever algoritmos
 	%\usepackage{acronym}					% produzir acrônimos
 	%\usepackage{scalefnt}					% permite redimensionar tamanho da fonte
@@ -42,9 +43,6 @@
 	%\usepackage{latexsym}					% simbolos matematicos
 	%\usepackage{upgreek}					% fonte letras gregas
 	%\usepackage{dsfont}					% fonte matematica
-	%\usepackage{type1ec}					% fonte Times
-	%\usepackage{pxfonts}					% fonte
-	%\usepackage{palatino}					% fonte palatino
 	%\usepackage{psfrag}					% símbolos latex em figuras eps
 	%\usepackage{subeqnarray}				% sub enumeração de equações
 	%\usepackage{bibentry}					% uso de bibtex inline
@@ -96,6 +94,7 @@
 	\include{./01-elementos-pre-textuais/resumoPt}		% Resumo na língua vernácula
 	\include{./01-elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
 	\include{./01-elementos-pre-textuais/listaIlustracoes}	% Lista de ilustrações
+	\include{./01-elementos-pre-textuais/listaQuadros}	% Lista de quadros
 	\include{./01-elementos-pre-textuais/listaTabelas}	% Lista de tabelas
 	\include{./01-elementos-pre-textuais/listaSiglas}	% Lista de abreviaturas e siglas
 	\include{./01-elementos-pre-textuais/listaSimbolos}	% Lista de símbolos
@@ -108,7 +107,7 @@
 	\include{./02-elementos-textuais/fundamentacaoTeorica}	% Fundamentação teórica
 	\include{./02-elementos-textuais/metodologia}		% Metodologia
 	\include{./02-elementos-textuais/resultados}		% Resultados
-	\include{./02-elementos-textuais/conclusoes}		% Conclusões
+	\include{./02-elementos-textuais/conclusao}		% Conclusão
 
 % elementos pós textuais
 	\postextual

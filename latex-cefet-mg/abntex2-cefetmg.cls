@@ -1,25 +1,30 @@
 %
-% abnt-cefetmg.cls
+% abntex2-cefetmg.cls
 %
 %
 %	Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 %
-%	dependência: abntex2 >= 1.9
+%	Dependência: abntex2 >= 1.7
 %
-%        Agradecimentos:
-%                Lauro Cesar https://code.google.com/p/abntex2/
-%                Henrique Borges <henriqueelias.borges@gmail.com>
-%                Cristina Murta <cristina@decom.cefetmg.br>
-%                Denise Souza <densouza@gmail.com>
+%	Agradecimentos:
+%		Lauro Cesar https://code.google.com/p/abntex2/
+%		Henrique Borges <henrique@lsi.cefetmg.br>
+%		Cristina Murta <cristina@decom.cefetmg.br>
+%		Denise Souza <densouza@gmail.com>
 
 
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{abntex2-cefetmg}[2013/12/01 v5.0]
+
+% repassa os parametros ao abntex2
+\DeclareOption*{
+	\PassOptionsToClass{\CurrentOption}{abntex2}
+}
 
 \PassOptionsToClass{
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	oneside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel.
 	sumario=tradicional,		% seleciona o sumário tradicional
 	% -- opções da classe abntex2 --
@@ -31,6 +36,7 @@
 	brazil,				% o último idioma é o principal do documento
 	}{abntex2}
 
+\ProcessOptions\relax
 \LoadClass{abntex2}
 
 

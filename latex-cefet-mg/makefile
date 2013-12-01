@@ -1,15 +1,15 @@
 # Variaveis definidas
 SOURCE = "main"
+TEX = pdflatex
+BIBTEX = bibtex
 
 # Compila o fonte
 all:
 	@echo "Compilando arquivos..."
-	@latex $(SOURCE).tex
-	@bibtex $(SOURCE).aux
-	@latex $(SOURCE).tex
-	@latex $(SOURCE).tex
-	@dvips $(SOURCE).dvi
-	@ps2pdf -dPDFSETTINGS=/prepress -dSubsetFonts=true -dEmbedAllFonts=true $(SOURCE).ps
+	$(TEX) $(SOURCE).tex
+	$(BIBTEX) $(SOURCE).aux
+	$(TEX) $(SOURCE).tex
+	$(TEX) $(SOURCE).tex
 	@echo "Terminado."
 
 # Remove arquivos temporarios

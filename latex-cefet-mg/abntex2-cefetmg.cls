@@ -78,6 +78,8 @@
 % travessão no sumário para apêndices e anexos
 \renewcommand{\cftchapteraftersnum}{\hfill{} -- \hfill{}}
 
+% insere espaço entre os itens do sumario de diferentes capítulos 
+\setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LISTAS

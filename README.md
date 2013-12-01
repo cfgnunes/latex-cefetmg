@@ -1,4 +1,9 @@
+# abntex2-cefetmg
 Modelo para trabalhos acadêmicos do CEFET-MG em LaTex baseado nas normas da ABNT. 
+
+Este projeto consiste em uma customização do projeto abntex2,
+hospedado em: <https://code.google.com/p/abntex2/>
+
 
 ## Instalação
 
@@ -7,11 +12,16 @@ Modelo para trabalhos acadêmicos do CEFET-MG em LaTex baseado nas normas da ABN
 Para instalar os pacotes necessários,
 execute os seguintes comandos no terminal: 
 
-<code> # apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-science texlive-publishers</code>
+<code> $ sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-science</code>
 
-<code> # apt-get install make cm-super </code>
+<code> $ sudo apt-get install texlive-publishers </code>
 
-<code> # apt-get install latexila </code>
+<code> $ sudo apt-get install make cm-super </code>
+
+Para instalar a versão mais recente do abntex2,
+siga as instruções em:
+<https://code.google.com/p/abntex2/wiki/InstalacaoLinux>
+
 
 ## Comandos
 

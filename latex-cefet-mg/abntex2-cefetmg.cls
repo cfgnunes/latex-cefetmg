@@ -4,7 +4,14 @@
 %
 %	Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 %
-%	dependência: abntex2 >= 1.7
+%	dependência: abntex2 >= 1.9
+%
+%        Agradecimentos:
+%                Lauro Cesar https://code.google.com/p/abntex2/
+%                Henrique Borges <henriqueelias.borges@gmail.com>
+%                Cristina Murta <cristina@decom.cefetmg.br>
+%                Denise Souza <densouza@gmail.com>
+
 
 \NeedsTeXFormat{LaTeX2e}
 
@@ -126,7 +133,7 @@
 
 		\begin{center}
 			\vspace*{-2.7cm}
-			\includegraphics[width=0.15\textwidth]{./04-figuras/cefet_logo.eps}
+			\includegraphics[width=0.15\textwidth]{./04-figuras/cefet_logo}
 
 			\normalfont\scshape{\imprimirinstituicao}\\
 			\normalfont\scshape{\imprimirprograma}

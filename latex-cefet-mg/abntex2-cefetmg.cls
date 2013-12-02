@@ -7,7 +7,7 @@
 %	Dependência: abntex2 >= 1.7
 %
 %	Agradecimentos:
-%		Lauro Cesar https://code.google.com/p/abntex2/
+%		Lauro César https://code.google.com/p/abntex2/
 %		Henrique Borges <henrique@lsi.cefetmg.br>
 %		Cristina Murta <cristina@decom.cefetmg.br>
 %		Denise Souza <densouza@gmail.com>
@@ -91,7 +91,7 @@
 % travessão no sumário para apêndices e anexos
 \renewcommand{\cftchapteraftersnum}{\hfill{} -- \hfill{}}
 
-% insere espaço entre os itens do sumario de diferentes capítulos 
+% insere espaço entre os itens do sumario de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,7 +115,7 @@
 \newlistentry{quadro}{loq}{0}
 
 \counterwithout{quadro}{chapter}
-\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 % cria a lista de algoritmos
@@ -125,7 +125,7 @@
 \newlistentry{algoritmo}{loa}{0}
 
 \counterwithout{algoritmo}{chapter}
-\renewcommand{\cftalgoritmoname}{\algoritmoname\space} 
+\renewcommand{\cftalgoritmoname}{\algoritmoname\space}
 \renewcommand*{\cftalgoritmoaftersnum}{\hfill--\hfill}
 
 
@@ -173,13 +173,13 @@
 	\begin{center}
 
 		{\large\normalfont\scshape\textbf\imprimirautor}
-	
+
 		\vspace*{\fill}\vspace*{\fill}
 		\begin{center}
 			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
 		\end{center}
 		\vspace*{\fill}
-	
+
 		\abntex@ifnotempty{\imprimirpreambulo}{
 			\hspace{.45\textwidth}
 			\begin{minipage}{.5\textwidth}
@@ -190,7 +190,7 @@
 		}
 
 		{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
-	
+
 		{\large\imprimirorientadorRotulo~\imprimirorientador\par}
 		\abntex@ifnotempty{\imprimircoorientador}{
 			{\large\imprimircoorientadorRotulo~\imprimircoorientador}
@@ -243,7 +243,7 @@
 	}{\pretextualchapter{#1}}
 
 	\vspace*{\fill}
-	
+
 	\begin{flushright}
 		\begin{minipage}{.5\textwidth}
 			\begin{SingleSpacing}

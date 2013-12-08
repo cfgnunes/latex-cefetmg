@@ -39,6 +39,11 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
+\RequirePackage{chngcntr}
+
+% define a numeração das equações de forma sequencial
+\counterwithout{equation}{chapter}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COMANDOS DE DADOS
@@ -47,6 +52,46 @@
 % comandos de dados - programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
+
+% comandos de dados - subtítulo
+\providecommand{\imprimirsubtitulo}{}
+\newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
+
+% comandos de dados - instituição do orientador
+\providecommand{\imprimirinstOrientador}{}
+\newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
+
+% comandos de dados - instituição do co-orientador
+\providecommand{\imprimirinstCoorientador}{}
+\newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
+
+% criação do comando para área de concentração (folha de rosto)
+\newcommand{\imprimirareaconcentracaoRotulo}{\'Area de concentra\c{c}\~ao: }
+\providecommand{\imprimirareaconcentracao}{}
+\newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
+
+% criação do comando para linha de pesqusa (folha de rosto)
+\newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
+\providecommand{\imprimirlinhapesquisa}{}
+\newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OBJETOS FLUTUANTES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% comando que trata a fonte nos objetos flutuantes
+\renewcommand{\fonte}[1]{
+	\begin{SingleSpacing}\par\end{SingleSpacing}
+	\centering\small{Fonte: #1}
+}
+
+% comando que trata as notas nos objetos flutuantes
+\renewcommand{\nota}[1]{
+	\small Nota: \\[-0.8cm]
+	\hspace{-0.5cm}
+	\begin{quote}{#1}\end{quote}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,6 +139,7 @@
 % insere espaço entre os itens do sumario de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LISTAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,7 +152,6 @@
 	\renewcommand{\listtablename}{Lista de tabelas}
 }
 \newcommand{\listofquadrosname}{Lista de quadros}
-\newcommand{\listofalgoritmosname}{Lista de algoritmos}
 
 % cria a lista de quadros
 \newcommand{\quadroname}{Quadro}
@@ -117,16 +162,6 @@
 \counterwithout{quadro}{chapter}
 \renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
-
-% cria a lista de algoritmos
-\newcommand{\algoritmoname}{Algoritmo}
-\newfloat[chapter]{algoritmo}{loa}{\algoritmoname}
-\newlistof{listofalgoritmos}{loa}{\listofalgoritmosname}
-\newlistentry{algoritmo}{loa}{0}
-
-\counterwithout{algoritmo}{chapter}
-\renewcommand{\cftalgoritmoname}{\algoritmoname\space}
-\renewcommand*{\cftalgoritmoaftersnum}{\hfill--\hfill}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,33 +206,46 @@
 \makeatletter
 \renewcommand{\folhaderostocontent}{
 	\begin{center}
-
 		{\large\normalfont\scshape\textbf\imprimirautor}
 
 		\vspace*{\fill}\vspace*{\fill}
 		\begin{center}
 			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
+			\abntex@ifnotempty{\imprimirsubtitulo}{
+				{\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
+			}
 		\end{center}
 		\vspace*{\fill}
 
 		\abntex@ifnotempty{\imprimirpreambulo}{
-			\hspace{.45\textwidth}
-			\begin{minipage}{.5\textwidth}
-				\SingleSpacing
-				\imprimirpreambulo
-			\end{minipage}
+			\SingleSpacing
+			\begin{tabular}{p{.33\textwidth}p{.13\textwidth}p{.44\textwidth}}
+				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+				\abntex@ifnotempty{\imprimirareaconcentracao}
+				{
+					& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+				}
+				\abntex@ifnotempty{\imprimirlinhapesquisa}
+				{
+	 				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+				}
+				& \small\imprimirorientadorRotulo & \imprimirorientador \\
+				& & \small\imprimirinstOrientador \\ & & \\
+				\abntex@ifnotempty{\imprimircoorientador}
+				{
+					& \small\imprimircoorientadorRotulo & \imprimircoorientador \\
+					& & \small\imprimirinstCoorientador
+				}
+			\end{tabular}
+
 			\vspace*{\fill}
 		}
 
-		{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
-
-		{\large\imprimirorientadorRotulo~\imprimirorientador\par}
-		\abntex@ifnotempty{\imprimircoorientador}{
-			{\large\imprimircoorientadorRotulo~\imprimircoorientador}
-		}
 		\vspace*{\fill}
 
 		\begin{center}
+			\normalfont\scshape{\imprimirinstituicao}\\
+			\normalfont\scshape{\imprimirprograma}\\
 			\normalfont\scshape\normalsize{\imprimirlocal}\\
 			\normalfont\scshape\normalsize{\imprimirdata}
 		\end{center}
@@ -205,7 +253,6 @@
 	\end{center}
 }
 \makeatother
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEDICATORIA

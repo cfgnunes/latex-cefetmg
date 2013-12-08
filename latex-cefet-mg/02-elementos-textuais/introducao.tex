@@ -2,53 +2,28 @@
 % Documento: Introdução
 %
 
+\pagenumbering{arabic}
 \chapter{Introdução}\label{chap:introducao}
 
-Esta é a primeira página\index{alfa}{pagina@página} na qual a numeração é visível (canto superior direito).
-Entretanto, a numeração das páginas (neste modelo de documento\index{alfa}{documento}) começa na Folha de Rosto, que é a página\index{alfa}{pagina@página} 1. Toda a numeração de página\index{alfa}{pagina@página} é automática.
+Este modelo prove um arquivo \textit{makefile}, portanto, para gerar este documento no formato PDF, basta apenas executar o comando {\ttfamily make all} no linux. Para limpar os arquivos temporários, basta digitar o comando {\ttfamily make clean}.
 
-Cada capítulo deve conter uma pequena introdução (tipicamente, um ou dois parágrafos) que deve deixar claro o objetivo e o que será discutido no capítulo, bem como a organização do capítulo. Veja o exemplo abaixo.
+Cada capítulo deve conter uma pequena introdução (tipicamente, um ou dois parágrafos) que deve deixar claro o objetivo e o que será discutido no capítulo, bem como a organização do capítulo.
+Veja o exemplo abaixo.
 
-Neste capítulo apresenta-se o desenvolvimento\index{alfa}{desenvolvimento} da \ldots, no que se refere à \ldots, estudos e autores importantes nesta trajetória. Para contextualizar a \ldots\mbox{} no âmbito dos estudos sobre \ldots, faz-se, na seção 1.1, uma introdução aos princípios-chave \ldots\mbox{ }Na seção 1.2, discute-se os aspectos relacionados \ldots, sob o ponto de vista da \ldots\mbox{ }blá blá \ldots\mbox{ }Ao final, seção 1.N, apresenta-se alguns comentários e uma síntese final do capítulo.
+A inclusão de reticências (\ldots) no texto deverá ser feita através de um comando especial denominado \verb|\ldots|.
+Assim esse comando deverá ser utilizado ao invés da digitação de três pontos.
 
-A inclusão de reticências (\ldots) no texto deverá ser feita através de um comando especial denominado \verb|\ldots|. Assim esse comando deverá ser utilizado ao invés da digitação de três pontos.
+A introdução deverá apresentar uma visão de conjunto do trabalho a ser realizado, com o apoio da literatura, situando-o no contexto do estado da arte da área científica específica, sua relevância no contexto da área inserida e sua importância específica para o avanço do conhecimento.
 
-Para melhor entendimento do uso do estilo de formatação, aconselha-se que o potencial usuário analise os comandos existentes no arquivo {\ttfamily main.tex} e os resultados obtidos no arquivo {\ttfamily main.pdf} depois do processamento pelo software LATEX + BIBTEX \cite{LaTeX2009,BibTeX2009}. Recomenda-se a consulta ao material de referência do software para a sua correta utilização \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
+Para melhor entendimento do uso do estilo de formatação, aconselha-se que o potencial usuário analise os comandos existentes no arquivo {\ttfamily main.tex} e os resultados obtidos no arquivo {\ttfamily main.pdf} depois do processamento pelo software LATEX + BIBTEX \cite{LaTeX2009,BibTeX2009}.
+Recomenda-se a consulta ao material de referência do software para a sua correta utilização \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
 
 \section{Motivação}
 \label{sec:motivacao}
 
-Uma das principais vantagens do uso do estilo de formatação para LATEX é a formatação \textit{automática} dos elementos que compõem um documento acadêmico, tais como capa, folha de rosto, dedicatória, agradecimentos, epígrafe, resumo, abstract, listas de figuras, tabelas, siglas e símbolos, sumário, capítulos, referências, etc. Outras grandes vantagens do uso do LATEX para formatação de documentos acadêmicos dizem respeito à facilidade de gerenciamento de referências cruzadas e bibliográficas, além da formatação -- inclusive de equações matemáticas -- correta e esteticamente perfeita.
+O estilo de documento utilizado é o {\ttfamily abntex2}.
+Através desse estilo a constituição do documento torna-se facilitada, uma vez que o mesmo possui comandos especiais para auxiliar a distribuição/definição das diversas partes constituintes do projeto.
+Esse estilo é baseado nas normas da ABNT.
+Maiores detalhes relacionados aos comandos existentes no estilo poderão ser adquiridos através da documentação disponível no site \href{https://code.google.com/p/abntex2/}{https://code.google.com/p/abntex2/}.
 
-\section{Caracterização do Problema}
-\label{sec:caracProblema}
-
-Inserir seu texto aqui...
-
-\section{Objetivos}
-\label{sec:objetivos}
-
-\subsection{Objetivo Geral}
-\label{subsec:objetivoGeral}
-
-Prover um modelo de formatação LATEX que atenda às normas da instituição atual e às normas brasileiras.
-
-\subsection{Objetivos Específicos}
-\label{subsec:objetivosEspecificos}
-
-\begin{itemize}
-	\item Obter documentos acadêmicos automaticamente formatados com correção e perfeição estética.
-	\item Desonerar autores da tediosa tarefa de formatar documentos acadêmicos, permitindo sua concentração no conteúdo do mesmo.
-	\item Desonerar orientadores e examinadores da tediosa tarefa de conferir a formatação de documentos acadêmicos, permitindo sua concentração no conteúdo do mesmo.
-\end{itemize}
-
-
-\section{Organização do Documento}
-\label{sec:organizacaoDocumento}
-
-Inserir seu texto aqui...
-
-\section{Justificativa}
-\label{sec:justificativa}
-
-Inserir seu texto aqui...
+Uma das principais vantagens do uso do estilo de formatação para LATEX é a formatação \textit{automática} dos elementos que compõem um documento acadêmico, tais como capa, folha de rosto, dedicatória, agradecimentos, epígrafe, resumo, abstract, listas de figuras, tabelas, siglas e símbolos, sumário, capítulos, referências, etc.

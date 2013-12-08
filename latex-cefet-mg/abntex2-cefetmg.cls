@@ -171,24 +171,51 @@
 \makeatletter
 \renewcommand{\imprimircapa}{
 	\begin{capa}
+		
+		\hspace{-2.0cm}
+		\begin{minipage}{.2\textwidth}
+			\includegraphics[width=0.8\textwidth]{./04-figuras/cefet_logo}
+		\end{minipage}
+		\quad
+		\hspace{-1.5cm}
+		\begin{minipage}{.9\textwidth}
+			\begin{center}
+			\normalfont\scshape{\imprimirinstituicao}\\
+			\normalfont\scshape{\imprimirprograma}\\
+			\abntex@ifnotempty{\imprimirareaconcentracao}
+			{
+				\normalfont\scshape{\imprimirareaconcentracao}
+			}
+			\end{center}
+		\end{minipage}
+
+		\vspace*{\fill}\vspace*{\fill}
 
 		\begin{center}
-			\vspace*{-2.7cm}
-			\includegraphics[width=0.15\textwidth]{./04-figuras/cefet_logo}
-
-			\normalfont\scshape{\imprimirinstituicao}\\
-			\normalfont\scshape{\imprimirprograma}
+			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
+			\abntex@ifnotempty{\imprimirsubtitulo}{
+				{\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
+			}
 		\end{center}
 
-		\vspace{50pt}
-		\center
-		\large\normalfont\scshape\textbf\imprimirautor
+		\vspace*{\fill}
 
-		\vfill
-		\ABNTEXchapterfont\Large\scshape\imprimirtitulo
+		\begin{center}
+			\large\normalfont\scshape\textbf\imprimirautor
+		\end{center}
+		\vspace{5pt}
+		\begin{center}
+			\small\imprimirorientadorRotulo{} \imprimirorientador \\
+			\small\imprimirinstOrientador \\
+			\abntex@ifnotempty{\imprimircoorientador}
+			{
+				\small\imprimircoorientadorRotulo{} \imprimircoorientador \\
+				\small\imprimirinstCoorientador
+			}
+		\end{center}
 
-		\vfill
-		\vspace{100pt}
+		\vspace*{\fill}
+
 		\begin{center}
 			\normalfont\scshape\normalsize{\imprimirlocal}\\
 			\normalfont\scshape\normalsize{\imprimirdata}

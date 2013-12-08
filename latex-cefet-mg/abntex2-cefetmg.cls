@@ -61,7 +61,7 @@
 \providecommand{\imprimirinstOrientador}{}
 \newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
 
-% comandos de dados - instituição do co-orientador
+% comandos de dados - instituição do coorientador
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 

@@ -88,10 +88,10 @@
 
 % comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{
-        \begin{SingleSpacing}\par\end{SingleSpacing}
-        \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
-                Nota: & #1
-        \end{tabular}
+	\begin{SingleSpacing}\par\end{SingleSpacing}
+	\begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
+		Nota: & #1
+	\end{tabular}
 }
 
 
@@ -210,7 +210,7 @@
 			\small\imprimirinstOrientador \\
 			\abntex@ifnotempty{\imprimircoorientador}
 			{
-        			\begin{SingleSpacing}\par\end{SingleSpacing}
+				\begin{SingleSpacing}\par\end{SingleSpacing}
 				\small\imprimircoorientadorRotulo{} \imprimircoorientador \\
 				\small\imprimirinstCoorientador
 			}

@@ -147,10 +147,17 @@
 
 % define os títulos das listas
 \addto\captionsbrazil{
+	% ajusta nomes padrões do babel
 	\renewcommand{\listadesiglasname}{Lista de abreviaturas e siglas}
 	\renewcommand{\listadesimbolosname}{Lista de s\'imbolos}
 	\renewcommand{\listfigurename}{Lista de figuras}
 	\renewcommand{\listtablename}{Lista de tabelas}
+	% ajusta nomes usados com a macro \autoref
+	\renewcommand{\pageautorefname}{p\'agina}
+	\renewcommand{\sectionautorefname}{Se{\c c}\~ao}
+	\renewcommand{\subsectionautorefname}{Subse{\c c}\~ao}
+	\renewcommand{\subsubsectionautorefname}{Subse{\c c}\~ao}
+	\renewcommand{\paragraphautorefname}{Subse{\c c}\~ao}
 }
 \newcommand{\listofquadrosname}{Lista de quadros}
 

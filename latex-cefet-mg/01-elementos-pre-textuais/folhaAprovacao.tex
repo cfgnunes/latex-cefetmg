@@ -1,38 +1,53 @@
 %
 % Documento: Folha de aprovação
 %
-
+\makeatletter
 \begin{folhadeaprovacao}
 
 	\begin{center}
 		{\large\normalfont\scshape\textbf\imprimirautor}
+	\end{center}
 
-		\vspace*{\fill}\vspace*{\fill}
-		\begin{center}
-			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
-		\end{center}
-		\vspace*{\fill}
+	\vspace*{50pt}
 
+	\begin{center}
+		\ABNTEXchapterfont\Large\scshape\imprimirtitulo
+		\abntex@ifnotempty{\imprimirsubtitulo}{
+			{\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
+		}
+	\end{center}
+
+	\vspace*{60pt}
+
+	\abntex@ifnotempty{\imprimirpreambulo}{
 		\SingleSpacing
-		\begin{tabular}{p{.33\textwidth}p{.13\textwidth}p{.44\textwidth}}
+		\begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
 			& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
 		\end{tabular}
-		\vspace*{\fill}
+	}
 
+	\vspace*{10pt}
+
+	\begin{center}
 		Trabalho aprovado. \imprimirlocal, 24 de novembro de 2014
 	\end{center}
 
-	\assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-	\assinatura{\textbf{Professor} \\ Convidado 1}
-	\assinatura{\textbf{Professor} \\ Convidado 2}
-	%\assinatura{\textbf{Professor} \\ Convidado 3}
-	%\assinatura{\textbf{Professor} \\ Convidado 4}
+	\begin{center}
+		\assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+		\assinatura{\textbf{Professor} \\ Convidado 1}
+		\assinatura{\textbf{Professor} \\ Convidado 2}
+		%\assinatura{\textbf{Professor} \\ Convidado 3}
+		%\assinatura{\textbf{Professor} \\ Convidado 4}
+	\end{center}
+
+	\vspace*{\fill}
 
 	\begin{center}
 		\normalfont\scshape{\imprimirinstituicao}\\
 		\normalfont\scshape{\imprimirprograma}\\
-		\normalfont\scshape\normalsize{\imprimirlocal}\\
-		\normalfont\scshape\normalsize{\imprimirdata}
+		\normalfont\scshape{\imprimirlocal}\\
+		\normalfont\scshape{\imprimirdata}
 	\end{center}
 
 \end{folhadeaprovacao}
+\makeatother

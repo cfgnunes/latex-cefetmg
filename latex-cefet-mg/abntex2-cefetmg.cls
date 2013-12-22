@@ -46,6 +46,36 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESTILO DE ELEMENTOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% elementos pre-textuais
+\renewcommand{\pretextual}{
+	\pagenumbering{roman} % algarismos romanos
+	\aliaspagestyle{chapter}{plain}
+	\pagestyle{plain}
+	\aliaspagestyle{cleared}{empty}
+	\aliaspagestyle{part}{empty}
+}
+
+% elementos textuais
+% Configura layout para elementos textuais
+\renewcommand{\textual}{
+	\pagenumbering{arabic} % inicia a numeração em 1
+	\ifthenelse{\equal{\ABNTEXisarticle}{true}}{
+		\pagestyle{plain}
+	}{
+		\pagestyle{abntheadings}
+		\aliaspagestyle{chapter}{abntchapfirst}
+	}
+	\nouppercaseheads
+	\bookmarksetup{startatroot}
+}
+
+% elementos pos-textuais
+\renewcommand{\postextual}{\phantompart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COMANDOS DE DADOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -179,7 +209,7 @@
 \makeatletter
 \renewcommand{\imprimircapa}{
 	\begin{capa}
-		
+
 		\hspace{-2.0cm}
 		\begin{minipage}{.2\textwidth}
 			\includegraphics[width=0.8\textwidth]{./04-figuras/cefet_logo}
@@ -197,7 +227,7 @@
 			\end{center}
 		\end{minipage}
 
-		\vspace*{\fill}\vspace*{\fill}
+		\vspace*{200pt}
 
 		\begin{center}
 			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
@@ -206,12 +236,14 @@
 			}
 		\end{center}
 
-		\vspace*{\fill}
+		\vspace*{80pt}
 
 		\begin{center}
 			\large\normalfont\scshape\textbf\imprimirautor
 		\end{center}
-		\vspace{5pt}
+
+		\vspace*{10pt}
+
 		\begin{center}
 			\small\imprimirorientadorRotulo{} \imprimirorientador \\
 			\small\imprimirinstOrientador \\
@@ -226,8 +258,8 @@
 		\vspace*{\fill}
 
 		\begin{center}
-			\normalfont\scshape\normalsize{\imprimirlocal}\\
-			\normalfont\scshape\normalsize{\imprimirdata}
+			\normalfont\scshape{\imprimirlocal}\\
+			\normalfont\scshape{\imprimirdata}
 		\end{center}
 
 	\end{capa}
@@ -241,51 +273,51 @@
 
 \makeatletter
 \renewcommand{\folhaderostocontent}{
+	\setcounter{page}{2}
 	\begin{center}
 		{\large\normalfont\scshape\textbf\imprimirautor}
+	\end{center}
 
-		\vspace*{\fill}\vspace*{\fill}
-		\begin{center}
-			\ABNTEXchapterfont\Large\scshape\imprimirtitulo
-			\abntex@ifnotempty{\imprimirsubtitulo}{
-				{\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
-			}
-		\end{center}
-		\vspace*{\fill}
+	\vspace*{150pt}
 
-		\abntex@ifnotempty{\imprimirpreambulo}{
-			\SingleSpacing
-			\begin{tabular}{p{.33\textwidth}p{.13\textwidth}p{.44\textwidth}}
-				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
-				\abntex@ifnotempty{\imprimirareaconcentracao}
-				{
-					& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
-				}
-				\abntex@ifnotempty{\imprimirlinhapesquisa}
-				{
-	 				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
-				}
-				& \small\imprimirorientadorRotulo & \imprimirorientador \\
-				& & \small\imprimirinstOrientador \\ & & \\
-				\abntex@ifnotempty{\imprimircoorientador}
-				{
-					& \small\imprimircoorientadorRotulo & \imprimircoorientador \\
-					& & \small\imprimirinstCoorientador
-				}
-			\end{tabular}
-
-			\vspace*{\fill}
+	\begin{center}
+		\ABNTEXchapterfont\Large\scshape\imprimirtitulo
+		\abntex@ifnotempty{\imprimirsubtitulo}{
+			{\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
 		}
+	\end{center}
 
-		\vspace*{\fill}
+	\vspace*{90pt}
 
-		\begin{center}
-			\normalfont\scshape{\imprimirinstituicao}\\
-			\normalfont\scshape{\imprimirprograma}\\
-			\normalfont\scshape\normalsize{\imprimirlocal}\\
-			\normalfont\scshape\normalsize{\imprimirdata}
-		\end{center}
+	\abntex@ifnotempty{\imprimirpreambulo}{
+		\SingleSpacing
+		\begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
+			& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+			\abntex@ifnotempty{\imprimirareaconcentracao}
+			{
+				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+			}
+			\abntex@ifnotempty{\imprimirlinhapesquisa}
+			{
+					& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+			}
+			& \small\imprimirorientadorRotulo & \imprimirorientador \\
+			& & \small\imprimirinstOrientador \\ & & \\
+			\abntex@ifnotempty{\imprimircoorientador}
+			{
+				& \small\imprimircoorientadorRotulo & \imprimircoorientador \\
+				& & \small\imprimirinstCoorientador
+			}
+		\end{tabular}
+	}
 
+	\vspace*{\fill}
+
+	\begin{center}
+		\normalfont\scshape{\imprimirinstituicao}\\
+		\normalfont\scshape{\imprimirprograma}\\
+		\normalfont\scshape{\imprimirlocal}\\
+		\normalfont\scshape{\imprimirdata}
 	\end{center}
 }
 \makeatother

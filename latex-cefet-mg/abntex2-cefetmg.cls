@@ -14,7 +14,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-cefetmg}[2013/12/01 v5.0]
+\ProvidesClass{abntex2-cefetmg}[2013/12/22 v5.0]
 
 % repassa os parametros ao abntex2
 \DeclareOption*{

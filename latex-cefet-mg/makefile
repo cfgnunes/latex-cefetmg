@@ -19,7 +19,7 @@ clean:
 	@find . -type f -iname "*.log" -delete
 	@find . -type f -iname "*.fdb_latexmk" -delete
 	@find . -type f -iname "*.*~" -delete
-	@rm -f *.ps *.l* *.idx *.bbl *.brf *.glo *.dvi *.toc *.blg *.ilg *.ind *.out *.wsp *.fls *.synctex.*
+	@rm -f *.bak *.ps *.l* *.idx *.bbl *.brf *.glo *.dvi *.toc *.blg *.ilg *.ind *.out *.wsp *.fls *.synctex.*
 	@echo "Terminado."
 
 pdf: clean all

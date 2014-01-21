@@ -13,7 +13,6 @@ all:
 	@echo "Comprimindo o arquivo pdf..."
 	@gs	-q -dNOPAUSE -dBATCH -dSAFER \
 		-sDEVICE=pdfwrite \
-		-dCompatibilityLevel=1.5 \
 		-dEmbedAllFonts=true \
 		-dSubsetFonts=true \
 		-sOutputFile=$(SOURCE)_compressed.pdf \

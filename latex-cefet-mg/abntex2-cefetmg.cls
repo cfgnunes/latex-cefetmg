@@ -39,7 +39,29 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
+\RequirePackage[brazilian,hyperpageref]{backref}
 \RequirePackage{chngcntr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONFIGURACOES GERAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% configurações do pacote backref
+% usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
+% texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1
+		Nenhuma citacao no texto.
+	\or
+		Citado na p\'agina #2.
+	\else
+        	Citado #1 vezes nas p\'aginas #2.
+	\fi
+}
 
 % define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
@@ -74,6 +96,7 @@
 
 % elementos pos-textuais
 \renewcommand{\postextual}{\phantompart}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COMANDOS DE DADOS

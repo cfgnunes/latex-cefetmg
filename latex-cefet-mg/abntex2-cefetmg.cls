@@ -55,7 +55,7 @@
 % define os textos da citação
 \renewcommand*{\backrefalt}[4]{
 	\ifcase #1
-		Nenhuma citacao no texto.
+		Nenhuma cita\c{c}\~ao no texto.
 	\or
 		Citado na p\'agina #2.
 	\else

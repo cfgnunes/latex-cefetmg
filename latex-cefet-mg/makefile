@@ -21,13 +21,10 @@ all:
 
 # Remove arquivos temporarios
 clean:
-	@echo "Limpando arquivos temporários..."
+	@echo "Limpando arquivos temporarios..."
 	@find . -type f -iname "*.aux" -delete
 	@find . -type f -iname "*.log" -delete
 	@find . -type f -iname "*.fdb_latexmk" -delete
 	@find . -type f -iname "*.*~" -delete
 	@rm -f *.pdf *.bak *.ps *.l* *.idx *.bbl *.brf *.glo *.dvi *.toc *.blg *.ilg *.ind *.out *.wsp *.fls *.synctex.*
 	@echo "Terminado."
-
-pdf: clean all
-	@evince $(SOURCE).pdf

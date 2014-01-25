@@ -1,22 +1,25 @@
-# Variaveis definidas
-SOURCE = "main"
-TEX = pdflatex
-BIBTEX = bibtex
+# Definicao de variaveis
+SOURCE      = "main"
+LATEX       = pdflatex
+BIBTEX      = bibtex
+MAKEINDEX   = makeindex
+GHOSTSCRIPT = gs
 
-# Compila o fonte
+# Compila o codigo fonte
 all:
 	@echo "Compilando arquivos..."
-	$(TEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
+	$(MAKEINDEX) $(SOURCE).idx
 	$(BIBTEX) $(SOURCE).aux
-	$(TEX) $(SOURCE).tex
-	$(TEX) $(SOURCE).tex
-	@echo "Comprimindo o arquivo pdf..."
-	@gs	-q -dNOPAUSE -dBATCH -dSAFER \
-		-sDEVICE=pdfwrite \
-		-dEmbedAllFonts=true \
-		-dSubsetFonts=true \
-		-sOutputFile=$(SOURCE)_compressed.pdf \
-		 $(SOURCE).pdf
+	$(LATEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
+	echo "Comprimindo o arquivo pdf..."
+	@$(GHOSTSCRIPT)	-q -dNOPAUSE -dBATCH -dSAFER \
+			-sDEVICE=pdfwrite \
+			-dEmbedAllFonts=true \
+			-dSubsetFonts=true \
+			-sOutputFile=$(SOURCE)_compressed.pdf \
+			 $(SOURCE).pdf
 	@echo "Terminado."
 
 # Remove arquivos temporarios

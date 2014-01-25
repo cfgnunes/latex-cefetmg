@@ -14,7 +14,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-cefetmg}[2013/12/22 v5.0]
+\ProvidesClass{abntex2-cefetmg}[2014/01/25 v5.2]
 
 % repassa os parametros ao abntex2
 \DeclareOption*{
@@ -39,9 +39,9 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-\RequirePackage[brazilian,hyperpageref]{backref}
+\RequirePackage[brazilian,hyperpageref]{backref}		% produzir índice nas referências
+\RequirePackage{makeidx}					% produzir índice remissivo de palavras
 \RequirePackage{chngcntr}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CONFIGURACOES GERAIS
@@ -66,6 +66,23 @@
 % define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
+% redefine títulos
+\renewcommand{\folhaderostoname}{Folha de Rosto}
+\renewcommand{\folhadeaprovacaoname}{Folha de Aprova\c{c}\~ao}
+\addto\captionsbrazil{
+	% ajusta nomes padrões do babel
+	\renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
+	\renewcommand{\listadesimbolosname}{Lista de S\'imbolos}
+	\renewcommand{\listfigurename}{Lista de Figuras}
+	\renewcommand{\listtablename}{Lista de Tabelas}
+	% ajusta nomes usados com a macro \autoref
+	\renewcommand{\pageautorefname}{p\'agina}
+	\renewcommand{\sectionautorefname}{Se{\c c}\~ao}
+	\renewcommand{\subsectionautorefname}{Subse{\c c}\~ao}
+	\renewcommand{\subsubsectionautorefname}{Subse{\c c}\~ao}
+	\renewcommand{\paragraphautorefname}{Subse{\c c}\~ao}
+}
+\newcommand{\listofquadrosname}{Lista de Quadros}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ESTILO DE ELEMENTOS
@@ -95,7 +112,10 @@
 }
 
 % elementos pos-textuais
-\renewcommand{\postextual}{\phantompart}
+\renewcommand{\postextual}{
+	\phantompart
+	\renewcommand{\indexname}{\'Indice Remissivo}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -197,22 +217,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LISTAS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% define os títulos das listas
-\addto\captionsbrazil{
-	% ajusta nomes padrões do babel
-	\renewcommand{\listadesiglasname}{Lista de abreviaturas e siglas}
-	\renewcommand{\listadesimbolosname}{Lista de s\'imbolos}
-	\renewcommand{\listfigurename}{Lista de figuras}
-	\renewcommand{\listtablename}{Lista de tabelas}
-	% ajusta nomes usados com a macro \autoref
-	\renewcommand{\pageautorefname}{p\'agina}
-	\renewcommand{\sectionautorefname}{Se{\c c}\~ao}
-	\renewcommand{\subsectionautorefname}{Subse{\c c}\~ao}
-	\renewcommand{\subsubsectionautorefname}{Subse{\c c}\~ao}
-	\renewcommand{\paragraphautorefname}{Subse{\c c}\~ao}
-}
-\newcommand{\listofquadrosname}{Lista de quadros}
 
 % cria a lista de quadros
 \newcommand{\quadroname}{Quadro}

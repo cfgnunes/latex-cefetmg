@@ -10,8 +10,6 @@
 %
 
 % Largura da tabulação dos arquivos igual a 8 (utilizar 'Tab' ao invés de 'Espaços')
-% TODO: criar glossário
-% TODO: criar índice remissivo
 
 \documentclass[oneside]{abntex2-cefetmg} 	% imprimir apenas frente
 %\documentclass[doubleside]{abntex2-cefetmg}	% imprimir frente e verso
@@ -35,11 +33,9 @@
 	%\usepackage{times}					% usa a fonte Times
 	%\usepackage{lmodern}					% usa a fonte Latin Modern
 	%\usepackage{subfig}					% posicionamento de figuras
-	%\usepackage{acronym}					% produzir acrônimos
 	%\usepackage{scalefnt}					% permite redimensionar tamanho da fonte
 	%\usepackage{color, colortbl}				% comandos de cores
 	%\usepackage{lscape}					% permite páginas em modo "paisagem"
-	%\usepackage{breakurl}					% permite quebra de linha em urls
 	%\usepackage{ae,aecompl}				% fontes de alta qualidade
 	%\usepackage{picinpar}					% dispor imagens em parágrafos
 	%\usepackage{latexsym}					% simbolos matematicos
@@ -47,9 +43,6 @@
 	%\usepackage{dsfont}					% fonte matematica
 	%\usepackage{psfrag}					% símbolos latex em figuras eps
 	%\usepackage{subeqnarray}				% sub enumeração de equações
-	%\usepackage{bibentry}					% uso de bibtex inline
-	%\usepackage{makeidx}					% produzir índice remissivo (glossario)
-	%\usepackage{multind}					% produzir índices múltiplos
 
 % inclui o prêambulo do documento
 	\include{./01-elementos-pre-textuais/preambulo}
@@ -77,6 +70,9 @@
 	pdfkeywords={abnt, latex, abntex, abntex2}
 }
 \makeatother
+
+% criação de índice remissivo
+\makeindex
 
 % início do documento
 \begin{document}
@@ -117,6 +113,6 @@
 	%\include{./03-elementos-pos-textuais/glossario}	% Glossário
 	\include{./03-elementos-pos-textuais/apendices}		% Apêndices
 	\include{./03-elementos-pos-textuais/anexos}		% Anexos
-	%\include{./03-elementos-pos-textuais/indices}		% Índices
+	\printindex						% Índice remissivo
 
 \end{document}

@@ -178,6 +178,8 @@
 % espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.2cm}
 
+%espaço entre o texto e o footer
+\setlength{\footskip}{0.0cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FONTES
@@ -300,7 +302,6 @@
 
 \makeatletter
 \renewcommand{\folhaderostocontent}{
-	\setcounter{page}{2}
 	\begin{center}
 		{\large\normalfont\scshape\textbf\imprimirautor}
 	\end{center}

@@ -1,5 +1,5 @@
 # Definicao de variaveis
-SOURCE      = "main"
+SOURCE      = main
 LATEX       = pdflatex
 BIBTEX      = bibtex
 MAKEINDEX   = makeindex
@@ -14,12 +14,12 @@ all:
 	$(LATEX) $(SOURCE).tex
 	$(LATEX) $(SOURCE).tex
 	@echo "Comprimindo o arquivo pdf..."
-	@$(GHOSTSCRIPT)	-q -dNOPAUSE -dBATCH -dSAFER \
-			-sDEVICE=pdfwrite \
-			-dEmbedAllFonts=true \
-			-dSubsetFonts=true \
-			-sOutputFile=$(SOURCE)_compressed.pdf \
-			 $(SOURCE).pdf
+	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
+		-sDEVICE=pdfwrite \
+		-dEmbedAllFonts=true \
+		-dSubsetFonts=true \
+		-sOutputFile=$(SOURCE)_compressed.pdf \
+		$(SOURCE).pdf
 	@echo "Terminado."
 
 # Remove arquivos temporarios

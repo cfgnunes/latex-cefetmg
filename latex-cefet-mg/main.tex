@@ -5,109 +5,110 @@
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 % Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 %
-%
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefet-mg
 %
-% Largura da tabulação dos arquivos igual a 8 (utilizar 'Tab' ao invés de 'Espaços')
+%
+% Informações:
+%   Codificação utilizada: UTF-8
+%   Tamanho da tabulação: 4 (espaços)
 
 
-\documentclass[oneside]{abntex2-cefetmg} 	% imprimir apenas frente
-%\documentclass[doubleside]{abntex2-cefetmg}	% imprimir frente e verso
+\documentclass[oneside]{abntex2-cefetmg}            % Imprimir apenas frente
+%\documentclass[doubleside]{abntex2-cefetmg}        % Imprimir frente e verso
 
-% importações de pacotes
-\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntex2cite}	% citações padrão ABNT
-\usepackage{bookmark}					% cria menu de bookmarks
-\usepackage[utf8]{inputenc}				% acentuação direta
-\usepackage[T1]{fontenc}				% codificação da fonte em 8 bits
-\usepackage{graphicx}					% inserir figuras
-\usepackage{amsfonts, amssymb, amsmath, dsfont}		% fonte e simbolos matemáticos
-\usepackage{booktabs}					% comandos para tabelas
-\usepackage{verbatim}					% texto é interpretado como escrito no documento
-\usepackage{multirow, array}				% múltiplas linhas e colunas em tabelas
-\usepackage[bottom]{footmisc}				% mantem as notas de rodapé sempre na mesma posicao
-\usepackage{indentfirst}				% indenta o primeiro parágrafo de cada seção.
-\usepackage{microtype}					% para melhorias de justificação?
-\usepackage{palatino}					% usa a fonte Palatino
-\usepackage[algoruled, portuguese]{algorithm2e}		% escrever algoritmos
-\usepackage{float}					% utilizado para criação de floats
-%\usepackage{times}					% usa a fonte Times
-%\usepackage{lmodern}					% usa a fonte Latin Modern
-%\usepackage{subfig}					% posicionamento de figuras
-%\usepackage{scalefnt}					% permite redimensionar tamanho da fonte
-%\usepackage{color, colortbl}				% comandos de cores
-%\usepackage{lscape}					% permite páginas em modo "paisagem"
-%\usepackage{ae,aecompl}				% fontes de alta qualidade
-%\usepackage{picinpar}					% dispor imagens em parágrafos
-%\usepackage{latexsym}					% simbolos matematicos
-%\usepackage{upgreek}					% fonte letras gregas
-%\usepackage{subeqnarray}				% sub enumeração de equações
+% Importações de pacotes
+\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntex2cite}  % Citações padrão ABNT
+\usepackage{bookmark}                               % Cria menu de bookmarks
+\usepackage[utf8]{inputenc}                         % Acentuação direta
+\usepackage[T1]{fontenc}                            % Codificação da fonte em 8 bits
+\usepackage{graphicx}                               % Inserir figuras
+\usepackage{amsfonts, amssymb, amsmath}             % Fonte e simbolos matemáticos
+\usepackage{booktabs}                               % Comandos para tabelas
+\usepackage{verbatim}                               % Texto é interpretado como escrito no documento
+\usepackage{multirow, array}                        % Múltiplas linhas e colunas em tabelas
+\usepackage[bottom]{footmisc}                       % Mantem as notas de rodapé sempre na mesma posicao
+\usepackage{indentfirst}                            % Indenta o primeiro parágrafo de cada seção.
+\usepackage{microtype}                              % Para melhorias de justificação?
+\usepackage{palatino}                               % Usa a fonte Palatino
+\usepackage[algoruled, portuguese]{algorithm2e}     % Escrever algoritmos
+\usepackage{float}                                  % Utilizado para criação de floats
+%\usepackage{times}                                 % Usa a fonte Times
+%\usepackage{lmodern}                               % Usa a fonte Latin Modern
+%\usepackage{subfig}                                % Posicionamento de figuras
+%\usepackage{scalefnt}                              % Permite redimensionar tamanho da fonte
+%\usepackage{color, colortbl}                       % Comandos de cores
+%\usepackage{lscape}                                % Permite páginas em modo "paisagem"
+%\usepackage{ae, aecompl}                           % Fontes de alta qualidade
+%\usepackage{picinpar}                              % Dispor imagens em parágrafos
+%\usepackage{latexsym}                              % Simbolos matematicos
+%\usepackage{upgreek}                               % Fonte letras gregas
 
-% inclui o prêambulo do documento
+% Inclui o prêambulo do documento
 \include{./01-elementos-pre-textuais/preambulo}
 
-% define as cores dos links e informações do pdf
+% Define as cores dos links e informações do PDF
 \makeatletter
 \hypersetup{
-	portuguese,
-	colorlinks,
-	linkcolor=blue,
-	citecolor=blue,
-	filecolor=blue,
-	urlcolor=blue,
-	breaklinks=true,
-	pdftitle={\@title},
-	pdfauthor={\@author},
-	pdfsubject={\imprimirpreambulo},
-	pdfkeywords={abnt, latex, abntex, abntex2}
+    portuguese,
+    colorlinks,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    breaklinks=true,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfkeywords={abnt, latex, abntex, abntex2}
 }
 \makeatother
 
-% redefinição de labels
+% Redefinição de labels
 \renewcommand{\algorithmautorefname}{Algoritmo}
 \def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
 
-% criação de índice remissivo
+% Cria o índice remissivo
 \makeindex
 
-% início do documento
+% Início do documento
 \begin{document}
 
-% retira espaço extra obsoleto entre as frases.
-	\frenchspacing
+    % Retira espaço extra obsoleto entre as frases.
+    \frenchspacing
 
-% elementos pré textuais
-	\pretextual
-	\imprimircapa						% Capa
-	\imprimirfolhaderosto{}					% Folha de rosto
-	\include{./01-elementos-pre-textuais/folhaAprovacao}	% Folha de aprovação
-	\include{./01-elementos-pre-textuais/dedicatoria}	% Dedicatória
-	\include{./01-elementos-pre-textuais/agradecimentos}	% Agradecimentos
-	\include{./01-elementos-pre-textuais/epigrafe}		% Epígrafe
-	\include{./01-elementos-pre-textuais/resumoPt}		% Resumo na língua vernácula
-	\include{./01-elementos-pre-textuais/resumoEn}		% Resumo em língua estrangeira
-	\include{./01-elementos-pre-textuais/listaFiguras}	% Lista de figuras
-	\include{./01-elementos-pre-textuais/listaTabelas}	% Lista de tabelas
-	\include{./01-elementos-pre-textuais/listaQuadros}	% Lista de quadros
-	\include{./01-elementos-pre-textuais/listaAlgoritmos}	% Lista de algoritmos
-	\include{./01-elementos-pre-textuais/listaSiglas}	% Lista de abreviaturas e siglas
-	\include{./01-elementos-pre-textuais/listaSimbolos}	% Lista de símbolos
-	\include{./01-elementos-pre-textuais/sumario}		% Sumário
+    % Elementos pré textuais
+    \pretextual
+    \imprimircapa                                           % Capa
+    \imprimirfolhaderosto{}                                 % Folha de rosto
+    \include{./01-elementos-pre-textuais/folhaAprovacao}    % Folha de aprovação
+    \include{./01-elementos-pre-textuais/dedicatoria}       % Dedicatória
+    \include{./01-elementos-pre-textuais/agradecimentos}    % Agradecimentos
+    \include{./01-elementos-pre-textuais/epigrafe}          % Epígrafe
+    \include{./01-elementos-pre-textuais/resumoPt}          % Resumo na língua vernácula
+    \include{./01-elementos-pre-textuais/resumoEn}          % Resumo em língua estrangeira
+    \include{./01-elementos-pre-textuais/listaFiguras}      % Lista de figuras
+    \include{./01-elementos-pre-textuais/listaTabelas}      % Lista de tabelas
+    \include{./01-elementos-pre-textuais/listaQuadros}      % Lista de quadros
+    \include{./01-elementos-pre-textuais/listaAlgoritmos}   % Lista de algoritmos
+    \include{./01-elementos-pre-textuais/listaSiglas}       % Lista de abreviaturas e siglas
+    \include{./01-elementos-pre-textuais/listaSimbolos}     % Lista de símbolos
+    \include{./01-elementos-pre-textuais/sumario}           % Sumário
 
-% elementos textuais
-	\textual
-	\include{./02-elementos-textuais/introducao}		% Introdução
-	\include{./02-elementos-textuais/trabalhosRelacionados}	% Trabalhos relacionados
-	\include{./02-elementos-textuais/fundamentacaoTeorica}	% Fundamentação teórica
-	\include{./02-elementos-textuais/metodologia}		% Metodologia
-	\include{./02-elementos-textuais/resultados}		% Resultados
-	\include{./02-elementos-textuais/conclusao}		% Conclusão
+    % Elementos textuais
+    \textual
+    \include{./02-elementos-textuais/introducao}            % Introdução
+    \include{./02-elementos-textuais/trabalhosRelacionados} % Trabalhos relacionados
+    \include{./02-elementos-textuais/fundamentacaoTeorica}  % Fundamentação teórica
+    \include{./02-elementos-textuais/metodologia}           % Metodologia
+    \include{./02-elementos-textuais/resultados}            % Resultados
+    \include{./02-elementos-textuais/conclusao}             % Conclusão
 
-% elementos pós textuais
-	\postextual
-	\include{./03-elementos-pos-textuais/referencias}	% Referências
-	%\include{./03-elementos-pos-textuais/glossario}	% Glossário
-	\include{./03-elementos-pos-textuais/apendices}		% Apêndices
-	\include{./03-elementos-pos-textuais/anexos}		% Anexos
-	\printindex						% Índice remissivo
+    % Elementos pós textuais
+    \postextual
+    \include{./03-elementos-pos-textuais/referencias}       % Referências
+    %\include{./03-elementos-pos-textuais/glossario}        % Glossário
+    \include{./03-elementos-pos-textuais/apendices}         % Apêndices
+    \include{./03-elementos-pos-textuais/anexos}            % Anexos
+    \printindex                                             % Índice remissivo
 
 \end{document}

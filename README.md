@@ -11,11 +11,11 @@ Este projeto consiste em uma customização do projeto abntex2 hospedado em: <ht
 Para instalar os pacotes necessários,
 execute os seguintes comandos no terminal: 
 
-<code> $ sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-extra texlive-science</code>
+<code> $ sudo apt-get install texlive texlive-latex-extra texlive-science</code>
 
-<code> $ sudo apt-get install texlive-publishers </code>
+<code> $ sudo apt-get install texlive-publishers texlive-lang-portuguese</code>
 
-<code> $ sudo apt-get install make cm-super </code>
+<code> $ sudo apt-get install make </code>
 
 Para instalar a versão mais recente do abntex2,
 siga as instruções em:

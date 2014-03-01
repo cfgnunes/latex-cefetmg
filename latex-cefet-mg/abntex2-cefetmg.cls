@@ -16,7 +16,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{abntex2-cefetmg}[2014/01/25 v5.2]
 
-% Repassa os parametros ao abntex2
+% Repassa os parâmetros ao abntex2
 \DeclareOption*{
     \PassOptionsToClass{\CurrentOption}{abntex2}
 }
@@ -142,7 +142,7 @@
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
-% Criação do comando para linha de pesqusa (folha de rosto)
+% Criação do comando para linha de pesquisa (folha de rosto)
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
@@ -171,7 +171,7 @@
 % PARÁGRAFOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Tamanho da indentação do parágrafo
+% Tamanho da endentação do parágrafo
 \setlength{\parindent}{1.3cm}
 
 % Espaçamento entre um parágrafo e outro

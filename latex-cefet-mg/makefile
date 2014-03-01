@@ -1,11 +1,11 @@
-# Definicao de variaveis
+# Definição de variáveis
 SOURCE      = main
 LATEX       = pdflatex
 BIBTEX      = bibtex
 MAKEINDEX   = makeindex
 GHOSTSCRIPT = gs
 
-# Compila o codigo fonte
+# Compila o código fonte
 all:
 	@echo "Compilando arquivos..."
 	$(LATEX) $(SOURCE).tex
@@ -22,7 +22,7 @@ all:
 		$(SOURCE).pdf
 	@echo "Terminado."
 
-# Remove arquivos temporarios
+# Remove arquivos temporários
 clean:
 	@echo "Limpando arquivos temporarios..."
 	@find . -type f -iname "*.aux" -delete

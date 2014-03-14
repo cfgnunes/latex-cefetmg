@@ -14,14 +14,14 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-cefetmg}[2014/01/25 v5.2]
+\ProvidesClass{abntex2-cefetmg}[2014/03/13 v5.3]
 
 % Repassa os parâmetros ao abntex2
-\DeclareOption*{
+\DeclareOption*{%
     \PassOptionsToClass{\CurrentOption}{abntex2}
 }
 
-\PassOptionsToClass{
+\PassOptionsToClass{%
     % Opções da classe memoir
     12pt,                       % Tamanho da fonte
     openright,                  % Capítulos começam em página ímpar (insere página vazia caso preciso)
@@ -43,6 +43,7 @@
 \RequirePackage{makeidx}                                % Produzir índice remissivo de palavras
 \RequirePackage{chngcntr}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CONFIGURACOES GERAIS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -52,7 +53,7 @@
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
+\renewcommand*{\backrefalt}[4]{%
     \ifcase #1
         Nenhuma cita\c{c}\~ao no texto.
     \or
@@ -68,7 +69,7 @@
 % Redefine títulos
 \renewcommand{\folhaderostoname}{Folha de Rosto}
 \renewcommand{\folhadeaprovacaoname}{Folha de Aprova\c{c}\~ao}
-\addto\captionsbrazil{
+\addto\captionsbrazil{%
     % Ajusta nomes padrões do babel
     \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
     \renewcommand{\listadesimbolosname}{Lista de S\'imbolos}
@@ -83,12 +84,13 @@
 }
 \newcommand{\listofquadrosname}{Lista de Quadros}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ESTILO DE ELEMENTOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Elementos pré-textuais
-\renewcommand{\pretextual}{
+\renewcommand{\pretextual}{%
     \pagenumbering{roman} % Algarismos romanos
     \aliaspagestyle{chapter}{plain}
     \pagestyle{plain}
@@ -97,12 +99,12 @@
 }
 
 % Elementos textuais
-\renewcommand{\textual}{
+\renewcommand{\textual}{%
     \pagenumbering{arabic} % Inicia a numeração em 1
-    \ifthenelse{\equal{\ABNTEXisarticle}{true}}{
+    \ifthenelse{\equal{\ABNTEXisarticle}{true}}{%
         \pagestyle{plain}
     }
-    {
+    {%
         \pagestyle{abntheadings}
         \aliaspagestyle{chapter}{abntchapfirst}
     }
@@ -111,10 +113,18 @@
 }
 
 % Elementos pós-textuais
-\renewcommand{\postextual}{
+\renewcommand{\postextual}{%
     \phantompart
     \renewcommand{\indexname}{\'Indice Remissivo}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMANDOS GERAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Automatiza o processo de aspas
+\newcommand{\aspas}[1]{``{#1}''}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,13 +163,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Comando que trata a fonte nos objetos flutuantes
-\renewcommand{\fonte}[1]{
+\renewcommand{\fonte}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \centering\small{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
-\renewcommand{\nota}[1]{
+\renewcommand{\nota}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
         Nota: & #1
@@ -179,6 +189,7 @@
 
 % Espaço entre o texto e o footer
 \setlength{\footskip}{0.0cm}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FONTES
@@ -231,131 +242,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CAPA
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatletter
-\renewcommand{\imprimircapa}{
-    \begin{capa}
-
-        \hspace{-2.0cm}
-        \begin{minipage}{.2\textwidth}
-            \includegraphics[width=0.8\textwidth]{./04-figuras/cefet_logo}
-        \end{minipage}
-        \quad
-        \hspace{-1.5cm}
-        \begin{minipage}{.9\textwidth}
-            \begin{center}
-            \normalfont\scshape{\imprimirinstituicao}\\
-            \normalfont\scshape{\imprimirprograma}\\
-            \abntex@ifnotempty{\imprimirareaconcentracao}
-            {
-                \normalfont\scshape{\imprimirareaconcentracao}
-            }
-            \end{center}
-        \end{minipage}
-
-        \vspace*{200pt}
-
-        \begin{center}
-            \ABNTEXchapterfont\Large\scshape\imprimirtitulo
-            \abntex@ifnotempty{\imprimirsubtitulo}{
-                {\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
-            }
-        \end{center}
-
-        \vspace*{80pt}
-
-        \begin{center}
-            \large\normalfont\scshape\textbf\imprimirautor
-        \end{center}
-
-        \vspace*{10pt}
-
-        \begin{center}
-            \small\imprimirorientadorRotulo{} \imprimirorientador \\
-            \small\imprimirinstOrientador \\
-            \abntex@ifnotempty{\imprimircoorientador}
-            {
-                \begin{SingleSpacing}\par\end{SingleSpacing}
-                \small\imprimircoorientadorRotulo{} \imprimircoorientador \\
-                \small\imprimirinstCoorientador
-            }
-        \end{center}
-
-        \vspace*{\fill}
-
-        \begin{center}
-            \normalfont\scshape{\imprimirlocal}\\
-            \normalfont\scshape{\imprimirdata}
-        \end{center}
-
-    \end{capa}
-}
-\makeatother
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FOLHA DE ROSTO
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\makeatletter
-\renewcommand{\folhaderostocontent}{
-    \begin{center}
-        {\large\normalfont\scshape\textbf\imprimirautor}
-    \end{center}
-
-    \vspace*{150pt}
-
-    \begin{center}
-        \ABNTEXchapterfont\Large\scshape\imprimirtitulo
-        \abntex@ifnotempty{\imprimirsubtitulo}{
-            {\ABNTEXchapterfont\Large\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
-        }
-    \end{center}
-
-    \vspace*{90pt}
-
-    \abntex@ifnotempty{\imprimirpreambulo}{
-        \SingleSpacing
-        \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
-            & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
-            \abntex@ifnotempty{\imprimirareaconcentracao}
-            {
-                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
-            }
-            \abntex@ifnotempty{\imprimirlinhapesquisa}
-            {
-                    & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
-            }
-            & \small\imprimirorientadorRotulo & \imprimirorientador \\
-            & & \small\imprimirinstOrientador \\ & & \\
-            \abntex@ifnotempty{\imprimircoorientador}
-            {
-                & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
-                & & \small\imprimirinstCoorientador
-            }
-        \end{tabular}
-    }
-
-    \vspace*{\fill}
-
-    \begin{center}
-        \normalfont\scshape{\imprimirinstituicao}\\
-        \normalfont\scshape{\imprimirprograma}\\
-        \normalfont\scshape{\imprimirlocal}\\
-        \normalfont\scshape{\imprimirdata}
-    \end{center}
-}
-\makeatother
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEDICATORIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewenvironment{dedicatoria}[1][]
-{
-    \ifthenelse{\equal{#1}{}}{
+{%
+    \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\dedicatorianame}
     }{\pretextualchapter{#1}}
 
@@ -367,7 +259,7 @@
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
 }
-{
+{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
@@ -379,8 +271,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewenvironment{epigrafe}[1][]
-{
-    \ifthenelse{\equal{#1}{}}{
+{%
+    \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\epigraphname}
     }{\pretextualchapter{#1}}
 
@@ -392,7 +284,7 @@
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
 }
-{
+{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}

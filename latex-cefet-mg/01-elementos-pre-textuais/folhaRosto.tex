@@ -1,15 +1,15 @@
 %
-% Documento: Folha de aprovação
+% Documento: Folha de rosto
 %
 
 \makeatletter
-\begin{folhadeaprovacao}
+\begin{folhaderosto}
 
     \begin{center}
         {\large\normalfont\scshape\textbf\imprimirautor}
     \end{center}
 
-    \vspace*{50pt}
+    \vspace*{150pt}
 
     \begin{center}
         \ABNTEXchapterfont\Large\scshape\imprimirtitulo
@@ -18,28 +18,29 @@
         }
     \end{center}
 
-    \vspace*{60pt}
+    \vspace*{90pt}
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
         \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
             & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+            \abntex@ifnotempty{\imprimirareaconcentracao}
+            {%
+                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+            }
+            \abntex@ifnotempty{\imprimirlinhapesquisa}
+            {%
+                    & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+            }
+            & \small\imprimirorientadorRotulo & \imprimirorientador \\
+            & & \small\imprimirinstOrientador \\ & & \\
+            \abntex@ifnotempty{\imprimircoorientador}
+            {%
+                & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
+                & & \small\imprimirinstCoorientador
+            }
         \end{tabular}
     }
-
-    \vspace*{10pt}
-
-    \begin{center}
-        Trabalho aprovado. \imprimirlocal, 24 de novembro de 2014
-    \end{center}
-
-    \begin{center}
-        \assinatura{\textbf{\imprimirorientador} \\ Orientador}
-        \assinatura{\textbf{Professor} \\ Convidado 1}
-        \assinatura{\textbf{Professor} \\ Convidado 2}
-        %\assinatura{\textbf{Professor} \\ Convidado 3}
-        %\assinatura{\textbf{Professor} \\ Convidado 4}
-    \end{center}
 
     \vspace*{\fill}
 
@@ -50,5 +51,5 @@
         \normalfont\scshape{\imprimirdata}
     \end{center}
 
-\end{folhadeaprovacao}
+\end{folhaderosto}
 \makeatother

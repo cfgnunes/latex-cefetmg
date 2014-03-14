@@ -45,7 +45,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CONFIGURACOES GERAIS
+% CONFIGURAÇÕES GERAIS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Configurações do pacote backref
@@ -59,7 +59,7 @@
     \or
         Citado na p\'agina #2.
     \else
-            Citado #1 vezes nas p\'aginas #2.
+        Citado #1 vezes nas p\'aginas #2.
     \fi
 }
 
@@ -171,7 +171,7 @@
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
-    \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
+    \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}%
         Nota: & #1
     \end{tabular}
 }
@@ -187,8 +187,8 @@
 % Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.2cm}
 
-% Espaço entre o texto e o footer
-\setlength{\footskip}{0.0cm}
+% Espaçamento entre o corpo do texto e o rodapé
+%\setlength{\footskip}{0.1cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -220,7 +220,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Travessão no sumário para apêndices e anexos
-\renewcommand{\cftchapteraftersnum}{\hfill{} -- \hfill{}}
+\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
 
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
@@ -242,7 +242,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DEDICATORIA
+% DEDICATÓRIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewenvironment{dedicatoria}[1][]

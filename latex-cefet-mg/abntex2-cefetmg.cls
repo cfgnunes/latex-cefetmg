@@ -187,9 +187,6 @@
 % Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.2cm}
 
-% Espaçamento entre o corpo do texto e o rodapé
-%\setlength{\footskip}{0.1cm}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FONTES

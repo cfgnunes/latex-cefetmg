@@ -171,7 +171,7 @@
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
-    \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}%
+    \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
     \end{tabular}
 }

@@ -13,6 +13,7 @@ all:
 	$(BIBTEX) $(SOURCE).aux
 	$(LATEX) $(SOURCE).tex
 	$(LATEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
 	@echo "Comprimindo o arquivo pdf..."
 	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
 		-sDEVICE=pdfwrite \

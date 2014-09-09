@@ -131,6 +131,10 @@
 % COMANDOS DE DADOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Comandos de dados - departamento
+\providecommand{\imprimirdepartamento}{}
+\newcommand{\programa}[1]{\renewcommand{\imprimirdepartamento}{#1}}
+
 % Comandos de dados - programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}

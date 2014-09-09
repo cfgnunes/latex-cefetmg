@@ -161,6 +161,14 @@
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
 
+% Comandos de dados - titulação do orientador
+\providecommand{\imprimirTitulacaoOrientador}{}
+\newcommand{\titulacaoOrientador}[1]{\renewcommand{\imprimirTitulacaoOrientador}{#1}}
+
+% Comandos de dados - titulação do coorientador
+\providecommand{\imprimirTitulacaoCoorientador}{}
+\newcommand{\titulacaoCoorientador}[1]{\renewcommand{\imprimirTitulacaoCoorientador}{#1}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OBJETOS FLUTUANTES

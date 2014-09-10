@@ -133,7 +133,7 @@
 
 % Comandos de dados - departamento
 \providecommand{\imprimirdepartamento}{}
-\newcommand{\programa}[1]{\renewcommand{\imprimirdepartamento}{#1}}
+\newcommand{\departamento}[1]{\renewcommand{\imprimirdepartamento}{#1}}
 
 % Comandos de dados - programa
 \providecommand{\imprimirprograma}{}

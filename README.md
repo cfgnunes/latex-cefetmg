@@ -1,7 +1,7 @@
-# latex-cefet-mg
+# LaTeX CEFET-MG
 Modelo para trabalhos acadêmicos do CEFET-MG em LaTex baseado nas normas da ABNT. 
 
-Este projeto consiste em uma customização do projeto abntex2 hospedado em: <https://code.google.com/p/abntex2/>
+Este projeto consiste em uma customização do projeto abnTeX2 hospedado em: <https://code.google.com/p/abntex2/>
 
 ### Pacotes necessários para usuários do Ubuntu
 

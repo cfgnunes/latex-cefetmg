@@ -28,19 +28,18 @@
 \usepackage{multirow, array}                        % Múltiplas linhas e colunas em tabelas
 \usepackage{indentfirst}                            % Endenta o primeiro parágrafo de cada seção.
 \usepackage{microtype}                              % Para melhorias de justificação?
-\usepackage{palatino}                               % Usa a fonte Palatino
 \usepackage{float}                                  % Utilizado para criação de floats
-%\usepackage[bottom]{footmisc}                      % Mantém as notas de rodapé sempre na mesma posição
+\usepackage{icomma}                                 % Uso de vírgulas em expressões matemáticas
+\usepackage{palatino}                               % Usa a fonte Palatino
 %\usepackage{times}                                 % Usa a fonte Times
 %\usepackage{lmodern}                               % Usa a fonte Latin Modern
+%\usepackage{color, colortbl}                       % Comandos de cores
+%\usepackage{listings}                              % Importação de códigos fonte
+%\usepackage[bottom]{footmisc}                      % Mantém as notas de rodapé sempre na mesma posição
 %\usepackage{subfig}                                % Posicionamento de figuras
 %\usepackage{scalefnt}                              % Permite redimensionar tamanho da fonte
-%\usepackage{color, colortbl}                       % Comandos de cores
 %\usepackage{lscape}                                % Permite páginas em modo "paisagem"
-%\usepackage{ae, aecompl}                           % Fontes de alta qualidade
 %\usepackage{picinpar}                              % Dispor imagens em parágrafos
-%\usepackage{latexsym}                              % Símbolos matemáticos
-%\usepackage{upgreek}                               % Fonte letras gregas
 
 % Inclui o preâmbulo do documento
 \include{./01-elementos-pre-textuais/preambulo}
@@ -72,7 +71,7 @@
 % Início do documento
 \begin{document}
 
-    % Retira espaço extra obsoleto entre as frases.
+    % Retira espaço extra obsoleto entre as frases
     \frenchspacing
 
     % Elementos pré textuais
@@ -105,7 +104,6 @@
     % Elementos pós textuais
     \postextual
     \include{./03-elementos-pos-textuais/referencias}       % Referências
-    %\include{./03-elementos-pos-textuais/glossario}        % Glossário
     \include{./03-elementos-pos-textuais/apendices}         % Apêndices
     \include{./03-elementos-pos-textuais/anexos}            % Anexos
     \printindex                                             % Índice remissivo

@@ -17,6 +17,7 @@
 %\documentclass[doubleside]{abntex2-cefetmg}        % Imprimir frente e verso
 
 % Importações de pacotes
+\usepackage[portuguese, onelanguage, lined, boxed, commentsnumbered, algoruled]{algorithm2e}                % Escrever algoritmos
 \usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntex2cite}  % Citações padrão ABNT
 \usepackage[utf8]{inputenc}                         % Acentuação direta
 \usepackage[T1]{fontenc}                            % Codificação da fonte em 8 bits
@@ -28,7 +29,6 @@
 \usepackage{indentfirst}                            % Endenta o primeiro parágrafo de cada seção.
 \usepackage{microtype}                              % Para melhorias de justificação?
 \usepackage{palatino}                               % Usa a fonte Palatino
-\usepackage[portuguese, onelanguage, lined, boxed, commentsnumbered, algoruled]{algorithm2e} % Escrever algoritmos
 \usepackage{float}                                  % Utilizado para criação de floats
 %\usepackage[bottom]{footmisc}                      % Mantém as notas de rodapé sempre na mesma posição
 %\usepackage{times}                                 % Usa a fonte Times
@@ -78,26 +78,26 @@
     % Elementos pré textuais
     \pretextual
     \include{./01-elementos-pre-textuais/capa}              % Capa
-    \include{./01-elementos-pre-textuais/folhaRosto}        % Folha de rosto
-    \include{./01-elementos-pre-textuais/folhaAprovacao}    % Folha de aprovação
+    \include{./01-elementos-pre-textuais/folha-rosto}       % Folha de rosto
+    \include{./01-elementos-pre-textuais/folha-aprovacao}   % Folha de aprovação
     \include{./01-elementos-pre-textuais/dedicatoria}       % Dedicatória
     \include{./01-elementos-pre-textuais/agradecimentos}    % Agradecimentos
     \include{./01-elementos-pre-textuais/epigrafe}          % Epígrafe
-    \include{./01-elementos-pre-textuais/resumoPt}          % Resumo na língua vernácula
-    \include{./01-elementos-pre-textuais/resumoEn}          % Resumo em língua estrangeira
-    \include{./01-elementos-pre-textuais/listaFiguras}      % Lista de figuras
-    \include{./01-elementos-pre-textuais/listaTabelas}      % Lista de tabelas
-    \include{./01-elementos-pre-textuais/listaQuadros}      % Lista de quadros
-    \include{./01-elementos-pre-textuais/listaAlgoritmos}   % Lista de algoritmos
-    \include{./01-elementos-pre-textuais/listaSiglas}       % Lista de abreviaturas e siglas
-    \include{./01-elementos-pre-textuais/listaSimbolos}     % Lista de símbolos
+    \include{./01-elementos-pre-textuais/resumo-pt}         % Resumo na língua vernácula
+    \include{./01-elementos-pre-textuais/resumo-en}         % Resumo em língua estrangeira
+    \include{./01-elementos-pre-textuais/lista-figuras}     % Lista de figuras
+    \include{./01-elementos-pre-textuais/lista-tabelas}     % Lista de tabelas
+    \include{./01-elementos-pre-textuais/lista-quadros}     % Lista de quadros
+    \include{./01-elementos-pre-textuais/lista-algoritmos}  % Lista de algoritmos
+    \include{./01-elementos-pre-textuais/lista-siglas}      % Lista de abreviaturas e siglas
+    \include{./01-elementos-pre-textuais/lista-simbolos}    % Lista de símbolos
     \include{./01-elementos-pre-textuais/sumario}           % Sumário
 
     % Elementos textuais
     \textual
     \include{./02-elementos-textuais/introducao}            % Introdução
-    \include{./02-elementos-textuais/trabalhosRelacionados} % Trabalhos relacionados
-    \include{./02-elementos-textuais/fundamentacaoTeorica}  % Fundamentação teórica
+    \include{./02-elementos-textuais/trab-relacionados}     % Trabalhos relacionados
+    \include{./02-elementos-textuais/fund-teorica}          % Fundamentação teórica
     \include{./02-elementos-textuais/metodologia}           % Metodologia
     \include{./02-elementos-textuais/resultados}            % Resultados
     \include{./02-elementos-textuais/conclusao}             % Conclusão

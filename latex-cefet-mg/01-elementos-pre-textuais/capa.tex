@@ -1,0 +1,62 @@
+%
+% Documento: Capa
+%
+
+\makeatletter
+\begin{capa}
+
+    \hspace{-2.0cm}
+    \begin{minipage}{0.19\textwidth}
+        \includegraphics[width=0.8\textwidth]{./04-figuras/cefet_logo}
+    \end{minipage}
+    \quad
+    \hspace{-1.5cm}
+    \begin{minipage}{.9\textwidth}
+        \begin{center}
+        \normalfont\scshape{\imprimirinstituicao}\\
+        \normalfont\scshape{\imprimirdepartamento}\\
+        \normalfont\scshape{\imprimirprograma}\\
+        \abntex@ifnotempty{\imprimirareaconcentracao}
+        {%
+            \normalfont\scshape{\imprimirareaconcentracao}
+        }
+        \end{center}
+    \end{minipage}
+
+    \vspace*{200pt}
+
+    \begin{center}
+        \ABNTEXchapterfont\Large\scshape\imprimirtitulo
+        \abntex@ifnotempty{\imprimirsubtitulo}{%
+            {\ABNTEXchapterfont\Large\scshape: }{\ABNTEXchapterfont\large\scshape\imprimirsubtitulo}
+        }
+    \end{center}
+
+    \vspace*{80pt}
+
+    \begin{center}
+        \large\normalfont\scshape\textbf\imprimirautor
+    \end{center}
+
+    \vspace*{10pt}
+
+    \begin{center}
+        \small\imprimirorientadorRotulo{} \imprimirorientador \\
+        \small\imprimirinstOrientador \\
+        \abntex@ifnotempty{\imprimircoorientador}
+        {%
+            \begin{SingleSpacing}\par\end{SingleSpacing}
+            \small\imprimircoorientadorRotulo{} \imprimircoorientador \\
+            \small\imprimirinstCoorientador
+        }
+    \end{center}
+
+    \vspace*{\fill}
+
+    \begin{center}
+        \normalfont\scshape{\imprimirlocal}\\
+        \normalfont\scshape{\imprimirdata}
+    \end{center}
+
+\end{capa}
+\makeatother

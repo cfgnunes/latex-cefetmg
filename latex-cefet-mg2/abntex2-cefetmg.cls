@@ -2,24 +2,20 @@
 % Modelo de trabalho acadêmico monográfico (Tese de Doutorado, Dissertação de Mestrado
 % ou Projeto de Qualificação) em português brasileiro e em conformidade com as normas da ABNT
 %
-% Adaptação da classe abntex2 para o Cefet-MG
-% Data: 07 de outubro de 2014
-%
 % *****************************************************************************
 % *  Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG        *
-% *  Laboratório de Sistemas Inteligentes - LSI                               *
 % *                                                                           *
+% *  Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                     *
 % *  Autor: Henrique E. Borges <henrique@lsi.cefetmg.br>                      *
 % *  Autor: Denise de Souza <densouza@gmail.com>                              *
-% *  Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                     *
-% *  Autor: Lauro César  <https://code.google.com/p/abntex2/>                 *
+% *  Autor: Lauro César <https://code.google.com/p/abntex2/>                  *
 % *                                                                           *
 % *****************************************************************************
 
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-cefetmg}[2013/12/22 v5.0]
+\ProvidesClass{abntex2-cefetmg}[2015/09/01 v6.0]
 
 %   Repassa os parâmetros ao abntex2
 \DeclareOption*{
@@ -95,13 +91,13 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{
-	\pagenumbering{arabic} 		% a numeração das páginas é em algarismos arábicos, inciando em 1
-	\chapterstyle{default} 		% estilo plain
+	\pagenumbering{arabic} 		% A numeração das páginas é em algarismos arábicos, inciando em 1
+	\chapterstyle{default} 		% Estilo plain
 }
 
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{
-	\chapterstyle{abnt} 		% estilo da ABNT
+	\chapterstyle{abnt} 		% Estilo da ABNT
 	\phantompart
 }
 
@@ -120,12 +116,12 @@
 %   COMANDOS DE DADOS
 % -----------------------------------------------------------------------------
 
-%   Comandos de dados - Programa de Pós-graduação
+%   Comandos de dados - Programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}	
 
 
-%   Comandos de dados - subtítulo do trabalho
+%   Comandos de dados -Subtítulo do trabalho
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
@@ -150,13 +146,13 @@
 \newcommand{\tituloAcademico}[1]{\renewcommand{\imprimirtituloAcademico}{#1}}
 
 
-%  Comandos de dados - Área de concentração do Programa de Pós-graduação
+%  Comandos de dados - Área de concentração do Programa
 \newcommand{\imprimirareaconcentracaoRotulo}{\'Area de concentra\c{c}\~ao: }
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
 
-%  Comandos de dados - linha de pesquisa do Programa de Pós-graduação
+%  Comandos de dados - linha de pesquisa do Programa
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
@@ -248,13 +244,13 @@
 
 %   Define os títulos das listas
 \addto\captionsbrazil{
-%  ajusta nomes padrões do babel
+%  Ajusta nomes padrões do babel
 	\renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
 	\renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
 	\renewcommand{\listfigurename}{Lista de Figuras}
 	\renewcommand{\listtablename}{Lista de Tabelas}
 	\renewcommand{\indexname}{\'{I}ndice Remissivo}
-%  ajusta nomes usados com a macro \autoref
+%  Ajusta nomes usados com a macro \autoref
 	\renewcommand{\pageautorefname}{p\'agina}
 	\renewcommand{\sectionautorefname}{Se\c{c}\~ao}
 	\renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}

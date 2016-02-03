@@ -52,6 +52,7 @@ Thumbs.db
 *.l*
 *.idx
 *.bbl
+*.brf
 *.glo
 *.dvi
 *.toc
@@ -62,3 +63,5 @@ Thumbs.db
 *.wsp
 *.fls
 *.synctex.*
+meuTrabalhoAcademico.pdf
+meuTrabalhoAcademico_compressed.pdf

@@ -13,29 +13,28 @@
 % *****************************************************************************
 
 
-
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{abntex2-cefetmg}[2015/09/01 v6.0]
 
-%   Repassa os parâmetros ao abntex2
+% Repassa os parâmetros ao abntex2
 \DeclareOption*{
 	\PassOptionsToClass{\CurrentOption}{abntex2}
 }
 
 \PassOptionsToClass{
-%  Opções da classe memoir
+% Opções da classe memoir
 	  12pt,						% Tamanho da fonte
 	  openright,				% Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
       %twoside,					% Impressão em frente (anverso) e verso. Oposto a oneside
       oneside,					% Impressão apenas no anverso. Oposto a twoside
       a4paper,					% Tamanho do papel.
 	  sumario=tradicional,		% Seleciona o sumário tradicional
-%  Opções da classe abntex2
+% Opções da classe abntex2
 	  %chapter=TITLE,			% Títulos de capítulos convertidos em letras maiúsculas
 	  %section=TITLE,			% Títulos de seções convertidos em letras maiúsculas
 	  %subsection=TITLE,		% Títulos de subseções convertidos em letras maiúsculas
 	  %subsubsection=TITLE,		% Ttítulos de subsubseções convertidos em letras maiúsculas
-%   opções do pacote babel
+% opções do pacote babel
       english,					% Idioma adicional para hifenização
       brazilian,				% O ultimo idioma indicado será o principal idioma do documento
       hyphens,         			% parâmetro para hifenizar urls longas, usado no pacote url
@@ -48,18 +47,17 @@
 \RequirePackage{chngcntr}
 
 
-
 % -----------------------------------------------------------------------------
-%    CONFIGURAÇÕES GERAIS
+% CONFIGURAÇÕES GERAIS
 % -----------------------------------------------------------------------------
 
-%   Configurações do pacote backref usado sem a opção hyperpageref de backref
+% Configurações do pacote backref usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
 
-%   Texto padrão antes do número das páginas
+% Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 
-%   Define os textos da citação
+% Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
 	\ifcase #1
 		Nenhuma cita\c{c}\~ao no texto.
@@ -70,16 +68,15 @@
 	\fi
 }
 
-%   Define a numeração das equações de forma sequencial
+% Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
 
-
 % -----------------------------------------------------------------------------
-%   ESTILO DE ELEMENTOS
+% ESTILO DE ELEMENTOS
 % -----------------------------------------------------------------------------
 
-%   Configura layout para elementos pre-textuais
+% Configura layout para elementos pre-textuais
 \renewcommand{\pretextual}{
 	\pagenumbering{roman} 			% a numeração das páginas é em algarismos romanos
 	\aliaspagestyle{chapter}{plain}
@@ -102,84 +99,81 @@
 }
 
 
-
 % -----------------------------------------------------------------------------
-%   COMANDOS DE DADOS PARTICULARES
+% COMANDOS DE DADOS PARTICULARES
 % -----------------------------------------------------------------------------
 
-%   Automatiza as aspas
+% Automatiza as aspas
 \newcommand{\aspas}[1]{``{#1}''}
 
 
-
 % -----------------------------------------------------------------------------
-%   COMANDOS DE DADOS
+% COMANDOS DE DADOS
 % -----------------------------------------------------------------------------
 
-%   Comandos de dados - Programa
+% Comandos de dados - Programa
 \providecommand{\imprimirprograma}{}
-\newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}	
+\newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
 
-%   Comandos de dados -Subtítulo do trabalho
+% Comandos de dados -Subtítulo do trabalho
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
 
-%   Comandos de dados - Instituição do orientador
+% Comandos de dados - Instituição do orientador
 \providecommand{\imprimirinstOrientador}{}
 \newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
 
 
-%   Comandos de dados - Instituição do coorientador
+% Comandos de dados - Instituição do coorientador
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
 
-%  Comandos de dados -  Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
+% Comandos de dados -  Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
 
-%  Comandos de dados - Título Acadêmico a ser alcançado (Doutor ou Mestre)
+% Comandos de dados - Título Acadêmico a ser alcançado (Doutor ou Mestre)
 \providecommand{\imprimirtituloAcademico}{}
 \newcommand{\tituloAcademico}[1]{\renewcommand{\imprimirtituloAcademico}{#1}}
 
 
-%  Comandos de dados - Área de concentração do Programa
+% Comandos de dados - Área de concentração do Programa
 \newcommand{\imprimirareaconcentracaoRotulo}{\'Area de concentra\c{c}\~ao: }
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
 
-%  Comandos de dados - linha de pesquisa do Programa
+% Comandos de dados - linha de pesquisa do Programa
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
 
 
-%  Comandos de dados - Texto da folha de aprovação
+% Comandos de dados - Texto da folha de aprovação
 \providecommand{\imprimirtextopadraofolhadeaprovacao}{}
 \newcommand{\textopadraofolhadeaprovacao}[1]{\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
 
-%  Comandos de dados - Logomarca da instituicao
+% Comandos de dados - Logomarca da instituicao
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
 
 
-
 % -----------------------------------------------------------------------------
-%   OBJETOS FLUTUANTES
+% OBJETOS FLUTUANTES
 % -----------------------------------------------------------------------------
 
-%   Comando que trata a fonte nos objetos flutuantes
+% Comando que trata a fonte nos objetos flutuantes
 \renewcommand{\fonte}[1]{
 	\begin{SingleSpacing}\par\end{SingleSpacing}
 	\centering\small{Fonte: #1}
 }
 
-%   Comando que trata as notas nos objetos flutuantes
+% Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{
 	\begin{SingleSpacing}\par\end{SingleSpacing}
 	\begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
@@ -188,24 +182,22 @@
 }
 
 
-
 % -----------------------------------------------------------------------------
-%   PARÁGRAFOS
+% PARÁGRAFOS
 % -----------------------------------------------------------------------------
 
-%   Tamanho da indentação do parágrafo
+% Tamanho da indentação do parágrafo
 \setlength{\parindent}{0cm}
 
-%   Espaçamento entre um parágrafo e outro
+% Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.4cm}
 
 
-
 % -----------------------------------------------------------------------------
-%   FONTES
+% FONTES
 % -----------------------------------------------------------------------------
 
-%   Redefinição de fontes
+% Redefinição de fontes
 \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
 \renewcommand{\ABNTEXchapterfontsize}{\HUGE}
 
@@ -225,32 +217,30 @@
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 
-
 % -----------------------------------------------------------------------------
-%   SUMÁRIO
+% SUMÁRIO
 % -----------------------------------------------------------------------------
 
-%   Travessão no sumário para apêndices e anexos
+% Travessão no sumário para apêndices e anexos
 \renewcommand{\cftchapteraftersnum}{\hfill{} -- \hfill{}}
 
-%   Insere espaço entre os itens do sumário de diferentes capítulos
+% Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
 
-
 % -----------------------------------------------------------------------------
-%   LISTAS
+% LISTAS
 % -----------------------------------------------------------------------------
 
-%   Define os títulos das listas
+% Define os títulos das listas
 \addto\captionsbrazil{
-%  Ajusta nomes padrões do babel
+% Ajusta nomes padrões do babel
 	\renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
 	\renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
 	\renewcommand{\listfigurename}{Lista de Figuras}
 	\renewcommand{\listtablename}{Lista de Tabelas}
 	\renewcommand{\indexname}{\'{I}ndice Remissivo}
-%  Ajusta nomes usados com a macro \autoref
+% Ajusta nomes usados com a macro \autoref
 	\renewcommand{\pageautorefname}{p\'agina}
 	\renewcommand{\sectionautorefname}{Se\c{c}\~ao}
 	\renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
@@ -258,7 +248,7 @@
 	\renewcommand{\paragraphautorefname}{Subse\c{c}\~ao}
 }
 
-%   Cria a lista de quadros
+% Cria a lista de quadros
 \newcommand{\listofquadrosname}{Lista de Quadros}
 \newcommand{\quadroname}{Quadro}
 \newfloat[chapter]{quadro}{loq}{\quadroname}
@@ -269,9 +259,8 @@
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 
-
 % -----------------------------------------------------------------------------
-%   CAPA
+% CAPA
 % -----------------------------------------------------------------------------
 
 \makeatletter
@@ -327,9 +316,8 @@
 \makeatother
 
 
-
 % -----------------------------------------------------------------------------
-%   FOLHA DE ROSTO
+% FOLHA DE ROSTO
 % -----------------------------------------------------------------------------
 
 \makeatletter
@@ -387,15 +375,14 @@
 \makeatother
 
 
-
 % -----------------------------------------------------------------------------
-%   FOLHA DE APROVAÇÃO
+% FOLHA DE APROVAÇÃO
 % -----------------------------------------------------------------------------
 \makeatletter
 \newcommand{\imprimirfolhadeaprovacao}{
 	\begin{folhadeaprovacao}
 		\vspace*{\fill}
-		
+
 		\begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
 			& \imprimirtextopadraofolhadeaprovacao \\
 		\end{tabular}
@@ -406,9 +393,8 @@
 \makeatother
 
 
-
 % -----------------------------------------------------------------------------
-%   DEDICATÓRIA
+% DEDICATÓRIA
 % -----------------------------------------------------------------------------
 \renewenvironment{dedicatoria}[1][]
 {
@@ -431,9 +417,8 @@
 }
 
 
-
 % -----------------------------------------------------------------------------
-%   EPÍGRAFE
+% EPÍGRAFE
 % -----------------------------------------------------------------------------
 \renewenvironment{epigrafe}[1][]
 {

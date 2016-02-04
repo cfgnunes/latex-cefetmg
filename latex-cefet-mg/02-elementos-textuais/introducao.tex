@@ -31,11 +31,11 @@ A conversão automática de acentos proporcionada pela codificação UTF8 no \La
 Todavia, há vários elementos do documento que sofrem conversão minúsculas/maiúsculas - por exemplo o conteúdo dos arquivos {\ttfamily .bib}, {\ttfamily capa.tex} e {\ttfamily folhaRosto.tex}, além de títulos de capítulos, seções, etc.. Para estes elementos, pelo menos, não acentue diretamente as palavras, use os comandos relacionados na \autoref{fig:acentosLatex}.
 
 \begin{figure}[!htb]
-	\centering
-	\caption{Comandos para acentuação no \LaTeX}
-	\includegraphics[width=0.8\textwidth]{./04-figuras/acentosLatex}
-	\fonte{\href{http://en.wikibooks.org/wiki/LaTeX/Special_Characters}{http://en.wikibooks.org/wiki/LaTeX/Special\underline{ }Characters}}
-	\label{fig:acentosLatex}
+    \centering
+    \caption{Comandos para acentuação no \LaTeX}
+    \includegraphics[width=0.8\textwidth]{./04-figuras/acentosLatex}
+    \fonte{\href{http://en.wikibooks.org/wiki/LaTeX/Special_Characters}{http://en.wikibooks.org/wiki/LaTeX/Special\underline{ }Characters}}
+    \label{fig:acentosLatex}
 \end{figure}
 
 
@@ -43,21 +43,21 @@ Para a compilação de arquivos \TeX{} ou \LaTeX{} veja os comandos apresentados
 
 
 \begin{figure}[!htb]
-	\centering
-	\caption{Comandos para compilação de arquivos \TeX{} ou \LaTeX}
-	\includegraphics[width=0.8\textwidth]{./04-figuras/ComandosCompilacaoTex}
-	\fonte{\href{http://en.wikibooks.org/wiki/LaTeX/Basics}{http://en.wikibooks.org/wiki/LaTeX/Basics}}
-	\label{fig:comanCompilaTex}
+    \centering
+    \caption{Comandos para compilação de arquivos \TeX{} ou \LaTeX}
+    \includegraphics[width=0.8\textwidth]{./04-figuras/ComandosCompilacaoTex}
+    \fonte{\href{http://en.wikibooks.org/wiki/LaTeX/Basics}{http://en.wikibooks.org/wiki/LaTeX/Basics}}
+    \label{fig:comanCompilaTex}
 \end{figure}
 
 
 A compilação para gerar um arquivo no formato pdf, incluindo corretamente as referências bibliográficas, deve ser realizada em quatro passos:
 
 \begin{compactitem}
-	\item \textbf{pdflatex} \verb|meuTrabalhoAcademico.tex|    -> gera um pdf, porém sem as referências, apenas indicando-as
-	\item \textbf{bibtex} \verb|meuTrabalhoAcademico.tex|	-> varre o arquivo myrefs.bib e busca pelas referências utilizadas
-	\item \textbf{pdflatex} \verb|meuTrabalhoAcademico.tex|	-> insere as referências e chamadas nos locais apropriados
-	\item \textbf{pdflatex} \verb|meuTrabalhoAcademico.tex|	-> faz a compilação final, verificando tudo
+    \item \textbf{pdflatex} \verb|meuTrabalhoAcademico.tex|    -> gera um pdf, porém sem as referências, apenas indicando-as
+    \item \textbf{bibtex} \verb|meuTrabalhoAcademico.tex|   -> varre o arquivo myrefs.bib e busca pelas referências utilizadas
+    \item \textbf{pdflatex} \verb|meuTrabalhoAcademico.tex| -> insere as referências e chamadas nos locais apropriados
+    \item \textbf{pdflatex} \verb|meuTrabalhoAcademico.tex| -> faz a compilação final, verificando tudo
 \end{compactitem}
 
 Alternativamente, poderá ser utilizado o comando \verb|makefile|, disponível na mesma pasta onde está o arquivo principal \verb|meuTrabalhoAcademico.tex|, que faz exatamente o mesmo que os quatro comandos supramencionados. No entanto atente para o fato de que , se você alterar o nome do arquivo \verb|meuTrabalhoAcademico.tex|, deverá também editar o arquivo \verb|makefile| para alterá-lo do mesmo modo.

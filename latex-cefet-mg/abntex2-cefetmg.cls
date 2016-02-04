@@ -14,31 +14,31 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-cefetmg}[2015/09/01 v6.0]
+\ProvidesClass{abntex2-cefetmg}[2016/02/03 v7.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{
-	\PassOptionsToClass{\CurrentOption}{abntex2}
+    \PassOptionsToClass{\CurrentOption}{abntex2}
 }
 
 \PassOptionsToClass{
 % Opções da classe memoir
-	  12pt,						% Tamanho da fonte
-	  openright,				% Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
-      %twoside,					% Impressão em frente (anverso) e verso. Oposto a oneside
-      oneside,					% Impressão apenas no anverso. Oposto a twoside
-      a4paper,					% Tamanho do papel.
-	  sumario=tradicional,		% Seleciona o sumário tradicional
+      12pt,                     % Tamanho da fonte
+      openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
+      %twoside,                 % Impressão em frente (anverso) e verso. Oposto a oneside
+      oneside,                  % Impressão apenas no anverso. Oposto a twoside
+      a4paper,                  % Tamanho do papel.
+      sumario=tradicional,      % Seleciona o sumário tradicional
 % Opções da classe abntex2
-	  %chapter=TITLE,			% Títulos de capítulos convertidos em letras maiúsculas
-	  %section=TITLE,			% Títulos de seções convertidos em letras maiúsculas
-	  %subsection=TITLE,		% Títulos de subseções convertidos em letras maiúsculas
-	  %subsubsection=TITLE,		% Ttítulos de subsubseções convertidos em letras maiúsculas
+      %chapter=TITLE,           % Títulos de capítulos convertidos em letras maiúsculas
+      %section=TITLE,           % Títulos de seções convertidos em letras maiúsculas
+      %subsection=TITLE,        % Títulos de subseções convertidos em letras maiúsculas
+      %subsubsection=TITLE,     % Ttítulos de subsubseções convertidos em letras maiúsculas
 % opções do pacote babel
-      english,					% Idioma adicional para hifenização
-      brazilian,				% O ultimo idioma indicado será o principal idioma do documento
-      hyphens,         			% parâmetro para hifenizar urls longas, usado no pacote url
-	}{abntex2}
+      english,                  % Idioma adicional para hifenização
+      brazilian,                % O ultimo idioma indicado será o principal idioma do documento
+      hyphens,                  % parâmetro para hifenizar urls longas, usado no pacote url
+    }{abntex2}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
@@ -59,13 +59,13 @@
 
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
-	\ifcase #1
-		Nenhuma cita\c{c}\~ao no texto.
-	\or
-		Citado na p\'agina #2.
-	\else
-        	Citado #1 vezes nas p\'aginas #2.
-	\fi
+    \ifcase #1
+        Nenhuma cita\c{c}\~ao no texto.
+    \or
+        Citado na p\'agina #2.
+    \else
+            Citado #1 vezes nas p\'aginas #2.
+    \fi
 }
 
 % Define a numeração das equações de forma sequencial
@@ -78,24 +78,24 @@
 
 % Configura layout para elementos pre-textuais
 \renewcommand{\pretextual}{
-	\pagenumbering{roman} 			% a numeração das páginas é em algarismos romanos
-	\aliaspagestyle{chapter}{plain}
-	\pagestyle{plain}
-	\aliaspagestyle{cleared}{empty}
-	\aliaspagestyle{part}{empty}
+    \pagenumbering{roman}           % a numeração das páginas é em algarismos romanos
+    \aliaspagestyle{chapter}{plain}
+    \pagestyle{plain}
+    \aliaspagestyle{cleared}{empty}
+    \aliaspagestyle{part}{empty}
 }
 
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{
-	\pagenumbering{arabic} 		% A numeração das páginas é em algarismos arábicos, inciando em 1
-	\chapterstyle{default} 		% Estilo plain
+    \pagenumbering{arabic}      % A numeração das páginas é em algarismos arábicos, inciando em 1
+    \chapterstyle{default}      % Estilo plain
 }
 
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{
-	\chapterstyle{abnt} 		% Estilo da ABNT
-	\phantompart
+    \chapterstyle{abnt}         % Estilo da ABNT
+    \phantompart
 }
 
 
@@ -169,16 +169,16 @@
 
 % Comando que trata a fonte nos objetos flutuantes
 \renewcommand{\fonte}[1]{
-	\begin{SingleSpacing}\par\end{SingleSpacing}
-	\centering\small{Fonte: #1}
+    \begin{SingleSpacing}\par\end{SingleSpacing}
+    \centering\small{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{
-	\begin{SingleSpacing}\par\end{SingleSpacing}
-	\begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
-		Nota: & #1
-	\end{tabular}
+    \begin{SingleSpacing}\par\end{SingleSpacing}
+    \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
+        Nota: & #1
+    \end{tabular}
 }
 
 
@@ -235,17 +235,17 @@
 % Define os títulos das listas
 \addto\captionsbrazil{
 % Ajusta nomes padrões do babel
-	\renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
-	\renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
-	\renewcommand{\listfigurename}{Lista de Figuras}
-	\renewcommand{\listtablename}{Lista de Tabelas}
-	\renewcommand{\indexname}{\'{I}ndice Remissivo}
+    \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
+    \renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
+    \renewcommand{\listfigurename}{Lista de Figuras}
+    \renewcommand{\listtablename}{Lista de Tabelas}
+    \renewcommand{\indexname}{\'{I}ndice Remissivo}
 % Ajusta nomes usados com a macro \autoref
-	\renewcommand{\pageautorefname}{p\'agina}
-	\renewcommand{\sectionautorefname}{Se\c{c}\~ao}
-	\renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
-	\renewcommand{\subsubsectionautorefname}{Subsubse\c{c}\~ao}
-	\renewcommand{\paragraphautorefname}{Subse\c{c}\~ao}
+    \renewcommand{\pageautorefname}{p\'agina}
+    \renewcommand{\sectionautorefname}{Se\c{c}\~ao}
+    \renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
+    \renewcommand{\subsubsectionautorefname}{Subsubse\c{c}\~ao}
+    \renewcommand{\paragraphautorefname}{Subse\c{c}\~ao}
 }
 
 % Cria a lista de quadros
@@ -265,53 +265,53 @@
 
 \makeatletter
 \renewcommand{\imprimircapa}{
-	\begin{capa}
-		\begin{center}
-			\imprimirlogoinstituicao{} \\
-			\normalfont\scshape{\imprimirinstituicao} \\
-			\normalfont\scshape{\imprimirprograma} \\
-		\end{center}
+    \begin{capa}
+        \begin{center}
+            \imprimirlogoinstituicao{} \\
+            \normalfont\scshape{\imprimirinstituicao} \\
+            \normalfont\scshape{\imprimirprograma} \\
+        \end{center}
 
-		\vspace*{\fill}
+        \vspace*{\fill}
 
-		\begin{center}
-			\ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
-			\abntex@ifnotempty{\imprimirsubtitulo}
-			{
-				{\ABNTEXchapterfont\HUGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
-			}
-		\end{center}
+        \begin{center}
+            \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
+            \abntex@ifnotempty{\imprimirsubtitulo}
+            {
+                {\ABNTEXchapterfont\HUGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
+            }
+        \end{center}
 
-		\vspace*{80pt}
+        \vspace*{80pt}
 
-		\begin{center}
-			\large\normalfont\scshape\textbf\imprimirautor
-		\end{center}
+        \begin{center}
+            \large\normalfont\scshape\textbf\imprimirautor
+        \end{center}
 
-		\vspace*{10pt}
+        \vspace*{10pt}
 
-		\begin{center}
-			\abntex@ifnotempty{\imprimirorientador}
-			{
-				\small\imprimirorientadorRotulo{} \imprimirorientador \\
-				\small\imprimirinstOrientador \\
-			}
-			\abntex@ifnotempty{\imprimircoorientador}
-			{
-				\begin{SingleSpacing}\par\end{SingleSpacing}
-				\small\imprimircoorientadorRotulo{} \imprimircoorientador \\
-				\small\imprimirinstCoorientador
-			}
-		\end{center}
+        \begin{center}
+            \abntex@ifnotempty{\imprimirorientador}
+            {
+                \small\imprimirorientadorRotulo{} \imprimirorientador \\
+                \small\imprimirinstOrientador \\
+            }
+            \abntex@ifnotempty{\imprimircoorientador}
+            {
+                \begin{SingleSpacing}\par\end{SingleSpacing}
+                \small\imprimircoorientadorRotulo{} \imprimircoorientador \\
+                \small\imprimirinstCoorientador
+            }
+        \end{center}
 
-		\vspace*{\fill}
+        \vspace*{\fill}
 
-		\begin{center}
-			\normalfont\scshape{\imprimirlocal}\\
-			\normalfont\scshape{\imprimirdata}
-		\end{center}
+        \begin{center}
+            \normalfont\scshape{\imprimirlocal}\\
+            \normalfont\scshape{\imprimirdata}
+        \end{center}
 
-	\end{capa}
+    \end{capa}
 }
 \makeatother
 
@@ -322,55 +322,55 @@
 
 \makeatletter
 \renewcommand{\folhaderostocontent}{
-	\setcounter{page}{2}
-	\begin{center}
-		{\large\normalfont\scshape\textbf\imprimirautor}
-	\end{center}
+    \setcounter{page}{2}
+    \begin{center}
+        {\large\normalfont\scshape\textbf\imprimirautor}
+    \end{center}
 
-	\vspace*{150pt}
+    \vspace*{150pt}
 
-	\begin{center}
-		\ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-		\abntex@ifnotempty{\imprimirsubtitulo}{
-			{\ABNTEXchapterfont\LARGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
-		}
-	\end{center}
+    \begin{center}
+        \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
+        \abntex@ifnotempty{\imprimirsubtitulo}{
+            {\ABNTEXchapterfont\LARGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
+        }
+    \end{center}
 
-	\vspace*{90pt}
+    \vspace*{90pt}
 
-	\abntex@ifnotempty{\imprimirpreambulo}{
-		\SingleSpacing
-		\begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
-			& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
-			\abntex@ifnotempty{\imprimirareaconcentracao}
-			{
-				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
-			}
-			\abntex@ifnotempty{\imprimirlinhapesquisa}
-			{
-				& \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
-			}
-			\abntex@ifnotempty{\imprimirorientador}
-			{
-				& \small\imprimirorientadorRotulo & \imprimirorientador \\
-				& & \small\imprimirinstOrientador \\ & & \\
-			}
-			\abntex@ifnotempty{\imprimircoorientador}
-			{
-				& \small\imprimircoorientadorRotulo & \imprimircoorientador \\
-				& & \small\imprimirinstCoorientador
-			}
-		\end{tabular}
-	}
+    \abntex@ifnotempty{\imprimirpreambulo}{
+        \SingleSpacing
+        \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
+            & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+            \abntex@ifnotempty{\imprimirareaconcentracao}
+            {
+                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+            }
+            \abntex@ifnotempty{\imprimirlinhapesquisa}
+            {
+                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+            }
+            \abntex@ifnotempty{\imprimirorientador}
+            {
+                & \small\imprimirorientadorRotulo & \imprimirorientador \\
+                & & \small\imprimirinstOrientador \\ & & \\
+            }
+            \abntex@ifnotempty{\imprimircoorientador}
+            {
+                & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
+                & & \small\imprimirinstCoorientador
+            }
+        \end{tabular}
+    }
 
-	\vspace*{\fill}
+    \vspace*{\fill}
 
-	\begin{center}
-		\normalfont\scshape{\imprimirinstituicao}\\
-		\normalfont\scshape{\imprimirprograma}\\
-		\normalfont\scshape{\imprimirlocal}\\
-		\normalfont\scshape{\imprimirdata}
-	\end{center}
+    \begin{center}
+        \normalfont\scshape{\imprimirinstituicao}\\
+        \normalfont\scshape{\imprimirprograma}\\
+        \normalfont\scshape{\imprimirlocal}\\
+        \normalfont\scshape{\imprimirdata}
+    \end{center}
 }
 \makeatother
 
@@ -380,15 +380,15 @@
 % -----------------------------------------------------------------------------
 \makeatletter
 \newcommand{\imprimirfolhadeaprovacao}{
-	\begin{folhadeaprovacao}
-		\vspace*{\fill}
+    \begin{folhadeaprovacao}
+        \vspace*{\fill}
 
-		\begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
-			& \imprimirtextopadraofolhadeaprovacao \\
-		\end{tabular}
+        \begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
+            & \imprimirtextopadraofolhadeaprovacao \\
+        \end{tabular}
 
-		\vspace*{\fill}
-	\end{folhadeaprovacao}
+        \vspace*{\fill}
+    \end{folhadeaprovacao}
 }
 \makeatother
 
@@ -398,22 +398,22 @@
 % -----------------------------------------------------------------------------
 \renewenvironment{dedicatoria}[1][]
 {
-	\ifthenelse{\equal{#1}{}}{
-		\PRIVATEbookmarkthis{\dedicatorianame}
-	}{\pretextualchapter{#1}}
+    \ifthenelse{\equal{#1}{}}{
+        \PRIVATEbookmarkthis{\dedicatorianame}
+    }{\pretextualchapter{#1}}
 
-	\vspace*{\fill}
+    \vspace*{\fill}
 
-	\begin{flushright}
-		\begin{minipage}{.5\textwidth}
-			\begin{SingleSpacing}
-				\setlength\parindent{0pt}
-				\setlength\parskip{12pt}
+    \begin{flushright}
+        \begin{minipage}{.5\textwidth}
+            \begin{SingleSpacing}
+                \setlength\parindent{0pt}
+                \setlength\parskip{12pt}
 }
 {
-			\end{SingleSpacing}
-		\end{minipage}
-	\end{flushright}
+            \end{SingleSpacing}
+        \end{minipage}
+    \end{flushright}
 }
 
 
@@ -422,20 +422,20 @@
 % -----------------------------------------------------------------------------
 \renewenvironment{epigrafe}[1][]
 {
-	\ifthenelse{\equal{#1}{}}{
-		\PRIVATEbookmarkthis{\epigraphname}
-	}{\pretextualchapter{#1}}
+    \ifthenelse{\equal{#1}{}}{
+        \PRIVATEbookmarkthis{\epigraphname}
+    }{\pretextualchapter{#1}}
 
-	\vspace*{\fill}
+    \vspace*{\fill}
 
-	\begin{flushright}
-		\begin{minipage}{.5\textwidth}
-			\begin{SingleSpacing}
-				\setlength\parindent{0pt}
-				\setlength\parskip{12pt}
+    \begin{flushright}
+        \begin{minipage}{.5\textwidth}
+            \begin{SingleSpacing}
+                \setlength\parindent{0pt}
+                \setlength\parskip{12pt}
 }
 {
-			\end{SingleSpacing}
-		\end{minipage}
-	\end{flushright}
+            \end{SingleSpacing}
+        \end{minipage}
+    \end{flushright}
 }

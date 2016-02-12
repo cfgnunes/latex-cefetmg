@@ -1,14 +1,13 @@
-%
-% Modelo de trabalho acadêmico monográfico (Tese de Doutorado, Dissertação de Mestrado
-% ou Projeto de Qualificação) em português brasileiro e em conformidade com as normas da ABNT
-%
 % *****************************************************************************
-% *  Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG        *
+% *     Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG     *
 % *                                                                           *
-% *  Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                     *
-% *  Autor: Henrique E. Borges <henrique@lsi.cefetmg.br>                      *
-% *  Autor: Denise de Souza <densouza@gmail.com>                              *
-% *  Autor: Lauro César <https://code.google.com/p/abntex2/>                  *
+% * Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT  *
+% * (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)   *
+% *                                                                           *
+% *  Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                   *
+% *           Henrique E. Borges <henrique@lsi.cefetmg.br>                    *
+% *           Denise de Souza <densouza@gmail.com>                            *
+% *           Lauro César <https://code.google.com/p/abntex2/>                *
 % *                                                                           *
 % *****************************************************************************
 
@@ -17,7 +16,6 @@
       %twoside,                 % Impressão em frente (anverso) e verso. Oposto a oneside
       oneside,                  % Impressão apenas no anverso. Oposto a twoside
       a4paper,                  % Tamanho do papel
-% opções do pacote babel
       english,                  % Idioma adicional para hifenização
       brazilian,                % O ultimo idioma indicado será o principal idioma do documento
 ]{abntex2-cefetmg}
@@ -28,24 +26,25 @@
 % -----------------------------------------------------------------------------
 
 \usepackage[brazilian,hyperpageref]{backref}
-\usepackage[alf,
-abnt-emphasize=bf,
-bibjustif,
-recuo=0cm,
-abnt-doi=expand,                % Expande um endereço iniciado com doi: para http://dx.doi.org/
-abnt-url-package=url,           % utiliza o pacote url
-abnt-refinfo=yes,               % utiliza o estilo bibliográfico abnt-refinfo
-abnt-etal-cite=3,
-abnt-etal-list=3,
-abnt-thesis-year=final]{abntex2cite}    % Formata as citações bibliográficas conforme a norma ABNT
+\usepackage[
+    alf,
+    abnt-emphasize=bf,
+    bibjustif,
+    recuo=0cm,
+    abnt-doi=expand,            % Expande um endereço iniciado com doi: para http://dx.doi.org/
+    abnt-url-package=url,       % utiliza o pacote url
+    abnt-refinfo=yes,           % utiliza o estilo bibliográfico abnt-refinfo
+    abnt-etal-cite=3,
+    abnt-etal-list=3,
+    abnt-thesis-year=final
+    ]{abntex2cite}              % Formata as citações bibliográficas conforme a norma ABNT
 
 
 % -----------------------------------------------------------------------------
 % Pacotes utilizados
 % -----------------------------------------------------------------------------
 
-%\usepackage[latin1]{inputenc}  % Codificação do documento (conversão automática dos acentos)
-\usepackage[utf8]{inputenc}     % Codificação do documento (conversão automática dos acentos)
+\usepackage[utf8]{inputenc}     % Codificação do documento
 \usepackage[T1]{fontenc}        % Seleção de código de fonte
 %\usepackage{times}             % Usa a fonte Times
 %\usepackage{lmodern}           % Usa a fonte Latin Modern
@@ -53,56 +52,35 @@ abnt-thesis-year=final]{abntex2cite}    % Formata as citações bibliográficas 
 %\usepackage{lmodern}           % Usa a fonte Latin Modern
 \usepackage{scalefnt}           % Permite redimensionar tamanho da fonte
 \usepackage[scaled]{helvet}     % Usa a fonte Helvetica (default)
-    \renewcommand*\familydefault{\sfdefault}
-%\usepackage{ae,aecompl}        % Fontes de alta qualidade
 \usepackage{upgreek}            % Permite inserção de letras gregas
 \usepackage{latexsym}           % Permite inserção de símbolos matemáticos
-\usepackage{amsfonts, amssymb, amsmath}     % fontes e símbolos matemáticos
-
+\usepackage{amsfonts, amssymb, amsmath}     % Fontes e símbolos matemáticos
 \usepackage{lscape}             % Permite páginas em modo "paisagem"
 \usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
 \usepackage{microtype}          % Melhora a justificação do documento
 \usepackage{hyperref}           % Usado para criar "hyperlinks" no PDF
-%\usepackage[hyphens]{url}      % Melhora apresentação de URLs
-%\usepackage{url}               % Melhora apresentação de URLs
 \usepackage{breakurl}           % Permite quebra de linha em URLs longas
-%\usepackage{balance}           % Balanceia o texto no artigo
-\usepackage[bottom]{footmisc}   % Mantém as notas de rodapé sempre na mesma posição
 \usepackage{verbatim}           % Permite apresentar texto tal como escrito no documento, ainda que sejam comandos Latex
-%\usepackage{lettrine}          % Lettrine é a primeira letra do início de um texto que é aumentada em relação às demais
-\usepackage[pointedenum]{paralist}      % Usado elaborar listas numeradas ou de "bullets", aninhadas ou não
-
 \usepackage{graphicx}           % Inclusão de gráficos e figuras
-%\usepackage{subfig}            % Permite posicionar figuras
-%\usepackage{picinpar}          % Permite posicionar imagens em parágrafos
-%\usepackage{psfrag}            % Inclusão de símbolos latex em figuras eps
 \usepackage{tikz}               % Pacote para desenhos
 \usepackage{color, colortbl}    % Controle das cores
 \usepackage{booktabs}           % Réguas horizontais em tabelas
 \usepackage{multirow, array}    % Permite tabelas com múltiplas linhas e colunas
-\usepackage[algoruled, portuguese]{algorithm2e}     % Permite escrever algoritmos em português
 \usepackage{float}              % Necessário para tabelas/figuras em ambiente multi-colunas
-                                % Devem ser, necessariamente, colocados em pontos específicos junto com [H] (e.g., \begin{table}[H])
 \usepackage{subeqnarray}        % Permite subnumeração de equações
-
-%\usepackage{comandos}          % Novos comandos
-%\usepackage{etoolbox}          % Pacote para tratamento de condicionais (if-else-end \ string)
-%\usepackage{ifthen}                % Pacote para tratamento de condicionais (if-else-end \ number)
-
-%\usepackage{babel}             % Usado para definir idioma do documento e respectivas hifenizações
-
 \usepackage{bookmark}           % Cria menu de bookmarks
-%\usepackage{nomencl}           % Usado para produzir lista de símbolos
 \usepackage{makeidx}            % Usado para produzir índice remissivo (glossário)
-    \makeindex                  % Compila o índice
+\usepackage[bottom]{footmisc}   % Mantém as notas de rodapé sempre na mesma posição
+\usepackage[pointedenum]{paralist}      % Usado elaborar listas numeradas ou de "bullets", aninhadas ou não
+\usepackage[algoruled, portuguese]{algorithm2e}     % Permite escrever algoritmos em português
 
-%\usepackage{multind}           % Usado para produzir índices múltiplos
-%\usepackage{acronym}           % Usado para produzir acrônimos
-%\usepackage{bibentry}          % Permite uso de bibtex inline
+% Redefine fontes
+\renewcommand*\familydefault{\sfdefault}
 
+% Compila o índice
+\makeindex
 
-
-% Insere e constroi alguns elementos pré-textuais para gerar capa, folha de rosto e fe folha de aprovação
+% Insere e constrói alguns elementos pré-textuais para gerar capa, folha de rosto e folha de aprovação
 \include{./01-elementos-pre-textuais/capa}
 \include{./01-elementos-pre-textuais/folhaRosto}
 \include{./01-elementos-pre-textuais/folhaAprovacao}
@@ -117,11 +95,11 @@ abnt-thesis-year=final]{abntex2cite}    % Formata as citações bibliográficas 
 \makeatletter
 \hypersetup{
     portuguese,
-    colorlinks=true,        % true: “links” coloridos; false: “links” em caixas de texto
-    linkcolor=blue,         % Define cor dos “links” internos
-    citecolor=blue,         % Define cor dos “links” para as referências bibliográficas
-    filecolor=blue,         % Define cor dos “links” para arquivos
-    urlcolor=blue,          % Define a cor dos “hiperlinks”
+    colorlinks=true,        % true: "links" coloridos; false: "links" em caixas de texto
+    linkcolor=blue,         % Define cor dos "links" internos
+    citecolor=blue,         % Define cor dos "links" para as referências bibliográficas
+    filecolor=blue,         % Define cor dos "links" para arquivos
+    urlcolor=blue,          % Define a cor dos "hiperlinks"
     breaklinks=true,
     pdftitle={\@title},
     pdfauthor={\@author},
@@ -148,7 +126,7 @@ abnt-thesis-year=final]{abntex2cite}    % Formata as citações bibliográficas 
 
 \begin{document}
 
-\frenchspacing              % Retira o espaço extra desnecessário nas frases
+\frenchspacing % Retira o espaço extra desnecessário nas frases
 
 % Gera e imprime alguns elementos pré-textuais: capa, folha de rosto e folha de aprovação
 \pretextual

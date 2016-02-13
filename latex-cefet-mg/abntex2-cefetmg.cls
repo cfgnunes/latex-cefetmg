@@ -1,14 +1,13 @@
-%
-% Modelo de trabalho acadêmico monográfico (Tese de Doutorado, Dissertação de Mestrado
-% ou Projeto de Qualificação) em português brasileiro e em conformidade com as normas da ABNT
-%
 % *****************************************************************************
-% *  Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG        *
+% *     Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG     *
 % *                                                                           *
-% *  Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                     *
-% *  Autor: Henrique E. Borges <henrique@lsi.cefetmg.br>                      *
-% *  Autor: Denise de Souza <densouza@gmail.com>                              *
-% *  Autor: Lauro César <https://code.google.com/p/abntex2/>                  *
+% * Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT  *
+% * (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)   *
+% *                                                                           *
+% *  Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                   *
+% *           Henrique E. Borges <henrique@lsi.cefetmg.br>                    *
+% *           Denise de Souza <densouza@gmail.com>                            *
+% *           Lauro César <https://code.google.com/p/abntex2/>                *
 % *                                                                           *
 % *****************************************************************************
 
@@ -33,8 +32,8 @@
       %chapter=TITLE,           % Títulos de capítulos convertidos em letras maiúsculas
       %section=TITLE,           % Títulos de seções convertidos em letras maiúsculas
       %subsection=TITLE,        % Títulos de subseções convertidos em letras maiúsculas
-      %subsubsection=TITLE,     % Ttítulos de subsubseções convertidos em letras maiúsculas
-% opções do pacote babel
+      %subsubsection=TITLE,     % Títulos de sub-subseções convertidos em letras maiúsculas
+% Opções do pacote babel
       english,                  % Idioma adicional para hifenização
       brazilian,                % O ultimo idioma indicado será o principal idioma do documento
       hyphens,                  % parâmetro para hifenizar urls longas, usado no pacote url
@@ -158,7 +157,7 @@
 \newcommand{\textopadraofolhadeaprovacao}[1]{\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
 
-% Comandos de dados - Logomarca da instituicao
+% Comandos de dados - Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
 

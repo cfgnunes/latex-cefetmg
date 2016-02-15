@@ -1,16 +1,15 @@
-% *****************************************************************************
-% *     Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG     *
-% *                                                                           *
-% * Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT  *
-% * (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)   *
-% *                                                                           *
-% *  Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                   *
-% *           Henrique E. Borges <henrique@lsi.cefetmg.br>                    *
-% *           Denise de Souza <densouza@gmail.com>                            *
-% *           Lauro César <https://code.google.com/p/abntex2/>                *
-% *                                                                           *
-% *****************************************************************************
-
+% -----------------------------------------------------------------------------
+%       Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
+%
+%   Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT
+%   (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
+%
+%    Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
+%             Henrique E. Borges <henrique@lsi.cefetmg.br>
+%             Denise de Souza <densouza@gmail.com>
+%             Lauro César <https://code.google.com/p/abntex2/>
+%
+% -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cefetmg}[2016/02/03 v7.0]
@@ -42,7 +41,6 @@
 \RequirePackage{makeidx}                                % Produzir índice remissivo de palavras
 \RequirePackage{chngcntr}
 
-
 % -----------------------------------------------------------------------------
 % CONFIGURAÇÕES GERAIS
 % -----------------------------------------------------------------------------
@@ -67,7 +65,6 @@
 % Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
-
 % -----------------------------------------------------------------------------
 % ESTILO DE ELEMENTOS
 % -----------------------------------------------------------------------------
@@ -81,7 +78,6 @@
     \aliaspagestyle{part}{empty}
 }
 
-
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
     \pagenumbering{arabic}      % A numeração das páginas é em algarismos arábicos, inciando em 1
@@ -94,14 +90,12 @@
     \phantompart
 }
 
-
 % -----------------------------------------------------------------------------
 % COMANDOS DE DADOS PARTICULARES
 % -----------------------------------------------------------------------------
 
 % Automatiza as aspas
 \newcommand{\aspas}[1]{``{#1}''}
-
 
 % -----------------------------------------------------------------------------
 % COMANDOS DE DADOS
@@ -111,53 +105,43 @@
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
-
 % Comandos de dados -Subtítulo do trabalho
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
-
 
 % Comandos de dados - Instituição do orientador
 \providecommand{\imprimirinstOrientador}{}
 \newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
 
-
 % Comandos de dados - Instituição do coorientador
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
-
 
 % Comandos de dados -  Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
-
 % Comandos de dados - Título Acadêmico a ser alcançado (Doutor ou Mestre)
 \providecommand{\imprimirtituloAcademico}{}
 \newcommand{\tituloAcademico}[1]{\renewcommand{\imprimirtituloAcademico}{#1}}
-
 
 % Comandos de dados - Área de concentração do Programa
 \newcommand{\imprimirareaconcentracaoRotulo}{\'Area de concentra\c{c}\~ao: }
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
-
 % Comandos de dados - linha de pesquisa do Programa
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
 
-
 % Comandos de dados - Texto da folha de aprovação
 \providecommand{\imprimirtextopadraofolhadeaprovacao}{}
 \newcommand{\textopadraofolhadeaprovacao}[1]{\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
-
 % Comandos de dados - Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
-
 
 % -----------------------------------------------------------------------------
 % OBJETOS FLUTUANTES
@@ -177,7 +161,6 @@
     \end{tabular}
 }
 
-
 % -----------------------------------------------------------------------------
 % PARÁGRAFOS
 % -----------------------------------------------------------------------------
@@ -187,7 +170,6 @@
 
 % Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.4cm}
-
 
 % -----------------------------------------------------------------------------
 % FONTES
@@ -212,7 +194,6 @@
 \renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
-
 % -----------------------------------------------------------------------------
 % SUMÁRIO
 % -----------------------------------------------------------------------------
@@ -222,7 +203,6 @@
 
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
-
 
 % -----------------------------------------------------------------------------
 % LISTAS
@@ -253,7 +233,6 @@
 \counterwithout{quadro}{chapter}
 \renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
-
 
 % -----------------------------------------------------------------------------
 % CAPA
@@ -310,7 +289,6 @@
     \end{capa}
 }
 \makeatother
-
 
 % -----------------------------------------------------------------------------
 % FOLHA DE ROSTO
@@ -370,7 +348,6 @@
 }
 \makeatother
 
-
 % -----------------------------------------------------------------------------
 % FOLHA DE APROVAÇÃO
 % -----------------------------------------------------------------------------
@@ -387,7 +364,6 @@
     \end{folhadeaprovacao}
 }
 \makeatother
-
 
 % -----------------------------------------------------------------------------
 % DEDICATÓRIA
@@ -411,7 +387,6 @@
         \end{minipage}
     \end{flushright}
 }
-
 
 % -----------------------------------------------------------------------------
 % EPÍGRAFE

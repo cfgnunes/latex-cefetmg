@@ -1,16 +1,15 @@
-% *****************************************************************************
-% *     Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG     *
-% *                                                                           *
-% * Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT  *
-% * (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)   *
-% *                                                                           *
-% *  Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>                   *
-% *           Henrique E. Borges <henrique@lsi.cefetmg.br>                    *
-% *           Denise de Souza <densouza@gmail.com>                            *
-% *           Lauro César <https://code.google.com/p/abntex2/>                *
-% *                                                                           *
-% *****************************************************************************
-
+% -----------------------------------------------------------------------------
+%       Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
+%
+%   Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT
+%   (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
+%
+%    Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
+%             Henrique E. Borges <henrique@lsi.cefetmg.br>
+%             Denise de Souza <densouza@gmail.com>
+%             Lauro César <https://code.google.com/p/abntex2/>
+%
+% -----------------------------------------------------------------------------
 
 \documentclass[%
       %twoside,                 % Impressão em frente (anverso) e verso. Oposto a oneside
@@ -29,7 +28,6 @@
     abnt-etal-list=3,
     abnt-thesis-year=final
 ]{abntex2cite}                  % Configura as citações bibliográficas conforme a norma ABNT
-
 
 % -----------------------------------------------------------------------------
 % Pacotes utilizados
@@ -62,12 +60,6 @@
 % Redefine fontes
 \renewcommand*\familydefault{\sfdefault}
 
-% Insere e constrói alguns elementos pré-textuais para gerar capa, folha de rosto e folha de aprovação
-\include{./01-elementos-pre-textuais/capa}
-\include{./01-elementos-pre-textuais/folha-rosto}
-\include{./01-elementos-pre-textuais/folha-aprovacao}
-
-
 % -----------------------------------------------------------------------------
 % Configurações de aparência do PDF final
 % -----------------------------------------------------------------------------
@@ -96,20 +88,21 @@
 % Cria o índice remissivo
 \makeindex
 
-% -----------------------------------------------------------------------------
 % Hifenização de palavras não constantes do dicionário
-% -----------------------------------------------------------------------------
-
 \hyphenation{%
         qua-dros-cha-ve
         Bras-nett
         Kat-sa-gge-los
 }
 
-
 % -----------------------------------------------------------------------------
 % Inclui todos os arquivos do trabalho acadêmico
 % -----------------------------------------------------------------------------
+
+% Insere e constrói alguns elementos pré-textuais para gerar capa, folha de rosto e folha de aprovação
+\include{./01-elementos-pre-textuais/capa}
+\include{./01-elementos-pre-textuais/folha-rosto}
+\include{./01-elementos-pre-textuais/folha-aprovacao}
 
 \begin{document}
 
@@ -151,7 +144,6 @@
 \include{./03-elementos-pos-textuais/apendices}             % Apêndices
 \include{./03-elementos-pos-textuais/anexos}                % Anexos
 \include{./03-elementos-pos-textuais/indice-remissivo}      % Índice Remissivo
-
 
 % -----------------------------------------------------------------------------
 % Os elementos pré-textuais, textuais e pós-textuais deverão ajustados conforme o

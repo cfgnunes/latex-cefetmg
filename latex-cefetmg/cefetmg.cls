@@ -13,7 +13,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{abntex2-cefetmg}[2016/02/03 v7.0]
+\ProvidesClass{cefetmg}[2016/02/03 v7.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{%
@@ -34,7 +34,6 @@
 % Opções do pacote babel
       english,                  % Idioma adicional para hifenização
       brazil,                   % O ultimo idioma indicado será o principal idioma do documento
-      hyphens,                  % parâmetro para hifenizar urls longas, usado no pacote url
     }{abntex2}
 
 \ProcessOptions\relax

@@ -1,26 +1,29 @@
-# Variaveis definidas
-TEX = pdflatex
-BIBTEX = bibtex
-# Este deve ser o nome do arquivo principal para ser compilado
+# Definição de variáveis
 SOURCE = "meu-trabalho"
+LATEX       = pdflatex
+BIBTEX      = bibtex
+MAKEINDEX   = makeindex
+GHOSTSCRIPT = gs
 
-# Compila o fonte
+# Compila o código fonte
 all:
 	@echo "Compilando arquivos..."
-	$(TEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
+	$(MAKEINDEX) $(SOURCE).idx
 	$(BIBTEX) $(SOURCE).aux
-	$(TEX) $(SOURCE).tex
-	$(TEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
+	$(LATEX) $(SOURCE).tex
 	@echo "Comprimindo o arquivo pdf..."
-	@gs	-q -dNOPAUSE -dBATCH -dSAFER \
+	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
 		-sDEVICE=pdfwrite \
 		-dEmbedAllFonts=true \
 		-dSubsetFonts=true \
 		-sOutputFile=$(SOURCE)-compactado.pdf \
-		 $(SOURCE).pdf
+		$(SOURCE).pdf
 	@echo "Terminado."
 
-# Remove arquivos temporarios
+# Remove arquivos temporários
 clean:
 	@echo "Limpando arquivos temporarios..."
 	@find . -type f -iname "*.aux" -delete

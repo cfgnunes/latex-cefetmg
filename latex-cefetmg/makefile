@@ -6,6 +6,7 @@ MAKEINDEX   = makeindex
 GHOSTSCRIPT = gs
 
 # Compila o código fonte
+# Pode-se compilar também apenas com o comando "latexmk -pdf meu-trabalho.tex"
 all:
 	@echo "Compilando arquivos..."
 	$(LATEX) $(SOURCE).tex

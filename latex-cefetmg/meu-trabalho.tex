@@ -12,32 +12,23 @@
 % *****************************************************************************
 
 
-\documentclass[
+\documentclass[%
       %twoside,                 % Impressão em frente (anverso) e verso. Oposto a oneside
       oneside,                  % Impressão apenas no anverso. Oposto a twoside
-      a4paper,                  % Tamanho do papel
-      english,                  % Idioma adicional para hifenização
-      brazilian,                % O ultimo idioma indicado será o principal idioma do documento
 ]{cefetmg}
 
-
-% -----------------------------------------------------------------------------
-% Configura as citações bibliográficas conforme a norma ABNT
-% -----------------------------------------------------------------------------
-
-\usepackage[brazilian,hyperpageref]{backref}
-\usepackage[
+\usepackage[%
     alf,
     abnt-emphasize=bf,
     bibjustif,
     recuo=0cm,
     abnt-doi=expand,            % Expande um endereço iniciado com doi: para http://dx.doi.org/
-    abnt-url-package=url,       % utiliza o pacote url
-    abnt-refinfo=yes,           % utiliza o estilo bibliográfico abnt-refinfo
+    abnt-url-package=url,       % Utiliza o pacote url
+    abnt-refinfo=yes,           % Utiliza o estilo bibliográfico abnt-refinfo
     abnt-etal-cite=3,
     abnt-etal-list=3,
     abnt-thesis-year=final
-    ]{abntex2cite}              % Formata as citações bibliográficas conforme a norma ABNT
+]{abntex2cite}                  % Configura as citações bibliográficas conforme a norma ABNT
 
 
 % -----------------------------------------------------------------------------
@@ -51,13 +42,9 @@
 %\usepackage{lmodern}           % Usa a fonte Latin Modern
 \usepackage[scaled]{helvet}     % Usa a fonte Helvetica (default)
 \usepackage{scalefnt}           % Permite redimensionar tamanho da fonte
-\usepackage{upgreek}            % Permite inserção de letras gregas
-\usepackage{latexsym}           % Permite inserção de símbolos matemáticos
-\usepackage{lscape}             % Permite páginas em modo "paisagem"
 \usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
 \usepackage{microtype}          % Melhora a justificação do documento
 \usepackage{hyperref}           % Usado para criar "hyperlinks" no PDF
-\usepackage{breakurl}           % Permite quebra de linha em URLs longas
 \usepackage{verbatim}           % Permite apresentar texto tal como escrito no documento, ainda que sejam comandos Latex
 \usepackage{graphicx}           % Inclusão de gráficos e figuras
 \usepackage{tikz}               % Pacote para desenhos
@@ -66,7 +53,6 @@
 \usepackage{multirow, array}    % Permite tabelas com múltiplas linhas e colunas
 \usepackage{float}              % Necessário para tabelas/figuras em ambiente multi-colunas
 \usepackage{subeqnarray}        % Permite subnumeração de equações
-\usepackage{bookmark}           % Cria menu de bookmarks
 \usepackage{icomma}             % Uso de vírgulas em expressões matemáticas
 \usepackage{amsfonts, amssymb, amsmath}         % Fontes e símbolos matemáticos
 \usepackage[pointedenum]{paralist}              % Usado elaborar listas numeradas ou de "bullets", aninhadas ou não
@@ -91,11 +77,11 @@
 \makeatletter
 \hypersetup{%
     portuguese,
-    colorlinks=true,        % true: "links" coloridos; false: "links" em caixas de texto
-    linkcolor=blue,         % Define cor dos "links" internos
-    citecolor=blue,         % Define cor dos "links" para as referências bibliográficas
-    filecolor=blue,         % Define cor dos "links" para arquivos
-    urlcolor=blue,          % Define a cor dos "hiperlinks"
+    colorlinks=true,            % true: "links" coloridos; false: "links" em caixas de texto
+    linkcolor=blue,             % Define cor dos "links" internos
+    citecolor=blue,             % Define cor dos "links" para as referências bibliográficas
+    filecolor=blue,             % Define cor dos "links" para arquivos
+    urlcolor=blue,              % Define a cor dos "hiperlinks"
     breaklinks=true,
     pdftitle={\@title},
     pdfauthor={\@author},
@@ -172,6 +158,5 @@
 % tipo de trabalho acadêmico: Tese de Doutorado, Dissertação de Mestrado ou
 % Projeto de Qualificação de Mestrado ou Doutorado
 % -----------------------------------------------------------------------------
-
 
 \end{document}

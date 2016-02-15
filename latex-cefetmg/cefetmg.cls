@@ -22,24 +22,23 @@
 
 \PassOptionsToClass{%
 % Opções da classe memoir
-      12pt,                     % Tamanho da fonte
-      openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
-      a4paper,                  % Tamanho do papel.
-      sumario=tradicional,      % Seleciona o sumário tradicional
+    12pt,                     % Tamanho da fonte
+    openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
+    a4paper,                  % Tamanho do papel.
+    sumario=tradicional,      % Seleciona o sumário tradicional
 % Opções da classe abntex2
-      %chapter=TITLE,           % Títulos de capítulos convertidos em letras maiúsculas
-      %section=TITLE,           % Títulos de seções convertidos em letras maiúsculas
-      %subsection=TITLE,        % Títulos de subseções convertidos em letras maiúsculas
-      %subsubsection=TITLE,     % Títulos de sub-subseções convertidos em letras maiúsculas
+    %chapter=TITLE,           % Títulos de capítulos convertidos em letras maiúsculas
+    %section=TITLE,           % Títulos de seções convertidos em letras maiúsculas
+    %subsection=TITLE,        % Títulos de subseções convertidos em letras maiúsculas
+    %subsubsection=TITLE,     % Títulos de sub-subseções convertidos em letras maiúsculas
 % Opções do pacote babel
-      english,                  % Idioma adicional para hifenização
-      brazil,                   % O ultimo idioma indicado será o principal idioma do documento
-    }{abntex2}
+    brazil,                   % Idioma do documento
+}{abntex2}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-\RequirePackage[brazilian,hyperpageref]{backref}        % Produzir índice nas referências
+\RequirePackage[brazilian, hyperpageref]{backref}       % Produzir índice nas referências
 \RequirePackage{makeidx}                                % Produzir índice remissivo de palavras
 \RequirePackage{chngcntr}
 
@@ -61,7 +60,7 @@
     \or
         Citado na p\'agina #2.
     \else
-            Citado #1 vezes nas p\'aginas #2.
+        Citado #1 vezes nas p\'aginas #2.
     \fi
 }
 

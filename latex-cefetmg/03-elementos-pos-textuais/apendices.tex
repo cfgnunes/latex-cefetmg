@@ -2,15 +2,12 @@
 % Apêndices
 % -----------------------------------------------------------------------------
 
-
 \begin{apendicesenv}
 \partapendices
-
 
 % -----------------------------------------------------------------------------
 % Primeiro apêndice
 % -----------------------------------------------------------------------------
-
 
 \chapter{Nome do apêndice} % Edite para alterar o título deste apêndice
 \label{chap:apendiceA}
@@ -23,7 +20,6 @@ Caso seja conveniente, podem ser criados outros apêndices para o seu trabalho a
 
 Não queira colocar tudo que é complementar em um único apêndice. Organize seus apêndices de modo a que, em cada um deles, haja um único tipo de conteúdo. Isso facilita a leitura e compreensão para o leitor do trabalho. É para ele que você escreve.
 
-
 % -----------------------------------------------------------------------------
 % Novo apêndice
 % -----------------------------------------------------------------------------
@@ -31,11 +27,9 @@ Não queira colocar tudo que é complementar em um único apêndice. Organize se
 \chapter{Estrutura de trabalhos acadêmicos}
 \label{chap:apEstrTrabAcad}
 
-
 Quanto à estrutura do trabalho acadêmico, esta varia sobremaneira, a depender da conveniência do autor e seu(s) respectivo(s) orientador(es). No entanto, de acordo com as normas ABNT, alguns elementos são obrigatórios.
 
 A título de sugestão, e apenas isso, a \autoref{fig:estrutura-projeto-qualificacao} apresenta uma estrutura para um projeto de qualificação de mestrado ou doutorado, conforme a norma \citeonline{NBR14724:2011}.
-
 
 \begin{figure}[!htb]
     \centering
@@ -45,11 +39,9 @@ A título de sugestão, e apenas isso, a \autoref{fig:estrutura-projeto-qualific
     \label{fig:estrutura-projeto-qualificacao}
 \end{figure}
 
-
 Já a \autoref{fig:estrutura-tese-dissertacao} apresenta uma estrutura para uma tese de doutorado ou dissertação de mestrado, conforme a norma \citeonline{NBR14724:2011}.
 
 Cabe ressaltar que, em todas as figuras, os elementos obrigatórios estão destacados em vermelho, os demais são opcionais.
-
 
 \begin{figure}[!htb]
     \centering
@@ -59,9 +51,7 @@ Cabe ressaltar que, em todas as figuras, os elementos obrigatórios estão desta
     \label{fig:estrutura-tese-dissertacao}
 \end{figure}
 
-
 Observe que a estrutura de um projeto de qualificação é muito similar à da tese ou dissertação. A única diferença existente é que num projeto de qualificação o autor certamente terá, via de regra, apenas resultados parciais e preliminares. Além disso, estando o trabalho ainda em andamento, há que se apresentar um cronograma de trabalho que evidencie que o mesmo poderá ser concluído dentro dos prazos estabelecidos pelo programa.
-
 
 Por fim, como foi dito, este  \emph{template} pode ser utilizado para outros trabalhos acadêmicos. Neste caso, a \autoref{fig:estrutura-projeto-pesquisa} apresenta uma sugestão de projeto de pesquisa a ser submetido ao programa para fins de admissão ao mesmo, conforme a norma \citeonline{NBR15287:2005}.
 
@@ -90,7 +80,6 @@ Maiores detalhes relacionados aos comandos existentes no estilo poderão ser adq
 
 Uma das principais vantagens do uso do estilo de formatação para \LaTeX{}  é a formatação \textit{automática} dos elementos que compõem um documento acadêmico, tais como capa, folha de rosto, dedicatória, agradecimentos, epígrafe, resumo, abstract, listas de figuras, tabelas, siglas e símbolos, sumário, capítulos, referências, etc.
 
-
 % -----------------------------------------------------------------------------
 % Novo apêndice
 % -----------------------------------------------------------------------------
@@ -103,8 +92,6 @@ A seguir ilustra-se a forma de incluir ilustrações no corpo do texto. Pela nor
 A numeração sequencial de figuras, tabelas e equações ocorre de modo automático.
 
 Referências cruzadas são obtidas através dos comandos \verb|\label{}| e \verb|\ref{}|. Por exemplo, não é necessário saber que o número de certo capítulo é \ref{chap:fundamentacaoTeorica} para colocar o seu número no texto. Alternativamente se pode usar desta forma: \autoref{chap:fundamentacaoTeorica}. Isto facilita muito a inserção, remoção ou relocação de elementos numerados no texto (fato corriqueiro na escrita e correção de um documento acadêmico) sem a necessidade de renumerá-los todos.
-
-
 
 \section{Figuras}
 \label{sec:figuras}
@@ -122,8 +109,6 @@ Para uso avançado de imagens no \LaTeX{}, recomenda-se a consulta de literatura
     \fonte{\citeonline{Souza2012}}
     \label{fig:kdtree}
 \end{figure}
-
-
 
 \section{Quadros e tabelas}
 \label{sec:tabelas}
@@ -144,8 +129,6 @@ Exemplo de tabela:
 
 \input{./05-tabelas/tabteste}
 
-
-
 \section{Equações}
 \label{sec:equacoes}
 
@@ -161,8 +144,6 @@ A transformada de Laplace é dada na \autoref{eq:laplace}, enquanto a Eq. \ref{e
     \label{eq:dft}
 \end{equation}
 
-
-
 \section{Algoritmos}\label{sec:algoritmos}
 
 Os algoritmos devem ser feitos segundo o modelo abaixo. Para isso, utilizar o pacote {\ttfamily algorithm2e} no início do arquivo principal como neste exemplo.
@@ -171,7 +152,6 @@ Os algoritmos devem ser feitos segundo o modelo abaixo. Para isso, utilizar o pa
 
 \input{./07-algoritmos/vertices}
 
-
 % -----------------------------------------------------------------------------
 % Novo apêndice
 % -----------------------------------------------------------------------------
@@ -179,12 +159,9 @@ Os algoritmos devem ser feitos segundo o modelo abaixo. Para isso, utilizar o pa
 \chapter{Sobre as listas}
 \label{chap:apSobreLista}
 
-
 Para construir listas de "\textit{bullets}"{} ou listas enumeradas, inclusive listas aninhadas, é utilizado o pacote \verb|paralist|.
 
 O exemplo a seguir ilustra duas listas não numeradas aninhadas, utilizando o ambiente \verb|\compactitem|. Observe a indentação, bem como a mudança automática do tipo de "\textit{bullet}"{} nas listas aninhadas.
-
-
 
 \begin{compactitem}
     \item item não numerado 1
@@ -197,9 +174,7 @@ O exemplo a seguir ilustra duas listas não numeradas aninhadas, utilizando o am
     \item item não numerado 3
 \end{compactitem}
 
-
 Por outro lado, o exemplo a seguir ilustra duas listas numeradas aninhadas, utilizando o ambiente \verb|\compactenum|. Observe a numeração progressiva e indentação das listas aninhadas.
-
 
 \begin{compactenum}
     \item item numerado 1
@@ -214,14 +189,12 @@ Por outro lado, o exemplo a seguir ilustra duas listas numeradas aninhadas, util
 
 Cabe ressaltar que os ambientes \verb|\itemize| e \verb|\enumerate| podem ser utilizados alternativamente. No entanto, durante a compilação pdflatex são apresentados erros associados a estes ambientes, porém o pdf é gerado corretamente. Trata-se de um "\textit{bug}"{} que ainda não conseguimos resolver. Caso conheça a solução, por favor, comunique-nos para que possamos incluí-la numa futura atualização deste modelo.
 
-
 % -----------------------------------------------------------------------------
 % Novo apêndice
 % -----------------------------------------------------------------------------
 
 \chapter{Sobre citações e chamadas de referências}
 \label{chap:apSobreCita}
-
 
 Citações são trechos transcritos ou informações retiradas das publicações consultadas para a realização do trabalho.
 As citações são utilizadas no texto com o propósito de esclarecer, completar, embasar ou corroborar as ideias do autor.
@@ -230,11 +203,8 @@ Todas as publicações consultadas e efetivamente utilizadas (por meio de citaç
 
 A norma ABNT NBR:10520-2002 classifica as citações em: citações livres e citações literais.
 
-
-
 \section{Citações livres}
 \label{sec:citacoesLivres}
-
 
 Nas citações livres, reproduzem-se as ideias e informações de um autor, sem, entretanto, ``copiar letra por letra'' o texto do autor. Sendo assim, não há muito a dizer sobre como fazer citações livres, exceto que há que se tomar o devido cuidado com o "recortar e colar e modificar"{} para que não se caracterize plágio.
 
@@ -246,7 +216,7 @@ Por outro lado, \citeonline{Barbosa2004} contra-argumenta afirmando que \ldots.
 
 Acima, as chamadas de referências foram feitas com o comando \verb|\citeonline{chave}|, que produzirá a formatação correta, conforme a norma ABNT.
 
- Observe que em ambos os casos anteriores, a frase fica incompleta e incompreensível caso as palavras "Maturana e Varela"{} e "Barbosa et al."{} não sejam "pronunciadas"{}. Ou seja, os nomes dos autores fazem parte da frase. Neste caso, a formatação automática da chamada de referência coloca os nomes dos autores seguido, entre parêntesis pelo ano de publicação da obra referenciada. Isso apenas no caso em que se usa o esquema autor-ano, que é \textit{padrão} neste modelo \LaTeX{}.
+Observe que em ambos os casos anteriores, a frase fica incompleta e incompreensível caso as palavras "Maturana e Varela"{} e "Barbosa et al."{} não sejam "pronunciadas"{}. Ou seja, os nomes dos autores fazem parte da frase. Neste caso, a formatação automática da chamada de referência coloca os nomes dos autores seguido, entre parêntesis pelo ano de publicação da obra referenciada. Isso apenas no caso em que se usa o esquema autor-ano, que é \textit{padrão} neste modelo \LaTeX{}.
 
 A segunda maneira de fazer uma chamada de referência deve ser utilizada quando se quer evitar uma interrupção na sequência do texto, o que poderia, eventualmente, prejudicar a leitura.
 
@@ -261,8 +231,6 @@ Nos dois casos imediatamente acima a chamada de referência deve ser feita com o
 Observe que o estilo de redação das frases teve que ser modificado para torná-las compreensíveis sem a menção explícita dos nomes dos autores. Estes agora não são parte integrante da frase, ficam entre parêntesis. Neste caso, a formatação automática da chamada de referência coloca, entre parêntesis, os nomes dos autores seguido pelo ano de publicação da obra referenciada. Novamente, apenas no caso em que se usa o esquema autor-ano, que é \textit{padrão} neste modelo \LaTeX{}.
 
 Por fim, cabe chamar a atenção para o detalhe do termo \textit{et al.} que deve ser utilizado quando o trabalho citado possui mais de três autores. Esse recurso é automatizado pelo estilo {\ttfamily abntex2}. Caso não haja desejo em abreviar o nome dos demais autores através do termo \textit{et al.}, deve-se incluir a opção {\ttfamily abnt-no-etal-label}.
-
-
 
 \section{Citações literais}
 \label{sec:citacoesLiterais}
@@ -299,7 +267,6 @@ No entanto, \citeonline[p.~33]{Silva2000}, ao fazerem as suas críticas à ciên
     Mas o curioso é que o conhecimento científico que descobriu os meios realmente extraordinários para, por exemplo, ver aquilo que se passa no nosso sol, para tentar conceber a estrutura das estrelas extremamente distantes, e até mesmo para tentar pesar o universo, o que é algo de extrema utilidade, o conhecimento científico que multiplicou seus meios de observação e de concepção do universo, dos objetos, está completamente cego, se quiser considerar-se apenas a si próprio!
 \end{citacao}
 
-
 Já quando o trecho citado é curto (3 ou menos linhas) ele deve inserido diretamente no texto entre aspas. Veja os dois exemplos seguintes, cada qual utilizando uma forma de chamada de referência.
 
 A epistemologia baseada na biologia parte do princípio de que ``assumo que não posso fazer referência a entidades independentes de mim para construir meu explicar'' \cite[p.~35]{Maturana2003}.
@@ -310,14 +277,10 @@ Finalmente, e isto vale para citações curtas ou longas, caso seja necessário 
 
 A epistemologia baseada na biologia parte do princípio de que ``assumo que não posso fazer referencia [\textit{sic}] a \underline{entidades independentes} de mim [realidade objetiva] para construir meu explicar'' \cite[p.~35, comentários e grifo nosso]{Maturana2003}.
 
-
-
 \section{Mais detalhes sobre as chamadas de referências}
 \label{sec:referUtilizadas}
 
-
 A seguir há mais exemplos dos comandos para as chamadas de referências e o resultado produzido.
-
 
 \citeonline{Maturana2003} \ \ \  \verb|\citeonline{Maturana2003}|\\
 \citeonline{Barbosa2004} \ \ \   \verb|\citeonline{Barbosa2004}|\\
@@ -327,20 +290,16 @@ A seguir há mais exemplos dos comandos para as chamadas de referências e o res
 \citeonline[p.~35]{Maturana2003} \ \ \   \verb|\citeonline[p.~35]{Maturana2003}|\\
 \cite{Barbosa2004,Maturana2003} \ \ \   \verb|\cite{Barbosa2004,Maturana2003}|\\
 
-
 Há que se tomar bastante cuidado com referências cujos autores têm nomes compostos, tipo João de Souza Júnior ou Antônio José da Silva Filho. Para que a formatação seja correta, os nomes dos autores no arquivo {\ttfamily .bib} deverá ser cadastrado de uma forma específica. Para maiores detalhes, veja o \autopageref{chap:anexoB} \footnote{O texto do anexo é de inteira responsabilidade do autor devidamente referenciado.}.
 
 Os exemplos abaixo ilustram a formatação correta.
 
-
 \cite[p.~28]{vanGELDER1998} \ \ \ \ \  \verb|\cite[p.~28]{vanGELDER1998}|\\
 \citeonline[p.~28]{vanGELDER1998} \ \ \ \ \  \verb|\citeonline[p.~28]{vanGELDER1998}|\\
-
 
 Observe que, a despeito do que está dito no \autoref{chap:anexoB}, ainda há falhas na formatação ABNT de nomes tipo \verb|van Gelder| quando utilizados em chamadas de referências que fazem parte do texto (\textit{e.g.}, \verb|\citeonline{vanGELDER1998}| que deveria produzir \verb|van Gelder (1998)|). Este problema pode ser contornado facilmente, simplesmente evitando o uso dessa forma de chamada de referência, preferindo sempre nestes casos, o uso da forma \textit{e.g.}, \verb|\cite{vanGELDER1998}| que será formatada corretamente, produzindo \verb|(van GELDER, 1998)|.
 
 Observe ainda o caso em que é feita duas citações juntas \cite{Santos2003, Neubert2001} e como citar endereços Web \cite{IRL2014}.
-
 
 % -----------------------------------------------------------------------------
 % Novo apêndice
@@ -351,13 +310,10 @@ Observe ainda o caso em que é feita duas citações juntas \cite{Santos2003, Ne
 
 A bibliografia é feita no padrão \textsc{Bib}\TeX{}. As referências são colocadas em um arquivo separado. Os elementos de cada item bibliográfico que devem constar nas referências  bibliográficas são apresentados a seguir. Tais referências bibliográficas devem seguir a norma \citeonline{NBR6023:2002} da ABNT\footnote{As normas técnicas da ABNT não são gratuitas.}.
 
-
-
 \section{Entradas de referências}
 \label{sec:entradasRefs}
 
 Entradas são objetos de citação bibliográficas. Dito de outra forma, são as categorias dos tipos de documentos e materiais componentes da bibliografia. A classe abn\TeX{} define as seguintes entradas:
-
 
 \begin{verbatim}
 @book
@@ -391,14 +347,10 @@ Diante disso, para evitar erros de formatação, o correto é após baixar o arq
 
 Neste contexto, e para esta finalidade, nas seções seguintes é apresentado uma série de exemplos, quase todos, utilizados como exemplos na própria norma \citeonline{NBR6023:2002}. Para detalhes dos campos utilizados confira o arquivo {\ttfamily myRefs.bib}. Deve-se estar atento para o fato de que o uso de um sistema de gerenciamento de referências para abrir e/ou editar o arquivo {\ttfamily myRefs.bib}, pode ocultar campos utilizados pela norma ABNT e, por outro lado, exibir campos não utilizados por ela. Ou seja, o aplicativo deve ser configurado adequadamente para exibir \textbf{todos os campos}, mesmo os opcionais.
 
-
-
 \section{Notas de rodapé}
 \label{sec:notasRodape}
 
-
 A norma \citeonline{NBR10520:2002}, em sua seção \textbf{7 Notas de rodapé}, classifica as notas de rodapé em duas categorias: notas explicativas\footnote{é o tipo mais comum de notas que destacam, explicam e/ou complementam o que foi dito no corpo do texto, como esta nota de rodapé, por exemplo.} e notas de referências. Já as notas de referências, como o próprio nome ja indica, são utilizadas para colocar referências e/ou chamadas de referências sob certas condições.
-
 
 \subsection{Notas de referências: uso de idem, ibidem, opus citatus e outros}
 \label{subsec:notasRefs}
@@ -417,11 +369,9 @@ Estes recursos se referem ao uso de certas expressões consagradas para facilita
     \item et sequentia = e sequência.
 \end{compactitem}
 
-
 Observe que estes recursos não se adequam para serem utilizados em listas de referências bibliográficas, nem tampouco no corpo do texto. Assim, devem ser utilizados apenas nas notas de referência posicionadas no rodapé \cite[p.~6]{abnTeX22014c}, quando se referem a uma referência já feita anteriormente no corpo do texto. Ademais, essas expressões fazem sentido apenas quando aplicadas a citações de uma única referência por vez. Enfim, trata-se mais de um recurso estilístico do que algo de primeira necessidade, pelo menos para o tipo de documento usualmente elaborados nas área de Ciências Exatas, da Terra e Engenharias.
 
 Veja o uso desses tipos de expressões nos exemplos seguintes:
-
 
 \Idem[p.~21]{abnTeX22014d}
 
@@ -435,16 +385,12 @@ Veja o uso desses tipos de expressões nos exemplos seguintes:
 
 \etseq[p.~6]{abnTeX22014c}
 
-
-
 \section{Datas em referências}
 \label{sec:datasBib}
-
 
 Quando as chamadas de referências são feitas no modelo autor-ano, como é o caso deste modelo \LaTeX{}, é evidente que o autor e sobretudo o ano adquirem papel de destaque. No caso da data de publicação, esta deve sempre estar presente (é elemento essencial) e indicada em algarismos arábicos.
 
 A norma ABNT não permite o uso de expressões do tipo "sem data"{} ("[s.d]") para indicar que não se sabe a data de publicação de certa referência bibliográfica. Assim sendo, quando a data não puder ser indicada precisamente, deve-se registrar uma data aproximada entre colchetes, conforme descrito a seguir:
-
 
 [1971 ou 1972] \ \ \ \ \ um ano ou outro,
 

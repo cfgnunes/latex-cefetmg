@@ -5,9 +5,10 @@ LATEXMK     = latexmk
 BIBTEX      = bibtex
 MAKEINDEX   = makeindex
 GHOSTSCRIPT = gs
+OPENPDF     = evince
 
 # Executa o processo completo de limpeza, compilação e compressão
-all: clean compile2 compress
+all: clean compile2 open
 
 # Compila o código fonte
 compile:
@@ -46,4 +47,10 @@ clean:
 	@find . -type f -iname "*.*~" -delete
 	@rm -f *.bak *.ps *.l* *.idx *.bbl *.brf *.glo *.dvi *.toc *.blg *.ilg *.ind *.out *.wsp *.fls *.synctex.*
 	@rm -f $(SOURCE).pdf $(SOURCE)-compactado.pdf
+	@echo "Pronto."
+
+# Visualiza o arquivo PDF gerado
+open:
+	@echo "Limpando arquivos temporarios..."
+	$(OPENPDF) $(SOURCE).pdf &
 	@echo "Pronto."

@@ -161,31 +161,31 @@ Os algoritmos devem ser feitos segundo o modelo abaixo. Para isso, utilizar o pa
 
 Para construir listas de "\textit{bullets}"{} ou listas enumeradas, inclusive listas aninhadas, é utilizado o pacote \verb|paralist|.
 
-O exemplo a seguir ilustra duas listas não numeradas aninhadas, utilizando o ambiente \verb|\compactitem|. Observe a indentação, bem como a mudança automática do tipo de "\textit{bullet}"{} nas listas aninhadas.
+O exemplo a seguir ilustra duas listas não numeradas aninhadas, utilizando o ambiente \verb|\itemize|. Observe a indentação, bem como a mudança automática do tipo de "\textit{bullet}"{} nas listas aninhadas.
 
-\begin{compactitem}
+\begin{itemize}
     \item item não numerado 1
     \item item não numerado 2
-    \begin{compactitem}
+    \begin{itemize}
         \item subitem não numerado 1
         \item subitem não numerado 2
         \item subitem não numerado 3
-    \end{compactitem}
+    \end{itemize}
     \item item não numerado 3
-\end{compactitem}
+\end{itemize}
 
-Por outro lado, o exemplo a seguir ilustra duas listas numeradas aninhadas, utilizando o ambiente \verb|\compactenum|. Observe a numeração progressiva e indentação das listas aninhadas.
+Por outro lado, o exemplo a seguir ilustra duas listas numeradas aninhadas, utilizando o ambiente \verb|\enumerate|. Observe a numeração progressiva e indentação das listas aninhadas.
 
-\begin{compactenum}
+\begin{enumerate}
     \item item numerado 1
     \item item numerado 2
-    \begin{compactenum}
+    \begin{enumerate}
         \item subitem numerado 1
         \item subitem numerado 2
         \item subitem numerado 3
-    \end{compactenum}
+    \end{enumerate}
     \item item numerado 3
-\end{compactenum}
+\end{enumerate}
 
 Cabe ressaltar que os ambientes \verb|\itemize| e \verb|\enumerate| podem ser utilizados alternativamente. No entanto, durante a compilação pdflatex são apresentados erros associados a estes ambientes, porém o pdf é gerado corretamente. Trata-se de um "\textit{bug}"{} que ainda não conseguimos resolver. Caso conheça a solução, por favor, comunique-nos para que possamos incluí-la numa futura atualização deste modelo.
 
@@ -359,7 +359,7 @@ Como indica o próprio nome, as notas de referências se prestam como recurso au
 
 Estes recursos se referem ao uso de certas expressões consagradas para facilitar a elaboração de referencias. São eles:
 
-\begin{compactitem}
+\begin{itemize}
     \item idem = mesmo autor,
     \item ibidem = mesma obra,
     \item opus citatum = obra citada,
@@ -367,7 +367,7 @@ Estes recursos se referem ao uso de certas expressões consagradas para facilita
     \item passim = aqui e alí,
     \item cf = confira,
     \item et sequentia = e sequência.
-\end{compactitem}
+\end{itemize}
 
 Observe que estes recursos não se adequam para serem utilizados em listas de referências bibliográficas, nem tampouco no corpo do texto. Assim, devem ser utilizados apenas nas notas de referência posicionadas no rodapé \cite[p.~6]{abnTeX22014c}, quando se referem a uma referência já feita anteriormente no corpo do texto. Ademais, essas expressões fazem sentido apenas quando aplicadas a citações de uma única referência por vez. Enfim, trata-se mais de um recurso estilístico do que algo de primeira necessidade, pelo menos para o tipo de documento usualmente elaborados nas área de Ciências Exatas, da Terra e Engenharias.
 

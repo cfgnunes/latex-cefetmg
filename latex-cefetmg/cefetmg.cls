@@ -51,6 +51,9 @@
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 
+% Define as listas de item compactas (sem espaçamento entre os itens)
+\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{%
     \ifcase #1

@@ -16,16 +16,14 @@
 \ProvidesClass{abntex2-cefetmg}[2016/02/03 v7.0]
 
 % Repassa os parâmetros ao abntex2
-\DeclareOption*{
+\DeclareOption*{%
     \PassOptionsToClass{\CurrentOption}{abntex2}
 }
 
-\PassOptionsToClass{
+\PassOptionsToClass{%
 % Opções da classe memoir
       12pt,                     % Tamanho da fonte
       openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
-      %twoside,                 % Impressão em frente (anverso) e verso. Oposto a oneside
-      oneside,                  % Impressão apenas no anverso. Oposto a twoside
       a4paper,                  % Tamanho do papel.
       sumario=tradicional,      % Seleciona o sumário tradicional
 % Opções da classe abntex2
@@ -35,14 +33,15 @@
       %subsubsection=TITLE,     % Títulos de sub-subseções convertidos em letras maiúsculas
 % Opções do pacote babel
       english,                  % Idioma adicional para hifenização
-      brazilian,                % O ultimo idioma indicado será o principal idioma do documento
+      brazil,                   % O ultimo idioma indicado será o principal idioma do documento
       hyphens,                  % parâmetro para hifenizar urls longas, usado no pacote url
     }{abntex2}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-\RequirePackage[brazilian,hyperpageref]{backref}
+\RequirePackage[brazilian,hyperpageref]{backref}        % Produzir índice nas referências
+\RequirePackage{makeidx}                                % Produzir índice remissivo de palavras
 \RequirePackage{chngcntr}
 
 
@@ -57,7 +56,7 @@
 \renewcommand{\backref}{}
 
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
+\renewcommand*{\backrefalt}[4]{%
     \ifcase #1
         Nenhuma cita\c{c}\~ao no texto.
     \or
@@ -75,9 +74,9 @@
 % ESTILO DE ELEMENTOS
 % -----------------------------------------------------------------------------
 
-% Configura layout para elementos pre-textuais
-\renewcommand{\pretextual}{
-    \pagenumbering{roman}           % a numeração das páginas é em algarismos romanos
+% Elementos pré-textuais
+\renewcommand{\pretextual}{%
+    \pagenumbering{roman} % Algarismos romanos
     \aliaspagestyle{chapter}{plain}
     \pagestyle{plain}
     \aliaspagestyle{cleared}{empty}
@@ -86,13 +85,13 @@
 
 
 % Configura layout para elementos textuais
-\renewcommand{\textual}{
+\renewcommand{\textual}{%
     \pagenumbering{arabic}      % A numeração das páginas é em algarismos arábicos, inciando em 1
     \chapterstyle{default}      % Estilo plain
 }
 
 % Configura layout para elementos pós-textuais
-\renewcommand{\postextual}{
+\renewcommand{\postextual}{%
     \chapterstyle{abnt}         % Estilo da ABNT
     \phantompart
 }
@@ -167,13 +166,13 @@
 % -----------------------------------------------------------------------------
 
 % Comando que trata a fonte nos objetos flutuantes
-\renewcommand{\fonte}[1]{
+\renewcommand{\fonte}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \centering\small{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
-\renewcommand{\nota}[1]{
+\renewcommand{\nota}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
         Nota: & #1
@@ -232,7 +231,7 @@
 % -----------------------------------------------------------------------------
 
 % Define os títulos das listas
-\addto\captionsbrazil{
+\addto\captionsbrazil{%
 % Ajusta nomes padrões do babel
     \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
     \renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
@@ -263,7 +262,7 @@
 % -----------------------------------------------------------------------------
 
 \makeatletter
-\renewcommand{\imprimircapa}{
+\renewcommand{\imprimircapa}{%
     \begin{capa}
         \begin{center}
             \imprimirlogoinstituicao{} \\
@@ -276,7 +275,7 @@
         \begin{center}
             \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
             \abntex@ifnotempty{\imprimirsubtitulo}
-            {
+            {%
                 {\ABNTEXchapterfont\HUGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
             }
         \end{center}
@@ -291,12 +290,12 @@
 
         \begin{center}
             \abntex@ifnotempty{\imprimirorientador}
-            {
+            {%
                 \small\imprimirorientadorRotulo{} \imprimirorientador \\
                 \small\imprimirinstOrientador \\
             }
             \abntex@ifnotempty{\imprimircoorientador}
-            {
+            {%
                 \begin{SingleSpacing}\par\end{SingleSpacing}
                 \small\imprimircoorientadorRotulo{} \imprimircoorientador \\
                 \small\imprimirinstCoorientador
@@ -320,7 +319,7 @@
 % -----------------------------------------------------------------------------
 
 \makeatletter
-\renewcommand{\folhaderostocontent}{
+\renewcommand{\folhaderostocontent}{%
     \setcounter{page}{2}
     \begin{center}
         {\large\normalfont\scshape\textbf\imprimirautor}
@@ -330,32 +329,32 @@
 
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-        \abntex@ifnotempty{\imprimirsubtitulo}{
+        \abntex@ifnotempty{\imprimirsubtitulo}{%
             {\ABNTEXchapterfont\LARGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
     \end{center}
 
     \vspace*{90pt}
 
-    \abntex@ifnotempty{\imprimirpreambulo}{
+    \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
         \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
             & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
             \abntex@ifnotempty{\imprimirareaconcentracao}
-            {
+            {%
                 & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}
-            {
+            {%
                 & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
             }
             \abntex@ifnotempty{\imprimirorientador}
-            {
+            {%
                 & \small\imprimirorientadorRotulo & \imprimirorientador \\
                 & & \small\imprimirinstOrientador \\ & & \\
             }
             \abntex@ifnotempty{\imprimircoorientador}
-            {
+            {%
                 & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
                 & & \small\imprimirinstCoorientador
             }
@@ -378,7 +377,7 @@
 % FOLHA DE APROVAÇÃO
 % -----------------------------------------------------------------------------
 \makeatletter
-\newcommand{\imprimirfolhadeaprovacao}{
+\newcommand{\imprimirfolhadeaprovacao}{%
     \begin{folhadeaprovacao}
         \vspace*{\fill}
 
@@ -396,8 +395,8 @@
 % DEDICATÓRIA
 % -----------------------------------------------------------------------------
 \renewenvironment{dedicatoria}[1][]
-{
-    \ifthenelse{\equal{#1}{}}{
+{%
+    \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\dedicatorianame}
     }{\pretextualchapter{#1}}
 
@@ -409,7 +408,7 @@
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
 }
-{
+{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
@@ -420,8 +419,8 @@
 % EPÍGRAFE
 % -----------------------------------------------------------------------------
 \renewenvironment{epigrafe}[1][]
-{
-    \ifthenelse{\equal{#1}{}}{
+{%
+    \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\epigraphname}
     }{\pretextualchapter{#1}}
 
@@ -433,7 +432,7 @@
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
 }
-{
+{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}

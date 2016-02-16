@@ -47,11 +47,10 @@
 \usepackage[utf8]{inputenc}     % Codificação do documento
 \usepackage[T1]{fontenc}        % Seleção de código de fonte
 %\usepackage{times}             % Usa a fonte Times
-%\usepackage{lmodern}           % Usa a fonte Latin Modern
 %\usepackage{palatino}          % Usa a fonte Palatino
 %\usepackage{lmodern}           % Usa a fonte Latin Modern
-\usepackage{scalefnt}           % Permite redimensionar tamanho da fonte
 \usepackage[scaled]{helvet}     % Usa a fonte Helvetica (default)
+\usepackage{scalefnt}           % Permite redimensionar tamanho da fonte
 \usepackage{upgreek}            % Permite inserção de letras gregas
 \usepackage{latexsym}           % Permite inserção de símbolos matemáticos
 \usepackage{lscape}             % Permite páginas em modo "paisagem"
@@ -90,7 +89,7 @@
 \definecolor{blue}{RGB}{41,5,195} % Altera o aspecto da cor azul
 
 \makeatletter
-\hypersetup{
+\hypersetup{%
     portuguese,
     colorlinks=true,        % true: "links" coloridos; false: "links" em caixas de texto
     linkcolor=blue,         % Define cor dos "links" internos
@@ -104,12 +103,18 @@
 }
 \makeatother
 
+% Redefinição de labels
+\renewcommand{\algorithmautorefname}{Algoritmo}
+\def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
+
+% Cria o índice remissivo
+\makeindex
 
 % -----------------------------------------------------------------------------
 % Hifenização de palavras não constantes do dicionário
 % -----------------------------------------------------------------------------
 
-\hyphenation{
+\hyphenation{%
         qua-dros-cha-ve
         Bras-nett
         Kat-sa-gge-los
@@ -122,7 +127,8 @@
 
 \begin{document}
 
-\frenchspacing % Retira o espaço extra desnecessário nas frases
+% Retira o espaço extra desnecessário nas frases
+\frenchspacing
 
 % Gera e imprime alguns elementos pré-textuais: capa, folha de rosto e folha de aprovação
 \pretextual

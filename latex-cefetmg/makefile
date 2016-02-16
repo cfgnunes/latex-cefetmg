@@ -51,6 +51,6 @@ clean:
 
 # Visualiza o arquivo PDF gerado
 open:
-	@echo "Limpando arquivos temporarios..."
+	@echo "Abrindo o arquivo PDF..."
 	$(OPENPDF) $(SOURCE).pdf &
 	@echo "Pronto."

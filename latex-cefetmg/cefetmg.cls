@@ -159,7 +159,7 @@
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
-    \begin{tabular}{p{.05\textwidth}p{.9\textwidth}}
+    \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
     \end{tabular}
 }
@@ -202,7 +202,7 @@
 % -----------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
-\renewcommand{\cftchapteraftersnum}{\hfill{} -- \hfill{}}
+\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
 
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
@@ -256,7 +256,7 @@
             \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
             \abntex@ifnotempty{\imprimirsubtitulo}
             {%
-                {\ABNTEXchapterfont\HUGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
+                {\ABNTEXchapterfont\HUGE\scshape: }{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
             }
         \end{center}
 
@@ -309,7 +309,7 @@
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
         \abntex@ifnotempty{\imprimirsubtitulo}{%
-            {\ABNTEXchapterfont\LARGE\scshape{\hspace*{-0.3em}: }}{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
+            {\ABNTEXchapterfont\LARGE\scshape: }{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
     \end{center}
 

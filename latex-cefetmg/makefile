@@ -1,5 +1,5 @@
 # Definição de variáveis
-SOURCE = "meu-trabalho"
+SOURCE      = "meu-trabalho"
 LATEX       = pdflatex
 BIBTEX      = bibtex
 MAKEINDEX   = makeindex

@@ -12,8 +12,8 @@
 % -----------------------------------------------------------------------------
 
 \documentclass[%
-      %twoside,                 % Impressão em frente (anverso) e verso. Oposto a oneside
-      oneside,                  % Impressão apenas no anverso. Oposto a twoside
+    %twoside,                   % Impressão em frente (anverso) e verso. Oposto a oneside
+    oneside,                    % Impressão apenas no anverso. Oposto a twoside
 ]{cefetmg}
 
 \usepackage[%
@@ -39,13 +39,11 @@
 %\usepackage{palatino}          % Usa a fonte Palatino
 %\usepackage{lmodern}           % Usa a fonte Latin Modern
 \usepackage[scaled]{helvet}     % Usa a fonte Helvetica (default)
-\usepackage{scalefnt}           % Permite redimensionar tamanho da fonte
 \usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
 \usepackage{microtype}          % Melhora a justificação do documento
 \usepackage{hyperref}           % Usado para criar "hyperlinks" no PDF
 \usepackage{verbatim}           % Permite apresentar texto tal como escrito no documento, ainda que sejam comandos Latex
 \usepackage{graphicx}           % Inclusão de gráficos e figuras
-\usepackage{tikz}               % Pacote para desenhos
 \usepackage{color, colortbl}    % Controle das cores
 \usepackage{booktabs}           % Réguas horizontais em tabelas
 \usepackage{multirow, array}    % Permite tabelas com múltiplas linhas e colunas
@@ -53,18 +51,15 @@
 \usepackage{subeqnarray}        % Permite subnumeração de equações
 \usepackage{icomma}             % Uso de vírgulas em expressões matemáticas
 \usepackage{amsfonts, amssymb, amsmath}         % Fontes e símbolos matemáticos
-\usepackage[pointedenum]{paralist}              % Usado elaborar listas numeradas ou de "bullets", aninhadas ou não
 \usepackage[algoruled, portuguese]{algorithm2e} % Permite escrever algoritmos em português
 %\usepackage[bottom]{footmisc}                  % Mantém as notas de rodapé sempre na mesma posição
 
-% Redefine fontes
+% Redefine a fonte para uma fonte similar a Arial
 \renewcommand*\familydefault{\sfdefault}
 
 % -----------------------------------------------------------------------------
 % Configurações de aparência do PDF final
 % -----------------------------------------------------------------------------
-
-\definecolor{blue}{RGB}{41,5,195} % Altera o aspecto da cor azul
 
 \makeatletter
 \hypersetup{%
@@ -81,6 +76,9 @@
 }
 \makeatother
 
+% Altera o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
 % Redefinição de labels
 \renewcommand{\algorithmautorefname}{Algoritmo}
 \def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
@@ -90,9 +88,9 @@
 
 % Hifenização de palavras não constantes do dicionário
 \hyphenation{%
-        qua-dros-cha-ve
-        Bras-nett
-        Kat-sa-gge-los
+    qua-dros-cha-ve
+    Bras-nett
+    Kat-sa-gge-los
 }
 
 % -----------------------------------------------------------------------------

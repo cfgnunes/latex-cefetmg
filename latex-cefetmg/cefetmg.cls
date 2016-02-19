@@ -83,7 +83,7 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    \pagenumbering{arabic}      % A numeração das páginas é em algarismos arábicos, inciando em 1
+    \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -92,7 +92,7 @@
 
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{%
-    \chapterstyle{abnt}         % Estilo da ABNT
+    \chapterstyle{abnt}
     \phantompart
 }
 

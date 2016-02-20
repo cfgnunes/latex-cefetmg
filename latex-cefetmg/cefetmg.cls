@@ -172,10 +172,10 @@
 % -----------------------------------------------------------------------------
 
 % Tamanho da indentação do parágrafo
-\setlength{\parindent}{0cm}
+\setlength{\parindent}{1.3cm}
 
 % Espaçamento entre um parágrafo e outro
-\setlength{\parskip}{0.4cm}
+\setlength{\parskip}{0.2cm}
 
 % -----------------------------------------------------------------------------
 % FONTES

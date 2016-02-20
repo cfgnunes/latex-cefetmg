@@ -32,7 +32,6 @@
 % -----------------------------------------------------------------------------
 % Pacotes utilizados
 % -----------------------------------------------------------------------------
-
 \usepackage[utf8]{inputenc}                                 % Codificação do documento
 \usepackage[T1]{fontenc}                                    % Seleção de código de fonte
 \usepackage{booktabs}                                       % Réguas horizontais em tabelas
@@ -67,7 +66,6 @@
 % -----------------------------------------------------------------------------
 % Configurações de aparência do PDF final
 % -----------------------------------------------------------------------------
-
 \makeatletter
 \hypersetup{%
     portuguese,
@@ -93,15 +91,14 @@
 % Cria o índice remissivo
 \makeindex
 
-% Hifenização de palavras não constantes do dicionário
+% Hifenização de palavras que não estão no dicionário
 \hyphenation{%
     qua-dros-cha-ve
-    Bras-nett
     Kat-sa-gge-los
 }
 
 % -----------------------------------------------------------------------------
-% Inclui todos os arquivos do trabalho acadêmico
+% Inclui os arquivos do trabalho acadêmico
 % -----------------------------------------------------------------------------
 
 % Insere e constrói alguns elementos pré-textuais para gerar capa, folha de rosto e folha de aprovação
@@ -111,16 +108,11 @@
 
 \begin{document}
 
-% Retira o espaço extra desnecessário nas frases
-\frenchspacing
-
-% Gera e imprime alguns elementos pré-textuais: capa, folha de rosto e folha de aprovação
+% Insere os elementos pré-textuais
 \pretextual
 \imprimircapa                                               % Comando para imprimir Capa
 \imprimirfolhaderosto{}                                     % Comando para imprimir Folha de rosto
 \imprimirfolhadeaprovacao{}                                 % Comando para imprimir Folha de aprovação
-
-% Insere os demais elementos pré-textuais
 \include{./01-elementos-pre-textuais/dedicatoria}           % Dedicatória
 \include{./01-elementos-pre-textuais/agradecimentos}        % Agradecimentos
 \include{./01-elementos-pre-textuais/epigrafe}              % Epígrafe

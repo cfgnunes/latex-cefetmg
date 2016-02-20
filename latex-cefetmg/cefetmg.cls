@@ -15,9 +15,7 @@
 \ProvidesClass{cefetmg}[2016/02/03 v7.0]
 
 % Repassa os parâmetros ao abntex2
-\DeclareOption*{%
-    \PassOptionsToClass{\CurrentOption}{abntex2}
-}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
 
 \PassOptionsToClass{%
 % Opções da classe memoir
@@ -42,7 +40,7 @@
 \RequirePackage{chngcntr}
 
 % -----------------------------------------------------------------------------
-% CONFIGURAÇÕES GERAIS
+% Configurações gerais
 % -----------------------------------------------------------------------------
 
 % Configurações do pacote backref usado sem a opção hyperpageref de backref
@@ -52,10 +50,11 @@
 \renewcommand{\backref}{}
 
 % Define as listas de item compactas (sem espaçamento entre os itens)
-\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
 
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{%
+\renewcommand*{\backrefalt}[4]
+{%
     \ifcase #1
         Nenhuma cita\c{c}\~ao no texto.
     \or
@@ -69,49 +68,14 @@
 \counterwithout{equation}{chapter}
 
 % -----------------------------------------------------------------------------
-% ESTILO DE ELEMENTOS
-% -----------------------------------------------------------------------------
-
-% Elementos pré-textuais
-\renewcommand{\pretextual}{%
-    \pagenumbering{roman} % Algarismos romanos
-    \aliaspagestyle{chapter}{plain}
-    \pagestyle{plain}
-    \aliaspagestyle{cleared}{empty}
-    \aliaspagestyle{part}{empty}
-}
-
-% Configura layout para elementos textuais
-\renewcommand{\textual}{%
-    \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
-    \pagestyle{abntheadings}
-    \aliaspagestyle{chapter}{abntchapfirst}
-    \nouppercaseheads
-    \bookmarksetup{startatroot}
-}
-
-% Configura layout para elementos pós-textuais
-\renewcommand{\postextual}{%
-    \chapterstyle{abnt}
-    \phantompart
-}
-
-% -----------------------------------------------------------------------------
-% COMANDOS DE DADOS PARTICULARES
-% -----------------------------------------------------------------------------
-
-% Automatiza as aspas
-\newcommand{\aspas}[1]{``{#1}''}
-
-% -----------------------------------------------------------------------------
-% COMANDOS DE DADOS
+% Comandos de dados
 % -----------------------------------------------------------------------------
 
 % Comandos de dados - Programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
-% Comandos de dados -Subtítulo do trabalho
+% Comandos de dados - Subtítulo do trabalho
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
@@ -150,17 +114,50 @@
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
 
 % -----------------------------------------------------------------------------
-% OBJETOS FLUTUANTES
+% Estilo de elementos
+% -----------------------------------------------------------------------------
+
+% Elementos pré-textuais
+\renewcommand{\pretextual}
+{%
+    \pagenumbering{roman} % Algarismos romanos
+    \aliaspagestyle{chapter}{plain}
+    \pagestyle{plain}
+    \aliaspagestyle{cleared}{empty}
+    \aliaspagestyle{part}{empty}
+}
+
+% Configura layout para elementos textuais
+\renewcommand{\textual}
+{%
+    \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
+    \pagestyle{abntheadings}
+    \aliaspagestyle{chapter}{abntchapfirst}
+    \nouppercaseheads
+    \bookmarksetup{startatroot}
+}
+
+% Configura layout para elementos pós-textuais
+\renewcommand{\postextual}
+{%
+    \chapterstyle{abnt}
+    \phantompart
+}
+
+% -----------------------------------------------------------------------------
+% Objetos flutuantes
 % -----------------------------------------------------------------------------
 
 % Comando que trata a fonte nos objetos flutuantes
-\renewcommand{\fonte}[1]{%
+\renewcommand{\fonte}[1]
+{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \centering\small{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
-\renewcommand{\nota}[1]{%
+\renewcommand{\nota}[1]
+{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
@@ -168,7 +165,7 @@
 }
 
 % -----------------------------------------------------------------------------
-% PARÁGRAFOS
+% Parágrafos
 % -----------------------------------------------------------------------------
 
 % Tamanho da indentação do parágrafo
@@ -178,7 +175,7 @@
 \setlength{\parskip}{0.2cm}
 
 % -----------------------------------------------------------------------------
-% FONTES
+% Fontes
 % -----------------------------------------------------------------------------
 
 % Redefinição de fontes
@@ -201,7 +198,7 @@
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 % -----------------------------------------------------------------------------
-% SUMÁRIO
+% Sumário
 % -----------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
@@ -211,7 +208,7 @@
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
 % -----------------------------------------------------------------------------
-% LISTAS
+% Listas
 % -----------------------------------------------------------------------------
 
 % Define os títulos das listas
@@ -241,9 +238,8 @@
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
 % -----------------------------------------------------------------------------
-% CAPA
+% Capa
 % -----------------------------------------------------------------------------
-
 \makeatletter
 \renewcommand{\imprimircapa}{%
     \begin{capa}
@@ -297,9 +293,8 @@
 \makeatother
 
 % -----------------------------------------------------------------------------
-% FOLHA DE ROSTO
+% Folha de rosto
 % -----------------------------------------------------------------------------
-
 \makeatletter
 \renewcommand{\folhaderostocontent}{%
     \setcounter{page}{2}
@@ -311,14 +306,16 @@
 
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-        \abntex@ifnotempty{\imprimirsubtitulo}{%
+        \abntex@ifnotempty{\imprimirsubtitulo}
+        {%
             {\ABNTEXchapterfont\LARGE\scshape: }{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
     \end{center}
 
     \vspace*{90pt}
 
-    \abntex@ifnotempty{\imprimirpreambulo}{%
+    \abntex@ifnotempty{\imprimirpreambulo}
+    {%
         \SingleSpacing
         \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
             & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
@@ -355,10 +352,11 @@
 \makeatother
 
 % -----------------------------------------------------------------------------
-% FOLHA DE APROVAÇÃO
+% Folha de aprovação
 % -----------------------------------------------------------------------------
 \makeatletter
-\newcommand{\imprimirfolhadeaprovacao}{%
+\newcommand{\imprimirfolhadeaprovacao}
+{%
     \begin{folhadeaprovacao}
         \vspace*{\fill}
 
@@ -372,7 +370,7 @@
 \makeatother
 
 % -----------------------------------------------------------------------------
-% DEDICATÓRIA
+% Dedicatória
 % -----------------------------------------------------------------------------
 \renewenvironment{dedicatoria}[1][]
 {%
@@ -395,11 +393,12 @@
 }
 
 % -----------------------------------------------------------------------------
-% EPÍGRAFE
+% Epígrafe
 % -----------------------------------------------------------------------------
 \renewenvironment{epigrafe}[1][]
 {%
-    \ifthenelse{\equal{#1}{}}{%
+    \ifthenelse{\equal{#1}{}}
+    {%
         \PRIVATEbookmarkthis{\epigraphname}
     }{\pretextualchapter{#1}}
 

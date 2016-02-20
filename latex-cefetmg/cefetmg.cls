@@ -23,11 +23,6 @@
     openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
     a4paper,                  % Tamanho do papel.
     sumario=tradicional,      % Seleciona o sumário tradicional
-% Opções da classe abntex2
-    %chapter=TITLE,           % Títulos de capítulos convertidos em letras maiúsculas
-    %section=TITLE,           % Títulos de seções convertidos em letras maiúsculas
-    %subsection=TITLE,        % Títulos de subseções convertidos em letras maiúsculas
-    %subsubsection=TITLE,     % Títulos de sub-subseções convertidos em letras maiúsculas
 % Opções do pacote babel
     brazil,                   % Idioma do documento
 }{abntex2}
@@ -42,6 +37,9 @@
 % -----------------------------------------------------------------------------
 % Configurações gerais
 % -----------------------------------------------------------------------------
+
+% Retira o espaço extra desnecessário nas frases
+\frenchspacing
 
 % Configurações do pacote backref usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
@@ -241,7 +239,8 @@
 % Capa
 % -----------------------------------------------------------------------------
 \makeatletter
-\renewcommand{\imprimircapa}{%
+\renewcommand{\imprimircapa}
+{%
     \begin{capa}
         \begin{center}
             \imprimirlogoinstituicao{} \\
@@ -296,7 +295,8 @@
 % Folha de rosto
 % -----------------------------------------------------------------------------
 \makeatletter
-\renewcommand{\folhaderostocontent}{%
+\renewcommand{\folhaderostocontent}
+{%
     \setcounter{page}{2}
     \begin{center}
         {\large\normalfont\scshape\textbf\imprimirautor}

@@ -84,7 +84,10 @@
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
     \pagenumbering{arabic}      % A numeração das páginas é em algarismos arábicos, inciando em 1
-    \chapterstyle{default}      % Estilo plain
+    \pagestyle{abntheadings}
+    \aliaspagestyle{chapter}{abntchapfirst}
+    \nouppercaseheads
+    \bookmarksetup{startatroot}
 }
 
 % Configura layout para elementos pós-textuais
@@ -304,7 +307,7 @@
         {\large\normalfont\scshape\textbf\imprimirautor}
     \end{center}
 
-    \vspace*{150pt}
+    \vspace*{80pt}
 
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo

@@ -45,7 +45,7 @@ clean:
 	@find . -type f -iname "*.log" -delete
 	@find . -type f -iname "*.fdb_latexmk" -delete
 	@find . -type f -iname "*.*~" -delete
-	@rm -f *.bak *.ps *.l* *.idx *.bbl *.brf *.glo *.dvi *.toc *.blg *.ilg *.ind *.out *.wsp *.fls *.synctex.*
+	@rm -f *.bak *.bbl *.blg *.brf *.dvi *.fls *.glo *.idx *.ilg *.ind *.l* *.nav *.out *.ps *.snm *.toc *.wsp *.synctex.*
 	@rm -f $(SOURCE).pdf $(SOURCE)-compactado.pdf
 	@echo "Pronto."
 

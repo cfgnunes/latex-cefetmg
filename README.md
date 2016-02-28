@@ -42,3 +42,4 @@ Cristina Murta <br />
 Denise Souza <br />
 Izaquiel Bessas <br />
 Talles Coelho <br />
+Guilherme Tonioli <br />

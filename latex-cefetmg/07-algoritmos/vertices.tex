@@ -1,0 +1,16 @@
+\begin{algorithm}
+    \caption{Algoritmo para remoção aleatória de vértices}
+    \KwIn{o número $n$ de vértices a remover, grafo original $G(V, E)$}
+    \KwOut{grafo reduzido $G'(V,E)$}
+    $removidos \leftarrow 0$ \\
+    \While {removidos $<$ n } {
+        $v \leftarrow$ Random$(1, ..., k) \in V$ \\
+            \For {$u \in adjacentes(v)$} {
+                remove aresta (u, v)\\
+                $removidos \leftarrow removidos + 1$\\
+            }
+            \If {há  componentes desconectados} {
+                remove os componentes desconectados\\
+            }
+        }
+\end{algorithm}

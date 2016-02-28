@@ -5,7 +5,7 @@ Este projeto consiste em uma customização do projeto abnTeX2 hospedado em: <ht
 ### Pacotes necessários para usuários do Ubuntu
 
 Para instalar os pacotes necessários,
-execute os seguintes comandos no terminal: 
+execute os seguintes comandos no terminal:
 
 ```sh
 $ sudo apt-get install texlive texlive-latex-extra texlive-science
@@ -20,7 +20,7 @@ https://github.com/abntex/abntex2/wiki/InstalacaoLinux
 ### Compilar documento
 
 Para compilar o projeto e gerar o documento no formato PDF,
-execute o seguinte comando dentro do diretório do projeto: 
+execute o seguinte comando dentro do diretório do projeto:
 
 ```sh
 $ make
@@ -29,7 +29,7 @@ $ make
 ### Limpar projeto
 
 Para limpar os arquivos temporários,
-execute o seguinte comando dentro do diretório do projeto: 
+execute o seguinte comando dentro do diretório do projeto:
 
 ```sh
 $ make clean

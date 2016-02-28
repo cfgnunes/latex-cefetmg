@@ -1,0 +1,22 @@
+% -----------------------------------------------------------------------------
+% Lista de Algoritmos
+% -----------------------------------------------------------------------------
+
+\newcommand{\algoritmoname}{Algoritmo}
+\renewcommand{\listalgorithmcfname}{Lista de Algoritmos}
+
+\floatname{algocf}{\algoritmoname}
+\newlistof{listofalgoritmos}{loa}{\listalgoritmoname}
+\newlistentry{algocf}{loa}{0}
+
+\counterwithout{algocf}{chapter}
+\renewcommand{\cftalgocfname}{\algoritmoname\space}
+\renewcommand*{\cftalgocfaftersnum}{\hfill--\hfill}
+
+\pdfbookmark[0]{\listalgorithmcfname}{loa}
+\listofalgorithms
+\cleardoublepage
+
+% -----------------------------------------------------------------------------
+% Este arquivo não necessita de ser editado. A lista é gerada automaticamente.
+% -----------------------------------------------------------------------------

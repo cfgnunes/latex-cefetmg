@@ -4,6 +4,8 @@
 %   Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT
 %   (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
 %
+%     Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
+%
 %    Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 %             Henrique E. Borges <henrique@lsi.cefetmg.br>
 %             Denise de Souza <densouza@gmail.com>
@@ -12,7 +14,7 @@
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2016/02/03 v7.0]
+\ProvidesClass{cefetmg}[2016/02/27 v6.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}

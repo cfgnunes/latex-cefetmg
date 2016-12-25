@@ -14,7 +14,7 @@
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2016/02/27 v6.0]
+\ProvidesClass{cefetmg}[2016/12/25 v6.1]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -53,8 +53,7 @@
 \setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
 
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]
-{%
+\renewcommand*{\backrefalt}[4]{%
     \ifcase #1
         Nenhuma cita\c{c}\~ao no texto.
     \or
@@ -118,8 +117,7 @@
 % -----------------------------------------------------------------------------
 
 % Elementos pré-textuais
-\renewcommand{\pretextual}
-{%
+\renewcommand{\pretextual}{%
     \pagenumbering{roman} % Algarismos romanos
     \aliaspagestyle{chapter}{plain}
     \pagestyle{plain}
@@ -128,8 +126,7 @@
 }
 
 % Configura layout para elementos textuais
-\renewcommand{\textual}
-{%
+\renewcommand{\textual}{%
     \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
@@ -138,8 +135,7 @@
 }
 
 % Configura layout para elementos pós-textuais
-\renewcommand{\postextual}
-{%
+\renewcommand{\postextual}{%
     \chapterstyle{abnt}
     \phantompart
 }
@@ -149,15 +145,13 @@
 % -----------------------------------------------------------------------------
 
 % Comando que trata a fonte nos objetos flutuantes
-\renewcommand{\fonte}[1]
-{%
+\renewcommand{\fonte}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \centering\small{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
-\renewcommand{\nota}[1]
-{%
+\renewcommand{\nota}[1]{%
     \begin{SingleSpacing}\par\end{SingleSpacing}
     \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
@@ -241,8 +235,7 @@
 % Capa
 % -----------------------------------------------------------------------------
 \makeatletter
-\renewcommand{\imprimircapa}
-{%
+\renewcommand{\imprimircapa}{%
     \begin{capa}
         \begin{center}
             \imprimirlogoinstituicao{} \\
@@ -254,8 +247,7 @@
 
         \begin{center}
             \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
-            \abntex@ifnotempty{\imprimirsubtitulo}
-            {%
+            \abntex@ifnotempty{\imprimirsubtitulo}{%
                 {\ABNTEXchapterfont\HUGE\scshape: }{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
             }
         \end{center}
@@ -269,13 +261,11 @@
         \vspace*{10pt}
 
         \begin{center}
-            \abntex@ifnotempty{\imprimirorientador}
-            {%
+            \abntex@ifnotempty{\imprimirorientador}{%
                 \small\imprimirorientadorRotulo{} \imprimirorientador \\
                 \small\imprimirinstOrientador \\
             }
-            \abntex@ifnotempty{\imprimircoorientador}
-            {%
+            \abntex@ifnotempty{\imprimircoorientador}{%
                 \begin{SingleSpacing}\par\end{SingleSpacing}
                 \small\imprimircoorientadorRotulo{} \imprimircoorientador \\
                 \small\imprimirinstCoorientador
@@ -297,9 +287,8 @@
 % Folha de rosto
 % -----------------------------------------------------------------------------
 \makeatletter
-\renewcommand{\folhaderostocontent}
-{%
-    \setcounter{page}{2}
+\renewcommand{\folhaderostocontent}{%
+
     \begin{center}
         {\large\normalfont\scshape\textbf\imprimirautor}
     \end{center}
@@ -308,8 +297,7 @@
 
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-        \abntex@ifnotempty{\imprimirsubtitulo}
-        {%
+        \abntex@ifnotempty{\imprimirsubtitulo}{%
             {\ABNTEXchapterfont\LARGE\scshape: }{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
     \end{center}
@@ -321,21 +309,17 @@
         \SingleSpacing
         \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
             & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
-            \abntex@ifnotempty{\imprimirareaconcentracao}
-            {%
+            \abntex@ifnotempty{\imprimirareaconcentracao}{%
                 & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
             }
-            \abntex@ifnotempty{\imprimirlinhapesquisa}
-            {%
+            \abntex@ifnotempty{\imprimirlinhapesquisa}{%
                 & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
             }
-            \abntex@ifnotempty{\imprimirorientador}
-            {%
+            \abntex@ifnotempty{\imprimirorientador}{%
                 & \small\imprimirorientadorRotulo & \imprimirorientador \\
                 & & \small\imprimirinstOrientador \\ & & \\
             }
-            \abntex@ifnotempty{\imprimircoorientador}
-            {%
+            \abntex@ifnotempty{\imprimircoorientador}{%
                 & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
                 & & \small\imprimirinstCoorientador
             }
@@ -350,6 +334,7 @@
         \normalfont\scshape{\imprimirlocal}\\
         \normalfont\scshape{\imprimirdata}
     \end{center}
+    \PRIVATEclearpageifneeded
 }
 \makeatother
 
@@ -357,8 +342,7 @@
 % Folha de aprovação
 % -----------------------------------------------------------------------------
 \makeatletter
-\newcommand{\imprimirfolhadeaprovacao}
-{%
+\newcommand{\imprimirfolhadeaprovacao}{%
     \begin{folhadeaprovacao}
         \vspace*{\fill}
 
@@ -368,14 +352,14 @@
 
         \vspace*{\fill}
     \end{folhadeaprovacao}
+    \PRIVATEclearpageifneeded
 }
 \makeatother
 
 % -----------------------------------------------------------------------------
 % Dedicatória
 % -----------------------------------------------------------------------------
-\renewenvironment{dedicatoria}[1][]
-{%
+\renewenvironment{dedicatoria}[1][]{%
     \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\dedicatorianame}
     }{\pretextualchapter{#1}}
@@ -387,20 +371,18 @@
             \begin{SingleSpacing}
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
-}
-{%
+}{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
+    \PRIVATEclearpageifneeded
 }
 
 % -----------------------------------------------------------------------------
 % Epígrafe
 % -----------------------------------------------------------------------------
-\renewenvironment{epigrafe}[1][]
-{%
-    \ifthenelse{\equal{#1}{}}
-    {%
+\renewenvironment{epigrafe}[1][]{%
+    \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\epigraphname}
     }{\pretextualchapter{#1}}
 
@@ -411,9 +393,9 @@
             \begin{SingleSpacing}
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
-}
-{%
+}{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
+    \PRIVATEclearpageifneeded
 }

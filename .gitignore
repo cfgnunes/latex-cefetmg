@@ -1,32 +1,4 @@
 ######################
-# Codigos compilados
-######################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-######################
-# Diretorios
-######################
-dist/
-build/
-
-######################
-# Pacotes
-######################
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-######################
 # Logs
 ######################
 *.log
@@ -66,4 +38,3 @@ Thumbs.db
 *.synctex.*
 *.toc
 *.wsp
-meu-trabalho*.pdf

@@ -1,10 +1,76 @@
 ######################
-# Logs
+# Latex files
 ######################
-*.log
+# Core latex/pdflatex auxiliary files:
+*.aux
+*.cb
+*.cb2
+*.fls
+*.fmt
+*.fot
+*.lo*
+*.out
+*.toc
+
+# Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+# Intermediate files:
+*.dvi
+*-converted-to.*
+*.ps
+
+# Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex*
+*.pdfsync
+
+# Beamer files:
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# Makeidx files:
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# Glossaries files:
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+# Editors files:
+*.*~
+*.backup
+*.bak
+*.sav
 
 ######################
-# Arquivos do SO
+# Packages
+######################
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+######################
+# OS files
 ######################
 .DS_Store
 .DS_Store?
@@ -13,28 +79,3 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-######################
-# Latex
-######################
-*.*~
-*.aux
-*.bak
-*.bbl
-*.blg
-*.brf
-*.dvi
-*.fdb_latexmk
-*.fls
-*.glo
-*.idx
-*.ilg
-*.ind
-*.l*
-*.nav
-*.out
-*.ps
-*.snm
-*.synctex.*
-*.toc
-*.wsp

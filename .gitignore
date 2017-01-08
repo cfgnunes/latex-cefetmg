@@ -16,8 +16,7 @@
 *.bbl
 *.bcf
 *.blg
-*-blx.aux
-*-blx.bib
+*-blx.*
 *.brf
 *.run.xml
 

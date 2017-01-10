@@ -1,4 +1,9 @@
 ######################
+# Main PDF
+######################
+meu-trabalho*.pdf
+
+######################
 # Latex files
 ######################
 # Core latex/pdflatex auxiliary files:
@@ -71,10 +76,9 @@
 ######################
 # OS files
 ######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
+*._*
+*.DS_Store*
+*.Spotlight*
 .Trashes
-ehthumbs.db
+thumbs.db
 Thumbs.db

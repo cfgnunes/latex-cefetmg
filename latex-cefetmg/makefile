@@ -2,9 +2,9 @@
 SOURCE      = meu-trabalho
 LATEXMK     = latexmk
 GHOSTSCRIPT = gs
-OPENPDF     = evince
+PDFVIEWER   = evince
 
-# Executa o processo completo de limpeza, compilação e compressão
+# Executa o processo de limpeza, compilação e abertura do arquivo
 all: clean compile open
 
 # Compila o código fonte
@@ -71,5 +71,5 @@ clean:
 # Visualiza o arquivo PDF gerado
 open:
 	@echo "Abrindo o arquivo PDF..."
-	@$(OPENPDF) $(SOURCE).pdf &
+	@$(PDFVIEWER) $(SOURCE).pdf &
 	@echo "Pronto."

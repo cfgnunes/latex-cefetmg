@@ -12,11 +12,6 @@ $ sudo apt-get install texlive texlive-latex-extra texlive-science
 $ sudo apt-get install texlive-publishers texlive-lang-portuguese
 $ sudo apt-get install make
 ```
-
-Para instalar a versão mais recente do abnTeX2,
-siga as instruções em:
-https://github.com/abntex/abntex2/wiki/InstalacaoLinux
-
 ### Compilar documento
 
 Para compilar o projeto e gerar o documento no formato PDF,

@@ -10,7 +10,7 @@ Para instalar os pacotes necessários, execute os seguintes comandos no terminal
 ```
 $ sudo apt-get install texlive texlive-latex-extra texlive-science
 $ sudo apt-get install texlive-publishers texlive-lang-portuguese
-$ sudo apt-get install make
+$ sudo apt-get install latexmk make
 ```
 
 ### Compilar documento

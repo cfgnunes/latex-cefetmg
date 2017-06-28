@@ -50,7 +50,7 @@ clean:
 	@find . -type f -iname "*.glo" -delete
 	@find . -type f -iname "*.gls" -delete
 	@find . -type f -iname "*.glsdefs" -delete
-	@find . -type f -iname "*.idx" -delete
+	@find . -type f -iname "*.idx" ! -path "./.git/*" -delete
 	@find . -type f -iname "*.ilg" -delete
 	@find . -type f -iname "*.ind" -delete
 	@find . -type f -iname "*.ist" -delete

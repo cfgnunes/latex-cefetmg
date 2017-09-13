@@ -1,9 +1,9 @@
 # LaTeX CEFET-MG
 
-Modelo para trabalhos acadêmicos em LaTeX baseado nas normas da ABNT para o CEFET-MG.  
-Este projeto consiste em uma customização do projeto abnTeX2 hospedado em: <https://github.com/abntex/abntex2>
+Modelo de trabalhos acadêmicos desenvolvido para o [CEFET-MG](http://www.cefetmg.br/).  
+Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos.  Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo está em conformidade com grande parte das normas [ABNT](http://www.abnt.org.br/).
 
-### Pacotes necessários para usuários do Ubuntu
+### Instalação de pacotes no Ubuntu
 
 Para instalar os pacotes necessários, execute os seguintes comandos no terminal:
 
@@ -23,8 +23,7 @@ $ make
 
 ### Limpar projeto
 
-Para limpar os arquivos temporários,
-execute o seguinte comando dentro do diretório do projeto:
+Para limpar os arquivos temporários, execute o seguinte comando dentro do diretório do projeto:
 
 ```
 $ make clean

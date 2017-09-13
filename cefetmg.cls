@@ -1,20 +1,19 @@
 % -----------------------------------------------------------------------------
 %       Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
-%   Modelo de trabalho acadêmico monográfico de acordo com as normas da ABNT
+%   Modelo de trabalho acadêmico em conformidade com as normas da ABNT
 %   (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
 %
-%     Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
+%    Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
-%    Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
-%             Henrique E. Borges <henrique@lsi.cefetmg.br>
+%    Autores: Cristiano Fraga Guimarães Nunes <cfgnunes@gmail.com>
+%             Henrique Elias Borges <henrique@lsi.cefetmg.br>
 %             Denise de Souza <densouza@gmail.com>
-%             Lauro César <https://code.google.com/p/abntex2/>
-%
+%             Lauro César <http://www.abntex.net.br/>
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2016/12/25 v6.1]
+\ProvidesClass{cefetmg}[2017/09/13 v6.2]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -23,7 +22,7 @@
 % Opções da classe memoir
     12pt,                     % Tamanho da fonte
     openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
-    a4paper,                  % Tamanho do papel.
+    a4paper,                  % Tamanho do papel
     sumario=tradicional,      % Seleciona o sumário tradicional
 % Opções do pacote babel
     brazil,                   % Idioma do documento
@@ -86,11 +85,11 @@
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
-% Comandos de dados -  Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
+% Comandos de dados - Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
-% Comandos de dados - Título Acadêmico a ser alcançado (Doutor ou Mestre)
+% Comandos de dados - Título acadêmico a ser alcançado (Doutor ou Mestre)
 \providecommand{\imprimirtituloAcademico}{}
 \newcommand{\tituloAcademico}[1]{\renewcommand{\imprimirtituloAcademico}{#1}}
 
@@ -99,7 +98,7 @@
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
-% Comandos de dados - linha de pesquisa do Programa
+% Comandos de dados - Linha de pesquisa do Programa
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
@@ -127,7 +126,7 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    \pagenumbering{arabic} % A numeração das páginas é em algarismos arábicos, inciando em 1
+    \pagenumbering{arabic} % Numeração das páginas em algarismos arábicos, inciando em 1
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -162,7 +161,7 @@
 % Parágrafos
 % -----------------------------------------------------------------------------
 
-% Tamanho da indentação do parágrafo
+% Tamanho do recuo do parágrafo
 \setlength{\parindent}{1.3cm}
 
 % Espaçamento entre um parágrafo e outro

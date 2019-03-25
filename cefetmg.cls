@@ -6,10 +6,8 @@
 %
 %    Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
-%    Autores: Cristiano Fraga Guimarães Nunes <cfgnunes@gmail.com>
-%             Henrique Elias Borges <henrique@lsi.cefetmg.br>
-%             Denise de Souza <densouza@gmail.com>
-%             Lauro César <http://www.abntex.net.br/>
+%    Autores: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
+%             Henrique Elias Borges <henrique@cefetmg.br>
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
@@ -20,19 +18,19 @@
 
 \PassOptionsToClass{%
 % Opções da classe memoir
-    12pt,                     % Tamanho da fonte
-    openright,                % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
-    a4paper,                  % Tamanho do papel
-    sumario=tradicional,      % Seleciona o sumário tradicional
+    12pt,                  % Tamanho da fonte
+    openright,             % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
+    a4paper,               % Tamanho do papel
+    sumario=tradicional,   % Seleciona o sumário tradicional
 % Opções do pacote babel
-    brazil,                   % Idioma do documento
+    brazil,                % Idioma do documento
 }{abntex2}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-\RequirePackage[brazilian, hyperpageref]{backref}       % Produzir índice nas referências
-\RequirePackage{makeidx}                                % Produzir índice remissivo de palavras
+\RequirePackage[brazilian, hyperpageref]{backref} % Índice nas referências
+\RequirePackage{makeidx}                          % Índice remissivo de palavras
 \RequirePackage{chngcntr}
 
 % -----------------------------------------------------------------------------
@@ -66,48 +64,48 @@
 \counterwithout{equation}{chapter}
 
 % -----------------------------------------------------------------------------
-% Comandos de dados
+% Comandos
 % -----------------------------------------------------------------------------
 
-% Comandos de dados - Programa
+% Comando: Programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
-% Comandos de dados - Subtítulo do trabalho
+% Comando: Subtítulo do trabalho
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
-% Comandos de dados - Instituição do orientador
+% Comando: Instituição do orientador
 \providecommand{\imprimirinstOrientador}{}
 \newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
 
-% Comandos de dados - Instituição do coorientador
+% Comando: Instituição do coorientador
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
-% Comandos de dados - Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
+% Comando: Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
-% Comandos de dados - Título acadêmico a ser alcançado (Doutor ou Mestre)
+% Comando: Título acadêmico a ser alcançado (Doutor ou Mestre)
 \providecommand{\imprimirtituloAcademico}{}
 \newcommand{\tituloAcademico}[1]{\renewcommand{\imprimirtituloAcademico}{#1}}
 
-% Comandos de dados - Área de concentração do Programa
+% Comando: Área de concentração do Programa
 \newcommand{\imprimirareaconcentracaoRotulo}{\'Area de concentra\c{c}\~ao: }
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
-% Comandos de dados - Linha de pesquisa do Programa
+% Comando: Linha de pesquisa do Programa
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
 
-% Comandos de dados - Texto da folha de aprovação
+% Comando: Texto da folha de aprovação
 \providecommand{\imprimirtextopadraofolhadeaprovacao}{}
 \newcommand{\textopadraofolhadeaprovacao}[1]{\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
-% Comandos de dados - Logomarca da instituição
+% Comando: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
 

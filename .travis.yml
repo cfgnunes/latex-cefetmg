@@ -16,6 +16,7 @@ matrix:
            - texlive-science
            - texlive-publishers
            - texlive-lang-portuguese
+           - texlive-xetex
            - latexmk
 
 script:

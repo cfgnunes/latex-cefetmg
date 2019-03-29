@@ -7,10 +7,19 @@ PDFVIEWER   = evince
 # Executa o processo de limpeza, compilação e abertura do arquivo
 all: clean compile open
 
+# Executa o processo de limpeza, compilação e compactação do arquivo
+all-test: clean compile-nonstop compress
+
 # Compila o código fonte
 compile:
 	@echo "Compilando arquivos..."
-	"$(LATEXMK)" -pdf -synctex=1 "$(SOURCE).tex"
+	@"$(LATEXMK)" -pdf -synctex=1 "$(SOURCE).tex"
+	@echo "Pronto."
+
+# Compila o código fonte sem realizar interação com o usuário
+compile-nonstop:
+	@echo "Compilando arquivos..."
+	@"$(LATEXMK)" -pdf -synctex=1 -xelatex -interaction=nonstopmode "$(SOURCE).tex"
 	@echo "Pronto."
 
 # Comprime o arquivo PDF gerado

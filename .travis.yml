@@ -11,13 +11,14 @@ matrix:
            - ubuntu-toolchain-r-test
          packages:
            - make
-           - texlive
-           - texlive-latex-extra
-           - texlive-science
-           - texlive-publishers
-           - texlive-lang-portuguese
-           - texlive-xetex
            - latexmk
+           - texlive
+           - texlive-lang-portuguese
+           - texlive-latex-extra
+           - texlive-publishers
+           - texlive-science
+           - texlive-xetex
+           - ghostscript
 
 script:
      - make all-test

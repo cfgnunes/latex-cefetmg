@@ -44,9 +44,9 @@ make clean
 
 ## Autores
 
-* **Cristiano Fraga G. Nunes** - *Codificação do modelo*
-* **Cristina Duarte Murta** - *Sugestões e revisão*
-* **Henrique Elias Borges** - *Sugestões e revisão*
+* **Cristiano Nunes** - *Codificação do modelo*
+* **Cristina Murta** - *Sugestões e revisão*
+* **Henrique Borges** - *Sugestões e revisão*
 
 ## Agradecimentos
 

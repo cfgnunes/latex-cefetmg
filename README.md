@@ -14,10 +14,15 @@ Esta seção assume o Ubuntu 14.04 (também testado no Ubuntu 16.04 e no Ubuntu 
 Para instalar os pacotes necessários, execute os seguintes comandos no terminal:
 
 ```sh
-sudo apt-get install latexmk ghostscript
-sudo apt-get install texlive texlive-latex-extra texlive-science
-sudo apt-get install texlive-xetex texlive-publishers texlive-lang-portuguese 
-sudo apt-get install make
+sudo appt-get install make
+sudo appt-get install latexmk
+sudo appt-get install texlive
+sudo appt-get install texlive-lang-portuguese
+sudo appt-get install texlive-latex-extra
+sudo appt-get install texlive-publishers
+sudo appt-get install texlive-science
+sudo appt-get install texlive-xetex
+sudo appt-get install ghostscript
 
 ```
 

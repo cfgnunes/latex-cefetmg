@@ -14,15 +14,15 @@ Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 18.04), mas o proc
 Para instalar os pacotes necessários, execute os seguintes comandos no terminal:
 
 ```sh
-sudo appt-get install make
-sudo appt-get install latexmk
-sudo appt-get install texlive
-sudo appt-get install texlive-lang-portuguese
-sudo appt-get install texlive-latex-extra
-sudo appt-get install texlive-publishers
-sudo appt-get install texlive-science
-sudo appt-get install texlive-xetex
-sudo appt-get install ghostscript
+sudo apt-get install make
+sudo apt-get install latexmk
+sudo apt-get install texlive
+sudo apt-get install texlive-lang-portuguese
+sudo apt-get install texlive-latex-extra
+sudo apt-get install texlive-publishers
+sudo apt-get install texlive-science
+sudo apt-get install texlive-xetex
+sudo apt-get install ghostscript
 
 ```
 
@@ -36,7 +36,7 @@ make
 
 ### Gerar uma versão compacta do documento
 
-Para gerar uma vesão mais compacta do documento final no formato PDF, execute o seguinte comando no terminal após compilar o documento:
+Para gerar uma versão mais compacta do documento final no formato PDF, execute o seguinte comando no terminal após compilar o documento:
 
 ```sh
 make compress

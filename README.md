@@ -66,7 +66,7 @@ Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melho
 ## Agradecimentos
 
 * Denise Souza
-* Guilherme Tonioli
-* Izaquiel Bessas
+* [Guilherme Tonioli](https://github.com/gtonioli)
+* [Izaquiel Bessas](https://github.com/izaquiellbessas)
 * Lauro César
-* Talles Coelho
+* [Talles Coelho](https://github.com/tallesCoelho)

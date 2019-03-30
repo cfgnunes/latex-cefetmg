@@ -59,7 +59,7 @@ Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melho
 
 ## Autores
 
-* **Cristiano Nunes** - *Codificação do modelo*
+* **Cristiano Nunes** - *Desenvolvimento*
 * **Cristina Murta** - *Sugestões e revisão*
 * **Henrique Borges** - *Sugestões e revisão*
 

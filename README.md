@@ -14,15 +14,15 @@ Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 18.04), mas o proc
 Para instalar os pacotes necessários, execute os seguintes comandos no terminal:
 
 ```sh
-sudo apt-get install make
-sudo apt-get install latexmk
-sudo apt-get install texlive
-sudo apt-get install texlive-lang-portuguese
-sudo apt-get install texlive-latex-extra
-sudo apt-get install texlive-publishers
-sudo apt-get install texlive-science
-sudo apt-get install texlive-xetex
-sudo apt-get install ghostscript
+sudo apt-get -y install make
+sudo apt-get -y install latexmk
+sudo apt-get -y install texlive
+sudo apt-get -y install texlive-lang-portuguese
+sudo apt-get -y install texlive-latex-extra
+sudo apt-get -y install texlive-publishers
+sudo apt-get -y install texlive-science
+sudo apt-get -y install texlive-xetex
+sudo apt-get -y install ghostscript
 
 ```
 
@@ -59,7 +59,7 @@ Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melho
 
 ## Autores
 
-* Cristiano Nunes - *Desenvolvimento*
+* Cristiano Nunes - *Desenvolvedor*
 * Cristina Murta - *Sugestões e revisão*
 * Henrique Borges - *Sugestões e revisão*
 

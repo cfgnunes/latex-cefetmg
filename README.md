@@ -8,7 +8,7 @@ Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é c
 
 ## Começando
 
-### Instalar os pré-requisitos (Ubuntu)
+### Instalar os pré-requisitos
 
 Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 18.04), mas o procedimento é semelhante para outras distribuições Linux.
 Para instalar os pacotes necessários, execute os seguintes comandos no terminal:

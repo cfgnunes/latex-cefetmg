@@ -11,7 +11,7 @@
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2017/09/13 v6.2]
+\ProvidesClass{cefetmg}[2019/10/17 v6.3]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -304,21 +304,21 @@
     \abntex@ifnotempty{\imprimirpreambulo}
     {%
         \SingleSpacing
-        \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
-            & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+        \begin{tabular}{p{.24\textwidth}p{.15\textwidth}p{.44\textwidth}}
+            & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
             \abntex@ifnotempty{\imprimirareaconcentracao}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
             }
             \abntex@ifnotempty{\imprimirorientador}{%
-                & \small\imprimirorientadorRotulo & \imprimirorientador \\
-                & & \small\imprimirinstOrientador \\ & & \\
+                & \imprimirorientadorRotulo & \imprimirorientador \\
+                & & \imprimirinstOrientador \\ & & \\
             }
             \abntex@ifnotempty{\imprimircoorientador}{%
-                & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
-                & & \small\imprimirinstCoorientador
+                & \imprimircoorientadorRotulo & \imprimircoorientador \\
+                & & \imprimirinstCoorientador
             }
         \end{tabular}
     }
@@ -343,7 +343,7 @@
     \begin{folhadeaprovacao}
         \vspace*{\fill}
 
-        \begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
+        \begin{tabular}{p{.4\textwidth}p{.45\textwidth}}
             & \imprimirtextopadraofolhadeaprovacao \\
         \end{tabular}
 

@@ -304,13 +304,13 @@
     \abntex@ifnotempty{\imprimirpreambulo}
     {%
         \SingleSpacing
-        \begin{tabular}{p{.24\textwidth}p{.15\textwidth}p{.44\textwidth}}
-            & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+        \begin{tabular}{p{.24\textwidth}p{.15\textwidth}p{.4\textwidth}}
+            & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000\hbadness=10000{\imprimirpreambulo}} \\ & & \\
             \abntex@ifnotempty{\imprimirareaconcentracao}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000\hbadness=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000\hbadness=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
             }
             \abntex@ifnotempty{\imprimirorientador}{%
                 & \imprimirorientadorRotulo & \imprimirorientador \\

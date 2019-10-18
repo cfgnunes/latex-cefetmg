@@ -143,9 +143,7 @@ A transformada de Laplace é dada na \autoref{eq:laplace}, enquanto a Eq. \ref{e
 
 \section{Algoritmos}\label{sec:algoritmos}
 
-Os algoritmos devem ser feitos segundo o modelo abaixo. Para isso, utilizar o pacote {\ttfamily algorithm2e} no início do arquivo principal como neste exemplo.
-\\
-\\
+Os algoritmos devem ser feitos segundo o modelo abaixo. Para isso, utilizar o pacote {\ttfamily algorithm2e} no início do arquivo principal como neste exemplo:
 
 \input{./07-algoritmos/vertices}
 
@@ -277,22 +275,27 @@ A epistemologia baseada na biologia parte do princípio de que ``assumo que não
 \section{Mais detalhes sobre as chamadas de referências}
 \label{sec:chamadas_referencias}
 
-A seguir há mais exemplos dos comandos para as chamadas de referências e o resultado produzido.
+A seguir há mais exemplos dos comandos para as chamadas de referências e o resultado produzido:
 
-\noindent{
-\citeonline{Barbosa2004} \ \ \   \verb|\citeonline{Barbosa2004}|\\
-\citeonline[p.~33]{Silva2000} \ \ \   \verb|\citeonline[p.~33]{v}|\\
-\cite[p.~28]{Silva2000} \ \ \  \verb|\cite[p.~28]{Silva2000}|\\
-\cite[p.~35]{Maturana2003} \ \ \   \verb|\cite[p.~35]{Maturana2003}|\\
-\cite{Silva2000,Maturana2003} \ \ \   \verb|\cite{Silva2000,Maturana2003}|\\
-}
+\citeonline{Barbosa2004} $\Longrightarrow$ \verb|\citeonline{Barbosa2004}|
+
+\citeonline[p.~33]{Silva2000} $\Longrightarrow$ \verb|\citeonline[p.~33]{v}|
+
+\cite[p.~28]{Silva2000} $\Longrightarrow$ \verb|\cite[p.~28]{Silva2000}|
+
+\cite[p.~35]{Maturana2003} $\Longrightarrow$ \verb|\cite[p.~35]{Maturana2003}|
+
+\vspace{30pt}
 
 Há que se tomar bastante cuidado com referências cujos autores têm nomes compostos, tipo João de Souza Júnior ou Antônio José da Silva Filho. Para que a formatação seja correta, os nomes dos autores no arquivo {\ttfamily .bib} deverá ser cadastrado de uma forma específica. Para maiores detalhes, veja o \autopageref{chap:anexo_b} \footnote{O texto do anexo é de inteira responsabilidade do autor devidamente referenciado.}.
 
-Os exemplos abaixo ilustram a formatação correta.
+Os exemplos abaixo ilustram a formatação correta:
 
-\cite[p.~28]{vanGELDER1998} \ \ \ \ \  \verb|\cite[p.~28]{vanGELDER1998}|\\
-\citeonline[p.~28]{vanGELDER1998} \ \ \ \ \  \verb|\citeonline[p.~28]{vanGELDER1998}|\\
+\cite[p.~28]{vanGELDER1998} $\Longrightarrow$ \verb|\cite[p.~28]{vanGELDER1998}|
+
+\citeonline[p.~28]{vanGELDER1998} $\Longrightarrow$ \verb|\citeonline[p.~28]{vanGELDER1998}|
+
+\vspace{30pt}
 
 Observe que, a despeito do que está dito no \autoref{chap:anexo_b}, ainda há falhas na formatação ABNT de nomes tipo \verb|van Gelder| quando utilizados em chamadas de referências que fazem parte do texto (\textit{e.g.}, \verb|\citeonline{vanGELDER1998}| que deveria produzir \verb|van Gelder (1998)|). Este problema pode ser contornado facilmente, simplesmente evitando o uso dessa forma de chamada de referência, preferindo sempre nestes casos, o uso da forma \textit{e.g.}, \verb|\cite{vanGELDER1998}| que será formatada corretamente, produzindo \verb|(van GELDER, 1998)|.
 

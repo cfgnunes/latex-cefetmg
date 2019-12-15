@@ -20,4 +20,4 @@ matrix:
            - texlive-xetex
            - ghostscript
 script:
-     - make all-test
+     - make test

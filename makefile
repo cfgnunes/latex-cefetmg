@@ -4,13 +4,13 @@ LATEXMK     = latexmk
 GHOSTSCRIPT = gs
 PDFVIEWER   = evince
 
-.PHONY: all all-test compile compile-nonstop compress clean open
+.PHONY: all test compile compile-nonstop compress clean run
 
 # Executa o processo de limpeza, compilação e abertura do arquivo
-all: clean compile open
+all: clean compile run
 
 # Executa o processo de limpeza, compilação e compactação do arquivo
-all-test: clean compile-nonstop compress
+test: clean compile-nonstop compress
 
 # Compila o código fonte
 compile:
@@ -181,7 +181,7 @@ clean:
 	@echo
 
 # Visualiza o arquivo PDF gerado
-open:
+run:
 	@echo "Abrindo o arquivo PDF..."
 	@$(PDFVIEWER) "$(SRC).pdf" &
 	@echo "Pronto!"

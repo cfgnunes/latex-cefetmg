@@ -1,5 +1,4 @@
 language: generic
-
 dist: xenial
 addons:
  apt:
@@ -13,8 +12,8 @@ addons:
      - texlive-science
      - texlive-xetex
      - ghostscript
-
 script:
+  - make help
   - make clean
   - make compile-test
   - make compress

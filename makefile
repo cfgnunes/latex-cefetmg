@@ -14,6 +14,7 @@ help:
 	@echo "'make compress': Comprime o arquivo PDF gerado."
 	@echo "'make clean': Remove arquivos gerados."
 	@echo "'make run': Visualiza o PDF gerado."
+	@echo
 
 compile:
 	@echo "Compilando arquivos..."

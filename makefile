@@ -4,26 +4,29 @@ LATEXMK     = latexmk
 GHOSTSCRIPT = gs
 PDFVIEWER   = evince
 
-.PHONY: all compile compile-test compress clean run
+.PHONY: all help compile compile-test compress clean run
 
-# Executa o processo de limpeza, compilação e abertura do arquivo
 all: clean compile run
 
-# Compila o código fonte
+help:
+	@echo "'make all': Executa o processo de limpeza, compilação e visualização do arquivo."
+	@echo "'make compile': Compila o código fonte."
+	@echo "'make compress': Comprime o arquivo PDF gerado."
+	@echo "'make clean': Remove arquivos gerados."
+	@echo "'make run': Visualiza o arquivo PDF gerado."
+
 compile:
 	@echo "Compilando arquivos..."
 	@$(LATEXMK) -pdf -synctex=1 "$(SRC).tex"
 	@echo "Pronto!"
 	@echo
 
-# Compila o código fonte sem realizar interação com o usuário
 compile-test:
 	@echo "Compilando arquivos..."
 	@$(LATEXMK) -pdf -synctex=1 -xelatex -interaction=nonstopmode "$(SRC).tex"
 	@echo "Pronto!"
 	@echo
 
-# Comprime o arquivo PDF gerado
 compress:
 	@echo "Comprimindo o arquivo PDF..."
 	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
@@ -35,7 +38,6 @@ compress:
 	@echo "Pronto!"
 	@echo
 
-# Remove arquivos temporários
 clean:
 	@echo "Limpando arquivos temporarios..."
 	@find . -type f \( \
@@ -177,7 +179,6 @@ clean:
 	@echo "Pronto!"
 	@echo
 
-# Visualiza o arquivo PDF gerado
 run:
 	@echo "Abrindo o arquivo PDF..."
 	@$(PDFVIEWER) "$(SRC).pdf" &

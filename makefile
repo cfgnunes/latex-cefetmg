@@ -9,11 +9,11 @@ PDFVIEWER   = evince
 all: clean compile run
 
 help:
-	@echo "'make all': Executa o processo de limpeza, compilação e visualização do arquivo."
+	@echo "'make all': Limpa diretório, compila e visualiza o PDF gerado."
 	@echo "'make compile': Compila o código fonte."
 	@echo "'make compress': Comprime o arquivo PDF gerado."
 	@echo "'make clean': Remove arquivos gerados."
-	@echo "'make run': Visualiza o arquivo PDF gerado."
+	@echo "'make run': Visualiza o PDF gerado."
 
 compile:
 	@echo "Compilando arquivos..."

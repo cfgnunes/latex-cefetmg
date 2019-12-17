@@ -42,14 +42,6 @@ Para gerar uma versão mais compacta do documento final no formato PDF, execute 
 make compress
 ```
 
-### Limpar arquivos temporários
-
-Para limpar os arquivos temporários, execute o seguinte comando no terminal:
-
-```sh
-make clean
-```
-
 ## Contribuindo
 
 Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melhorar o conteúdo, você pode:

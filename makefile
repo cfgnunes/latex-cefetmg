@@ -1,4 +1,3 @@
-# Definição de variáveis
 SRC         = meu-trabalho
 LATEXMK     = latexmk
 GHOSTSCRIPT = gs

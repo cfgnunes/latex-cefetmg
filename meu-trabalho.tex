@@ -21,7 +21,7 @@
     abnt-emphasize=bf,
     bibjustif,
     recuo=0cm,
-    abnt-doi=expand,       % Expande endereço iniciado com doi: para http://dx.doi.org/
+    abnt-doi=expand,       % Expande endereço iniciado com DOI para http://dx.doi.org/
     abnt-url-package=url,  % Utiliza o pacote url
     abnt-refinfo=yes,      % Utiliza o estilo bibliográfico abnt-refinfo
     abnt-etal-cite=3,
@@ -80,7 +80,7 @@
 }
 \makeatother
 
-% Altera o aspecto da cor azul
+% Altera a tonalidade da cor azul dos links
 \definecolor{blue}{RGB}{41,5,195}
 
 % Redefinição de labels
@@ -100,34 +100,34 @@
 % Inclui os arquivos do trabalho acadêmico
 % -----------------------------------------------------------------------------
 
-% Insere e constrói alguns elementos pré-textuais para gerar capa,
-% folha de rosto e folha de aprovação
+% Insere alguns elementos pré-textuais para gerar capa, folha de rosto e
+% folha de aprovação
 \include{./elementos-pre-textuais/capa}
 \include{./elementos-pre-textuais/folha-rosto}
 \include{./elementos-pre-textuais/folha-aprovacao}
 
 \begin{document}
 
-% Insere os elementos pré-textuais
-\pretextual
-\imprimircapa                                            % Inclui Capa
-\imprimirfolhaderosto{}                                  % Inclui Folha de rosto
-\imprimirfolhadeaprovacao{}                              % Inclui Folha de aprovação
+% Elementos pré-textuais
+\pretextual                                              % Configura layout para elementos pré-textuais
+\imprimircapa                                            % Capa
+\imprimirfolhaderosto{}                                  % Folha de rosto
+\imprimirfolhadeaprovacao{}                              % Folha de aprovação
 \include{./elementos-pre-textuais/dedicatoria}           % Dedicatória
 \include{./elementos-pre-textuais/agradecimentos}        % Agradecimentos
 \include{./elementos-pre-textuais/epigrafe}              % Epígrafe
 \include{./elementos-pre-textuais/resumo-pt}             % Resumo na língua vernácula
 \include{./elementos-pre-textuais/resumo-en}             % Resumo em língua inglesa
-\include{./elementos-pre-textuais/lista-figuras}         % Lista de figuras
-\include{./elementos-pre-textuais/lista-tabelas}         % Lista de tabelas
-\include{./elementos-pre-textuais/lista-quadros}         % Lista de quadros
-\include{./elementos-pre-textuais/lista-algoritmos}      % Lista de algoritmos
+\imprimirlistafiguras                                    % Lista de figuras
+\imprimirlistatabelas                                    % Lista de tabelas
+\imprimirlistaquadros                                    % Lista de quadros
+\imprimirlistaalgoritmos                                 % Lista de algoritmos
 \include{./elementos-pre-textuais/lista-siglas}          % Lista de siglas
 \include{./elementos-pre-textuais/lista-simbolos}        % Lista de símbolos
-\include{./elementos-pre-textuais/sumario}               % Sumário
+\imprimirsumario                                         % Sumário
 
-% Insere os elementos textuais
-\textual
+% Elementos textuais
+\textual                                                 % Configura layout para elementos textuais
 \include{./elementos-textuais/introducao}                % Introdução
 \include{./elementos-textuais/trabalhos-relacionados}    % Trabalhos relacionados
 \include{./elementos-textuais/fundamentacao-teorica}     % Fundamentação teórica
@@ -135,11 +135,11 @@
 \include{./elementos-textuais/resultados}                % Resultados
 \include{./elementos-textuais/conclusao}                 % Conclusão
 
-% Insere os elementos pós-textuais
-\postextual
-\include{./elementos-pos-textuais/referencias}           % Referências
+% Elementos pós-textuais
+\postextual                                              % Configura layout para elementos pós-textuais
+\imprimirreferencias                                     % Referências
 \include{./elementos-pos-textuais/apendices}             % Apêndices
 \include{./elementos-pos-textuais/anexos}                % Anexos
-\include{./elementos-pos-textuais/indice-remissivo}      % Índice Remissivo
+\imprimirindiceremissivo                                 % Índice Remissivo
 
 \end{document}

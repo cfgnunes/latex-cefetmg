@@ -12,7 +12,7 @@
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2019/10/17 v6.3]
+\ProvidesClass{cefetmg}[2019/12/20 v7.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -109,6 +109,65 @@
 % Comando: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
+
+% Comando: Imprimir lista de figuras
+\newcommand{\imprimirlistafiguras}{%
+    \pdfbookmark[0]{\listfigurename}{lof}
+    \listoffigures*
+    \cleardoublepage
+}
+
+% Comando: Imprimir lista de tabelas
+\newcommand{\imprimirlistatabelas}{%
+    \pdfbookmark[0]{\listtablename}{lot}
+    \listoftables*
+    \cleardoublepage
+}
+
+% Comando: Imprimir lista de quadros
+\newcommand{\imprimirlistaquadros}{%
+    \pdfbookmark[0]{\listofquadrosname}{loq}
+    \listofquadros*
+    \cleardoublepage
+}
+
+% Comando: Imprimir sumário
+\newcommand{\imprimirsumario}{%
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
+    \cleardoublepage
+}
+
+% Comando: Imprimir lista de quadros
+\newcommand{\imprimirlistaalgoritmos}{%
+    \newcommand{\algoritmoname}{Algoritmo}
+    \renewcommand{\listalgorithmcfname}{Lista de Algoritmos}
+
+    \floatname{algocf}{\algoritmoname}
+    \newlistof{listofalgoritmos}{loa}{\listalgoritmoname}
+    \newlistentry{algocf}{loa}{0}
+
+    \counterwithout{algocf}{chapter}
+    \renewcommand{\cftalgocfname}{\algoritmoname\space}
+    \renewcommand*{\cftalgocfaftersnum}{\hfill--\hfill}
+
+    \pdfbookmark[0]{\listalgorithmcfname}{loa}
+    \listofalgorithms
+    \cleardoublepage
+}
+
+% Comando: Imprimir referências
+\newcommand{\imprimirreferencias}{%
+    % Carrega o arquivo "referencias.bib" com as referências do trabalho
+    \bibliography{./referencias}{}
+    % Define o estilo ABNT para formatar a lista de referências
+    \bibliographystyle{abntex2-alf}
+}
+
+% Comando: Imprimir índice remissivo
+\newcommand{\imprimirindiceremissivo}{%
+    \printindex
+}
 
 % -----------------------------------------------------------------------------
 % Estilo de elementos

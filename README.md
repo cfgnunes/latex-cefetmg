@@ -8,7 +8,7 @@ Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é c
 
 Para um modelo de apresentação em slides, visite o projeto [latex-slides](https://github.com/cfgnunes/latex-slides/).
 
-![exemplo](04-figuras/figura-exemplo.png)
+![exemplo](figuras/figura-exemplo.png)
 
 ## Começando
 

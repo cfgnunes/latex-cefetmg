@@ -6,7 +6,7 @@ PDFVIEWER   = evince
 
 .PHONY: default help compile compact clean run
 
-default: run
+default: compile
 
 help:
 	@echo "'make compile': Gera o documento em PDF."

@@ -1,40 +1,42 @@
 SRC         = meu-trabalho
+SRC-COMPR   = meu-trabalho-compactado
 LATEXMK     = latexmk
 GHOSTSCRIPT = gs
 PDFVIEWER   = evince
 
-.PHONY: all help compile compile-test compress clean run
+.PHONY: default help compile compact clean run
 
-all: clean compile run
+default: run
 
 help:
-	@echo "'make all': Limpa diretório, compila e visualiza o PDF gerado."
-	@echo "'make compile': Compila o código fonte."
-	@echo "'make compress': Comprime o arquivo PDF gerado."
+	@echo "'make compile': Gera o documento em PDF."
+	@echo "'make compact': Gera o documento em PDF compactado."
 	@echo "'make clean': Remove arquivos gerados."
-	@echo "'make run': Visualiza o PDF gerado."
+	@echo "'make run': Gera o documento em PDF e visualiza."
 	@echo
 
-compile:
+TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
+IMG_FILES = $(shell find . -type f -iname "*.png" -or -iname "*.jpg" -or -iname "*.eps")
+PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf" ! -iname "$(SRC-COMPR).pdf")
+
+compile: $(SRC).pdf
+$(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES)
 	@echo "Compilando arquivos..."
-	@$(LATEXMK) -pdf -synctex=1 "$(SRC).tex"
+	@$(LATEXMK) -pdf -synctex=1 $(SRC).tex
+	@touch $(SRC).pdf
 	@echo "Pronto!"
 	@echo
 
-compile-test:
-	@echo "Compilando arquivos..."
-	@$(LATEXMK) -pdf -synctex=1 -xelatex -interaction=nonstopmode "$(SRC).tex"
-	@echo "Pronto!"
-	@echo
-
-compress:
+compact: $(SRC-COMPR).pdf
+$(SRC-COMPR).pdf: $(SRC).pdf
 	@echo "Comprimindo o arquivo PDF..."
 	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
 		-sDEVICE=pdfwrite \
 		-dEmbedAllFonts=true \
 		-dSubsetFonts=true \
-		-sOutputFile="$(SRC)-compactado.pdf" \
-		"$(SRC).pdf"
+		-sOutputFile=$(SRC-COMPR).pdf \
+		$(SRC).pdf
+	@touch $(SRC-COMPR).pdf
 	@echo "Pronto!"
 	@echo
 
@@ -176,11 +178,12 @@ clean:
 		-or -iname "acs-*.bib" \
 		-or -iname "TSWLatexianTemp*" \
 		\) ! -path "./.git/*" -delete
+	@rm -rf $(SRC).pdf $(SRC-COMPR).pdf
 	@echo "Pronto!"
 	@echo
 
-run:
+run: $(SRC).pdf
 	@echo "Abrindo o arquivo PDF..."
-	@$(PDFVIEWER) "$(SRC).pdf" &
+	@$(PDFVIEWER) $(SRC).pdf &
 	@echo "Pronto!"
 	@echo

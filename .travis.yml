@@ -15,5 +15,4 @@ addons:
 script:
   - make help
   - make clean
-  - make compile-test
-  - make compress
+  - make compact

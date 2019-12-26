@@ -43,7 +43,7 @@ make
 Para gerar uma versão mais compacta do documento final no formato PDF, execute o seguinte comando no terminal após compilar o documento:
 
 ```sh
-make compress
+make compact
 ```
 
 ## Contribuindo

@@ -9,9 +9,9 @@ PDFVIEWER   = evince
 default: compile
 
 help:
+	@echo "'make clean': Limpa os arquivos gerados."
+	@echo "'make compact': Gera o documento em PDF mais compacto."
 	@echo "'make compile': Gera o documento em PDF."
-	@echo "'make compact': Gera o documento em PDF compactado."
-	@echo "'make clean': Remove arquivos gerados."
 	@echo "'make run': Gera o documento em PDF e visualiza."
 	@echo
 
@@ -21,7 +21,7 @@ PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf" ! -iname
 
 compile: $(SRC).pdf
 $(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES)
-	@echo "Compilando arquivos..."
+	@echo "Compilando o projeto..."
 	@$(LATEXMK) -pdf -synctex=1 $(SRC).tex
 	@touch $(SRC).pdf
 	@echo "Pronto!"
@@ -41,7 +41,7 @@ $(SRC-COMPR).pdf: $(SRC).pdf
 	@echo
 
 clean:
-	@echo "Limpando arquivos temporarios..."
+	@echo "Limpando arquivos gerados..."
 	@find . -type f \( \
 		-iname "*-blx.*" \
 		-or -iname "*-blx.aux" \

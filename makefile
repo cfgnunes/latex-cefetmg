@@ -4,9 +4,9 @@ LATEXMK     = latexmk
 GHOSTSCRIPT = gs
 PDFVIEWER   = evince
 
-.PHONY: default help compile compact clean run
+.PHONY: all help compile compact clean run
 
-default: compile
+all: compile compact
 
 help:
 	@echo "'make clean': Limpa os arquivos gerados."
@@ -32,8 +32,7 @@ $(SRC-COMPR).pdf: $(SRC).pdf
 	@echo "Comprimindo o arquivo PDF..."
 	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
 		-sDEVICE=pdfwrite \
-		-dEmbedAllFonts=true \
-		-dSubsetFonts=true \
+		-dPDFSETTINGS=/printer \
 		-sOutputFile=$(SRC-COMPR).pdf \
 		$(SRC).pdf
 	@touch $(SRC-COMPR).pdf

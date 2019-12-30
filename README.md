@@ -26,8 +26,6 @@ sudo apt -y install texlive-latex-extra
 sudo apt -y install texlive-publishers
 sudo apt -y install texlive-science
 sudo apt -y install texlive-xetex
-sudo apt -y install ghostscript
-
 ```
 
 ### Compilar documento

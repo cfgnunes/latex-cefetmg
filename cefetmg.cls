@@ -1,4 +1,4 @@
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
 % Modelo de trabalho acadêmico em conformidade com as normas da ABNT
@@ -9,7 +9,7 @@
 % Autores: Cristiano Nunes <cfgnunes@gmail.com>
 %          Henrique Borges <henrique@cefetmg.br>
 % Data: 2012-07-02
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cefetmg}[2019/12/20 v7.0]
@@ -20,7 +20,8 @@
 \PassOptionsToClass{%
 % Opções da classe memoir
     12pt,                  % Tamanho da fonte
-    openright,             % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
+    openright,             % Capítulos começam sempre em páginas ímpares
+                           % (insere página vazia caso necessário)
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
 % Opções do pacote babel
@@ -34,9 +35,9 @@
 \RequirePackage{makeidx}                          % Índice remissivo de palavras
 \RequirePackage{chngcntr}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Configurações gerais
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
@@ -64,9 +65,9 @@
 % Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Comandos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Comando: Programa
 \providecommand{\imprimirprograma}{}
@@ -84,7 +85,8 @@
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
-% Comando: Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
+% Comando: Tipo de trabalho acadêmico
+% (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
@@ -104,11 +106,13 @@
 
 % Comando: Texto da folha de aprovação
 \providecommand{\imprimirtextopadraofolhadeaprovacao}{}
-\newcommand{\textopadraofolhadeaprovacao}[1]{\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
+\newcommand{\textopadraofolhadeaprovacao}[1]%
+    {\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
 % Comando: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
-\newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
+\newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}%
+    {\includegraphics[width={#1}\textwidth]{#2}}}
 
 % Comando: Imprimir lista de figuras
 \newcommand{\imprimirlistafiguras}{%
@@ -169,9 +173,9 @@
     \printindex
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Estilo de elementos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Elementos pré-textuais
 \renewcommand{\pretextual}{%
@@ -184,7 +188,8 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    \pagenumbering{arabic} % Numeração das páginas em algarismos arábicos, inciando em 1
+    \pagenumbering{arabic} % Numeração das páginas em algarismos
+                           % arábicos, inciando em 1
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -197,9 +202,9 @@
     \phantompart
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Objetos flutuantes
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Comando que trata a fonte nos objetos flutuantes
 \renewcommand{\fonte}[1]{%
@@ -215,9 +220,9 @@
     \end{tabular}
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Parágrafos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Tamanho do recuo do parágrafo
 \setlength{\parindent}{1.3cm}
@@ -225,9 +230,9 @@
 % Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.2cm}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Fontes
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Redefinição de fontes
 \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
@@ -248,9 +253,9 @@
 \renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Sumário
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
 \renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
@@ -258,9 +263,9 @@
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Listas
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Define os títulos das listas
 \addto\captionsbrazil{%
@@ -288,9 +293,9 @@
 \renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Capa
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \renewcommand{\imprimircapa}{%
     \begin{capa}
@@ -305,7 +310,8 @@
         \begin{center}
             \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
             \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {\ABNTEXchapterfont\HUGE\scshape: }{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
+                {\ABNTEXchapterfont\HUGE\scshape: }%
+                    {\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
             }
         \end{center}
 
@@ -340,9 +346,9 @@
 }
 \makeatother
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Folha de rosto
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \renewcommand{\folhaderostocontent}{%
 
@@ -355,22 +361,31 @@
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
         \abntex@ifnotempty{\imprimirsubtitulo}{%
-            {\ABNTEXchapterfont\LARGE\scshape: }{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
+            {\ABNTEXchapterfont\LARGE\scshape: }%
+                {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
     \end{center}
 
     \vspace*{90pt}
 
-    \abntex@ifnotempty{\imprimirpreambulo}
-    {%
+    \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
         \begin{tabular}{p{.24\textwidth}p{.15\textwidth}p{.4\textwidth}}
-            & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000\hbadness=10000{\imprimirpreambulo}} \\ & & \\
+            & \multicolumn{2}{p{.6\textwidth}}%
+                {\hyphenpenalty=10000\hbadness=10000%
+                    {\imprimirpreambulo}%
+                } \\ & & \\
             \abntex@ifnotempty{\imprimirareaconcentracao}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000\hbadness=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}%
+                    {\hyphenpenalty=10000\hbadness=10000%
+                    {\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}%
+                    } \\ & & \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\hyphenpenalty=10000\hbadness=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}%
+                    {\hyphenpenalty=10000\hbadness=10000%
+                        {\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}%
+                    } \\ & & \\
             }
             \abntex@ifnotempty{\imprimirorientador}{%
                 & \imprimirorientadorRotulo & \imprimirorientador \\
@@ -395,9 +410,9 @@
 }
 \makeatother
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Folha de aprovação
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \newcommand{\imprimirfolhadeaprovacao}{%
     \begin{folhadeaprovacao}
@@ -413,9 +428,9 @@
 }
 \makeatother
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Dedicatória
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \renewenvironment{dedicatoria}[1][]{%
     \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\dedicatorianame}
@@ -435,9 +450,9 @@
     \PRIVATEclearpageifneeded
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Epígrafe
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \renewenvironment{epigrafe}[1][]{%
     \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\epigraphname}

@@ -1,41 +1,26 @@
-SRC         = meu-trabalho
-SRC-COMPR   = meu-trabalho-compactado
-LATEXMK     = latexmk
-GHOSTSCRIPT = gs
-PDFVIEWER   = evince
+SRC       = meu-trabalho
+LATEX     = latexmk
+PDFVIEWER = evince
 
-.PHONY: all help compile compact clean run
+TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
+IMG_FILES = $(shell find . -type f -iname "*.png" -or -iname "*.jpg" -or -iname "*.eps")
+PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf")
 
-all: compile compact
+.PHONY: all help compile clean run
+
+all: compile
 
 help:
 	@echo "'make clean': Limpa os arquivos gerados."
-	@echo "'make compact': Gera o documento em PDF mais compacto."
 	@echo "'make compile': Gera o documento em PDF."
 	@echo "'make run': Gera o documento em PDF e visualiza."
 	@echo
 
-TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
-IMG_FILES = $(shell find . -type f -iname "*.png" -or -iname "*.jpg" -or -iname "*.eps")
-PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf" ! -iname "$(SRC-COMPR).pdf")
-
 compile: $(SRC).pdf
 $(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES)
 	@echo "Compilando o projeto..."
-	@$(LATEXMK) -pdf -synctex=1 $(SRC).tex
+	@$(LATEX) -pdf -synctex=1 $(SRC).tex
 	@touch $(SRC).pdf
-	@echo "Pronto!"
-	@echo
-
-compact: $(SRC-COMPR).pdf
-$(SRC-COMPR).pdf: $(SRC).pdf
-	@echo "Comprimindo o arquivo PDF..."
-	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
-		-sDEVICE=pdfwrite \
-		-dPDFSETTINGS=/printer \
-		-sOutputFile=$(SRC-COMPR).pdf \
-		$(SRC).pdf
-	@touch $(SRC-COMPR).pdf
 	@echo "Pronto!"
 	@echo
 

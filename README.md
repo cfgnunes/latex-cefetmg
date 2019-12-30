@@ -38,14 +38,6 @@ Para compilar o projeto e gerar o documento no formato PDF, execute o seguinte c
 make
 ```
 
-### Gerar uma versão compacta do documento
-
-Para gerar uma versão mais compacta do documento final no formato PDF, execute o seguinte comando no terminal após compilar o documento:
-
-```sh
-make compact
-```
-
 ## Contribuindo
 
 Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melhorar o conteúdo, você pode:

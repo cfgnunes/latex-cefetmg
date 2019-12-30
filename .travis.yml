@@ -11,7 +11,6 @@ addons:
       - texlive-publishers
       - texlive-science
       - texlive-xetex
-      - ghostscript
 script:
   - make help
   - make clean

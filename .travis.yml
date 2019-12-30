@@ -15,4 +15,4 @@ addons:
 script:
   - make help
   - make clean
-  - make compact
+  - make

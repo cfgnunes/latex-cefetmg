@@ -1,4 +1,4 @@
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
 % Modelo de trabalho acadêmico em conformidade com as normas da ABNT
@@ -9,7 +9,7 @@
 % Autores: Cristiano Nunes <cfgnunes@gmail.com>
 %          Henrique Borges <henrique@cefetmg.br>
 % Data: 2012-07-02
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 \documentclass[%
     %twoside,              % Impressão em frente (anverso) e verso
@@ -21,7 +21,7 @@
     abnt-emphasize=bf,
     bibjustif,
     recuo=0cm,
-    abnt-doi=expand,       % Expande endereço iniciado com DOI para http://dx.doi.org/
+    abnt-doi=expand,       % Expande endereço DOI para http://dx.doi.org/
     abnt-url-package=url,  % Utiliza o pacote url
     abnt-refinfo=yes,      % Utiliza o estilo bibliográfico abnt-refinfo
     abnt-etal-cite=3,
@@ -29,9 +29,9 @@
     abnt-thesis-year=final
 ]{abntex2cite}             % Configura as citações bibliográficas
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Pacotes utilizados
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}                      % Codificação do documento
 \usepackage[T1]{fontenc}                         % Seleção de código de fonte
 \usepackage{booktabs}                            % Réguas horizontais em tabelas
@@ -62,9 +62,9 @@
 % Redefine a fonte para uma fonte similar a Arial (fonte Helvetica)
 \renewcommand*\familydefault{\sfdefault}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Configurações de aparência do PDF final
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \hypersetup{%
     portuguese,
@@ -96,9 +96,9 @@
     Kat-sa-gge-los
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Inclui os arquivos do trabalho acadêmico
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Insere alguns elementos pré-textuais para gerar capa, folha de rosto e
 % folha de aprovação
@@ -108,8 +108,8 @@
 
 \begin{document}
 
-% Elementos pré-textuais
-\pretextual                                              % Configura layout para elementos pré-textuais
+% Configura layout para pré-textuais
+\pretextual
 \imprimircapa                                            % Capa
 \imprimirfolhaderosto{}                                  % Folha de rosto
 \imprimirfolhadeaprovacao{}                              % Folha de aprovação
@@ -126,8 +126,8 @@
 \include{./elementos-pre-textuais/lista-simbolos}        % Lista de símbolos
 \imprimirsumario                                         % Sumário
 
-% Elementos textuais
-\textual                                                 % Configura layout para elementos textuais
+% Configura layout para textuais
+\textual
 \include{./elementos-textuais/introducao}                % Introdução
 \include{./elementos-textuais/trabalhos-relacionados}    % Trabalhos relacionados
 \include{./elementos-textuais/fundamentacao-teorica}     % Fundamentação teórica
@@ -135,8 +135,8 @@
 \include{./elementos-textuais/resultados}                % Resultados
 \include{./elementos-textuais/conclusao}                 % Conclusão
 
-% Elementos pós-textuais
-\postextual                                              % Configura layout para elementos pós-textuais
+% Configura layout para pós-textuais
+\postextual
 \imprimirreferencias                                     % Referências
 \include{./elementos-pos-textuais/apendices}             % Apêndices
 \include{./elementos-pos-textuais/anexos}                % Anexos

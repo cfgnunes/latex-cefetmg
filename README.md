@@ -12,10 +12,10 @@ Para um modelo de apresentação em slides, visite o projeto [latex-slides](http
 
 ## Começando
 
-### Instalar os pré-requisitos
+### Pré-requisitos
 
 Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 18.04), mas o procedimento é semelhante para outras distribuições Linux.
-Para instalar os pacotes necessários, execute os seguintes comandos no terminal:
+Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh
 sudo apt -y install make

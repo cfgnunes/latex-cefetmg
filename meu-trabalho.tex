@@ -32,32 +32,32 @@
 % ------------------------------------------------------------------------------
 % Pacotes utilizados
 % ------------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}                      % Codificação do documento
-\usepackage[T1]{fontenc}                         % Seleção de código de fonte
-\usepackage{booktabs}                            % Réguas horizontais em tabelas
-\usepackage{color, colortbl}                     % Controle de cores
-\usepackage{float}                               % Tabelas/figuras em ambiente multicolunas
-\usepackage{graphicx}                            % Inclusão de gráficos
-\usepackage{icomma}                              % Uso de vírgulas em expressões matemáticas
-\usepackage{indentfirst}                         % Recua o primeiro parágrafo de cada seção
-\usepackage{microtype}                           % Melhora a justificação do documento
-\usepackage{multirow, array}                     % Tabelas com múltiplas linhas e colunas
-\usepackage{subeqnarray}                         % Subenumeração de equações
-\usepackage{verbatim}                            % Apresentar texto tal como escrito no documento
-\usepackage{amsfonts, amssymb, amsmath}          % Fontes e símbolos matemáticos
+\usepackage[utf8]{inputenc}     % Codificação do documento
+\usepackage[T1]{fontenc}        % Seleção de código de fonte
+\usepackage{booktabs}           % Réguas horizontais em tabelas
+\usepackage{color, colortbl}    % Controle de cores
+\usepackage{float}              % Tabelas/figuras em ambiente multicolunas
+\usepackage{graphicx}           % Inclusão de gráficos
+\usepackage{icomma}             % Uso de vírgulas em expressões matemáticas
+\usepackage{indentfirst}        % Recua o primeiro parágrafo de cada seção
+\usepackage{microtype}          % Melhora a justificação do documento
+\usepackage{multirow, array}    % Tabelas com múltiplas linhas e colunas
+\usepackage{subeqnarray}        % Subenumeração de equações
+\usepackage{verbatim}           % Exibir texto tal como escrito no documento
+\usepackage{amssymb, amsmath}   % Fontes e símbolos matemáticos
 \usepackage[algoruled, portuguese]{algorithm2e}  % Algoritmos em português
-\usepackage[scaled]{helvet}                      % Usa a fonte Helvetica
-%\usepackage{times}                              % Usa a fonte Times
-%\usepackage{palatino}                           % Usa a fonte Palatino
-%\usepackage{lmodern}                            % Usa a fonte Latin Modern
-%\usepackage[bottom]{footmisc}                   % Notas de rodapé sempre na mesma posição
-%\usepackage{ae, aecompl}                        % Fontes de alta qualidade
-%\usepackage{latexsym}                           % Símbolos matemáticos
-%\usepackage{lscape}                             % Páginas em modo paisagem
-%\usepackage{picinpar}                           % Dispor imagens em parágrafos
-%\usepackage{scalefnt}                           % Redimensionar tamanho da fonte
-%\usepackage{subfig}                             % Posicionamento de figuras
-%\usepackage{upgreek}                            % Fonte letras gregas
+\usepackage[scaled]{helvet}     % Usa a fonte Helvetica
+%\usepackage{times}             % Usa a fonte Times
+%\usepackage{palatino}          % Usa a fonte Palatino
+%\usepackage{lmodern}           % Usa a fonte Latin Modern
+%\usepackage[bottom]{footmisc}  % Notas de rodapé sempre na mesma posição
+%\usepackage{ae, aecompl}       % Fontes de alta qualidade
+%\usepackage{latexsym}          % Símbolos matemáticos
+%\usepackage{lscape}            % Páginas em modo paisagem
+%\usepackage{picinpar}          % Dispor imagens em parágrafos
+%\usepackage{scalefnt}          % Redimensionar tamanho da fonte
+%\usepackage{subfig}            % Posicionamento de figuras
+%\usepackage{upgreek}           % Fonte letras gregas
 
 % Redefine a fonte para uma fonte similar a Arial (fonte Helvetica)
 \renewcommand*\familydefault{\sfdefault}
@@ -68,7 +68,7 @@
 \makeatletter
 \hypersetup{%
     portuguese,
-    colorlinks=true, % true: links coloridos; false: links em caixas de texto
+    colorlinks=true, % true: links coloridos; false: links em caixas
     linkcolor=blue,  % Cor dos links internos
     citecolor=blue,  % Cor dos links para as referências bibliográficas
     filecolor=blue,  % Cor dos links para arquivos
@@ -100,46 +100,46 @@
 % Inclui os arquivos do trabalho acadêmico
 % ------------------------------------------------------------------------------
 
-% Insere alguns elementos pré-textuais para gerar capa, folha de rosto e
-% folha de aprovação
-\include{./elementos-pre-textuais/capa}
-\include{./elementos-pre-textuais/folha-rosto}
-\include{./elementos-pre-textuais/folha-aprovacao}
+% Insere alguns elementos pré-textuais para gerar capa,
+% folha de rosto e folha de aprovação
+\include{elementos-pre-textuais/capa}
+\include{elementos-pre-textuais/folha-rosto}
+\include{elementos-pre-textuais/folha-aprovacao}
 
 \begin{document}
 
-% Configura layout para pré-textuais
+% Configura layout para os elementos pré-textuais
 \pretextual
-\imprimircapa                                            % Capa
-\imprimirfolhaderosto{}                                  % Folha de rosto
-\imprimirfolhadeaprovacao{}                              % Folha de aprovação
-\include{./elementos-pre-textuais/dedicatoria}           % Dedicatória
-\include{./elementos-pre-textuais/agradecimentos}        % Agradecimentos
-\include{./elementos-pre-textuais/epigrafe}              % Epígrafe
-\include{./elementos-pre-textuais/resumo-pt}             % Resumo na língua vernácula
-\include{./elementos-pre-textuais/resumo-en}             % Resumo em língua inglesa
-\imprimirlistafiguras                                    % Lista de figuras
-\imprimirlistatabelas                                    % Lista de tabelas
-\imprimirlistaquadros                                    % Lista de quadros
-\imprimirlistaalgoritmos                                 % Lista de algoritmos
-\include{./elementos-pre-textuais/lista-siglas}          % Lista de siglas
-\include{./elementos-pre-textuais/lista-simbolos}        % Lista de símbolos
-\imprimirsumario                                         % Sumário
+\imprimircapa                                       % Capa
+\imprimirfolhaderosto{}                             % Folha de rosto
+\imprimirfolhadeaprovacao{}                         % Folha de aprovação
+\include{elementos-pre-textuais/dedicatoria}        % Dedicatória
+\include{elementos-pre-textuais/agradecimentos}     % Agradecimentos
+\include{elementos-pre-textuais/epigrafe}           % Epígrafe
+\include{elementos-pre-textuais/resumo-pt}          % Resumo
+\include{elementos-pre-textuais/resumo-en}          % Abstract
+\imprimirlistafiguras                               % Lista de figuras
+\imprimirlistatabelas                               % Lista de tabelas
+\imprimirlistaquadros                               % Lista de quadros
+\imprimirlistaalgoritmos                            % Lista de algoritmos
+\include{elementos-pre-textuais/lista-siglas}       % Lista de siglas
+\include{elementos-pre-textuais/lista-simbolos}     % Lista de símbolos
+\imprimirsumario                                    % Sumário
 
-% Configura layout para textuais
+% Configura layout para os elementos textuais
 \textual
-\include{./elementos-textuais/introducao}                % Introdução
-\include{./elementos-textuais/trabalhos-relacionados}    % Trabalhos relacionados
-\include{./elementos-textuais/fundamentacao-teorica}     % Fundamentação teórica
-\include{./elementos-textuais/metodologia}               % Metodologia
-\include{./elementos-textuais/resultados}                % Resultados
-\include{./elementos-textuais/conclusao}                 % Conclusão
+\include{elementos-textuais/introducao}             % Introdução
+\include{elementos-textuais/trabalhos-relacionados} % Trabalhos relacionados
+\include{elementos-textuais/fundamentacao-teorica}  % Fundamentação teórica
+\include{elementos-textuais/metodologia}            % Metodologia
+\include{elementos-textuais/resultados}             % Resultados
+\include{elementos-textuais/conclusao}              % Conclusão
 
-% Configura layout para pós-textuais
+% Configura layout para os elementos pós-textuais
 \postextual
-\imprimirreferencias                                     % Referências
-\include{./elementos-pos-textuais/apendices}             % Apêndices
-\include{./elementos-pos-textuais/anexos}                % Anexos
-\imprimirindiceremissivo                                 % Índice Remissivo
+\imprimirreferencias                                % Referências
+\include{elementos-pos-textuais/apendices}          % Apêndices
+\include{elementos-pos-textuais/anexos}             % Anexos
+\imprimirindiceremissivo                            % Índice Remissivo
 
 \end{document}

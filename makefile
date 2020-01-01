@@ -162,7 +162,7 @@ clean:
 		-or -iname "acs-*.bib" \
 		-or -iname "TSWLatexianTemp*" \
 		\) ! -path "./.git/*" -delete
-	@rm -rf $(SRC).pdf $(SRC-COMPR).pdf
+	@rm -rf $(SRC).pdf
 	@echo "Pronto!"
 	@echo
 

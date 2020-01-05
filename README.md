@@ -42,19 +42,19 @@ make
 
 Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melhorar o conteúdo, você pode:
 
-* [Abrir um problema](https://github.com/cfgnunes/latex-cefetmg/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
-* Criar um fork do projeto, realizar mudanças, e submeter um pull request.
+- [Abrir um problema](https://github.com/cfgnunes/latex-cefetmg/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
+- Criar um fork do projeto, realizar mudanças, e submeter um pull request.
 
 ## Autores
 
-* Cristiano Nunes - *Desenvolvedor*
-* Cristina Murta - *Sugestões e revisão*
-* Henrique Borges - *Sugestões e revisão*
+- Cristiano Nunes - _Desenvolvedor_
+- Cristina Murta - _Sugestões e revisão_
+- Henrique Borges - _Sugestões e revisão_
 
 ## Agradecimentos
 
-* Denise Souza
-* Guilherme Tonioli
-* Izaquiel Bessas
-* Lauro César
-* Talles Coelho
+- Denise Souza
+- Guilherme Tonioli
+- Izaquiel Bessas
+- Lauro César
+- Talles Coelho

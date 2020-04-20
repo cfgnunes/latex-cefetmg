@@ -16,7 +16,7 @@ Para um modelo de apresentação em slides, visite o projeto [latex-slides](http
 
 ### Pré-requisitos
 
-Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 18.04), mas o procedimento é semelhante para outras distribuições Linux.
+Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 20.04), mas o procedimento é semelhante para outras distribuições Linux.
 Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh

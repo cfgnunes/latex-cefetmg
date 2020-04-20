@@ -225,10 +225,10 @@
 % ------------------------------------------------------------------------------
 
 % Tamanho do recuo do parágrafo
-\setlength{\parindent}{1.3cm}
+\setlength{\parindent}{1.25cm}
 
 % Espaçamento entre um parágrafo e outro
-\setlength{\parskip}{0.2cm}
+\setlength{\parskip}{0.0cm}
 
 % ------------------------------------------------------------------------------
 % Fontes

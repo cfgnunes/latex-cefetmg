@@ -1,19 +1,17 @@
-SRC       = meu-trabalho
-LATEX     = latexmk
-PDFVIEWER = evince
+SRC = meu-trabalho
+LATEX = latexmk
 
 TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
 IMG_FILES = $(shell find . -type f -iname "*.png" -or -iname "*.jpg" -or -iname "*.eps")
 PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf")
 
-.PHONY: all help compile clean run
+.PHONY: default help compile clean
 
-all: compile
+default: compile
 
 help:
-	@echo "'make clean': Limpa os arquivos gerados."
-	@echo "'make compile': Gera o documento em PDF."
-	@echo "'make run': Gera o documento em PDF e visualiza."
+	@echo "'make': Gera o documento em PDF."
+	@echo "'make clean': Remove os arquivos gerados."
 	@echo
 
 compile: $(SRC).pdf
@@ -163,11 +161,5 @@ clean:
 		-or -iname "TSWLatexianTemp*" \
 		\) ! -path "./.git/*" -delete
 	@rm -rf $(SRC).pdf
-	@echo "Pronto!"
-	@echo
-
-run: $(SRC).pdf
-	@echo "Abrindo o arquivo PDF..."
-	@$(PDFVIEWER) $(SRC).pdf &
 	@echo "Pronto!"
 	@echo

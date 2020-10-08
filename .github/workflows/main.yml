@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install Dependencies
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
         run: |
           sudo apt -y install make
           sudo apt -y install latexmk
@@ -24,3 +26,6 @@ jobs:
 
       - name: Build latex project
         run: make
+      
+      - name: Clean latex project
+        

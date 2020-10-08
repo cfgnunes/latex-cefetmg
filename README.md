@@ -1,4 +1,4 @@
-# LaTeX CEFET-MG [![Build Status](https://travis-ci.org/cfgnunes/latex-cefetmg.svg?branch=master)](https://travis-ci.org/cfgnunes/latex-cefetmg)
+# LaTeX CEFET-MG [![Actions Status](https://github.com/cfgnunes/latex-cefetmg/workflows/build/badge.svg)](https://github.com/cfgnunes/latex-cefetmg/actions)
 
 Se você gosta desse modelo, faça uma doação para apoiar o desenvolvedor.
 [![paypal](https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28TY53S7HPN9S)

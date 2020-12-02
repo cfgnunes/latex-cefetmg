@@ -12,7 +12,7 @@
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2019/12/20 v7.0]
+\ProvidesClass{cefetmg}[2020/12/02 v8.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -32,8 +32,8 @@
 \LoadClass{abntex2}
 
 \RequirePackage[brazilian, hyperpageref]{backref} % Índice nas referências
-\RequirePackage{makeidx}                          % Índice remissivo de palavras
 \RequirePackage{chngcntr}
+\RequirePackage{etoolbox}
 
 % ------------------------------------------------------------------------------
 % Configurações gerais
@@ -48,9 +48,6 @@
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 
-% Define as listas de item compactas (sem espaçamento entre os itens)
-\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
-
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{%
     \ifcase #1
@@ -64,6 +61,35 @@
 
 % Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
+
+% Adiciona espaço entre as equações
+\AtEndEnvironment{equation}{%
+    \vspace{8pt}
+}
+
+% Padroniza o tamanho dos captions das figuras
+\captiontitlefont{\normalsize}
+\captionnamefont{\normalsize}
+\subcaptionsize{\normalsize}
+\subcaptionlabelfont{\normalsize}
+\subcaptionfont{\normalsize}
+
+% Coloca quadros sempre no topo da página (em páginas vazias)
+\setlength{\@fptop}{0pt}
+
+% Coloca floats sempre acima do rodapé
+\feetbelowfloat
+
+% Coloca rodapés sempre no final da página
+\renewcommand\footnoterule{%
+    \vspace*{\fill}%
+    \kern-3\p@%
+    \hrule%
+    \kern2.6\p@%
+}
+
+% Autoref para equações
+\def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
 
 % ------------------------------------------------------------------------------
 % Comandos
@@ -163,7 +189,7 @@
 % Comando: Imprimir referências
 \newcommand{\imprimirreferencias}{%
     % Carrega o arquivo "referencias.bib" com as referências do trabalho
-    \bibliography{./referencias}{}
+    \bibliography{referencias}{}
     % Define o estilo ABNT para formatar a lista de referências
     \bibliographystyle{abntex2-alf}
 }
@@ -208,13 +234,13 @@
 
 % Comando que trata a fonte nos objetos flutuantes
 \renewcommand{\fonte}[1]{%
-    \begin{SingleSpacing}\par\end{SingleSpacing}
-    \centering\small{Fonte: #1}
+    \break%
+    \centering\footnotesize{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{%
-    \begin{SingleSpacing}\par\end{SingleSpacing}
+    \break%
     \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
     \end{tabular}
@@ -229,6 +255,9 @@
 
 % Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.0cm}
+
+% Define espaçamento entre listas
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
 
 % ------------------------------------------------------------------------------
 % Fontes

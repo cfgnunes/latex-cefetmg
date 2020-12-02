@@ -1,29 +1,35 @@
-# LaTeX CEFET-MG
+# LaTeX CEFET-MG [![Actions Status](https://github.com/cfgnunes/latex-cefetmg/workflows/build/badge.svg)](https://github.com/cfgnunes/latex-cefetmg/actions)
 
-[![Build Status](https://travis-ci.org/cfgnunes/latex-cefetmg.svg?branch=master)](https://travis-ci.org/cfgnunes/latex-cefetmg)
+Se você gosta desse modelo, faça uma doação para apoiar o desenvolvedor.
+[![paypal](https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28TY53S7HPN9S)
+[![mercadopago](https://http2.mlstatic.com/ui/navigation/4.1.4/mercadopago/logo__small.png)](https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=77777663-0bd99901-1d1b-4d5d-a8d2-ae1d4eb75127)
 
 Modelo não-oficial de trabalho acadêmico desenvolvido para os alunos do [CEFET-MG](http://www.cefetmg.br/).
 Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos (TCC, Dissertação e Tese).
 Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é compatível com as normas [ABNT](http://www.abnt.org.br/) vigentes.
 
+Para um modelo de apresentação em slides, visite o projeto [latex-slides](https://github.com/cfgnunes/latex-slides/).
+
+![exemplo](figuras/figura-exemplo.png)
+
 ## Começando
 
-### Instalar os pré-requisitos
+### Pré-requisitos
 
-Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 18.04), mas o procedimento é semelhante para outras distribuições Linux.
-Para instalar os pacotes necessários, execute os seguintes comandos no terminal:
+Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 20.04), mas o procedimento é semelhante para outras distribuições Linux.
+Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh
-sudo apt-get -y install make
-sudo apt-get -y install latexmk
-sudo apt-get -y install texlive
-sudo apt-get -y install texlive-lang-portuguese
-sudo apt-get -y install texlive-latex-extra
-sudo apt-get -y install texlive-publishers
-sudo apt-get -y install texlive-science
-sudo apt-get -y install texlive-xetex
-sudo apt-get -y install ghostscript
-
+sudo apt -y install \
+    make \
+    latexmk \
+    texlive \
+    texlive-lang-portuguese \
+    texlive-latex-extra \
+    texlive-publishers \
+    texlive-science \
+    texlive-xetex \
+    texlive-fonts-extra
 ```
 
 ### Compilar documento
@@ -34,39 +40,23 @@ Para compilar o projeto e gerar o documento no formato PDF, execute o seguinte c
 make
 ```
 
-### Gerar uma versão compacta do documento
-
-Para gerar uma versão mais compacta do documento final no formato PDF, execute o seguinte comando no terminal após compilar o documento:
-
-```sh
-make compress
-```
-
-### Limpar arquivos temporários
-
-Para limpar os arquivos temporários, execute o seguinte comando no terminal:
-
-```sh
-make clean
-```
-
 ## Contribuindo
 
 Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melhorar o conteúdo, você pode:
 
-* [Abrir um problema](https://github.com/cfgnunes/latex-cefetmg/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
-* Criar um fork do projeto, realizar mudanças, e submeter um pull request.
+- [Abrir um problema](https://github.com/cfgnunes/latex-cefetmg/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
+- Criar um fork do projeto, realizar mudanças, e submeter um pull request.
 
 ## Autores
 
-* Cristiano Nunes - *Desenvolvedor*
-* Cristina Murta - *Sugestões e revisão*
-* Henrique Borges - *Sugestões e revisão*
+- Cristiano Nunes - _Desenvolvedor_
+- Cristina Murta - _Sugestões e revisão_
+- Henrique Borges - _Sugestões e revisão_
 
 ## Agradecimentos
 
-* Denise Souza
-* Guilherme Tonioli
-* Izaquiel Bessas
-* Lauro César
-* Talles Coelho
+- Denise Souza
+- Guilherme Tonioli
+- Izaquiel Bessas
+- Lauro César
+- Talles Coelho

@@ -1,86 +1,50 @@
-# Definição de variáveis
-SOURCE      = meu-trabalho
-LATEXMK     = latexmk
-GHOSTSCRIPT = gs
-PDFVIEWER   = evince
+SRC = meu-trabalho
+SRC_COMP = meu-trabalho-comptactado
+LATEX = latexmk
+OUTPUT_DIR = latex.out
 
-# Executa o processo de limpeza, compilação e abertura do arquivo
-all: clean compile open
+TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
+IMG_FILES = $(shell find . -type f -iname "*.png" -or -iname "*.jpg" -or -iname "*.eps")
+PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf" ! -iname "$(SRC_COMP).pdf")
+SVG_FILES = $(shell find . -type f -iname "*.svg")
 
-# Executa o processo de limpeza, compilação e compactação do arquivo
-all-test: clean compile-nonstop compress
+.PHONY: default help compile compress clean
 
-# Compila o código fonte
-compile:
-	@echo "Compilando arquivos..."
-	@"$(LATEXMK)" -pdf -synctex=1 "$(SOURCE).tex"
-	@echo "Pronto."
+default: compress
 
-# Compila o código fonte sem realizar interação com o usuário
-compile-nonstop:
-	@echo "Compilando arquivos..."
-	@"$(LATEXMK)" -pdf -synctex=1 -xelatex -interaction=nonstopmode "$(SOURCE).tex"
-	@echo "Pronto."
+help:
+	@echo "'make': Gera o documento em PDF."
+	@echo "'make compress': Gera o documento em PDF (comptactado)."
+	@echo "'make clean': Remove os arquivos gerados."
+	@echo
 
-# Comprime o arquivo PDF gerado
-compress:
-	@echo "Comprimindo o arquivo PDF..."
-	@"$(GHOSTSCRIPT)" -q -dNOPAUSE -dBATCH -dSAFER \
-		-sDEVICE=pdfwrite \
-		-dEmbedAllFonts=true \
-		-dSubsetFonts=true \
-		-sOutputFile="$(SOURCE)-compactado.pdf" \
-		"$(SOURCE).pdf"
-	@echo "Pronto."
+compile: $(OUTPUT_DIR)/$(SRC).pdf
 
-# Remove arquivos temporários
+$(OUTPUT_DIR)/$(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES) $(SVG_FILES:.svg=.pdf)
+	@echo "Compilando o projeto..."
+	@$(LATEX) -pdf -synctex=1 -output-directory=$(OUTPUT_DIR) $(SRC).tex
+	@touch $(OUTPUT_DIR)/$(SRC).pdf
+	@echo "Pronto!"
+	@echo
+
+%.pdf: %.svg
+	@echo "Convertendo imagem SVG para PDF..."
+	@echo " > convertendo '$<'..."
+	@inkscape --without-gui --export-area-drawing --export-pdf-version=1.5 --export-margin=1 --file=$< --export-pdf=$@ 2>/dev/null
+	@echo "Pronto!"
+	@echo
+
+compress: $(OUTPUT_DIR)/$(SRC_COMP).pdf
+
+$(OUTPUT_DIR)/$(SRC_COMP).pdf: $(OUTPUT_DIR)/$(SRC).pdf
+	@echo "Compactando o arquivo final..."
+	@gs -q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -sOutputFile=$(OUTPUT_DIR)/$(SRC_COMP).pdf $(OUTPUT_DIR)/$(SRC).pdf
+	@touch $(OUTPUT_DIR)/$(SRC_COMP).pdf
+	@echo "Pronto!"
+	@echo
+
 clean:
-	@echo "Limpando arquivos temporarios..."
-	@find . -type f \( \
-		-iname "*-blx.*" \
-		-or -iname "*-converted-to.*" \
-		-or -iname "*.*~" \
-		-or -iname "*.acn" \
-		-or -iname "*.acr" \
-		-or -iname "*.aux" \
-		-or -iname "*.backup" \
-		-or -iname "*.bak" \
-		-or -iname "*.bbl" \
-		-or -iname "*.bcf" \
-		-or -iname "*.blg" \
-		-or -iname "*.brf" \
-		-or -iname "*.cb" \
-		-or -iname "*.cb2" \
-		-or -iname "*.dvi" \
-		-or -iname "*.fdb_latexmk" \
-		-or -iname "*.fls" \
-		-or -iname "*.fmt" \
-		-or -iname "*.fot" \
-		-or -iname "*.glg" \
-		-or -iname "*.glo" \
-		-or -iname "*.gls" \
-		-or -iname "*.glsdefs" \
-		-or -iname "*.idx" \
-		-or -iname "*.ilg" \
-		-or -iname "*.ind" \
-		-or -iname "*.ist" \
-		-or -iname "*.lo*" \
-		-or -iname "*.nav" \
-		-or -iname "*.out" \
-		-or -iname "*.pdfsync" \
-		-or -iname "*.pre" \
-		-or -iname "*.ps" \
-		-or -iname "*.run.xml" \
-		-or -iname "*.sav" \
-		-or -iname "*.snm" \
-		-or -iname "*.synctex*" \
-		-or -iname "*.toc" \
-		-or -iname "*.vrb" \
-		\) ! -path "./.git/*" -delete
-	@echo "Pronto."
-
-# Visualiza o arquivo PDF gerado
-open:
-	@echo "Abrindo o arquivo PDF..."
-	@"$(PDFVIEWER)" "$(SOURCE).pdf" &
-	@echo "Pronto."
+	@echo "Limpando arquivos gerados..."
+	@rm -rf $(OUTPUT_DIR)
+	@echo "Pronto!"
+	@echo

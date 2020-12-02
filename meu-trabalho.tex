@@ -1,14 +1,14 @@
-% -----------------------------------------------------------------------------
-%       Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
+% ------------------------------------------------------------------------------
+% Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
-%   Modelo de trabalho acadêmico em conformidade com as normas da ABNT
-%   (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
+% Modelo de trabalho acadêmico em conformidade com as normas da ABNT
+% (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
 %
-%    Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
+% Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
-%    Autores: Cristiano Nunes <cfgnunes@gmail.com>
-%             Henrique Borges <henrique@cefetmg.br>
-% -----------------------------------------------------------------------------
+% Autores: Cristiano Nunes <cfgnunes@gmail.com>
+%          Henrique Borges <henrique@cefetmg.br>
+% ------------------------------------------------------------------------------
 
 \documentclass[%
     %twoside,              % Impressão em frente (anverso) e verso
@@ -20,54 +20,51 @@
     abnt-emphasize=bf,
     bibjustif,
     recuo=0cm,
-    abnt-doi=expand,       % Expande endereço iniciado com doi: para http://dx.doi.org/
-    abnt-url-package=url,  % Utiliza o pacote url
-    abnt-refinfo=yes,      % Utiliza o estilo bibliográfico abnt-refinfo
+    abnt-doi=expand,
+    abnt-url-package=hyperref,
+    abnt-refinfo=yes,
     abnt-etal-cite=3,
     abnt-etal-list=3,
     abnt-thesis-year=final
 ]{abntex2cite}             % Configura as citações bibliográficas
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Pacotes utilizados
-% -----------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}                      % Codificação do documento
-\usepackage[T1]{fontenc}                         % Seleção de código de fonte
-\usepackage{booktabs}                            % Réguas horizontais em tabelas
-\usepackage{color, colortbl}                     % Controle de cores
-\usepackage{float}                               % Tabelas/figuras em ambiente multicolunas
-\usepackage{graphicx}                            % Inclusão de gráficos
-\usepackage{icomma}                              % Uso de vírgulas em expressões matemáticas
-\usepackage{indentfirst}                         % Recua o primeiro parágrafo de cada seção
-\usepackage{microtype}                           % Melhora a justificação do documento
-\usepackage{multirow, array}                     % Tabelas com múltiplas linhas e colunas
-\usepackage{subeqnarray}                         % Subenumeração de equações
-\usepackage{verbatim}                            % Apresentar texto tal como escrito no documento
-\usepackage{amsfonts, amssymb, amsmath}          % Fontes e símbolos matemáticos
+% ------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}         % Codificação do documento
+\usepackage[T1]{fontenc}            % Seleção de código de fonte
+\usepackage{booktabs}               % Réguas horizontais em tabelas
+\usepackage{color, colortbl}        % Controle de cores
+\usepackage{float}                  % Tabelas/figuras em ambiente multicolunas
+\usepackage{graphicx}               % Inclusão de gráficos
+\usepackage{hyperref}               % Utilização de hyperlinks
+\usepackage{icomma}                 % Uso de vírgulas em expressões matemáticas
+\usepackage{indentfirst}            % Recua o primeiro parágrafo de cada seção
+\usepackage{microtype}              % Melhora a justificação do documento
+\usepackage{multirow, makecell}     % Tabelas com múltiplas linhas e colunas
+\usepackage{subeqnarray}            % Subenumeração de equações
+\usepackage{verbatim}               % Exibir texto tal como escrito no documento
 \usepackage[algoruled, portuguese]{algorithm2e}  % Algoritmos em português
-\usepackage[scaled]{helvet}                      % Usa a fonte Helvetica
-%\usepackage{times}                              % Usa a fonte Times
-%\usepackage{palatino}                           % Usa a fonte Palatino
-%\usepackage{lmodern}                            % Usa a fonte Latin Modern
-%\usepackage[bottom]{footmisc}                   % Notas de rodapé sempre na mesma posição
-%\usepackage{ae, aecompl}                        % Fontes de alta qualidade
-%\usepackage{latexsym}                           % Símbolos matemáticos
-%\usepackage{lscape}                             % Páginas em modo paisagem
-%\usepackage{picinpar}                           % Dispor imagens em parágrafos
-%\usepackage{scalefnt}                           % Redimensionar tamanho da fonte
-%\usepackage{subfig}                             % Posicionamento de figuras
-%\usepackage{upgreek}                            % Fonte letras gregas
+\usepackage{amsmath}                % Fontes e símbolos matemáticos
+\usepackage[charter]{mathdesign}    % Utiliza a fonte Charter BT
+%\usepackage{times}                 % Utiliza a fonte Times
+%\usepackage{newtxtext,newtxmath}   % Utiliza a fonte Times (melhorado)
+%\usepackage{palatino}              % Utiliza a fonte Palatino
+%\usepackage{lmodern}               % Utiliza a fonte Latin Modern
+%\usepackage{latexsym}              % Símbolos matemáticos
+%\usepackage{lscape}                % Páginas em modo paisagem
 
-% Redefine a fonte para uma fonte similar a Arial (fonte Helvetica)
-\renewcommand*\familydefault{\sfdefault}
+% Utiliza a fonte Helvetica (similar a Arial)
+%\usepackage{helvet}
+%\renewcommand*\familydefault{\sfdefault}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Configurações de aparência do PDF final
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \hypersetup{%
     portuguese,
-    colorlinks=true, % true: links coloridos; false: links em caixas de texto
+    colorlinks=true, % true: links coloridos; false: links em caixas
     linkcolor=blue,  % Cor dos links internos
     citecolor=blue,  % Cor dos links para as referências bibliográficas
     filecolor=blue,  % Cor dos links para arquivos
@@ -79,12 +76,11 @@
 }
 \makeatother
 
-% Altera o aspecto da cor azul
-\definecolor{blue}{RGB}{41,5,195}
+% Altera a tonalidade da cor azul dos links
+\definecolor{blue}{RGB}{0,80,128}
 
 % Redefinição de labels
 \renewcommand{\algorithmautorefname}{Algoritmo}
-\def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
 
 % Cria o índice remissivo
 \makeindex
@@ -95,50 +91,50 @@
     Kat-sa-gge-los
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Inclui os arquivos do trabalho acadêmico
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
-% Insere e constrói alguns elementos pré-textuais para gerar capa,
+% Insere alguns elementos pré-textuais para gerar capa,
 % folha de rosto e folha de aprovação
-\include{./01-elementos-pre-textuais/capa}
-\include{./01-elementos-pre-textuais/folha-rosto}
-\include{./01-elementos-pre-textuais/folha-aprovacao}
+\input{elementos-pre-textuais/capa}
+\input{elementos-pre-textuais/folha-rosto}
+\input{elementos-pre-textuais/folha-aprovacao}
 
 \begin{document}
 
-% Insere os elementos pré-textuais
+% Configura layout para os elementos pré-textuais
 \pretextual
-\imprimircapa                                            % Inclui Capa
-\imprimirfolhaderosto{}                                  % Inclui Folha de rosto
-\imprimirfolhadeaprovacao{}                              % Inclui Folha de aprovação
-\include{./01-elementos-pre-textuais/dedicatoria}        % Dedicatória
-\include{./01-elementos-pre-textuais/agradecimentos}     % Agradecimentos
-\include{./01-elementos-pre-textuais/epigrafe}           % Epígrafe
-\include{./01-elementos-pre-textuais/resumo-pt}          % Resumo na língua vernácula
-\include{./01-elementos-pre-textuais/resumo-en}          % Resumo em língua inglesa
-\include{./01-elementos-pre-textuais/lista-figuras}      % Lista de figuras
-\include{./01-elementos-pre-textuais/lista-tabelas}      % Lista de tabelas
-\include{./01-elementos-pre-textuais/lista-quadros}      % Lista de quadros
-\include{./01-elementos-pre-textuais/lista-algoritmos}   % Lista de algoritmos
-\include{./01-elementos-pre-textuais/lista-siglas}       % Lista de siglas
-\include{./01-elementos-pre-textuais/lista-simbolos}     % Lista de símbolos
-\include{./01-elementos-pre-textuais/sumario}            % Sumário
+\imprimircapa                                       % Capa
+\imprimirfolhaderosto{}                             % Folha de rosto
+\imprimirfolhadeaprovacao{}                         % Folha de aprovação
+\input{elementos-pre-textuais/dedicatoria}          % Dedicatória
+\input{elementos-pre-textuais/agradecimentos}       % Agradecimentos
+\input{elementos-pre-textuais/epigrafe}             % Epígrafe
+\input{elementos-pre-textuais/resumo-pt}            % Resumo
+\input{elementos-pre-textuais/resumo-en}            % Abstract
+\imprimirlistafiguras                               % Lista de figuras
+\imprimirlistatabelas                               % Lista de tabelas
+\imprimirlistaquadros                               % Lista de quadros
+\imprimirlistaalgoritmos                            % Lista de algoritmos
+\input{elementos-pre-textuais/lista-siglas}         % Lista de siglas
+\input{elementos-pre-textuais/lista-simbolos}       % Lista de símbolos
+\imprimirsumario                                    % Sumário
 
-% Insere os elementos textuais
+% Configura layout para os elementos textuais
 \textual
-\include{./02-elementos-textuais/introducao}             % Introdução
-\include{./02-elementos-textuais/trabalhos-relacionados} % Trabalhos relacionados
-\include{./02-elementos-textuais/fundamentacao-teorica}  % Fundamentação teórica
-\include{./02-elementos-textuais/metodologia}            % Metodologia
-\include{./02-elementos-textuais/resultados}             % Resultados
-\include{./02-elementos-textuais/conclusao}              % Conclusão
+\input{elementos-textuais/introducao}               % Introdução
+\input{elementos-textuais/trabalhos-relacionados}   % Trabalhos relacionados
+\input{elementos-textuais/fundamentacao-teorica}    % Fundamentação teórica
+\input{elementos-textuais/metodologia}              % Metodologia
+\input{elementos-textuais/resultados}               % Resultados
+\input{elementos-textuais/conclusao}                % Conclusão
 
-% Insere os elementos pós-textuais
+% Configura layout para os elementos pós-textuais
 \postextual
-\include{./03-elementos-pos-textuais/referencias}        % Referências
-\include{./03-elementos-pos-textuais/apendices}          % Apêndices
-\include{./03-elementos-pos-textuais/anexos}             % Anexos
-\include{./03-elementos-pos-textuais/indice-remissivo}   % Índice Remissivo
+\imprimirreferencias                                % Referências
+\input{elementos-pos-textuais/apendices}            % Apêndices
+\input{elementos-pos-textuais/anexos}               % Anexos
+\imprimirindiceremissivo                            % Índice Remissivo
 
 \end{document}

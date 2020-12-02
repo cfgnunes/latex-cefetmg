@@ -111,6 +111,11 @@ acs-*.bib
 *.glo
 *.gls
 *.glsdefs
+*.lzo
+*.lzs
+
+# uncomment this for glossaries-extra (will ignore makeindex's style files!)
+# *.ist
 
 # gnuplottex
 *-gnuplottex-*
@@ -226,8 +231,9 @@ pythontex-files-*/
 # xindy
 *.xdy
 
-# xypic precompiled matrices
+# xypic precompiled matrices and outlines
 *.xyc
+*.xyd
 
 # endfloat
 *.ttt
@@ -250,8 +256,14 @@ TSWLatexianTemp*
 # Kile
 *.backup
 
+# gummi
+.*.swp
+
 # KBibTeX
 *~[0-9]*
+
+# TeXnicCenter
+*.tps
 
 # auto folder when using emacs and auctex
 ./auto/*
@@ -263,11 +275,15 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
-# IDE
+# Makeindex log files
+*.lpz
+
+# Visual Studio Code
 .vscode/
 
+## Specific files:
 # Output file
 meu-trabalho*.pdf
 
-# Other auxiliary lists
+# Auxiliary lists
 *.lo*

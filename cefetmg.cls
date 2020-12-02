@@ -1,17 +1,18 @@
-% -----------------------------------------------------------------------------
-%       Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
+% ------------------------------------------------------------------------------
+% Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
-%   Modelo de trabalho acadêmico em conformidade com as normas da ABNT
-%   (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
+% Modelo de trabalho acadêmico em conformidade com as normas da ABNT
+% (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
 %
-%    Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
+% Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
-%    Autores: Cristiano Nunes <cfgnunes@gmail.com>
-%             Henrique Borges <henrique@cefetmg.br>
-% -----------------------------------------------------------------------------
+% Autores: Cristiano Nunes <cfgnunes@gmail.com>
+%          Henrique Borges <henrique@cefetmg.br>
+% Data: 2012-07-02
+% ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2017/09/13 v6.2]
+\ProvidesClass{cefetmg}[2020/12/02 v8.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -19,7 +20,8 @@
 \PassOptionsToClass{%
 % Opções da classe memoir
     12pt,                  % Tamanho da fonte
-    openright,             % Capítulos começam sempre em páginas ímpares (insere página vazia caso necessário)
+    openright,             % Capítulos começam sempre em páginas ímpares
+                           % (insere página vazia caso necessário)
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
 % Opções do pacote babel
@@ -30,12 +32,12 @@
 \LoadClass{abntex2}
 
 \RequirePackage[brazilian, hyperpageref]{backref} % Índice nas referências
-\RequirePackage{makeidx}                          % Índice remissivo de palavras
 \RequirePackage{chngcntr}
+\RequirePackage{etoolbox}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Configurações gerais
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
@@ -45,9 +47,6 @@
 
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
-
-% Define as listas de item compactas (sem espaçamento entre os itens)
-\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
 
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{%
@@ -63,9 +62,38 @@
 % Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
-% -----------------------------------------------------------------------------
+% Adiciona espaço entre as equações
+\AtEndEnvironment{equation}{%
+    \vspace{8pt}
+}
+
+% Padroniza o tamanho dos captions das figuras
+\captiontitlefont{\normalsize}
+\captionnamefont{\normalsize}
+\subcaptionsize{\normalsize}
+\subcaptionlabelfont{\normalsize}
+\subcaptionfont{\normalsize}
+
+% Coloca quadros sempre no topo da página (em páginas vazias)
+\setlength{\@fptop}{0pt}
+
+% Coloca floats sempre acima do rodapé
+\feetbelowfloat
+
+% Coloca rodapés sempre no final da página
+\renewcommand\footnoterule{%
+    \vspace*{\fill}%
+    \kern-3\p@%
+    \hrule%
+    \kern2.6\p@%
+}
+
+% Autoref para equações
+\def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
+
+% ------------------------------------------------------------------------------
 % Comandos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Comando: Programa
 \providecommand{\imprimirprograma}{}
@@ -83,7 +111,8 @@
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
-% Comando: Tipo de trabalho acadêmico (tese, dissertação ou projeto de qualificação)
+% Comando: Tipo de trabalho acadêmico
+% (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
@@ -103,15 +132,76 @@
 
 % Comando: Texto da folha de aprovação
 \providecommand{\imprimirtextopadraofolhadeaprovacao}{}
-\newcommand{\textopadraofolhadeaprovacao}[1]{\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
+\newcommand{\textopadraofolhadeaprovacao}[1]%
+    {\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
 % Comando: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
-\newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}{\includegraphics[width={#1}\textwidth]{#2}}}
+\newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}%
+    {\includegraphics[width={#1}\textwidth]{#2}}}
 
-% -----------------------------------------------------------------------------
+% Comando: Imprimir lista de figuras
+\newcommand{\imprimirlistafiguras}{%
+    \pdfbookmark[0]{\listfigurename}{lof}
+    \listoffigures*
+    \cleardoublepage
+}
+
+% Comando: Imprimir lista de tabelas
+\newcommand{\imprimirlistatabelas}{%
+    \pdfbookmark[0]{\listtablename}{lot}
+    \listoftables*
+    \cleardoublepage
+}
+
+% Comando: Imprimir lista de quadros
+\newcommand{\imprimirlistaquadros}{%
+    \pdfbookmark[0]{\listofquadrosname}{loq}
+    \listofquadros*
+    \cleardoublepage
+}
+
+% Comando: Imprimir sumário
+\newcommand{\imprimirsumario}{%
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
+    \cleardoublepage
+}
+
+% Comando: Imprimir lista de quadros
+\newcommand{\imprimirlistaalgoritmos}{%
+    \newcommand{\algoritmoname}{Algoritmo}
+    \renewcommand{\listalgorithmcfname}{Lista de Algoritmos}
+
+    \floatname{algocf}{\algoritmoname}
+    \newlistof{listofalgoritmos}{loa}{\listalgoritmoname}
+    \newlistentry{algocf}{loa}{0}
+
+    \counterwithout{algocf}{chapter}
+    \renewcommand{\cftalgocfname}{\algoritmoname\space}
+    \renewcommand*{\cftalgocfaftersnum}{\hfill--\hfill}
+
+    \pdfbookmark[0]{\listalgorithmcfname}{loa}
+    \listofalgorithms
+    \cleardoublepage
+}
+
+% Comando: Imprimir referências
+\newcommand{\imprimirreferencias}{%
+    % Carrega o arquivo "referencias.bib" com as referências do trabalho
+    \bibliography{referencias}{}
+    % Define o estilo ABNT para formatar a lista de referências
+    \bibliographystyle{abntex2-alf}
+}
+
+% Comando: Imprimir índice remissivo
+\newcommand{\imprimirindiceremissivo}{%
+    \printindex
+}
+
+% ------------------------------------------------------------------------------
 % Estilo de elementos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Elementos pré-textuais
 \renewcommand{\pretextual}{%
@@ -124,7 +214,8 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    \pagenumbering{arabic} % Numeração das páginas em algarismos arábicos, inciando em 1
+    \pagenumbering{arabic} % Numeração das páginas em algarismos
+                           % arábicos, inciando em 1
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -137,37 +228,40 @@
     \phantompart
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Objetos flutuantes
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Comando que trata a fonte nos objetos flutuantes
 \renewcommand{\fonte}[1]{%
-    \begin{SingleSpacing}\par\end{SingleSpacing}
-    \centering\small{Fonte: #1}
+    \break%
+    \centering\footnotesize{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{%
-    \begin{SingleSpacing}\par\end{SingleSpacing}
+    \break%
     \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
     \end{tabular}
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Parágrafos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Tamanho do recuo do parágrafo
-\setlength{\parindent}{1.3cm}
+\setlength{\parindent}{1.25cm}
 
 % Espaçamento entre um parágrafo e outro
-\setlength{\parskip}{0.2cm}
+\setlength{\parskip}{0.0cm}
 
-% -----------------------------------------------------------------------------
+% Define espaçamento entre listas
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
+
+% ------------------------------------------------------------------------------
 % Fontes
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Redefinição de fontes
 \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
@@ -188,9 +282,9 @@
 \renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Sumário
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
 \renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
@@ -198,9 +292,9 @@
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Listas
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 % Define os títulos das listas
 \addto\captionsbrazil{%
@@ -228,9 +322,9 @@
 \renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Capa
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \renewcommand{\imprimircapa}{%
     \begin{capa}
@@ -245,7 +339,8 @@
         \begin{center}
             \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
             \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {\ABNTEXchapterfont\HUGE\scshape: }{\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
+                {\ABNTEXchapterfont\HUGE\scshape: }%
+                    {\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
             }
         \end{center}
 
@@ -280,9 +375,9 @@
 }
 \makeatother
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Folha de rosto
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \renewcommand{\folhaderostocontent}{%
 
@@ -295,30 +390,39 @@
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
         \abntex@ifnotempty{\imprimirsubtitulo}{%
-            {\ABNTEXchapterfont\LARGE\scshape: }{\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
+            {\ABNTEXchapterfont\LARGE\scshape: }%
+                {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
     \end{center}
 
     \vspace*{90pt}
 
-    \abntex@ifnotempty{\imprimirpreambulo}
-    {%
+    \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
-        \begin{tabular}{p{.25\textwidth}p{.13\textwidth}p{.44\textwidth}}
-            & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirpreambulo}} \\ & & \\
+        \begin{tabular}{p{.24\textwidth}p{.15\textwidth}p{.4\textwidth}}
+            & \multicolumn{2}{p{.6\textwidth}}%
+                {\hyphenpenalty=10000\hbadness=10000%
+                    {\imprimirpreambulo}%
+                } \\ & & \\
             \abntex@ifnotempty{\imprimirareaconcentracao}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}%
+                    {\hyphenpenalty=10000\hbadness=10000%
+                    {\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}%
+                    } \\ & & \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}{%
-                & \multicolumn{2}{p{.6\textwidth}}{\small\hyphenpenalty=10000{\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}} \\ & & \\
+                & \multicolumn{2}{p{.6\textwidth}}%
+                    {\hyphenpenalty=10000\hbadness=10000%
+                        {\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}%
+                    } \\ & & \\
             }
             \abntex@ifnotempty{\imprimirorientador}{%
-                & \small\imprimirorientadorRotulo & \imprimirorientador \\
-                & & \small\imprimirinstOrientador \\ & & \\
+                & \imprimirorientadorRotulo & \imprimirorientador \\
+                & & \imprimirinstOrientador \\ & & \\
             }
             \abntex@ifnotempty{\imprimircoorientador}{%
-                & \small\imprimircoorientadorRotulo & \imprimircoorientador \\
-                & & \small\imprimirinstCoorientador
+                & \imprimircoorientadorRotulo & \imprimircoorientador \\
+                & & \imprimirinstCoorientador
             }
         \end{tabular}
     }
@@ -335,15 +439,15 @@
 }
 \makeatother
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Folha de aprovação
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \makeatletter
 \newcommand{\imprimirfolhadeaprovacao}{%
     \begin{folhadeaprovacao}
         \vspace*{\fill}
 
-        \begin{tabular}{p{.45\textwidth}p{.45\textwidth}}
+        \begin{tabular}{p{.4\textwidth}p{.45\textwidth}}
             & \imprimirtextopadraofolhadeaprovacao \\
         \end{tabular}
 
@@ -353,9 +457,9 @@
 }
 \makeatother
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Dedicatória
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \renewenvironment{dedicatoria}[1][]{%
     \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\dedicatorianame}
@@ -375,9 +479,9 @@
     \PRIVATEclearpageifneeded
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Epígrafe
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \renewenvironment{epigrafe}[1][]{%
     \ifthenelse{\equal{#1}{}}{%
         \PRIVATEbookmarkthis{\epigraphname}

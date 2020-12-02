@@ -1,0 +1,34 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Set up git repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt -y install \
+            make \
+            latexmk \
+            texlive \
+            texlive-lang-portuguese \
+            texlive-latex-extra \
+            texlive-publishers \
+            texlive-science \
+            texlive-xetex \
+            texlive-fonts-extra
+
+      - name: Build latex project
+        run: make
+
+      - name: Clean latex project
+        run: make clean

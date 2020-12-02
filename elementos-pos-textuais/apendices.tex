@@ -10,7 +10,7 @@
     % --------------------------------------------------------------------------
 
     \chapter{Nome do apêndice}
-    \label{chap:apendice_a}
+    \label{chap_apendice_a}
 
     Lembre-se que a diferença entre apêndice e anexo diz respeito à autoria do texto e/ou material ali colocado.
 
@@ -19,50 +19,52 @@
 
     Caso seja conveniente, podem ser criados outros apêndices para o seu trabalho acadêmico.
     Basta recortar e colar este trecho neste mesmo documento.
-    Lembre-se de alterar o ``label'' do apêndice.
 
     % --------------------------------------------------------------------------
     % Novo apêndice
     % --------------------------------------------------------------------------
 
     \chapter{Estrutura de trabalhos acadêmicos}
-    \label{chap:estrutura_de_trabalhos_academicos}
+    \label{chap_estrutura_de_trabalhos_academicos}
 
     Quanto à estrutura do trabalho acadêmico, esta varia sobremaneira, a depender da conveniência do autor e seu(s) respectivo(s) orientador(es).
     No entanto, de acordo com as normas ABNT, alguns elementos são obrigatórios.
 
-    A título de sugestão, e apenas isso, a \autoref{fig:estrutura_projeto_qualificacao} apresenta uma estrutura para um projeto de qualificação de mestrado ou doutorado, conforme a norma \citeonline{NBR14724:2011}.
+    A título de sugestão, e apenas isso, a \autoref{fig_estrutura_projeto_qualificacao} apresenta uma estrutura para um projeto de qualificação de mestrado ou doutorado, conforme a norma \citeonline{NBR14724:2011}.
 
     \begin{figure}[!htb]
         \centering
-        \caption{Estrutura sugerida de um Projeto de Qualificação para os cursos de Mestrado ou Doutorado}
         \includegraphics[width=0.5\textwidth]{./figuras/estrutura-projeto-qualificacao}
-        \label{fig:estrutura_projeto_qualificacao}
+        \label{fig_estrutura_projeto_qualificacao}
+        \caption{Estrutura sugerida de um Projeto de Qualificação para os cursos de Mestrado ou Doutorado}
     \end{figure}
 
-    Já a \autoref{fig:estrutura_tese_dissertacao} apresenta uma estrutura para uma tese de doutorado ou dissertação de mestrado, conforme a norma \citeonline{NBR14724:2011}.
+    Já a \autoref{fig_estrutura_tese_dissertacao} apresenta uma estrutura para uma tese de doutorado ou dissertação de mestrado, conforme a norma \citeonline{NBR14724:2011}.
 
     Cabe ressaltar que, em todas as figuras, os elementos obrigatórios estão destacados em vermelho, os demais são opcionais.
 
     \begin{figure}[!htb]
         \centering
-        \caption{Estrutura sugerida de uma Tese de Doutorado ou Dissertação de Mestrado}
         \includegraphics[width=0.5\textwidth]{./figuras/estrutura-tese-dissertacao}
-        \label{fig:estrutura_tese_dissertacao}
+        \label{fig_estrutura_tese_dissertacao}
+        \caption{Estrutura sugerida de uma Tese de Doutorado ou Dissertação de Mestrado}
     \end{figure}
+
+    % O comando abaixo adiciona uma quebra de página no documento
+    \newpage
 
     Observe que a estrutura de um projeto de qualificação é muito similar à da tese ou dissertação.
     A única diferença existente é que num projeto de qualificação o autor certamente terá, via de regra, apenas resultados parciais e preliminares.
     Além disso, estando o trabalho ainda em andamento, há que se apresentar um cronograma de trabalho que evidencie que o mesmo poderá ser concluído dentro dos prazos estabelecidos pelo programa.
 
-    Por fim, como foi dito, este  \emph{template} pode ser utilizado para outros trabalhos acadêmicos.
-    Neste caso, a \autoref{fig:estrutura_projeto_pesquisa} apresenta uma sugestão de projeto de pesquisa a ser submetido ao programa para fins de admissão ao mesmo, conforme a norma \citeonline{NBR15287:2005}.
+    Por fim, como foi dito, este \emph{template} pode ser utilizado para outros trabalhos acadêmicos.
+    Neste caso, a \autoref{fig_estrutura_projeto_pesquisa} apresenta uma sugestão de projeto de pesquisa a ser submetido ao programa para fins de admissão ao mesmo, conforme a norma \citeonline{NBR15287:2005}.
 
     \begin{figure}[!htb]
         \centering
-        \caption{Estrutura sugerida de um projeto de pesquisa para admissão ao PPGMMC}
         \includegraphics[width=0.6\textwidth]{./figuras/estrutura-projeto-pesquisa}
-        \label{fig:estrutura_projeto_pesquisa}
+        \label{fig_estrutura_projeto_pesquisa}
+        \caption{Estrutura sugerida de um projeto de pesquisa para admissão ao PPGMMC}
     \end{figure}
 
     Você deverá editar o arquivo principal {\ttfamily meu-trabalho.tex} para fazer os ajustes necessários, reiterando que as estruturas apresentadas são mera sugestão.
@@ -74,7 +76,7 @@
     Recomenda-se a consulta ao material de referência do software para a sua correta utilização \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
 
     Finalmente, este modelo apresenta um arquivo {\ttfamily makefile} para agilizar a compilação do documento.
-    Portanto, para gerar o documento final no formato PDF, basta apenas executar o comando {\ttfamily make} no linux.
+    Portanto, para gerar o documento final no formato PDF, basta apenas executar o comando {\ttfamily make} no mesmo diretório.
     Para limpar os arquivos temporários, basta digitar o comando {\ttfamily make clean}.
 
     % --------------------------------------------------------------------------
@@ -82,7 +84,7 @@
     % --------------------------------------------------------------------------
 
     \chapter{Sobre as ilustrações}
-    \label{chap:sobre_as_ilustracoes}
+    \label{chap_sobre_as_ilustracoes}
 
     A seguir ilustra-se a forma de incluir ilustrações no corpo do texto.
     Pela norma figuras, tabelas, quadros, equações, quadros, algoritmos, diagrama, etc.
@@ -92,33 +94,33 @@
     A numeração sequencial de figuras, tabelas e equações ocorre de modo automático.
 
     Referências cruzadas são obtidas através dos comandos \verb|\label{}| e \verb|\ref{}|.
-    Por exemplo, não é necessário saber que o número de certo capítulo é \ref{chap:fundamentacao_teorica} para colocar o seu número no texto.
-    Alternativamente se pode usar desta forma: \autoref{chap:fundamentacao_teorica}.
+    Por exemplo, não é necessário saber que o número de certo capítulo é \ref{chap_fundamentacao_teorica} para colocar o seu número no texto.
+    Alternativamente se pode usar desta forma: \autoref{chap_fundamentacao_teorica}.
     Isto facilita muito a inserção, remoção ou relocação de elementos numerados no texto (fato corriqueiro na escrita e correção de um documento acadêmico) sem a necessidade de renumerá-los todos.
 
     \section{Figuras}
-    \label{sec:figuras}
+    \label{sec_figuras}
 
     A seguir é apresentado um exemplo de figura.
-    A \autoref{fig:figura_exemplo} aparece automaticamente na lista de figuras.
+    A \autoref{fig_figura_exemplo} aparece automaticamente na lista de figuras.
 
     \begin{figure}[!htb]
         \centering
+        \includegraphics[width=0.75\textwidth]{./figuras/figura-exemplo}
+        \label{fig_figura_exemplo}
         \caption{Exemplo de figura}
-        \includegraphics[width=0.6\textwidth]{./figuras/figura-exemplo}
-        \label{fig:figura_exemplo}
     \end{figure}
 
     \section{Quadros e tabelas}
-    \label{sec:tabelas}
+    \label{sec_tabelas}
 
-    Também é apresentado o exemplo do \autoref{qua:comparabd} e da \autoref{tab:testes}, que aparece automaticamente na lista de quadros e tabelas.
+    Também é apresentado o exemplo do \autoref{qua_comparabd} e da \autoref{tab_testes}, que aparece automaticamente na lista de quadros e tabelas.
 
     Informações sobre a construção de tabelas no \LaTeX{} podem ser encontradas na literatura especializada \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
 
     \input{./quadros/quacomparabd}
 
-    Muitos confundem, mas existem diferenças entre \index{tabelas} e \index{quadros}.
+    Muitos confundem, mas existem diferenças entre \index{tabelas} tabelas e \index{quadros} quadros.
     Um quadro é formado por linhas horizontais e verticais, sendo, portanto ``fechado''.
     Você deverá utilizar um quadro quando o conteúdo é majoritariamente não-numérico.
     O número do quadro e o título vem acima do quadro, e a fonte, deve vir abaixo.
@@ -130,25 +132,28 @@
 
     \input{./tabelas/tabteste}
 
-    \section{Equações}
-    \label{sec:equacoes}
+    % O comando abaixo adiciona uma quebra de página no documento
+    \newpage
 
-    A transformada de Laplace é dada na \autoref{eq:laplace}, enquanto a Eq. \ref{eq:dft} apresenta a formulação da transformada discreta de Fourier bidimensional\footnote{Deve-se reparar na formatação esteticamente perfeita destas equações.}.
+    \section{Equações}
+    \label{sec_equacoes}
+
+    A transformada de Laplace é dada na \autoref{eq_laplace}, enquanto a Eq. \ref{eq_dft} apresenta a formulação da transformada discreta de Fourier bidimensional\footnote{Deve-se reparar na formatação esteticamente perfeita destas equações.}.
     Observe que utilizamos propositalmente duas formas distintas para referenciar as equações.
 
     \begin{equation}
         X(s) = \int\limits_{t = -\infty}^{\infty} x(t) \, \text{e}^{-st} \, dt
-        \label{eq:laplace}
+        \label{eq_laplace}
     \end{equation}
 
     \begin{equation}
         F(u, v) = \sum_{m = 0}^{M - 1} \sum_{n = 0}^{N - 1} f(m, n) \exp \left[ -j 2 \pi \left( \frac{u m}{M} + \frac{v n}{N} \right) \right]
-        \label{eq:dft}
+        \label{eq_dft}
     \end{equation}
 
-    \section{Algoritmos}\label{sec:algoritmos}
+    \section{Algoritmos}\label{sec_algoritmos}
 
-    Os \index{algoritmos} devem ser feitos segundo o modelo abaixo.
+    Os \index{algoritmos} algoritmos devem ser feitos segundo o modelo abaixo.
 
     \begin{algorithm}
         \caption{Algoritmo para remoção aleatória de vértices}
@@ -172,7 +177,7 @@
     % --------------------------------------------------------------------------
 
     \chapter{Sobre as listas}
-    \label{chap:sobre_as_listas}
+    \label{chap_sobre_as_listas}
 
     O exemplo a seguir ilustra duas listas não numeradas aninhadas, utilizando o ambiente \verb|\itemize|.
     Observe a indentação, bem como a mudança automática do tipo de ``\textit{bullet}'' nas listas aninhadas.
@@ -207,7 +212,7 @@
     % --------------------------------------------------------------------------
 
     \chapter{Sobre as citações e chamadas de referências}
-    \label{chap:sobre_as_citacoes}
+    \label{chap_sobre_as_citacoes}
 
     Citações são trechos transcritos ou informações retiradas das publicações consultadas para a realização do trabalho.
     As citações são utilizadas no texto com o propósito de esclarecer, completar, embasar ou corroborar as ideias do autor.
@@ -217,7 +222,7 @@
     A norma ABNT NBR:10520-2002 classifica as citações em: citações livres e citações literais.
 
     \section{Citações livres}
-    \label{sec:citacoes_livres}
+    \label{sec_citacoes_livres}
 
     Nas citações livres, reproduzem-se as ideias e informações de um autor, sem, entretanto, ``copiar letra por letra'' o texto do autor.
     Sendo assim, não há muito a dizer sobre como fazer citações livres, exceto que há que se tomar o devido cuidado com o ``recortar e colar e modificar'' para que não se caracterize plágio.
@@ -226,8 +231,8 @@
     Os exemplos a seguir ilustram estas duas possibilidades.
 
     Enquanto \citeonline{Maturana2003} defendem uma epistemologia baseada na biologia.
-    Para os autores, é necessário rever \ldots.
-    Por outro lado, \citeonline{Barbosa2004} contra-argumenta afirmando que \ldots.
+    Para os autores, é necessário rever\ldots
+    Por outro lado, \citeonline{Barbosa2004} contra-argumenta afirmando que\ldots
 
     Acima, as chamadas de referências foram feitas com o comando \verb|\citeonline{}|, que produzirá a formatação correta, conforme a norma ABNT.
 
@@ -237,6 +242,9 @@
     Isso apenas no caso em que se usa o esquema autor-ano, que é \textit{padrão} neste modelo \LaTeX{}.
 
     A segunda maneira de fazer uma chamada de referência deve ser utilizada quando se quer evitar uma interrupção na sequência do texto, o que poderia, eventualmente, prejudicar a leitura.
+
+    % O comando abaixo adiciona uma quebra de página no documento
+    \newpage
 
     Assim, a citação livre é feita e imediatamente após a obra referenciada deve ser colocada entre parênteses.
     Porém, neste caso específico, o nome do autor deve vir em caixa alta, seguido do ano da publicação, como nos exemplos a seguir.
@@ -255,12 +263,12 @@
     Esse recurso é automatizado pelo modelo proposto.
 
     \section{Citações literais}
-    \label{sec:citacoes_literais}
+    \label{sec_citacoes_literais}
 
     Nas citações literais, reproduzem-se as ideias e informações de um autor, exatamente como este a expressou, ou seja, faz-se uma ``cópia letra por letra'' do texto do autor.
     Sendo assim, obviamente, a obra citada deve ser referenciada, sob pena de se caracterizar plágio.
 
-    Quanto à chamada da referência, ela pode ser feita de qualquer das duas maneiras mencionadas na \autoref{sec:citacoes_livres}, conforme o nome do(s) autor(es) façam parte do seu texto ou não.
+    Quanto à chamada da referência, ela pode ser feita de qualquer das duas maneiras mencionadas na \autoref{sec_citacoes_livres}, conforme o nome do(s) autor(es) façam parte do seu texto ou não.
 
     Há duas maneiras distintas de se fazer uma citação literal, conforme o trecho citado seja longo ou curto.
 
@@ -309,7 +317,7 @@
     A epistemologia baseada na biologia parte do princípio de que ``assumo que não posso fazer referencia [\textit{sic}] a \underline{entidades independentes} de mim [realidade objetiva] para construir meu explicar'' \cite[p.~35, comentários e grifo nosso]{Maturana2003}.
 
     \section{Mais detalhes sobre as chamadas de referências}
-    \label{sec:chamadas_referencias}
+    \label{sec_chamadas_referencias}
 
     A seguir há mais exemplos dos comandos para as chamadas de referências e o resultado produzido:
 
@@ -341,7 +349,7 @@
     % --------------------------------------------------------------------------
 
     \chapter{Sobre as referências bibliográficas}
-    \label{chap:sobre_as_referencias_bibliograficas}
+    \label{chap_sobre_as_referencias_bibliograficas}
 
     A bibliografia é feita no padrão \textsc{Bib}\TeX{}.
     As referências são colocadas em um arquivo separado chamado {\ttfamily referencias.bib}.
@@ -349,7 +357,7 @@
     Tais referências bibliográficas devem seguir a norma \citeonline{NBR6023:2002} da ABNT\footnote{As normas técnicas da ABNT não são gratuitas.}.
 
     \section{Entradas de referências}
-    \label{sec:entradas_de_referencias}
+    \label{sec_entradas_de_referencias}
 
     Entradas são objetos de citação bibliográficas.
     Dito de outra forma, são as categorias dos tipos de documentos e materiais componentes da bibliografia.
@@ -402,13 +410,13 @@
     Ou seja, o aplicativo deve ser configurado adequadamente para exibir \textbf{todos os campos}, mesmo os opcionais.
 
     \section{Notas de rodapé}
-    \label{sec:notas_de_rodape}
+    \label{sec_notas_de_rodape}
 
     A norma \citeonline{NBR10520:2002} classifica as notas de rodapé em duas categorias: notas explicativas\footnote{É o tipo mais comum de notas que destacam, explicam e/ou complementam o que foi dito no corpo do texto, como esta nota de rodapé, por exemplo.} e notas de referências.
     Já as notas de referências, como o próprio nome já indica, são utilizadas para colocar referências e/ou chamadas de referências sob certas condições.
 
     \subsection{Notas de referências: uso de idem, ibidem, opus citatus e outros}
-    \label{subsec:notas_de_referencias}
+    \label{subsec_notas_de_referencias}
 
     Como indica o próprio nome, as notas de referências se prestam como recurso auxiliar para referenciação de bibliografia, e seu uso e aplicação são descritos na norma \citeonline{NBR10520:2002}.
 
@@ -445,7 +453,7 @@
     \etseq[p.~6]{abnTeX22014c}
 
     \section{Datas em referências}
-    \label{sec:datas_em_referencias}
+    \label{sec_datas_em_referencias}
 
     Quando as chamadas de referências são feitas no modelo autor-ano, como é o caso deste modelo, é evidente que o autor e sobretudo o ano adquirem papel de destaque.
     No caso da data de publicação, esta deve sempre estar presente (é elemento essencial) e indicada em algarismos arábicos.
@@ -453,22 +461,22 @@
     A norma ABNT não permite o uso de expressões do tipo ``sem data'' (``[s.d]``) para indicar que não se sabe a data de publicação de certa referência bibliográfica.
     Assim sendo, quando a data não puder ser indicada precisamente, deve-se registrar uma data aproximada entre colchetes, conforme descrito a seguir:
 
-    [1971 ou 1972] \ \ \ \ \ um ano ou outro,
+    [1971 ou 1972] $\Longrightarrow$ um ano ou outro,
 
-    [1969?] \ \ \ \ \ ano provável,
+    [1969?] $\Longrightarrow$ ano provável,
 
-    [1973] \ \ \ \ \ ano certo, não indicada no item,
+    [1973] $\Longrightarrow$ ano certo, não indicada no item,
 
-    [entre 1906 e 1912] \ \ \ \ \ use intervalos menores de 20 anos,
+    [entre 1906 e 1912] $\Longrightarrow$ use intervalos menores de 20 anos,
 
-    [ca. 1960] \ \ \ \ \ \textit{circa} de ... ( data aproximada),
+    [ca. 1960] $\Longrightarrow$ \textit{circa} de\ldots (data aproximada),
 
-    [197-] \ \ \ \ \ década certa,
+    [197-] $\Longrightarrow$ década certa,
 
-    [197-?] \ \ \ \ \ década provável,
+    [197-?] $\Longrightarrow$ década provável,
 
-    [18--] \ \ \ \ \ século certo,
+    [18--] $\Longrightarrow$ século certo,
 
-    [18--?] \ \ \ \ \ século provável.
+    [18--?] $\Longrightarrow$ século provável.
 
 \end{apendicesenv}

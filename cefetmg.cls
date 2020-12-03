@@ -234,13 +234,13 @@
 
 % Comando que trata a fonte nos objetos flutuantes
 \renewcommand{\fonte}[1]{%
-    \break%
+    \vspace{4pt}\break%
     \centering\footnotesize{Fonte: #1}
 }
 
 % Comando que trata as notas nos objetos flutuantes
 \renewcommand{\nota}[1]{%
-    \break%
+    \vspace{4pt}\break%
     \begin{tabular}{l p{.85\textwidth}}%
         Nota: & #1
     \end{tabular}
@@ -399,7 +399,7 @@
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
-        \begin{tabular}{p{.24\textwidth}p{.15\textwidth}p{.4\textwidth}}
+        \begin{tabular}{p{.24\textwidth}p{.16\textwidth}p{.4\textwidth}}
             & \multicolumn{2}{p{.6\textwidth}}%
                 {\hyphenpenalty=10000\hbadness=10000%
                     {\imprimirpreambulo}%

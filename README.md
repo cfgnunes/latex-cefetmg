@@ -20,14 +20,16 @@ Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 20.04), mas o proc
 Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh
-sudo apt -y install make
-sudo apt -y install latexmk
-sudo apt -y install texlive
-sudo apt -y install texlive-lang-portuguese
-sudo apt -y install texlive-latex-extra
-sudo apt -y install texlive-publishers
-sudo apt -y install texlive-science
-sudo apt -y install texlive-xetex
+sudo apt -y install \
+    make \
+    latexmk \
+    texlive \
+    texlive-lang-portuguese \
+    texlive-latex-extra \
+    texlive-publishers \
+    texlive-science \
+    texlive-xetex \
+    texlive-fonts-extra
 ```
 
 ### Compilar documento

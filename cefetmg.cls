@@ -8,7 +8,6 @@
 %
 % Autores: Cristiano Nunes <cfgnunes@gmail.com>
 %          Henrique Borges <henrique@cefetmg.br>
-% Data: 2012-07-02
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}

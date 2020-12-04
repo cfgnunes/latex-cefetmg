@@ -8,6 +8,8 @@ Modelo não-oficial de trabalho acadêmico desenvolvido para os alunos do [CEFET
 Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos (TCC, Dissertação e Tese).
 Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é compatível com as normas [ABNT](http://www.abnt.org.br/) vigentes.
 
+Para abrir este modelo diretamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt), [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
+
 Para um modelo de apresentação em slides, visite o projeto [latex-slides](https://github.com/cfgnunes/latex-slides/).
 
 ![exemplo](figuras/figura-exemplo.png)

@@ -8,11 +8,11 @@ Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é c
 
 ## Usando o modelo online
 
-Vantagens de usar o LaTeX online são:
+Vantagens de usar o modelo online são:
 
 - não precisa instalar o LaTeX;
-- editar o seu trabalho de diferentes computadores;
-- compartilhar o texto online com outras pessoas.
+- permite editar seu trabalho em diferentes computadores;
+- permite compartilhar o texto online com outras pessoas de forma simples.
 
 Desvantagem:
 

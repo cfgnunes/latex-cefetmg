@@ -1,20 +1,33 @@
 # LaTeX CEFET-MG [![Actions Status](https://github.com/cfgnunes/latex-cefetmg/workflows/build/badge.svg)](https://github.com/cfgnunes/latex-cefetmg/actions)
 
-Se você gosta desse modelo, faça uma doação para apoiar o desenvolvedor.
-[![paypal](https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28TY53S7HPN9S)
-[<img src="https://www.picpay.com/static/images/new/home/ppay-icon.png" height="32" alt="picpay" />](https://picpay.me/cfgnunes)
-
 Modelo não-oficial de trabalho acadêmico desenvolvido para os alunos do [CEFET-MG](http://www.cefetmg.br/).
 Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos (TCC, Dissertação e Tese).
 Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é compatível com as normas [ABNT](http://www.abnt.org.br/) vigentes.
 
-Para abrir este modelo diretamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt), [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
+É possível utilizar esse modelo online ou instalando o LaTeX em seu computador.
 
-Para um modelo de apresentação em slides, visite o projeto [latex-slides](https://github.com/cfgnunes/latex-slides/).
+## Usando o modelo online
+
+Vantagens de usar o LaTeX online são:
+
+- não precisa instalar o LaTeX;
+- editar o seu trabalho de diferentes computadores;
+- compartilhar o texto online com outras pessoas.
+
+Desvantagem:
+
+- só poderá editar seu trabalho se estiver conectado na Internet.
+
+Para utilizar o LaTeX online é necessário que você se registre gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
+Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias.
+
+Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
 
 ![exemplo](figuras/figura-exemplo.png)
 
-## Começando
+## Usando o modelo em seu computador (usando Windows)
+
+## Usando o modelo em seu computador (usando GNU/Linux)
 
 ### Pré-requisitos
 

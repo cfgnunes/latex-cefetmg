@@ -25,13 +25,11 @@ Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overle
 
 [![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt)
 
-## Usando o modelo em seu computador (usando Windows)
-
 ## Usando o modelo em seu computador (usando GNU/Linux)
 
 ### Pré-requisitos
 
-Esta seção assume o Ubuntu 16.04 (também testado no Ubuntu 20.04), mas o procedimento é semelhante para outras distribuições Linux.
+Esta seção assume o sistema operacional Ubuntu 16.04 (também testado no Ubuntu 20.04), mas o procedimento é semelhante para outras distribuições GNU/Linux.
 Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh

@@ -23,7 +23,7 @@ Note que existe uma versão paga do Overleaf, que oferece funcionalidades que po
 
 Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
 
-![exemplo](figuras/figura-exemplo.png)
+[![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt)
 
 ## Usando o modelo em seu computador (usando Windows)
 

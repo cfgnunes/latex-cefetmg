@@ -21,9 +21,9 @@ Desvantagem:
 Para utilizar o LaTeX online é necessário que você se registre gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
 Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias.
 
-Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
+Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
 
-[![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt)
+[![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
 
 ## Usando o modelo em seu computador (usando GNU/Linux)
 

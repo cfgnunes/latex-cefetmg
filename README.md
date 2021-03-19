@@ -6,6 +6,8 @@ Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é c
 
 É possível utilizar esse modelo online ou instalando o LaTeX em seu computador.
 
+[![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
+
 ## Usando o modelo online
 
 Vantagens de usar o modelo online são:
@@ -22,8 +24,6 @@ Para utilizar o LaTeX online é necessário que você se registre gratuitamente 
 Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias.
 
 Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
-
-[![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
 
 ## Usando o modelo em seu computador (usando GNU/Linux)
 

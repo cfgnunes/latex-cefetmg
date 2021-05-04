@@ -20,7 +20,6 @@
     % Opções da classe memoir
     12pt,                  % Tamanho da fonte
     openright,             % Capítulos começam sempre em páginas ímpares
-                           % (insere página vazia caso necessário)
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
     % Opções do pacote babel
@@ -255,9 +254,10 @@
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
     \bottomfootnote
-    %\chapterstyle{default} % Escreve a palavra "Capítulo" no início
-    \pagenumbering{arabic}  % Numeração das páginas em algarismos
-                            % arábicos, inciando em 1
+    % Escreve a palavra "Capítulo" no início
+    %\chapterstyle{default}
+    % Numeração das páginas em algarismos arábicos, inciando em 1
+    \pagenumbering{arabic}
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -431,31 +431,35 @@
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
-        \begin{tabular}{p{.24\textwidth}p{.16\textwidth}>{\raggedright\arraybackslash}p{.4\textwidth}}
-            & \multicolumn{2}{p{.6\textwidth}}%
-                {\hyphenpenalty=10000\hbadness=10000%
-                    {\imprimirpreambulo}} \\
-                \\
+        \begin{tabular}{%
+            p{.24\textwidth}%
+            p{.16\textwidth}%
+            >{\raggedright\arraybackslash}p{.4\textwidth}%
+            }
+
+             & \multicolumn{2}{p{.6\textwidth}}
+            {\hyphenpenalty=10000\hbadness=10000\imprimirpreambulo}           \\
+            \\
             \abntex@ifnotempty{\imprimirareaconcentracao}{%
-                & \multicolumn{2}{p{.6\textwidth}}%
-                    {\hyphenpenalty=10000\hbadness=10000%
+             & \multicolumn{2}{p{.6\textwidth}}
+                {\hyphenpenalty=10000\hbadness=10000%
                     \imprimirareaconcentracaoRotulo\imprimirareaconcentracao} \\
-                    \\
+            \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}{%
-                & \multicolumn{2}{p{.6\textwidth}}%
-                    {\hyphenpenalty=10000\hbadness=10000%
-                        \imprimirlinhapesquisaRotulo\imprimirlinhapesquisa} \\
-                    \\
+             & \multicolumn{2}{p{.6\textwidth}}
+                {\hyphenpenalty=10000\hbadness=10000%
+                    \imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}       \\
+            \\
             }
             \abntex@ifnotempty{\imprimirorientador}{%
-                & \imprimirorientadorRotulo & \imprimirorientador \\
-                & & {\imprimirinstOrientador}\\
-                \\
+             & \imprimirorientadorRotulo        & \imprimirorientador         \\
+             &                                  & \imprimirinstOrientador     \\
+            \\
             }
             \abntex@ifnotempty{\imprimircoorientador}{%
-                & \imprimircoorientadorRotulo & \imprimircoorientador \\
-                & & {\imprimirinstCoorientador}\\
+             & \imprimircoorientadorRotulo      & \imprimircoorientador       \\
+             &                                  & \imprimirinstCoorientador   \\
             }
         \end{tabular}
     }
@@ -479,7 +483,7 @@
         \vspace*{\fill}
 
         \begin{tabular}{p{.4\textwidth}p{.45\textwidth}}
-            & \imprimirtextopadraofolhadeaprovacao \\
+             & \imprimirtextopadraofolhadeaprovacao \\
         \end{tabular}
 
         \vspace*{\fill}

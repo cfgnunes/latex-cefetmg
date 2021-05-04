@@ -238,11 +238,6 @@
     \bibliographystyle{abntex2-alf}
 }
 
-% Comando: Imprimir índice remissivo
-\newcommand{\imprimirindiceremissivo}{%
-    \printindex
-}
-
 % ------------------------------------------------------------------------------
 % Estilo de elementos
 % ------------------------------------------------------------------------------

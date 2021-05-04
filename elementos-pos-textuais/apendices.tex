@@ -35,8 +35,8 @@
     \begin{figure}[!htb]
         \centering
         \caption{Estrutura sugerida de um Projeto de Qualificação para os cursos de Mestrado ou Doutorado}
-        \includegraphics[width=0.5\textwidth]{figuras/estrutura-projeto-qualificacao}
         \label{fig_estrutura_projeto_qualificacao}
+        \includegraphics[width=0.5\textwidth]{figuras/estrutura-projeto-qualificacao}
     \end{figure}
 
     Já a \autoref{fig_estrutura_tese_dissertacao} apresenta uma estrutura para uma tese de doutorado ou dissertação de mestrado, conforme a norma \citeonline{NBR14724:2011}.
@@ -46,8 +46,8 @@
     \begin{figure}[!htb]
         \centering
         \caption{Estrutura sugerida de uma Tese de Doutorado ou Dissertação de Mestrado}
-        \includegraphics[width=0.5\textwidth]{figuras/estrutura-tese-dissertacao}
         \label{fig_estrutura_tese_dissertacao}
+        \includegraphics[width=0.5\textwidth]{figuras/estrutura-tese-dissertacao}
     \end{figure}
 
     % O comando abaixo adiciona uma quebra de página no documento
@@ -116,17 +116,19 @@
 
     A seguir é apresentado um exemplo de figura.
     A \autoref{fig_figura_exemplo} aparece automaticamente na lista de figuras.
+    A \autoref{fig_figura_exemplo2} exibe um exemplo de figura contendo múltiplas figuras.
 
     \begin{figure}[!htb]
         \centering
         \caption{Exemplo de figura}
-        \includegraphics[width=0.75\textwidth]{figuras/figura-exemplo.png}
         \label{fig_figura_exemplo}
+        \includegraphics[width=0.75\textwidth]{figuras/figura-exemplo.png}
     \end{figure}
 
     \begin{figure}[!htb]
         \centering
         \caption{Exemplo de várias figuras em uma única figura.}
+        \label{fig_figura_exemplo2}
         \subtop[][Figura exemplo.]{%
             \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
         }\hspace{2ex} % Espaço entre a figura
@@ -136,7 +138,6 @@
         \subtop[][Figura exemplo.]{%
             \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
         }
-        \label{fig_figura_exemplo2}
     \end{figure}
 
     \section{Equações}
@@ -155,7 +156,8 @@
         \label{eq_dft}
     \end{equation}
 
-    \section{Algoritmos}\label{sec_algoritmos}
+    \section{Algoritmos}
+    \label{sec_algoritmos}
 
     Os \index{algoritmos} algoritmos devem ser feitos segundo o \autoref{alg_remocao_aleatoria_vertices}:
 

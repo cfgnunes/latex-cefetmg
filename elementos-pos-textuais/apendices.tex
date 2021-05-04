@@ -84,33 +84,8 @@
     Alternativamente se pode usar desta forma: \autoref{chap_fundamentacao_teorica}.
     Isto facilita muito a inserção, remoção ou relocação de elementos numerados no texto (fato corriqueiro na escrita e correção de um documento acadêmico) sem a necessidade de enumerá-los todos.
 
-    \section{Figuras}
-    \label{sec_figuras}
-
-    A seguir é apresentado um exemplo de figura.
-    A \autoref{fig_figura_exemplo} aparece automaticamente na lista de figuras.
-
-    \begin{figure}[!htb]
-        \centering
-        \caption{Exemplo de figura}
-        \includegraphics[width=0.75\textwidth]{figuras/figura-exemplo.png}
-        \label{fig_figura_exemplo}
-    \end{figure}
-
-    \begin{figure}[!b]
-        \centering
-        \caption{Exemplo de várias figuras em uma única figura.}
-        \subtop[][Figura exemplo.]{%
-            \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
-        }\hspace{2ex} % Espaço entre a figura
-        \subtop[][Figura exemplo.]{%
-            \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
-        }\hspace{2ex} % Espaço entre a figura
-        \subtop[][Figura exemplo.]{%
-            \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
-        }
-        \label{fig_figura_exemplo2}
-    \end{figure}
+    % O comando abaixo adiciona uma quebra de página no documento
+    \newpage
 
     \section{Quadros e tabelas}
     \label{sec_tabelas}
@@ -135,6 +110,34 @@
 
     % O comando abaixo adiciona uma quebra de página no documento
     \newpage
+
+    \section{Figuras}
+    \label{sec_figuras}
+
+    A seguir é apresentado um exemplo de figura.
+    A \autoref{fig_figura_exemplo} aparece automaticamente na lista de figuras.
+
+    \begin{figure}[!htb]
+        \centering
+        \caption{Exemplo de figura}
+        \includegraphics[width=0.75\textwidth]{figuras/figura-exemplo.png}
+        \label{fig_figura_exemplo}
+    \end{figure}
+
+    \begin{figure}[!htb]
+        \centering
+        \caption{Exemplo de várias figuras em uma única figura.}
+        \subtop[][Figura exemplo.]{%
+            \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
+        }\hspace{2ex} % Espaço entre a figura
+        \subtop[][Figura exemplo.]{%
+            \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
+        }\hspace{2ex} % Espaço entre a figura
+        \subtop[][Figura exemplo.]{%
+            \includegraphics[scale=0.2]{figuras/figura-exemplo-2.jpg}%
+        }
+        \label{fig_figura_exemplo2}
+    \end{figure}
 
     \section{Equações}
     \label{sec_equacoes}
@@ -527,271 +530,5 @@
 
     Você não precisa formatar toda a sua entrada desta maneira,
     apenas aquelas que vão ser convertidas para maiúsculas.
-
-    \chapter{Exemplos de Equações}
-    \label{chap_exemplos_equacoes}
-
-    As experiências acumuladas demonstram que o desenvolvimento contínuo de
-    distintas formas de atuação representa uma abertura para a melhoria do
-    investimento em reciclagem técnica.
-
-    No entanto, não podemos esquecer que a complexidade dos estudos efetuados nos
-    obriga à análise do processo de comunicação.
-    \[
-        \begin{split}
-            x_n & = A \big( \tilde{x}_n + c_1\tilde{x}_{n-1} + c_2\tilde{x}_{n-2} + \dots + c_k\tilde{x}_{n-k} \big) \\
-            & + B \big(   \hat{x}_n + c_1  \hat{x}_{n-1} + c_2  \hat{x}_{n-2} + \dots + c_k  \hat{x}_{n-k} \big) \\
-            & = 0 \\
-        \end{split}
-    \]
-    Ainda assim, existem dúvidas a respeito de como a contínua expansão de nossa
-    atividade maximiza as possibilidades por conta das diversas correntes de
-    pensamento.
-    \begin{equation}
-        \begin{split}
-            x_{n+3}^{(1)} & = a_{11}\; x_{n+2}^{(1)}                                                                  \\[2mm]
-            & + a_{12} \left( \, a_{21}x_{n+1}^{(1)}+a_{22}x_{n+1}^{(2)}+a_{23}x_{n+1}^{(3)} \, \right) \\[2mm]
-            & + a_{13} \left( \, a_{31}x_{n+1}^{(1)}+a_{32}x_{n+1}^{(2)}+a_{33}x_{n+1}^{(3)} \, \right)
-        \end{split}
-    \end{equation}
-
-    O empenho em analisar o consenso sobre a necessidade de qualificação oferece uma
-    interessante oportunidade para verificação do investimento em reciclagem
-    técnica.
-
-    \begin{align*}
-        f(y_1) & = 0 + 0 + 0 + 0,015 + \dots + 0,09 + 0 = 0,665 \\
-        f(y_0) & = 0 + 0 + 0 + 0,035 + \dots + 0,01 + 0 = 0,335
-    \end{align*}
-
-    O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes nos obriga
-    à análise das posturas dos órgãos dirigentes com relação às suas atribuições.
-
-    \[
-        g(x_i|y_j) = P(X=x_i|Y=y_j) = \frac{g(x_i) f(y_j|x_i)}{\displaystyle\;\sum_{i=1}^{n} g(x_i) f(y_i|x_i)\;}
-    \]
-
-    As experiências acumuladas demonstram que a revolução dos costumes
-    assume importantes posições no estabelecimento das formas de ação.
-
-    Assim mesmo, a mobilidade dos capitais internacionais cumpre um papel essencial
-    na formulação das diversas correntes de pensamento.
-    \[ A\cup B \in \mathcal{A} \qquad  \text{e} \qquad  A'\in \mathcal{A} \]
-    Utilizando o Teorema de Bayes, temos
-    \begin{align*}
-        P(F|E) & = \frac{P(E|F)P(F)}{P(E)}                                \\[3mm]
-               & = \frac{P(E|F)P(F)}{P(E|F)P(F) + P(E|M)P(M)}             \\[3mm]
-               & = \frac{0,3 \times 0,4}{0,3 \times 0,4 + 0,5 \times 0,6} \\[3mm]
-               & \approx 28,57\%
-    \end{align*}
-    Por conseguinte,
-    \[
-        P(C_{1}|A_{2}) = \frac{P(A_{2}|C_{1})P(C_{1})}{A_{2}}
-        = \frac{\frac{1}{2} \times \frac{1}{3}}{\frac{1}{2}}
-        = \frac{1}{3}
-    \]
-    a percepção das dificuldades facilita a criação do levantamento
-    das variáveis envolvidas.
-
-    Nunca é demais lembrar o peso e o significado destes
-    problemas, visto que a expansão dos mercados mundiais representa uma abertura
-    para a melhoria dos modos de operação convencionais. Pensando mais a longo
-    prazo, o novo modelo estrutural aqui preconizado faz parte de um processo de
-    gerenciamento do sistema de formação de quadros que corresponde às necessidades.
-    \[
-        \sin \alpha = \frac{\;\text{cateto oposto}\;}{\text{hipotenusa}}
-    \]
-
-    Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se o
-    aumento do diálogo entre os diferentes setores produtivos maximiza as
-    possibilidades por conta das regras de conduta normativas.
-    \begin{equation}\label{eq:serie2}
-        f(x) = \frac{a_{0}}{2}
-        + \sum_{n=1}^{\infty} \Big( a_{n} \cos\frac{n\pi x}{L} + b_{n} \sin\frac{n\pi x}{L} \Big)
-    \end{equation}
-    Podemos vislumbrar o modo pelo qual a estrutura atual da organização agrega valor ao estabelecimento da gestão inovadora da qual fazemos parte.
-    \begin{align*}
-        \int_{-\pi}^{\pi} \sin(nx)\cos(mx)\,dx & =\frac{1}{2}\int_{-\pi}^{\pi}\Big(\sin(m+n)x+\sin(m-n)x\Big)\,dx \\[3mm]
-                                               & =\frac{1}{2}\int_{-\pi}^{\pi}\Big(\sin(2nx)+\sin(0)\Big)\,dx     \\[3mm]
-                                               & =\frac{1}{2}\int_{-\pi}^{\pi}\sin(2nx)\,dx                       \\[3mm]
-                                               & =-\left.\frac{1}{2}\frac{\cos(2nx)}{2n}\right|_{-\pi}^{\pi}      \\[3mm]
-                                               & =0
-    \end{align*}
-
-    A prática cotidiana
-    prova que a valorização de fatores subjetivos garante a contribuição de um grupo
-    importante na determinação dos índices pretendidos.
-    \[
-        f(x) = \sum_{n=1}^{\infty} \frac{2(-1)^{n+1}}{n} \sin(nx)
-    \]
-
-    Todavia, a competitividade
-    nas transações comerciais é uma das consequências de alternativas às soluções
-    ortodoxas.
-
-    \[
-        f(x) =
-        \begin{cases}
-            \; 1, & \text{ se }  -\pi \leq x \leq 0 \\
-            \; 0, & \text{ se } 0 < x \leq \pi
-        \end{cases}
-    \]
-
-    O que temos que ter sempre em mente é que o surgimento do comércio
-    virtual não pode mais se dissociar das condições financeiras e administrativas
-    exigidas.
-
-    \begin{align*}
-        1 \!\times\! 2^0 + 1 \!\times\! 2^1 + 1 \!\times\! 2^2 + 0 \!\times\! 2^3 +
-        1 \!\times\! 2^4 + 0 \!\times\! 2^5 + 0 \!\times\! 2^6 + 1 \!\times\! 2^7 & =            \\
-        1 + 2 + 4 + 0 + 16 + 0 + 0 + 128                                          & = (151)_{10}
-    \end{align*}
-
-    Do mesmo modo, o consenso sobre a necessidade de qualificação estende o alcance
-    e a importância do fluxo de informações.
-
-    \[
-        \int_{-\pi}^{\pi} 2x\sin(nx)\,dx
-        = \left.
-        \frac{-2x\cos(nx)}{n}
-        \right|_{-\pi}^{\pi}
-        = \frac{-4\pi(-1)^n}{n}
-    \]
-
-    É importante questionar o quanto o
-    acompanhamento das preferências de consumo possibilita uma melhor visão global
-    dos conhecimentos estratégicos para atingir a excelência.
-
-    \begin{enumerate}[label=\alph*)]
-        \item $f(A\cup B)\leq f(A)+f(B)$
-        \item $f(B-A)=f(B)-f(A), \quad $se$\quad A\subseteq B$
-        \item $f(A)\leq f(B), \quad $se$\quad A\subseteq B \quad$ (Propriedade monótona)
-        \item $f(\emptyset)=0$
-    \end{enumerate}
-
-    No mundo atual, a
-    adoção de políticas descentralizadoras estimula a padronização dos índices
-    pretendidos.
-
-    \[
-        A = \{a_{1}\} \cup \{a_{2}\} \cup \dots \cup \{a_{k} \}
-    \]
-    a propriedade aditiva exige que
-    \[
-        P(A) = \sum_{i=1}^{k} P({a_{i}})
-    \]
-
-    A certificação de metodologias que nos auxiliam a lidar com a
-    constante divulgação das informações maximiza as possibilidades por conta de
-    alternativas às soluções ortodoxas.
-
-    \[
-        M \cup N = (T \cap B) \cup (U \cap B)
-        \quad
-        \Rightarrow
-        \quad
-        M \cup N = (T \cup U) \cap B
-    \]
-
-    Neste sentido, a estrutura atual da organização promove a alavancagem das regras
-    de conduta normativas.
-
-    Uma equação em que alguns jogos se baseiam é a chamada ``super equação''
-
-    \[
-        r( \varphi )=
-        \left [\,
-        \vphantom{\begin{array}{c}1\\2\\3\\\end{array}}
-        \left|
-        \frac{\,\cos\left( \frac{m_1\varphi }{4} \right)\,}{a}
-        \right|^{n_2} + \;\;
-        \left|
-        \frac{\,\sin\left( \frac{m_2\varphi }{4} \right)\,}{b}
-        \right|^{n_3}
-        \right]^{-\frac{1}{n_1}}
-    \]
-
-    A prática cotidiana prova que a expansão dos mercados
-    mundiais deve passar por modificações independentemente das posturas dos órgãos
-    dirigentes com relação às suas atribuições.
-
-    \[
-        \left\| \vec{v} \right\| = \sqrt{ x_{1}^{2} + x_{2}^{2} + \cdots + x_{n}^{2} \,}
-    \]
-
-    \[
-        \lambda_1 = \frac
-        {
-            \begin{vmatrix}
-                x & x_1 & x_2 \\
-                y & y_1 & y_2 \\
-                1 & 1   & 1
-            \end{vmatrix}
-        }
-        {\;
-            \begin{vmatrix}
-                x_1 & x_2 & x_3 \\
-                y_1 & y_2 & y_3 \\
-                1   & 1   & 1
-            \end{vmatrix}
-            \;
-        }
-        = \frac{S_1}{S}
-    \]
-
-    As experiências acumuladas
-    demonstram que a mobilidade dos capitais internacionais pode nos levar a
-    considerar a reestruturação das direções preferenciais no sentido do progresso.
-
-    \[
-        \sin x = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} + \frac{x^{7}}{7!} + \cdots
-    \]
-    e ele mostrou que
-    \[
-        \sin x = \frac{e^{ix}-e^{-ix}}{2i} \quad \text{e} \quad \cos x = \frac {e^{ix} + e^{-ix}}{2}
-    \]
-
-    No mundo atual, o início da atividade geral de formação de atitudes ainda não
-    demonstrou convincentemente que vai participar na mudança das novas proposições.
-
-    \[
-        \hat{A} = \hat{E} \qquad  \hat{B} = \hat{F} \qquad \hat{C} = \hat{G}
-    \]
-    \[
-        \frac{\;\overline{AB}\;}{\;\overline{EF}\;}
-        = \frac{\;\overline{BC}\;}{\;\overline{FG}\;}
-        = \frac{\;\overline{CA}\;}{\;\overline{GE}\;}
-    \]
-
-    É importante questionar o quanto a crescente influência da mídia afeta
-    positivamente a correta previsão do fluxo de informações.
-
-    \[
-        f(x) = \tan x = \overline{AT}
-    \]
-    \[
-        f(x) = \csc x = \overline{OC}
-    \]
-
-    Neste sentido, o
-    comprometimento entre as equipes deve passar por modificações independentemente
-    das diretrizes de desenvolvimento para o futuro.
-
-    Consideremos as somas parciais
-
-    \begin{align*}
-         & s_1 = a_1                   \\
-         & s_2 = a_1 + a_2             \\
-         & s_3 = a_1 + a_2 + a_3       \\
-         & s_4 = a_1 + a_2 + a_3 + a_4
-    \end{align*}
-    e, em, geral
-    \[
-        s_n = a_1 + a_2 + a_3 + a_4 + \dots + a_n
-        = \sum_{i=1}^{n} a_i
-    \]
-    Evidentemente, a determinação
-    clara de objetivos aponta para a melhoria do processo de comunicação como um
-    todo.
 
 \end{apendicesenv}

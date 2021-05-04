@@ -10,23 +10,8 @@
 %          Henrique Borges <henrique@cefetmg.br>
 % ------------------------------------------------------------------------------
 
-\documentclass[%
-    %twoside,              % Impressão em frente (anverso) e verso
-    oneside,               % Impressão apenas no anverso
-]{cefetmg}
-
-\usepackage[%
-    alf,
-    abnt-emphasize=bf,
-    bibjustif,
-    recuo=0cm,
-    abnt-doi=expand,
-    abnt-url-package=hyperref,
-    abnt-refinfo=yes,
-    abnt-etal-cite=3,
-    abnt-etal-list=3,
-    abnt-thesis-year=final
-]{abntex2cite}             % Configura as citações bibliográficas
+\documentclass[oneside]{cefetmg}    % Impressão apenas no anverso
+%\documentclass[twoside]{cefetmg}   % Impressão em frente (anverso) e verso
 
 % ------------------------------------------------------------------------------
 % Pacotes utilizados
@@ -37,14 +22,12 @@
 \usepackage{color, colortbl}        % Controle de cores
 \usepackage{float}                  % Tabelas/figuras em ambiente multicolunas
 \usepackage{graphicx}               % Inclusão de gráficos
-\usepackage{hyperref}               % Utilização de hyperlinks
 \usepackage{icomma}                 % Uso de vírgulas em expressões matemáticas
 \usepackage{indentfirst}            % Recua o primeiro parágrafo de cada seção
 \usepackage{microtype}              % Melhora a justificação do documento
 \usepackage{multirow, makecell}     % Tabelas com múltiplas linhas e colunas
 \usepackage{subeqnarray}            % Subenumeração de equações
 \usepackage{verbatim}               % Exibir texto tal como escrito no documento
-\usepackage[algoruled, portuguese]{algorithm2e}  % Algoritmos em português
 \usepackage{amsmath}                % Fontes e símbolos matemáticos
 \usepackage{xfrac}                  % Escrever frações de forma compacta
 \usepackage[charter]{mathdesign}    % Utiliza a fonte Charter BT
@@ -64,16 +47,16 @@
 % ------------------------------------------------------------------------------
 
 % Define uma cor para ser utilizada nos links do PDF
-\definecolor{blue_links}{RGB}{0,80,128}
+\definecolor{blue_link}{RGB}{0,80,128}
 
 \makeatletter
 \hypersetup{%
     portuguese,
-    colorlinks=true, % true: links coloridos; false: links em caixas
-    linkcolor=blue_links,  % Cor dos links internos
-    citecolor=blue_links,  % Cor dos links para as referências bibliográficas
-    filecolor=blue_links,  % Cor dos links para arquivos
-    urlcolor=blue_links,   % Cor dos links de URLs
+    colorlinks=true,        % true: links coloridos; false: links em caixas
+    linkcolor=blue_link,    % Cor dos links internos
+    citecolor=blue_link,    % Cor dos links para as referências bibliográficas
+    filecolor=blue_link,    % Cor dos links para arquivos
+    urlcolor=blue_link,     % Cor dos links de URLs
     breaklinks=true,
     pdftitle={\@title},
     pdfauthor={\@author},
@@ -81,39 +64,25 @@
 }
 \makeatother
 
-% Redefinição de labels
-\renewcommand{\algorithmautorefname}{Algoritmo}
-
 % Cria o índice remissivo
 \makeindex
 
 % Hifenização de palavras que não estão no dicionário
-\hyphenation{%
-    qua-dros-cha-ve
-    Kat-sa-gge-los
-}
+%\hyphenation{%
+%    qua-dros-cha-ve
+%    Kat-sa-gge-los
+%}
 
-% Coloca rodapés sempre no final da página
-\makeatletter
-\renewcommand\footnoterule{%
-    \vspace*{\fill}%
-    \kern-3\p@%
-    \hrule%
-    \kern2.6\p@%
-}
-\makeatother
-
-% Para utilizar múltiplas figuras um uma única figura
-\newsubfloat{figure}
+% Pode-se utilizar os comandos abaixo para realizar ajustes das margens
+%\usepackage{geometry}
+%\geometry{left=3.0cm, right=2.0cm, top=3.0cm, bottom=2.0cm}
 
 % ------------------------------------------------------------------------------
 % Inclui os arquivos do trabalho acadêmico
 % ------------------------------------------------------------------------------
 
 % Insere alguns elementos para gerar capa, folha de rosto e folha de aprovação
-\input{elementos-pre-textuais/capa.tex}
-\input{elementos-pre-textuais/folha-rosto.tex}
-\input{elementos-pre-textuais/folha-aprovacao.tex}
+\input{elementos-pre-textuais/preambulo.tex}
 
 \begin{document}
 

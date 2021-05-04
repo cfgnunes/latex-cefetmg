@@ -11,28 +11,46 @@
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2021/04/19 v8.1]
+\ProvidesClass{cefetmg}[2021/05/04 v9.0]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
 
 \PassOptionsToClass{%
-% Opções da classe memoir
+    % Opções da classe memoir
     12pt,                  % Tamanho da fonte
     openright,             % Capítulos começam sempre em páginas ímpares
                            % (insere página vazia caso necessário)
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
-% Opções do pacote babel
+    % Opções do pacote babel
     brazil,                % Idioma do documento
 }{abntex2}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-\RequirePackage[brazilian, hyperpageref]{backref} % Índice nas referências
+% ------------------------------------------------------------------------------
+% Pacotes utilizados
+% ------------------------------------------------------------------------------
+
+\RequirePackage{hyperref}
 \RequirePackage{chngcntr}
 \RequirePackage{etoolbox}
+\RequirePackage[brazilian, hyperpageref]{backref}
+\RequirePackage[algoruled, portuguese]{algorithm2e}
+\RequirePackage[%
+    alf,
+    abnt-emphasize=bf,
+    bibjustif,
+    recuo=0cm,
+    abnt-doi=expand,
+    abnt-url-package=hyperref,
+    abnt-refinfo=yes,
+    abnt-etal-cite=3,
+    abnt-etal-list=3,
+    abnt-thesis-year=final
+]{abntex2cite}
 
 % ------------------------------------------------------------------------------
 % Configurações gerais
@@ -41,37 +59,16 @@
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
 
-% Configurações do pacote backref usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
-
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
-
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{%
-    \ifcase #1
-        Nenhuma cita\c{c}\~ao no texto.
-    \or
-        Citado na p\'agina #2.
-    \else
-        Citado #1 vezes nas p\'aginas #2.
-    \fi
-}
 
 % Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
-% Adiciona espaço após as equações
+% Adiciona um espaço após as equações
 \AtEndEnvironment{equation}{%
     \vspace{8pt}
 }
-
-% Padroniza o tamanho dos captions das figuras
-\captiontitlefont{\small}
-\captionnamefont{\small}
-\subcaptionsize{\small}
-\subcaptionlabelfont{\small}
-\subcaptionfont{\small}
 
 % Coloca quadros sempre no topo da página (em páginas vazias)
 \setlength{\@fptop}{0pt}
@@ -79,11 +76,67 @@
 % Coloca floats sempre acima do rodapé
 \feetbelowfloat
 
-% Autoref para equações
+% Macro \autoref para equações
 \def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
 
+% Comando para colocar rodapés sempre no final da página
+\newcommand{\bottomfootnote}{%
+    \renewcommand\footnoterule{%
+        \vspace*{\fill}%
+        \kern-3\p@%
+        \hrule%
+        \kern2.6\p@%
+    }
+}
+
+% Para utilizar múltiplas figuras um uma única figura
+\newsubfloat{figure}
+
 % ------------------------------------------------------------------------------
-% Comandos
+% Parágrafos
+% ------------------------------------------------------------------------------
+
+% Tamanho do recuo do parágrafo
+\setlength{\parindent}{1.25cm}
+
+% Espaçamento entre um parágrafo e outro
+\setlength{\parskip}{0.0cm}
+
+% Define espaçamento entre listas
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
+
+% ------------------------------------------------------------------------------
+% Fontes
+% ------------------------------------------------------------------------------
+
+% Tamanho das fontes de capítulos e seções
+\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\HUGE}
+
+\renewcommand{\ABNTEXpartfont}{\normalfont}
+\renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
+
+\renewcommand{\ABNTEXsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsectionfontsize}{\Large}
+
+\renewcommand{\ABNTEXsubsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsubsectionfontsize}{\large}
+
+\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+
+% Tamanho das fontes de figuras
+\captiontitlefont{\small}
+\captionnamefont{\small}
+\subcaptionsize{\small}
+\subcaptionlabelfont{\small}
+\subcaptionfont{\small}
+
+% ------------------------------------------------------------------------------
+% Definição de novos comandos
 % ------------------------------------------------------------------------------
 
 % Comando: Programa
@@ -196,6 +249,7 @@
 
 % Elementos pré-textuais
 \renewcommand{\pretextual}{%
+    \bottomfootnote
     \pagenumbering{roman} % Algarismos romanos
     \aliaspagestyle{chapter}{plain}
     \pagestyle{plain}
@@ -205,9 +259,10 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    %\chapterstyle{default}% Escreve a palavra "Capítulo" no início
-    \pagenumbering{arabic} % Numeração das páginas em algarismos
-                           % arábicos, inciando em 1
+    \bottomfootnote
+    %\chapterstyle{default} % Escreve a palavra "Capítulo" no início
+    \pagenumbering{arabic}  % Numeração das páginas em algarismos
+                            % arábicos, inciando em 1
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
@@ -216,6 +271,7 @@
 
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{%
+    \bottomfootnote
     \chapterstyle{abnt}
     \phantompart
 }
@@ -224,47 +280,11 @@
 % Objetos flutuantes
 % ------------------------------------------------------------------------------
 
-% Comando que trata a fonte nos objetos flutuantes
+% Comando que trata o objeto flutuante "Fonte"
 \renewcommand{\fonte}[1]{%
     \vspace{4pt}\break%
     \centering\footnotesize{Fonte: #1}
 }
-
-% ------------------------------------------------------------------------------
-% Parágrafos
-% ------------------------------------------------------------------------------
-
-% Tamanho do recuo do parágrafo
-\setlength{\parindent}{1.25cm}
-
-% Espaçamento entre um parágrafo e outro
-\setlength{\parskip}{0.0cm}
-
-% Define espaçamento entre listas
-\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
-
-% ------------------------------------------------------------------------------
-% Fontes
-% ------------------------------------------------------------------------------
-
-% Redefinição de fontes
-\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
-\renewcommand{\ABNTEXchapterfontsize}{\HUGE}
-
-\renewcommand{\ABNTEXpartfont}{\normalfont}
-\renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
-
-\renewcommand{\ABNTEXsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsectionfontsize}{\Large}
-
-\renewcommand{\ABNTEXsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsectionfontsize}{\large}
-
-\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
-
-\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 % ------------------------------------------------------------------------------
 % Sumário
@@ -274,27 +294,42 @@
 \renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
 
 % Insere espaço entre os itens do sumário de diferentes capítulos
-\setlength{\cftbeforechapterskip}{1.0em \@plus\p@}
+\setlength{\cftbeforechapterskip}{2.0ex \@plus\p@}
 
 % ------------------------------------------------------------------------------
-% Listas
+% Tradução de labels
 % ------------------------------------------------------------------------------
 
-% Define os títulos das listas
+% Define os labels para português
 \addto\captionsbrazil{%
-% Ajusta nomes padrões do babel
+    % Ajusta nomes padrões do babel
     \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
     \renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
     \renewcommand{\listfigurename}{Lista de Figuras}
     \renewcommand{\listtablename}{Lista de Tabelas}
     \renewcommand{\indexname}{\'{I}ndice Remissivo}
-% Ajusta nomes usados com a macro \autoref
+    % Ajusta nomes usados com a macro \autoref
     \renewcommand{\pageautorefname}{p\'agina}
     \renewcommand{\sectionautorefname}{Se\c{c}\~ao}
     \renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
     \renewcommand{\subsubsectionautorefname}{Subsubse\c{c}\~ao}
     \renewcommand{\paragraphautorefname}{Subse\c{c}\~ao}
+    \renewcommand{\algorithmautorefname}{Algoritmo}
+    \renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
+    \renewcommand*{\backrefalt}[4]{%
+        \ifcase #1
+            Nenhuma cita\c{c}\~ao no texto.
+        \or
+            Citado na p\'agina #2.
+        \else
+            Citado #1 vezes nas p\'aginas #2.
+        \fi
+    }
 }
+
+% ------------------------------------------------------------------------------
+% Listas
+% ------------------------------------------------------------------------------
 
 % Cria a lista de quadros
 \newcommand{\listofquadrosname}{Lista de Quadros}

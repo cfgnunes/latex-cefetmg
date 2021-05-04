@@ -67,17 +67,17 @@
         \label{fig_estrutura_projeto_pesquisa}
     \end{figure}
 
-    Você deverá editar o arquivo principal {\ttfamily meu-trabalho.tex} para fazer os ajustes necessários, reiterando que as estruturas apresentadas são mera sugestão.
+    Você deverá editar o arquivo principal {\color{red} meu-trabalho.tex} para fazer os ajustes necessários, reiterando que as estruturas apresentadas são mera sugestão.
 
     A inclusão de reticências (\ldots) no texto deverá ser feita através de um comando especial denominado \verb|\ldots| \cite{LaTeX2014}.
     Assim esse comando deverá ser utilizado ao invés da digitação de três pontos.
 
-    Para melhor entendimento do uso do estilo de formatação, aconselha-se que o potencial usuário analise os comandos existentes no arquivo {\ttfamily meu-trabalho.tex} e os resultados obtidos no arquivo {\ttfamily meu-trabalho.pdf}.
+    Para melhor entendimento do uso do estilo de formatação, aconselha-se que o potencial usuário analise os comandos existentes no arquivo {\color{red} meu-trabalho.tex} e os resultados obtidos no arquivo {\color{red} meu-trabalho.pdf}.
     Recomenda-se a consulta ao material de referência do software para a sua correta utilização \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
 
-    Finalmente, este modelo apresenta um arquivo {\ttfamily makefile} para agilizar a compilação do documento.
-    Portanto, para gerar o documento final no formato PDF, basta apenas executar o comando {\ttfamily make} no mesmo diretório.
-    Para limpar os arquivos temporários, basta digitar o comando {\ttfamily make clean}.
+    Finalmente, este modelo apresenta um arquivo {\color{red} makefile} para agilizar a compilação do documento.
+    Portanto, para gerar o documento final no formato PDF, basta apenas executar o comando {\color{red} make} no mesmo diretório.
+    Para limpar os arquivos temporários, basta digitar o comando {\color{red} make clean}.
 
     % --------------------------------------------------------------------------
     % Novo apêndice
@@ -333,7 +333,7 @@
     \vspace{3em}
 
     Há que se tomar bastante cuidado com referências cujos autores têm nomes compostos, tipo João de Souza Júnior ou Antônio José da Silva Filho.
-    Para que a formatação seja correta, os nomes dos autores no arquivo {\ttfamily referencias.bib} deverá ser cadastrado de uma forma específica.
+    Para que a formatação seja correta, os nomes dos autores no arquivo {\color{red} referencias.bib} deverá ser cadastrado de uma forma específica.
 
     Os exemplos abaixo ilustram a formatação correta:
 
@@ -353,7 +353,7 @@
     \label{chap_sobre_as_referencias_bibliograficas}
 
     A bibliografia é feita no padrão \textsc{Bib}\TeX{}.
-    As referências são colocadas em um arquivo separado chamado {\ttfamily referencias.bib}.
+    As referências são colocadas em um arquivo separado chamado {\color{red} referencias.bib}.
     Os elementos de cada item bibliográfico que devem constar nas referências bibliográficas são apresentados a seguir.
     Tais referências bibliográficas devem seguir a norma \citeonline{NBR6023:2002} da ABNT\footnote{As normas técnicas da ABNT não são gratuitas.}.
 
@@ -365,22 +365,22 @@
     A classe abn\TeX{} define as seguintes entradas:
 
     \begin{verbatim}
-    @book
-    @inbook
-    @article
-    @phdthesis
-    @mastersthesis
-    @monography
-    @techreport
-    @manual
-    @proceedings
-    @inproceedings
-    @journalpart
-    @booklet
-    @patent
-    @unpublished
-    @misc
-\end{verbatim}
+        @book
+        @inbook
+        @article
+        @phdthesis
+        @mastersthesis
+        @monography
+        @techreport
+        @manual
+        @proceedings
+        @inproceedings
+        @journalpart
+        @booklet
+        @patent
+        @unpublished
+        @misc
+    \end{verbatim}
 
     Cada entrada é formatada pelo modelo de uma forma específica.
     Algumas entradas foram introduzidas especificamente para atender à norma \citeonline{NBR6023:2002}, são elas: \verb|@monography|, \verb|@journalpart|,\verb|@patent|.
@@ -400,14 +400,14 @@
     A entrada \verb|@patent| é utilizada, obviamente, para cadastrar referências a patentes.
 
     Todavia, o fato é que a normalização de referências conforme a norma \citeonline{NBR6023:2002} requer que muitos dos campos do \textsc{Bib}\TeX{} sejam adaptados.
-    Sendo mais explícito, ao baixar um arquivo {\ttfamily .bib} de um trabalho, principalmente ser for internacional, e inserí-lo ``\textit{as is}'' em suas referências, há grande chance dessa referência ser formatada de modo errado, no que concerne à norma \citeonline{NBR6023:2002}.
+    Sendo mais explícito, ao baixar um arquivo {\color{red} .bib} de um trabalho, principalmente ser for internacional, e inserí-lo ``\textit{as is}'' em suas referências, há grande chance dessa referência ser formatada de modo errado, no que concerne à norma \citeonline{NBR6023:2002}.
     Isso é especialmente válido em alguns tipos de documentos de largo uso no meio acadêmico afim às áreas de Ciências Exatas, da Terra e Engenharias.
 
-    Diante disso, para evitar erros de formatação, o correto é após baixar o arquivo {\ttfamily .bib} de um trabalho, editá-lo com um editor de textos (usando a codificação UTF8), para verificar se os campos descritores que o \textit{publishers} original utilizou são aqueles requeridos pela norma ABNT.
+    Diante disso, para evitar erros de formatação, o correto é após baixar o arquivo {\color{red} .bib} de um trabalho, editá-lo com um editor de textos (usando a codificação UTF8), para verificar se os campos descritores que o \textit{publishers} original utilizou são aqueles requeridos pela norma ABNT.
 
     Neste contexto, e para esta finalidade, nas seções seguintes é apresentado uma série de exemplos, quase todos, utilizados como exemplos na própria norma \citeonline{NBR6023:2002}.
-    Para detalhes dos campos utilizados confira o arquivo {\ttfamily referencias.bib}.
-    Deve-se estar atento para o fato de que o uso de um sistema de gerenciamento de referências para abrir e/ou editar o arquivo {\ttfamily referencias.bib}, pode ocultar campos utilizados pela norma ABNT e, por outro lado, exibir campos não utilizados por ela.
+    Para detalhes dos campos utilizados confira o arquivo {\color{red} referencias.bib}.
+    Deve-se estar atento para o fato de que o uso de um sistema de gerenciamento de referências para abrir e/ou editar o arquivo {\color{red} referencias.bib}, pode ocultar campos utilizados pela norma ABNT e, por outro lado, exibir campos não utilizados por ela.
     Ou seja, o aplicativo deve ser configurado adequadamente para exibir \textbf{todos os campos}, mesmo os opcionais.
 
     \section{Notas de rodapé}
@@ -483,7 +483,7 @@
     \chapter{Ferramentas para Gerenciar a Bibliografia}
     \label{chap_ferramenta_para_gerenciar_a_bibliografia}
 
-    O arquivo {\ttfamily referencias.bib} pode ser editado manualmente usando o
+    O arquivo {\color{red} referencias.bib} pode ser editado manualmente usando o
     TeXstudio ou com o uso de um editor próprio para arquivos de bibliografia.
     Se você desejar um editor de bibliografia que eu recomendo é o JabRef.
     Além disso, esse programa permite baixar da internet as referências prontas.

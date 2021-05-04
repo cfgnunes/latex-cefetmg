@@ -11,7 +11,7 @@
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2020/12/02 v8.0]
+\ProvidesClass{cefetmg}[2021/04/19 v8.1]
 
 % Repassa os parâmetros ao abntex2
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -61,31 +61,23 @@
 % Define a numeração das equações de forma sequencial
 \counterwithout{equation}{chapter}
 
-% Adiciona espaço entre as equações
+% Adiciona espaço após as equações
 \AtEndEnvironment{equation}{%
     \vspace{8pt}
 }
 
 % Padroniza o tamanho dos captions das figuras
-\captiontitlefont{\normalsize}
-\captionnamefont{\normalsize}
-\subcaptionsize{\normalsize}
-\subcaptionlabelfont{\normalsize}
-\subcaptionfont{\normalsize}
+\captiontitlefont{\small}
+\captionnamefont{\small}
+\subcaptionsize{\small}
+\subcaptionlabelfont{\small}
+\subcaptionfont{\small}
 
 % Coloca quadros sempre no topo da página (em páginas vazias)
 \setlength{\@fptop}{0pt}
 
 % Coloca floats sempre acima do rodapé
 \feetbelowfloat
-
-% Coloca rodapés sempre no final da página
-\renewcommand\footnoterule{%
-    \vspace*{\fill}%
-    \kern-3\p@%
-    \hrule%
-    \kern2.6\p@%
-}
 
 % Autoref para equações
 \def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
@@ -213,6 +205,7 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
+    %\chapterstyle{default}% Escreve a palavra "Capítulo" no início
     \pagenumbering{arabic} % Numeração das páginas em algarismos
                            % arábicos, inciando em 1
     \pagestyle{abntheadings}
@@ -235,14 +228,6 @@
 \renewcommand{\fonte}[1]{%
     \vspace{4pt}\break%
     \centering\footnotesize{Fonte: #1}
-}
-
-% Comando que trata as notas nos objetos flutuantes
-\renewcommand{\nota}[1]{%
-    \vspace{4pt}\break%
-    \begin{tabular}{l p{.85\textwidth}}%
-        Nota: & #1
-    \end{tabular}
 }
 
 % ------------------------------------------------------------------------------
@@ -398,30 +383,31 @@
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing
-        \begin{tabular}{p{.24\textwidth}p{.16\textwidth}p{.4\textwidth}}
+        \begin{tabular}{p{.24\textwidth}p{.16\textwidth}>{\raggedright\arraybackslash}p{.4\textwidth}}
             & \multicolumn{2}{p{.6\textwidth}}%
                 {\hyphenpenalty=10000\hbadness=10000%
-                    {\imprimirpreambulo}%
-                } \\ & & \\
+                    {\imprimirpreambulo}} \\
+                \\
             \abntex@ifnotempty{\imprimirareaconcentracao}{%
                 & \multicolumn{2}{p{.6\textwidth}}%
                     {\hyphenpenalty=10000\hbadness=10000%
-                    {\imprimirareaconcentracaoRotulo\imprimirareaconcentracao}%
-                    } \\ & & \\
+                    \imprimirareaconcentracaoRotulo\imprimirareaconcentracao} \\
+                    \\
             }
             \abntex@ifnotempty{\imprimirlinhapesquisa}{%
                 & \multicolumn{2}{p{.6\textwidth}}%
                     {\hyphenpenalty=10000\hbadness=10000%
-                        {\imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}%
-                    } \\ & & \\
+                        \imprimirlinhapesquisaRotulo\imprimirlinhapesquisa} \\
+                    \\
             }
             \abntex@ifnotempty{\imprimirorientador}{%
                 & \imprimirorientadorRotulo & \imprimirorientador \\
-                & & \imprimirinstOrientador \\ & & \\
+                & & {\imprimirinstOrientador}\\
+                \\
             }
             \abntex@ifnotempty{\imprimircoorientador}{%
                 & \imprimircoorientadorRotulo & \imprimircoorientador \\
-                & & \imprimirinstCoorientador
+                & & {\imprimirinstCoorientador}\\
             }
         \end{tabular}
     }

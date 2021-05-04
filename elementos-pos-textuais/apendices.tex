@@ -35,7 +35,7 @@
     \begin{figure}[!htb]
         \centering
         \caption{Estrutura sugerida de um Projeto de Qualificação para os cursos de Mestrado ou Doutorado}
-        \includegraphics[width=0.5\textwidth]{./figuras/estrutura-projeto-qualificacao}
+        \includegraphics[width=0.5\textwidth]{figuras/estrutura-projeto-qualificacao}
         \label{fig_estrutura_projeto_qualificacao}
     \end{figure}
 
@@ -46,7 +46,7 @@
     \begin{figure}[!htb]
         \centering
         \caption{Estrutura sugerida de uma Tese de Doutorado ou Dissertação de Mestrado}
-        \includegraphics[width=0.5\textwidth]{./figuras/estrutura-tese-dissertacao}
+        \includegraphics[width=0.5\textwidth]{figuras/estrutura-tese-dissertacao}
         \label{fig_estrutura_tese_dissertacao}
     \end{figure}
 
@@ -63,7 +63,7 @@
     \begin{figure}[!htb]
         \centering
         \caption{Estrutura sugerida de um projeto de pesquisa para admissão ao PPGMMC}
-        \includegraphics[width=0.6\textwidth]{./figuras/estrutura-projeto-pesquisa}
+        \includegraphics[width=0.6\textwidth]{figuras/estrutura-projeto-pesquisa}
         \label{fig_estrutura_projeto_pesquisa}
     \end{figure}
 
@@ -107,7 +107,7 @@
     \begin{figure}[!htb]
         \centering
         \caption{Exemplo de figura}
-        \includegraphics[width=0.75\textwidth]{./figuras/figura-exemplo}
+        \includegraphics[width=0.75\textwidth]{figuras/figura-exemplo}
         \label{fig_figura_exemplo}
     \end{figure}
 
@@ -118,7 +118,7 @@
 
     Informações sobre a construção de tabelas no \LaTeX{} podem ser encontradas na literatura especializada \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
 
-    \input{./quadros/quacomparabd}
+    \input{quadros/quacomparabd.tex}
 
     Muitos confundem, mas existem diferenças entre \index{tabelas} tabelas e \index{quadros} quadros.
     Um quadro é formado por linhas horizontais e verticais, sendo, portanto ``fechado''.
@@ -130,7 +130,7 @@
 
     Exemplo de tabela:
 
-    \input{./tabelas/tabteste}
+    \input{tabelas/tabteste.tex}
 
     % O comando abaixo adiciona uma quebra de página no documento
     \newpage
@@ -153,10 +153,11 @@
 
     \section{Algoritmos}\label{sec_algoritmos}
 
-    Os \index{algoritmos} algoritmos devem ser feitos segundo o modelo abaixo.
+    Os \index{algoritmos} algoritmos devem ser feitos segundo o \autoref{alg_remocao_aleatoria_vertices}:
 
     \begin{algorithm}
         \caption{Algoritmo para remoção aleatória de vértices}
+        \label{alg_remocao_aleatoria_vertices}
         \KwIn{o número $n$ de vértices a remover, grafo original $G(V, E)$}
         \KwOut{grafo reduzido $G'(V,E)$}
         $removidos \leftarrow 0$ \\
@@ -232,7 +233,7 @@
 
     Enquanto \citeonline{Maturana2003} defendem uma epistemologia baseada na biologia.
     Para os autores, é necessário rever\ldots
-    Por outro lado, \citeonline{Barbosa2004} contra-argumenta afirmando que\ldots
+    Por outro lado, \citeonline{nunes2017local} contra-argumenta afirmando que\ldots
 
     Acima, as chamadas de referências foram feitas com o comando \verb|\citeonline{}|, que produzirá a formatação correta, conforme a norma ABNT.
 
@@ -249,8 +250,8 @@
     Assim, a citação livre é feita e imediatamente após a obra referenciada deve ser colocada entre parênteses.
     Porém, neste caso específico, o nome do autor deve vir em caixa alta, seguido do ano da publicação, como nos exemplos a seguir.
 
-    Há defensores da epistemologia baseada na biologia que argumentam em favor da necessidade de \ldots \cite{Maturana2003}.
-    Por outro lado, há os que contra-argumentam afirmando que \ldots  \cite{Barbosa2004}.
+    Há defensores da epistemologia baseada na biologia que argumentam em favor da necessidade de\ldots \cite{Maturana2003}.
+    Por outro lado, há os que contra-argumentam afirmando que\ldots  \cite{nunes2017local}.
 
     Nos dois casos imediatamente acima a chamada de referência deve ser feita com o comando \verb|\cite{chave}|, que produzirá a formatação correta, conforme a norma ABNT.
 
@@ -321,7 +322,7 @@
 
     A seguir há mais exemplos dos comandos para as chamadas de referências e o resultado produzido:
 
-    \citeonline{Barbosa2004} $\Longrightarrow$ \verb|\citeonline{Barbosa2004}|
+    \citeonline{nunes2017local} $\Longrightarrow$ \verb|\citeonline{nunes2017local}|
 
     \citeonline[p.~33]{Silva2000} $\Longrightarrow$ \verb|\citeonline[p.~33]{Silva2000}|
 
@@ -342,7 +343,7 @@
 
     \vspace{3em}
 
-    Observe ainda o caso em que é feita duas citações juntas \cite{Silva2000, Barbosa2004} e como citar endereços de páginas da Internet \cite{IRL2014}.
+    Observe ainda o caso em que é feita duas citações juntas \cite{Silva2000, nunes2017local} e como citar endereços de páginas da Internet \cite{IRL2014}.
 
     % --------------------------------------------------------------------------
     % Novo apêndice
@@ -413,7 +414,9 @@
     \label{sec_notas_de_rodape}
 
     A norma \citeonline{NBR10520:2002} classifica as notas de rodapé em duas categorias: notas explicativas\footnote{É o tipo mais comum de notas que destacam, explicam e/ou complementam o que foi dito no corpo do texto, como esta nota de rodapé, por exemplo.} e notas de referências.
-    Já as notas de referências, como o próprio nome já indica, são utilizadas para colocar referências e/ou chamadas de referências sob certas condições.
+    Já as notas de referências, como o próprio nome já indica, são utilizadas para colocar referências e/ou chamadas de referências sob certas condições\footnotemark{}.
+
+    \footnotetext{Outra nota de rodapé.}
 
     \subsection{Notas de referências: uso de idem, ibidem, opus citatus e outros}
     \label{subsec_notas_de_referencias}
@@ -439,8 +442,6 @@
     Enfim, trata-se mais de um recurso estilístico do que algo de primeira necessidade, pelo menos para o tipo de documento usualmente elaborados nas área de Ciências Exatas, da Terra e Engenharias.
 
     Veja o uso desses tipos de expressões nos exemplos seguintes:
-
-    \Idem[p.~21]{abnTeX22014d}
 
     \Ibidem[p.~7]{abnTeX22014c}
 
@@ -551,7 +552,6 @@
     Ainda assim, existem dúvidas a respeito de como a contínua expansão de nossa
     atividade maximiza as possibilidades por conta das diversas correntes de
     pensamento.
-
     \begin{equation}
         \begin{split}
             x_{n+3}^{(1)} & = a_{11}\; x_{n+2}^{(1)}                                                                  \\[2mm]

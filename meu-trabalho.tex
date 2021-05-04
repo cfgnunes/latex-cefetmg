@@ -62,23 +62,24 @@
 % ------------------------------------------------------------------------------
 % Configurações de aparência do PDF final
 % ------------------------------------------------------------------------------
+
+% Define uma cor para ser utilizada nos links do PDF
+\definecolor{blue_links}{RGB}{0,80,128}
+
 \makeatletter
 \hypersetup{%
     portuguese,
     colorlinks=true, % true: links coloridos; false: links em caixas
-    linkcolor=blue,  % Cor dos links internos
-    citecolor=blue,  % Cor dos links para as referências bibliográficas
-    filecolor=blue,  % Cor dos links para arquivos
-    urlcolor=blue,   % Cor dos links de URLs
+    linkcolor=blue_links,  % Cor dos links internos
+    citecolor=blue_links,  % Cor dos links para as referências bibliográficas
+    filecolor=blue_links,  % Cor dos links para arquivos
+    urlcolor=blue_links,   % Cor dos links de URLs
     breaklinks=true,
     pdftitle={\@title},
     pdfauthor={\@author},
-    pdfkeywords={abnt, latex, abntex, abntex2}
+    pdfkeywords={Palavra-chave1, Palavra-chave2, Palavra-chave3, Palavra-chave4}
 }
 \makeatother
-
-% Altera a tonalidade da cor azul dos links
-\definecolor{blue}{RGB}{0,80,128}
 
 % Redefinição de labels
 \renewcommand{\algorithmautorefname}{Algoritmo}
@@ -92,50 +93,62 @@
     Kat-sa-gge-los
 }
 
+% Coloca rodapés sempre no final da página
+\makeatletter
+\renewcommand\footnoterule{%
+    \vspace*{\fill}%
+    \kern-3\p@%
+    \hrule%
+    \kern2.6\p@%
+}
+\makeatother
+
 % ------------------------------------------------------------------------------
 % Inclui os arquivos do trabalho acadêmico
 % ------------------------------------------------------------------------------
 
-% Insere alguns elementos pré-textuais para gerar capa,
-% folha de rosto e folha de aprovação
-\input{elementos-pre-textuais/capa}
-\input{elementos-pre-textuais/folha-rosto}
-\input{elementos-pre-textuais/folha-aprovacao}
+% Insere alguns elementos para gerar capa, folha de rosto e folha de aprovação
+\input{elementos-pre-textuais/capa.tex}
+\input{elementos-pre-textuais/folha-rosto.tex}
+\input{elementos-pre-textuais/folha-aprovacao.tex}
 
 \begin{document}
 
 % Configura layout para os elementos pré-textuais
 \pretextual
-\imprimircapa                                       % Capa
-\imprimirfolhaderosto{}                             % Folha de rosto
-\imprimirfolhadeaprovacao{}                         % Folha de aprovação
-\input{elementos-pre-textuais/dedicatoria}          % Dedicatória
-\input{elementos-pre-textuais/agradecimentos}       % Agradecimentos
-\input{elementos-pre-textuais/epigrafe}             % Epígrafe
-\input{elementos-pre-textuais/resumo-pt}            % Resumo
-\input{elementos-pre-textuais/resumo-en}            % Abstract
-\imprimirlistafiguras                               % Lista de figuras
-\imprimirlistatabelas                               % Lista de tabelas
-\imprimirlistaquadros                               % Lista de quadros
-\imprimirlistaalgoritmos                            % Lista de algoritmos
-\input{elementos-pre-textuais/lista-siglas}         % Lista de siglas
-\input{elementos-pre-textuais/lista-simbolos}       % Lista de símbolos
-\imprimirsumario                                    % Sumário
+
+\imprimircapa                                           % Capa
+\imprimirfolhaderosto{}                                 % Folha de rosto
+\imprimirfolhadeaprovacao{}                             % Folha de aprovação
+\input{elementos-pre-textuais/dedicatoria.tex}          % Dedicatória
+\input{elementos-pre-textuais/agradecimentos.tex}       % Agradecimentos
+\input{elementos-pre-textuais/epigrafe.tex}             % Epígrafe
+\input{elementos-pre-textuais/resumo-pt.tex}            % Resumo
+\input{elementos-pre-textuais/resumo-en.tex}            % Abstract
+\imprimirlistafiguras                                   % Lista de figuras
+\imprimirlistatabelas                                   % Lista de tabelas
+\imprimirlistaquadros                                   % Lista de quadros
+\imprimirlistaalgoritmos                                % Lista de algoritmos
+\input{elementos-pre-textuais/lista-siglas.tex}         % Lista de siglas
+\input{elementos-pre-textuais/lista-simbolos.tex}       % Lista de símbolos
+\imprimirsumario                                        % Sumário
 
 % Configura layout para os elementos textuais
 \textual
-\input{elementos-textuais/introducao}               % Introdução
-\input{elementos-textuais/trabalhos-relacionados}   % Trabalhos relacionados
-\input{elementos-textuais/fundamentacao-teorica}    % Fundamentação teórica
-\input{elementos-textuais/metodologia}              % Metodologia
-\input{elementos-textuais/resultados}               % Resultados
-\input{elementos-textuais/conclusao}                % Conclusão
+
+\input{elementos-textuais/introducao.tex}               % Introdução
+\input{elementos-textuais/trabalhos-relacionados.tex}   % Trabalhos relacionados
+\input{elementos-textuais/fundamentacao-teorica.tex}    % Fundamentação teórica
+\input{elementos-textuais/metodologia.tex}              % Metodologia
+\input{elementos-textuais/resultados.tex}               % Resultados
+\input{elementos-textuais/conclusao.tex}                % Conclusão
 
 % Configura layout para os elementos pós-textuais
 \postextual
-\imprimirreferencias                                % Referências
-\input{elementos-pos-textuais/apendices}            % Apêndices
-\input{elementos-pos-textuais/anexos}               % Anexos
-\imprimirindiceremissivo                            % Índice Remissivo
+
+\imprimirreferencias                                    % Referências
+\input{elementos-pos-textuais/apendices.tex}            % Apêndices
+\input{elementos-pos-textuais/anexos.tex}               % Anexos
+\imprimirindiceremissivo                                % Índice Remissivo
 
 \end{document}

@@ -37,7 +37,7 @@
 \RequirePackage{chngcntr}
 \RequirePackage{etoolbox}
 \RequirePackage[brazilian, hyperpageref]{backref}
-\RequirePackage[algoruled, portuguese]{algorithm2e}
+\RequirePackage[portuguese, onelanguage, algoruled]{algorithm2e}
 \RequirePackage[%
     alf,
     abnt-emphasize=bf,

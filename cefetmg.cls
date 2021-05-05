@@ -11,7 +11,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cefetmg}[2021/05/04 v9.0]
 
-% Repassa os parâmetros ao abntex2
+% Repassa os parâmetros à classe 'abntex2'
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
 
 \PassOptionsToClass{%

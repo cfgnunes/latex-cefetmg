@@ -55,6 +55,9 @@
 % Configurações gerais
 % ------------------------------------------------------------------------------
 
+% Cria o índice remissivo
+\makeindex
+
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
 
@@ -88,8 +91,12 @@
     }
 }
 
-% Para utilizar múltiplas figuras um uma única figura
-\newsubfloat{figure}
+\AfterPreamble{%
+    % Colocar rodapés sempre no final da página
+    \bottomfootnote
+    % Para utilizar múltiplas figuras um uma única figura
+    \newsubfloat{figure}
+}
 
 % ------------------------------------------------------------------------------
 % Parágrafos
@@ -243,7 +250,6 @@
 
 % Elementos pré-textuais
 \renewcommand{\pretextual}{%
-    \bottomfootnote
     \pagenumbering{roman} % Algarismos romanos
     \aliaspagestyle{chapter}{plain}
     \pagestyle{plain}
@@ -253,7 +259,6 @@
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    \bottomfootnote
     % Escreve a palavra "Capítulo" no início
     %\chapterstyle{default}
     % Numeração das páginas em algarismos arábicos, inciando em 1
@@ -266,7 +271,6 @@
 
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{%
-    \bottomfootnote
     \chapterstyle{abnt}
     \phantompart
 }

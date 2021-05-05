@@ -63,9 +63,6 @@
 }
 \makeatother
 
-% Cria o índice remissivo
-\makeindex
-
 % Hifenização de palavras que não estão no dicionário
 %\hyphenation{%
 %    qua-dros-cha-ve
@@ -81,8 +78,7 @@
 
 \begin{document}
 
-% Configura layout para os elementos pré-textuais
-\pretextual
+\pretextual % Configura layout para os elementos pré-textuais
 
 \imprimircapa                                           % Capa
 \imprimirfolhaderosto{}                                 % Folha de rosto
@@ -100,8 +96,7 @@
 \input{elementos-pre-textuais/lista-simbolos.tex}       % Lista de símbolos
 \imprimirsumario                                        % Sumário
 
-% Configura layout para os elementos textuais
-\textual
+\textual % Configura layout para os elementos textuais
 
 \input{elementos-textuais/introducao.tex}               % Introdução
 \input{elementos-textuais/fundamentacao-teorica.tex}    % Fundamentação teórica
@@ -110,8 +105,7 @@
 \input{elementos-textuais/resultados.tex}               % Resultados
 \input{elementos-textuais/conclusao.tex}                % Conclusão
 
-% Configura layout para os elementos pós-textuais
-\postextual
+\postextual % Configura layout para os elementos pós-textuais
 
 \imprimirreferencias                                    % Referências
 \input{elementos-pos-textuais/apendices.tex}            % Apêndices

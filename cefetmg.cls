@@ -565,7 +565,8 @@
     \PRIVATEbookmarkthis{#1}
     \renewcommand{\abstractnamefont}{\chaptitlefont}
     \renewcommand{\abstractname}{\ABNTEXchapterupperifneeded{#1}}
-    \begin{abstract}\vspace{23pt}
+    \begin{abstract}
+    \vspace{23pt} % Adicionado esse espaço para manter igual aos capítulos
 }{%
     \end{abstract}\PRIVATEclearpageifneeded
 }

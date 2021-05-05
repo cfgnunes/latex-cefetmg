@@ -37,7 +37,7 @@
 %\usepackage{latexsym}              % Símbolos matemáticos
 %\usepackage{lscape}                % Páginas em modo paisagem
 
-% Utiliza a fonte Helvetica (similar a Arial)
+% Utiliza a fonte Helvetica (similar a fonte Arial)
 %\usepackage{helvet}
 %\renewcommand*\familydefault{\sfdefault}
 
@@ -45,23 +45,13 @@
 % Configurações de aparência do PDF final
 % ------------------------------------------------------------------------------
 
-% Define uma cor para ser utilizada nos links do PDF
+% Define a cor utilizada nos links do PDF
 \definecolor{blue_link}{RGB}{0,80,128}
 
-\makeatletter
-\hypersetup{%
-    portuguese,
-    colorlinks=true,        % true: links coloridos; false: links em caixas
-    linkcolor=blue_link,    % Cor dos links internos
-    citecolor=blue_link,    % Cor dos links para as referências bibliográficas
-    filecolor=blue_link,    % Cor dos links para arquivos
-    urlcolor=blue_link,     % Cor dos links de URLs
-    breaklinks=true,
-    pdftitle={\@title},
-    pdfauthor={\@author},
-    pdfkeywords={Palavra-chave1, Palavra-chave2, Palavra-chave3, Palavra-chave4}
-}
-\makeatother
+% Configuração dos metadados do PDF (palavras-chave)
+\hypersetup{pdfkeywords={%
+    Palavra-chave 1, Palavra-chave 2, Palavra-chave 3, Palavra-chave 4.
+}}
 
 % Hifenização de palavras que não estão no dicionário
 %\hyphenation{%

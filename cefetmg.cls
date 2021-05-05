@@ -38,6 +38,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage[brazilian, hyperpageref]{backref}
 \RequirePackage[portuguese, onelanguage, algoruled]{algorithm2e}
+\RequirePackage{color}
 \RequirePackage[%
     alf,
     abnt-emphasize=bf,
@@ -54,6 +55,20 @@
 % ------------------------------------------------------------------------------
 % Configurações gerais
 % ------------------------------------------------------------------------------
+
+% Define a cor utilizada nos links do PDF
+\definecolor{blue_link}{RGB}{0,80,128}
+
+% Configuração dos links do PDF (pacote: hyperref)
+\hypersetup{%
+    portuguese,
+    colorlinks=true,        % true: links coloridos; false: links em caixas
+    linkcolor=blue_link,    % Cor dos links internos
+    citecolor=blue_link,    % Cor dos links para as citações
+    filecolor=blue_link,    % Cor dos links para arquivos
+    urlcolor=blue_link,     % Cor dos links de URLs
+    breaklinks=true,
+}
 
 % Cria o índice remissivo
 \makeindex
@@ -96,6 +111,11 @@
     \bottomfootnote
     % Para utilizar múltiplas figuras um uma única figura
     \newsubfloat{figure}
+    % Configuração dos metadados do PDF (pacote: hyperref)
+    \hypersetup{%
+        pdftitle={\@title},
+        pdfauthor={\@author}
+    }
 }
 
 % ------------------------------------------------------------------------------

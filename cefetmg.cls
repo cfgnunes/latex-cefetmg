@@ -267,9 +267,11 @@
 % Elementos pré-textuais
 % (redefinições da classe 'abntex2')
 \renewcommand{\pretextual}{%
-    \pagenumbering{roman}               % Tipo de numeração das páginas
-    \pagestyle{plain}
-    \aliaspagestyle{chapter}{plain}
+    % Pela ABNT, NBR 14724/2011, as folhas ou páginas
+    % pré-textuais devem ser contadas, mas não numeradas.
+    %\pagenumbering{roman}              % Tipo de numeração das páginas
+    \pagestyle{empty}
+    \aliaspagestyle{chapter}{empty}
     \aliaspagestyle{cleared}{empty}
     \aliaspagestyle{part}{empty}
 }
@@ -279,7 +281,7 @@
 \renewcommand{\textual}{%
     \chapterstyle{abnt}                 % Estilo dos títulos dos capítulos
     \setlength{\beforechapskip}{0pt}    % Remove espaço antes dos títulos
-    \pagenumbering{arabic}              % Tipo de numeração das páginas
+    %\pagenumbering{arabic}             % Tipo de numeração das páginas
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads

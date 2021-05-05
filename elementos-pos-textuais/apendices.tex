@@ -14,7 +14,7 @@
 
     Lembre-se que a diferença entre apêndice e anexo diz respeito à autoria do texto e/ou material ali colocado.
 
-    Caso o material ou texto suplementar ou complementar seja de sua autoria, então ele deverá ser colocado como um apêndice.
+    Caso o material ou texto suplementar, ou complementar seja de sua autoria, então ele deverá ser colocado como um apêndice.
     Porém, caso a autoria seja de terceiros, então o material ou texto deverá ser colocado como anexo.
 
     Caso seja conveniente, podem ser criados outros apêndices para o seu trabalho acadêmico.
@@ -28,7 +28,7 @@
     \label{chap_estrutura_de_trabalhos_academicos}
 
     Quanto à estrutura do trabalho acadêmico, esta varia sobremaneira, a depender da conveniência do autor e seu(s) respectivo(s) orientador(es).
-    No entanto, de acordo com as normas ABNT, alguns elementos são obrigatórios.
+    No entanto, conforme as normas ABNT, alguns elementos são obrigatórios.
 
     A título de sugestão, e apenas isso, a \autoref{fig_estrutura_projeto_qualificacao} apresenta uma estrutura para um projeto de qualificação de mestrado ou doutorado, conforme a norma \citeonline{NBR14724:2011}.
 
@@ -55,7 +55,7 @@
 
     Observe que a estrutura de um projeto de qualificação é muito similar à da tese ou dissertação.
     A única diferença existente é que num projeto de qualificação o autor certamente terá, via de regra, apenas resultados parciais e preliminares.
-    Além disso, estando o trabalho ainda em andamento, há que se apresentar um cronograma de trabalho que evidencie que o mesmo poderá ser concluído dentro dos prazos estabelecidos pelo programa.
+    Além disso, estando o trabalho ainda em andamento, há que se apresentar um cronograma de trabalho que evidencie que o mesmo poderá ser concluído nos prazos estabelecidos pelo programa.
 
     Por fim, como foi dito, este \emph{template} pode ser utilizado para outros trabalhos acadêmicos.
     Neste caso, a \autoref{fig_estrutura_projeto_pesquisa} apresenta uma sugestão de projeto de pesquisa a ser submetido ao programa para fins de admissão ao mesmo, conforme a norma \citeonline{NBR15287:2005}.
@@ -67,17 +67,13 @@
         \label{fig_estrutura_projeto_pesquisa}
     \end{figure}
 
-    Você deverá editar o arquivo principal {\color{red} meu-trabalho.tex} para fazer os ajustes necessários, reiterando que as estruturas apresentadas são mera sugestão.
+    Você deverá editar o arquivo principal {\color{red} meu-trabalho.tex} para fazer os ajustes necessários, reiterando que as estruturas apresentadas são meras sugestões.
 
     A inclusão de reticências (\ldots) no texto deverá ser feita através de um comando especial denominado \verb|\ldots| \cite{LaTeX2014}.
-    Assim esse comando deverá ser utilizado ao invés da digitação de três pontos.
+    Assim, esse comando deverá ser utilizado ao invés da digitação de três pontos.
 
     Para melhor entendimento do uso do estilo de formatação, aconselha-se que o potencial usuário analise os comandos existentes no arquivo {\color{red} meu-trabalho.tex} e os resultados obtidos no arquivo {\color{red} meu-trabalho.pdf}.
     Recomenda-se a consulta ao material de referência do software para a sua correta utilização \cite{Lamport1986,Buerger1989,Kopka2003,Mittelbach2004}.
-
-    Finalmente, este modelo apresenta um arquivo {\color{red} makefile} para agilizar a compilação do documento.
-    Portanto, para gerar o documento final no formato PDF, basta apenas executar o comando {\color{red} make} no mesmo diretório.
-    Para limpar os arquivos temporários, basta digitar o comando {\color{red} make clean}.
 
     % --------------------------------------------------------------------------
     % Novo apêndice
@@ -87,16 +83,16 @@
     \label{chap_sobre_as_ilustracoes}
 
     A seguir ilustra-se a forma de incluir ilustrações no corpo do texto.
-    Pela norma figuras, tabelas, quadros, equações, quadros, algoritmos, diagrama, etc.
+    Pela norma, figuras, tabelas, quadros, equações, quadros, algoritmos, diagrama, etc.
     são tipos específicos de ilustrações.
-    As ilustrações (pelo menos alguns tipos específicos) serão indexadas automática em suas respectivas listas.
+    As ilustrações (pelo menos alguns tipos específicos) serão indexadas automaticamente em suas respectivas listas.
 
     A numeração sequencial de figuras, tabelas e equações ocorre de modo automático.
 
     Referências cruzadas são obtidas através dos comandos \verb|\label{}| e \verb|\ref{}|.
     Por exemplo, não é necessário saber que o número de certo capítulo é \ref{chap_fundamentacao_teorica} para colocar o seu número no texto.
     Alternativamente se pode usar desta forma: \autoref{chap_fundamentacao_teorica}.
-    Isto facilita muito a inserção, remoção ou relocação de elementos numerados no texto (fato corriqueiro na escrita e correção de um documento acadêmico) sem a necessidade de renumerá-los todos.
+    Isto facilita muito a inserção, remoção ou relocação de elementos numerados no texto (fato corriqueiro na escrita e correção de um documento acadêmico) sem a necessidade de enumerá-los todos.
 
     \section{Figuras}
     \label{sec_figuras}
@@ -233,7 +229,7 @@
     Citações são trechos transcritos ou informações retiradas das publicações consultadas para a realização do trabalho.
     As citações são utilizadas no texto com o propósito de esclarecer, completar, embasar ou corroborar as ideias do autor.
 
-    Todas as publicações consultadas e efetivamente utilizadas (por meio de citações) devem ser listadas, obrigatoriamente, nas referências bibliográficas, de forma a preservar os direitos autorais e intelectuais.
+    Todas as publicações consultadas e efetivamente utilizadas (por citações) devem ser listadas, obrigatoriamente, nas referências bibliográficas, de forma a preservar os direitos autorais e intelectuais.
 
     A norma ABNT NBR:10520-2002 classifica as citações em: citações livres e citações literais.
 
@@ -254,7 +250,7 @@
 
     Observe que em ambos os casos anteriores, a frase fica incompleta e incompreensível caso as palavras ``Maturana e Varela'' e ``Barbosa et al.'' não sejam ``pronunciadas''.
     Ou seja, os nomes dos autores fazem parte da frase.
-    Neste caso, a formatação automática da chamada de referência coloca os nomes dos autores seguido, entre parêntesis pelo ano de publicação da obra referenciada.
+    Neste caso, a formatação automática da chamada de referência coloca os nomes dos autores seguidos, entre parêntesis pelo ano de publicação da obra referenciada.
     Isso apenas no caso em que se usa o esquema autor-ano, que é \textit{padrão} neste modelo \LaTeX{}.
 
     A segunda maneira de fazer uma chamada de referência deve ser utilizada quando se quer evitar uma interrupção na sequência do texto, o que poderia, eventualmente, prejudicar a leitura.
@@ -272,7 +268,7 @@
 
     Observe que o estilo de redação das frases teve que ser modificado para torná-las compreensíveis sem a menção explícita dos nomes dos autores.
     Estes agora não são parte integrante da frase, ficam entre parêntesis.
-    Neste caso, a formatação automática da chamada de referência coloca, entre parêntesis, os nomes dos autores seguido pelo ano de publicação da obra referenciada.
+    Neste caso, a formatação automática da chamada de referência coloca, entre parêntesis, os nomes dos autores, seguido pelo ano de publicação da obra referenciada.
     Novamente, apenas no caso em que se usa o esquema autor-ano, que é \textit{padrão} neste modelo \LaTeX{}.
 
     Por fim, cabe chamar a atenção para o detalhe do termo \textit{et al.} que deve ser utilizado quando o trabalho citado possui mais de três autores.
@@ -311,7 +307,7 @@
     A localização precisa do trecho citado deve ser indicada sempre, exceto para artigos científicos (tipicamente com poucas páginas, o que geralmente não é o caso de artigos de revisão de literatura) e outros documentos com ``poucas'' páginas.
 
     Alternativamente, é possível construir uma frase que contenha os autores, e irá encaminhar (por assim dizer) a citação literal.
-    Assim sendo, note que pode após a citação literal não mais aparece o nome dos autores, visto que já se encontra no texto.
+    Assim sendo, note que após a citação literal não mais aparece o nome dos autores, visto que já se encontra no texto.
     Veja o exemplo seguinte.
 
     No entanto, \citeonline[p.~33]{Silva2000}, ao fazerem as suas críticas à ciência moderna, afirmam:
@@ -320,17 +316,17 @@
         Mas o curioso é que o conhecimento científico que descobriu os meios realmente extraordinários para, por exemplo, ver aquilo que se passa no nosso sol, para tentar conceber a estrutura das estrelas extremamente distantes, e até mesmo para tentar pesar o universo, o que é algo de extrema utilidade, o conhecimento científico que multiplicou seus meios de observação e de concepção do universo, dos objetos, está completamente cego, se quiser considerar-se apenas a si próprio!
     \end{citacao}
 
-    Já quando o trecho citado é curto (3 ou menos linhas) ele deve inserido diretamente no texto entre aspas.
+    Já quando o trecho citado é curto (3 ou menos linhas) ele deve ser inserido diretamente no texto entre aspas.
     Veja os dois exemplos seguintes, cada qual utilizando uma forma de chamada de referência.
 
     A epistemologia baseada na biologia parte do princípio de que ``assumo que não posso fazer referência a entidades independentes de mim para construir meu explicar'' \cite[p.~35]{Maturana2003}.
 
     A epistemologia baseada na biologia de \citeonline[p.~35]{Maturana2003} parte do princípio de que ``assumo que não posso fazer referência a entidades independentes de mim para construir meu explicar''.
 
-    Finalmente, e isto vale para citações curtas ou longas, caso seja necessário inserir ou suprimir (modificar de modo geral) qualquer palavra ou frase no trecho citado literalmente, qualquer que seja a finalidade, isto deve ser feito colocando sua intervenção entre colchetes retos e deve ser indicado explicitamente ao final da citação.
+    Finalmente, e isto vale para citações curtas ou longas, caso seja necessário inserir ou suprimir (modificar de modo geral) qualquer palavra ou frase no trecho citado literalmente, isto deve ser feito colocando sua intervenção entre colchetes retos e deve ser indicado explicitamente ao final da citação.
     Veja o exemplo seguinte.
 
-    A epistemologia baseada na biologia parte do princípio de que ``assumo que não posso fazer referencia [\textit{sic}] a \underline{entidades independentes} de mim [realidade objetiva] para construir meu explicar'' \cite[p.~35, comentários e grifo nosso]{Maturana2003}.
+    A epistemologia baseada na biologia parte do princípio de que ``assumo que não posso fazer referência [\textit{sic}] a \underline{entidades independentes} de mim [realidade objetiva] para construir meu explicar'' \cite[p.~35, comentários e grifo nosso]{Maturana2003}.
 
     \section{Mais detalhes sobre as chamadas de referências}
     \label{sec_chamadas_referencias}
@@ -403,7 +399,7 @@
     Para maiores detalhes, refira-se a \citeonline{abnTeX22014d}, \citeonline{abnTeX22014b}, \citeonline{abnTeX22014c}.
 
     A entrada \verb|@monography| é utilizada para cadastrar referências a trabalhos de conclusão de curso, monografias de cursos de especialização (pós-graduação \textit{lato sensu}), e outros trabalhos monográficos, exceto dissertação de mestrado e tese de doutorado.
-    Eu particularmente, não considero que a formatação deste tipo de entrada está adequado.
+    Eu particularmente, não considero que a formatação deste tipo de entrada seja adequada.
     Para um trabalho de conclusão de curso (TCC) de curso de graduação, que deveria ser formatado como ``[\ldots] Trabalho de Conclusão de Curso (Bacharelado em Engenharia de Computação) [\ldots]''; no entanto o uso de \verb|@monography| irá produzir ``[\ldots] Monografia (Bacharelado em Engenharia de Computação) [\ldots]''.
     A própria  \citeonline{NBR6023:2002}, na seção 8.11.4, apresenta um exemplo com a formatação diferente daquela proporcionada por \citeonline{abnTeX22014d}.
 
@@ -415,7 +411,7 @@
     A entrada \verb|@patent| é utilizada, obviamente, para cadastrar referências a patentes.
 
     Todavia, o fato é que a normalização de referências conforme a norma \citeonline{NBR6023:2002} requer que muitos dos campos do \textsc{Bib}\TeX{} sejam adaptados.
-    Sendo mais explícito, ao baixar um arquivo {\color{red} .bib} de um trabalho, principalmente ser for internacional, e inserí-lo ``\textit{as is}'' em suas referências, há grande chance dessa referência ser formatada de modo errado, no que concerne à norma \citeonline{NBR6023:2002}.
+    Sendo mais explícito, ao baixar um arquivo {\color{red} .bib} de um trabalho, principalmente se for internacional, e inseri-lo ``\textit{as is}'' em suas referências, há grande chance dessa referência ser formatada de modo errado, no que concerne à norma \citeonline{NBR6023:2002}.
     Isso é especialmente válido em alguns tipos de documentos de largo uso no meio acadêmico afim às áreas de Ciências Exatas, da Terra e Engenharias.
 
     Diante disso, para evitar erros de formatação, o correto é após baixar o arquivo {\color{red} .bib} de um trabalho, editá-lo com um editor de textos (usando a codificação UTF8), para verificar se os campos descritores que o \textit{publishers} original utilizou são aqueles requeridos pela norma ABNT.
@@ -438,7 +434,7 @@
 
     Como indica o próprio nome, as notas de referências se prestam como recurso auxiliar para referenciação de bibliografia, e seu uso e aplicação são descritos na norma \citeonline{NBR10520:2002}.
 
-    Estes recursos se referem ao uso de certas expressões consagradas para facilitar a elaboração de referencias.
+    Estes recursos se referem ao uso de certas expressões consagradas para facilitar a elaboração de referências.
     São eles:
 
     \begin{itemize}
@@ -451,10 +447,10 @@
         \item et sequentia = e sequência.
     \end{itemize}
 
-    Observe que estes recursos não se adequam para serem utilizados em listas de referências bibliográficas, nem tampouco no corpo do texto.
+    Observe que estes recursos não se adéquam para serem utilizados em listas de referências bibliográficas, nem tampouco no corpo do texto.
     Assim, devem ser utilizados apenas nas notas de referência posicionadas no rodapé \cite[p.~6]{abnTeX22014c}, quando se referem a uma referência já feita anteriormente no corpo do texto.
     Ademais, essas expressões fazem sentido apenas quando aplicadas a citações de uma única referência por vez.
-    Enfim, trata-se mais de um recurso estilístico do que algo de primeira necessidade, pelo menos para o tipo de documento usualmente elaborados nas área de Ciências Exatas, da Terra e Engenharias.
+    Enfim, trata-se mais de um recurso estilístico do que algo de primeira necessidade, pelo menos para o tipo de documentos usualmente elaborados nas áreas de Ciências Exatas, da Terra e Engenharias.
 
     Veja o uso desses tipos de expressões nos exemplos seguintes:
 
@@ -503,21 +499,12 @@
     Se você desejar um editor de bibliografia que eu recomendo é o JabRef.
     Além disso, esse programa permite baixar da internet as referências prontas.
 
-    Os arquivos com as referências bibliográficas tem uma formatação rígida e
-    pouco intuitiva, gerando resultados inesperados em muitos casos. Uma forma
-    de evitar erros na digitação desses arquivos é usar um programa especifico
-    para esse fim. Uma opção é o JabRef que gerencia as referencias
-    de forma simples. Para instalá-lo basta seguir as instruções de sua página
+    Os arquivos com as referências bibliográficas tem uma formatação rígida e pouco intuitiva, gerando resultados inesperados em muitos casos. Uma forma de evitar erros na digitação desses arquivos é usar um programa específico para esse fim. Uma opção é o JabRef que gerencia as referências de forma simples. Para instalá-lo basta seguir as instruções de sua página
     \begin{center}
         \url{http://www.jabref.org}
     \end{center}
-    Se o programa estiver em inglês após a instalação basta configurá-lo para o
-    português, entrando do menu \textit{Opctions -- Preferences} que abre o
-    quadro de dialogo de Preferencias. Nesse quadro selecione a aba \textit{General}
-    e dentro dessa aba selecione \textit{Brazilian Portuguese} na opção \textit{Language}.
-    Ao reiniciar o programa ele estará com os menus em português.
 
-    Como as normas ABNT são estão em dissonância com os padrões internacionais,
+    Como as normas ABNT estão em dissonância com os padrões internacionais,
     o pacote \textit{abntex2cite} cria campos e não reconhecidos pelo automaticamente
     pelo JabRef.
     É possível fazer as edições a mão quando os campos não são reconhecidos,
@@ -532,7 +519,7 @@
 
     Nas suas entradas que ficam o nos arquivos \texttt{.bib}
     você deve tomar cuidado especial com a formatação dos acentos,
-    especialmente no campo \texttt{author} que sempre é convertido para maiúsculas.
+    especialmente no campo \textit{author} que sempre é convertido para maiúsculas.
     Nesses casos é recomendável utilizar a acentuação original do \LaTeX
     usando comandos e não letras acentuadas, como mostra a tabela
     \begin{center}
@@ -556,7 +543,7 @@
     investimento em reciclagem técnica.
 
     No entanto, não podemos esquecer que a complexidade dos estudos efetuados nos
-    obriga à análise do processo de comunicação como um todo.
+    obriga à análise do processo de comunicação.
     \[
         \begin{split}
             x_n & = A \big( \tilde{x}_n + c_1\tilde{x}_{n-1} + c_2\tilde{x}_{n-2} + \dots + c_k\tilde{x}_{n-k} \big) \\
@@ -609,7 +596,7 @@
     das variáveis envolvidas.
 
     Nunca é demais lembrar o peso e o significado destes
-    problemas, uma vez que a expansão dos mercados mundiais representa uma abertura
+    problemas, visto que a expansão dos mercados mundiais representa uma abertura
     para a melhoria dos modos de operação convencionais. Pensando mais a longo
     prazo, o novo modelo estrutural aqui preconizado faz parte de um processo de
     gerenciamento do sistema de formação de quadros que corresponde às necessidades.
@@ -624,9 +611,7 @@
         f(x) = \frac{a_{0}}{2}
         + \sum_{n=1}^{\infty} \Big( a_{n} \cos\frac{n\pi x}{L} + b_{n} \sin\frac{n\pi x}{L} \Big)
     \end{equation}
-    Podemos já vislumbrar
-    o modo pelo qual a estrutura atual da organização agrega valor ao
-    estabelecimento da gestão inovadora da qual fazemos parte.
+    Podemos vislumbrar o modo pelo qual a estrutura atual da organização agrega valor ao estabelecimento da gestão inovadora da qual fazemos parte.
     \begin{align*}
         \int_{-\pi}^{\pi} \sin(nx)\cos(mx)\,dx & =\frac{1}{2}\int_{-\pi}^{\pi}\Big(\sin(m+n)x+\sin(m-n)x\Big)\,dx \\[3mm]
                                                & =\frac{1}{2}\int_{-\pi}^{\pi}\Big(\sin(2nx)+\sin(0)\Big)\,dx     \\[3mm]
@@ -700,7 +685,7 @@
     Neste sentido, a estrutura atual da organização promove a alavancagem das regras
     de conduta normativas.
 
-    Uma equação em que alguns jogos se baseiam é a chamada ``superfórmula''
+    Uma equação em que alguns jogos se baseiam é a chamada ``super equação''
     \[
         r( \varphi )=
         \left [\,

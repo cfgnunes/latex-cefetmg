@@ -557,3 +557,15 @@
     \end{flushright}
     \PRIVATEclearpageifneeded
 }
+
+% ------------------------------------------------------------------------------
+% Resumo
+% ------------------------------------------------------------------------------
+\renewenvironment{resumo}[1][\resumoname]{%
+    \PRIVATEbookmarkthis{#1}
+    \renewcommand{\abstractnamefont}{\chaptitlefont}
+    \renewcommand{\abstractname}{\ABNTEXchapterupperifneeded{#1}}
+    \begin{abstract}\vspace{23pt}
+}{%
+    \end{abstract}\PRIVATEclearpageifneeded
+}

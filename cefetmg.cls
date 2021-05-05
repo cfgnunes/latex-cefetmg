@@ -257,9 +257,9 @@
 }
 
 % Comando: Imprimir referências
-\newcommand{\imprimirreferencias}{%
+\newcommand{\imprimirreferencias}[1]{%
     % Carrega o arquivo "referencias.bib" com as referências do trabalho
-    \bibliography{referencias}{}
+    \bibliography{#1}{}
     % Define o estilo ABNT para formatar a lista de referências
     \bibliographystyle{abntex2-alf}
 }

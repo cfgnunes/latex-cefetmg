@@ -515,9 +515,9 @@
         \vspace*{\fill}
         \begin{adjustwidth}{2cm}{2cm}%
             \begin{center}
-                Copie o arquivo \textbf{\detokenize{#1}}
-                fornecido pela instituição e coloque na mesma pasta do trabalho.
-                Dessa forma, a folha será automaticamente incluída aqui.
+                Coloque o arquivo \textbf{\detokenize{#1}}, fornecido pela
+                instituição, no mesmo diretório do trabalho.
+                Assim, a folha de aprovação será automaticamente inserida aqui.
             \end{center}
         \end{adjustwidth}
     }
@@ -533,9 +533,9 @@
         \vspace*{\fill}
         \begin{adjustwidth}{2cm}{2cm}%
             \begin{center}
-                Copie o arquivo \textbf{\detokenize{#1}}
-                fornecido pela instituição e coloque na mesma pasta do trabalho.
-                Dessa forma, a folha será automaticamente incluída aqui.
+                Coloque o arquivo \textbf{\detokenize{#1}}, fornecido pela
+                instituição, no mesmo diretório do trabalho.
+                Assim, a ficha catalográfica será automaticamente inserida aqui.
             \end{center}
         \end{adjustwidth}
     }

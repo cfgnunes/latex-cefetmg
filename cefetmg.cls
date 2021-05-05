@@ -1,13 +1,11 @@
 % ------------------------------------------------------------------------------
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
-% Modelo de trabalho acadêmico em conformidade com as normas da ABNT
-% (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
+% Declaração da classe cefetmg como uma extensao da classe 'memoir' e 'abntex2'
 %
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
-% Autores: Cristiano Nunes <cfgnunes@gmail.com>
-%          Henrique Borges <henrique@cefetmg.br>
+% Autor: Cristiano Nunes <cfgnunes@gmail.com>
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
@@ -17,12 +15,12 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
 
 \PassOptionsToClass{%
-    % Opções da classe memoir
+    % Opções da classe 'memoir'
     12pt,                  % Tamanho da fonte
     openright,             % Capítulos começam sempre em páginas ímpares
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
-    % Opções do pacote babel
+    % Opções da classe 'babel'
     brazil,                % Idioma do documento
 }{abntex2}
 
@@ -135,7 +133,8 @@
 % Fontes
 % ------------------------------------------------------------------------------
 
-% Tamanho das fontes de capítulos e seções
+% Redefine tamanho das fontes de capítulos e seções
+% (redefinições da classe 'abntex2')
 \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
 \renewcommand{\ABNTEXchapterfontsize}{\HUGE}
 
@@ -154,7 +153,8 @@
 \renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
-% Tamanho das fontes de figuras
+% Redefine tamanho das fontes de figuras
+% (redefinições da classe 'memoir')
 \captiontitlefont{\small}
 \captionnamefont{\small}
 \subcaptionsize{\small}
@@ -165,80 +165,73 @@
 % Definição de novos comandos
 % ------------------------------------------------------------------------------
 
-% Comando: Programa
+% Comando de dados: Programa
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
-% Comando: Subtítulo do trabalho
+% Comando de dados: Subtítulo do trabalho
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
-% Comando: Instituição do orientador
+% Comando de dados: Instituição do orientador
 \providecommand{\imprimirinstOrientador}{}
 \newcommand{\instOrientador}[1]{\renewcommand{\imprimirinstOrientador}{#1}}
 
-% Comando: Instituição do coorientador
+% Comando de dados: Instituição do coorientador
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
-% Comando: Tipo de trabalho acadêmico
+% Comando de dados: Tipo de trabalho acadêmico
 % (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
 
-% Comando: Título acadêmico a ser alcançado (Doutor ou Mestre)
+% Comando de dados: Título acadêmico a ser alcançado (Doutor ou Mestre)
 \providecommand{\imprimirtituloAcademico}{}
 \newcommand{\tituloAcademico}[1]{\renewcommand{\imprimirtituloAcademico}{#1}}
 
-% Comando: Área de concentração do Programa
+% Comando de dados: Área de concentração do Programa
 \newcommand{\imprimirareaconcentracaoRotulo}{\'Area de concentra\c{c}\~ao: }
 \providecommand{\imprimirareaconcentracao}{}
 \newcommand{\areaconcentracao}[1]{\renewcommand{\imprimirareaconcentracao}{#1}}
 
-% Comando: Linha de pesquisa do Programa
+% Comando de dados: Linha de pesquisa do Programa
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
 
-% Comando: Texto da folha de aprovação
+% Comando de dados: Texto da folha de aprovação
 \providecommand{\imprimirtextopadraofolhadeaprovacao}{}
 \newcommand{\textopadraofolhadeaprovacao}[1]%
     {\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
-% Comando: Logomarca da instituição
+% Comando de figura: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}%
     {\includegraphics[width={#1}\textwidth]{#2}}}
 
-% Comando: Imprimir lista de figuras
+% Comando de listas: Imprimir lista de figuras
 \newcommand{\imprimirlistafiguras}{%
     \pdfbookmark[0]{\listfigurename}{lof}
     \listoffigures*
     \cleardoublepage
 }
 
-% Comando: Imprimir lista de tabelas
+% Comando de listas: Imprimir lista de tabelas
 \newcommand{\imprimirlistatabelas}{%
     \pdfbookmark[0]{\listtablename}{lot}
     \listoftables*
     \cleardoublepage
 }
 
-% Comando: Imprimir lista de quadros
+% Comando de listas: Imprimir lista de quadros
 \newcommand{\imprimirlistaquadros}{%
     \pdfbookmark[0]{\listofquadrosname}{loq}
     \listofquadros*
     \cleardoublepage
 }
 
-% Comando: Imprimir sumário
-\newcommand{\imprimirsumario}{%
-    \pdfbookmark[0]{\contentsname}{toc}
-    \tableofcontents*
-    \cleardoublepage
-}
-
-% Comando: Imprimir lista de quadros
+% Comando de listas: Imprimir lista de quadros
 \newcommand{\imprimirlistaalgoritmos}{%
     \newcommand{\algoritmoname}{Algoritmo}
     \renewcommand{\listalgorithmcfname}{Lista de Algoritmos}
@@ -249,10 +242,17 @@
 
     \counterwithout{algocf}{chapter}
     \renewcommand{\cftalgocfname}{\algoritmoname\space}
-    \renewcommand*{\cftalgocfaftersnum}{\hfill--\hfill}
+    \renewcommand*{\cftalgocfaftersnum}{\hfill\textendash\hfill}
 
     \pdfbookmark[0]{\listalgorithmcfname}{loa}
     \listofalgorithms
+    \cleardoublepage
+}
+
+% Comando: Imprimir sumário
+\newcommand{\imprimirsumario}{%
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
     \cleardoublepage
 }
 
@@ -269,6 +269,7 @@
 % ------------------------------------------------------------------------------
 
 % Elementos pré-textuais
+% (redefinições da classe 'abntex2')
 \renewcommand{\pretextual}{%
     \pagenumbering{roman}               % Tipo de numeração das páginas
     \pagestyle{plain}
@@ -278,6 +279,7 @@
 }
 
 % Configura layout para elementos textuais
+% (redefinições da classe 'abntex2')
 \renewcommand{\textual}{%
     \chapterstyle{abnt}                 % Estilo dos títulos dos capítulos
     \setlength{\beforechapskip}{0pt}    % Remove espaço antes dos títulos
@@ -289,6 +291,7 @@
 }
 
 % Configura layout para elementos pós-textuais
+% (redefinições da classe 'abntex2')
 \renewcommand{\postextual}{%
     \pagestyle{abntheadings}
 }
@@ -298,6 +301,7 @@
 % ------------------------------------------------------------------------------
 
 % Comando que trata o objeto flutuante "Fonte"
+% (redefinições da classe 'abntex2')
 \renewcommand{\fonte}[1]{%
     \vspace{4pt}\break%
     \centering\footnotesize{Fonte: #1}
@@ -308,9 +312,11 @@
 % ------------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
+% (redefinições da classe 'memoir')
 \renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
 
 % Fontes da seção \part no sumário
+% (redefinições da classe 'memoir')
 \renewcommand{\cftpartfont}{\bfseries\large}
 \renewcommand{\cftpartpagefont}{\normalfont\cftchapterfont}
 
@@ -322,6 +328,7 @@
 % ------------------------------------------------------------------------------
 
 % Define os labels para português
+% (redefinições da classe 'abntex2')
 \addto\captionsbrazil{%
     % Ajusta nomes padrões do babel
     \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
@@ -360,23 +367,25 @@
 \newlistentry{quadro}{loq}{0}
 \counterwithout{quadro}{chapter}
 \renewcommand{\cftquadroname}{\quadroname\space}
-\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+\renewcommand*{\cftquadroaftersnum}{\hfill\textendash\hfill}
 
 % Lista de abreviaturas e siglas
+% (redefinições da classe 'abntex2')
 \renewenvironment{siglas}{%
     \pretextualchapter{\listadesiglasname}
     \begin{symbols}
-    \setSpacing{0.0}
+    \setSpacing{0.0} % <-- Adicionado para remover os espaços entre as listas
 }{%
     \end{symbols}
     \cleardoublepage
 }
 
 % Lista de simbolos
+% (redefinições da classe 'abntex2')
 \renewenvironment{simbolos}{%
     \pretextualchapter{\listadesimbolosname}
     \begin{symbols}
-    \setSpacing{0.0}
+    \setSpacing{0.0} % <-- Adicionado para remover os espaços entre as listas
 }{%
     \end{symbols}
     \cleardoublepage
@@ -563,12 +572,13 @@
 % ------------------------------------------------------------------------------
 % Resumo
 % ------------------------------------------------------------------------------
+% (redefinições da classe 'abntex2')
 \renewenvironment{resumo}[1][\resumoname]{%
     \PRIVATEbookmarkthis{#1}
     \renewcommand{\abstractnamefont}{\chaptitlefont}
     \renewcommand{\abstractname}{\ABNTEXchapterupperifneeded{#1}}
     \begin{abstract}
-    \vspace{23pt} % Adicionado esse espaço para manter igual aos capítulos
+    \vspace{23pt} % <-- Adicionado para manter um espaço igual aos capítulos
 }{%
     \end{abstract}\PRIVATEclearpageifneeded
 }

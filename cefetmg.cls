@@ -292,7 +292,6 @@
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{%
     \chapterstyle{abnt}
-    \phantompart
 }
 
 % ------------------------------------------------------------------------------

@@ -286,10 +286,10 @@
 % ------------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
-\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
+%\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
 
 % Insere espaço entre os itens do sumário de diferentes capítulos
-\setlength{\cftbeforechapterskip}{2.0ex \@plus\p@}
+\setlength{\cftbeforechapterskip}{2.0ex}
 
 % ------------------------------------------------------------------------------
 % Tradução de labels
@@ -336,10 +336,30 @@
 \renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
 
+% Lista de abreviaturas e siglas
+\renewenvironment{siglas}{%
+    \pretextualchapter{\listadesiglasname}
+    \begin{symbols}
+    \setSpacing{0.0}
+}{%
+    \end{symbols}
+    \cleardoublepage
+}
+
+% Lista de simbolos
+\renewenvironment{simbolos}{%
+    \pretextualchapter{\listadesimbolosname}
+    \begin{symbols}
+    \setSpacing{0.0}
+}{%
+    \end{symbols}
+    \cleardoublepage
+}
+% ---
+
 % ------------------------------------------------------------------------------
 % Capa
 % ------------------------------------------------------------------------------
-\makeatletter
 \renewcommand{\imprimircapa}{%
     \begin{capa}
         \begin{center}
@@ -387,12 +407,10 @@
 
     \end{capa}
 }
-\makeatother
 
 % ------------------------------------------------------------------------------
 % Folha de rosto
 % ------------------------------------------------------------------------------
-\makeatletter
 \renewcommand{\folhaderostocontent}{%
 
     \begin{center}
@@ -452,12 +470,10 @@
     \end{center}
     \PRIVATEclearpageifneeded
 }
-\makeatother
 
 % ------------------------------------------------------------------------------
 % Folha de aprovação
 % ------------------------------------------------------------------------------
-\makeatletter
 \newcommand{\imprimirfolhadeaprovacao}{%
     \begin{folhadeaprovacao}
         \vspace*{\fill}
@@ -470,7 +486,6 @@
     \end{folhadeaprovacao}
     \PRIVATEclearpageifneeded
 }
-\makeatother
 
 % ------------------------------------------------------------------------------
 % Dedicatória

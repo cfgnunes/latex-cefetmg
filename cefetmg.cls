@@ -34,6 +34,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{chngcntr}
 \RequirePackage{etoolbox}
+\RequirePackage{pdfpages}
 \RequirePackage[brazilian, hyperpageref]{backref}
 \RequirePackage[portuguese, onelanguage, algoruled]{algorithm2e}
 \RequirePackage{color}
@@ -199,11 +200,6 @@
 \newcommand{\imprimirlinhapesquisaRotulo}{Linha de pesquisa: }
 \providecommand{\imprimirlinhapesquisa}{}
 \newcommand{\linhapesquisa}[1]{\renewcommand{\imprimirlinhapesquisa}{#1}}
-
-% Comando de dados: Texto da folha de aprovação
-\providecommand{\imprimirtextopadraofolhadeaprovacao}{}
-\newcommand{\textopadraofolhadeaprovacao}[1]%
-    {\renewcommand{\imprimirtextopadraofolhadeaprovacao}{#1}}
 
 % Comando de figura: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
@@ -512,16 +508,37 @@
 % ------------------------------------------------------------------------------
 % Folha de aprovação
 % ------------------------------------------------------------------------------
-\newcommand{\imprimirfolhadeaprovacao}{%
-    \begin{folhadeaprovacao}
+\newcommand{\imprimirfolhadeaprovacao}[1]{%
+    \clearpage%
+    \PRIVATEbookmarkthis{\folhadeaprovacaoname}%
+    \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
         \vspace*{\fill}
+        \begin{adjustwidth}{2cm}{2cm}%
+            \begin{center}
+                Copie o arquivo \textbf{\detokenize{#1}}
+                fornecido pela instituição e coloque na mesma pasta do trabalho.
+                Dessa forma, a folha será automaticamente incluída aqui.
+            \end{center}
+        \end{adjustwidth}
+    }
+    \PRIVATEclearpageifneeded
+}
 
-        \begin{tabular}{p{.4\textwidth}p{.45\textwidth}}
-             & \imprimirtextopadraofolhadeaprovacao \\
-        \end{tabular}
-
+% ------------------------------------------------------------------------------
+% Ficha catalográfica
+% ------------------------------------------------------------------------------
+\newcommand{\imprimirfichacatalografica}[1]{%
+    \clearpage%
+    \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
         \vspace*{\fill}
-    \end{folhadeaprovacao}
+        \begin{adjustwidth}{2cm}{2cm}%
+            \begin{center}
+                Copie o arquivo \textbf{\detokenize{#1}}
+                fornecido pela instituição e coloque na mesma pasta do trabalho.
+                Dessa forma, a folha será automaticamente incluída aqui.
+            \end{center}
+        \end{adjustwidth}
+    }
     \PRIVATEclearpageifneeded
 }
 

@@ -6,7 +6,7 @@ Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2), o modelo é c
 
 É possível utilizar esse modelo online ou instalando o LaTeX em seu computador.
 
-[![exemplo](figuras/figura-exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
+[![exemplo](figuras/figura_exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
 
 ## Utilizando o modelo online
 

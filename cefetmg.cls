@@ -309,7 +309,11 @@
 % ------------------------------------------------------------------------------
 
 % Travessão no sumário para apêndices e anexos
-%\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
+\renewcommand{\cftchapteraftersnum}{\hfill\textendash\hfill}
+
+% Fontes da seção \part no sumário
+\renewcommand{\cftpartfont}{\bfseries\large}
+\renewcommand{\cftpartpagefont}{\normalfont\cftchapterfont}
 
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{2.0ex}

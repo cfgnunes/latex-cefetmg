@@ -280,7 +280,7 @@
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
     % Escreve a palavra "Capítulo" no início
-    %\chapterstyle{default}
+    %\chapterstyle{default}\setlength{\beforechapskip}{0pt}
     % Numeração das páginas em algarismos arábicos, inciando em 1
     \pagenumbering{arabic}
     \pagestyle{abntheadings}
@@ -291,7 +291,7 @@
 
 % Configura layout para elementos pós-textuais
 \renewcommand{\postextual}{%
-    \chapterstyle{abnt}
+    \pagestyle{abntheadings}
 }
 
 % ------------------------------------------------------------------------------

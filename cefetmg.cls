@@ -30,7 +30,6 @@
 % ------------------------------------------------------------------------------
 % Pacotes utilizados
 % ------------------------------------------------------------------------------
-
 \RequirePackage{hyperref}
 \RequirePackage{chngcntr}
 \RequirePackage{etoolbox}
@@ -74,6 +73,9 @@
 
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
+
+% Aumenta o espaço da largura número da página em TOCs (evitar 'overfull \hbox')
+\renewcommand\@pnumwidth{1.8em}
 
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}

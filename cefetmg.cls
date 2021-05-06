@@ -129,9 +129,6 @@
 % Espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.0cm}
 
-% Define espaçamento entre listas
-\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
-
 % ------------------------------------------------------------------------------
 % Fontes
 % ------------------------------------------------------------------------------
@@ -282,7 +279,7 @@
 % (redefinições da classe 'abntex2')
 \renewcommand{\textual}{%
     \chapterstyle{abnt}                 % Estilo dos títulos dos capítulos
-    \setlength{\beforechapskip}{0pt}    % Remove espaço antes dos títulos
+    \setlength{\beforechapskip}{-30pt}  % Remove espaço antes dos títulos
     %\pagenumbering{arabic}             % Tipo de numeração das páginas
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}

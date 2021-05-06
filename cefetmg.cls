@@ -404,14 +404,17 @@
 % ------------------------------------------------------------------------------
 \renewcommand{\imprimircapa}{%
     \begin{capa}
+        % Imprime logo, instituição e o nome do programa
         \begin{center}
             \imprimirlogoinstituicao{} \\
             \normalfont\scshape{\imprimirinstituicao} \\
             \normalfont\scshape{\imprimirprograma} \\
         \end{center}
 
+        % Espaço vertical
         \vspace*{\fill}
 
+        % Imprime o título do trabalho
         \begin{center}
             \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
             \abntex@ifnotempty{\imprimirsubtitulo}{%
@@ -420,14 +423,18 @@
             }
         \end{center}
 
+        % Espaço vertical
         \vspace*{80pt}
 
+        % Imprime o nome do autor
         \begin{center}
             \large\normalfont\scshape\textbf\imprimirautor
         \end{center}
 
+        % Espaço vertical
         \vspace*{10pt}
 
+        % Imprime os orientadores
         \begin{center}
             \abntex@ifnotempty{\imprimirorientador}{%
                 \small\imprimirorientadorRotulo{} \imprimirorientador \\
@@ -440,8 +447,10 @@
             }
         \end{center}
 
+        % Espaço vertical
         \vspace*{\fill}
 
+        % Imprime local e data
         \begin{center}
             \normalfont\scshape{\imprimirlocal}\\
             \normalfont\scshape{\imprimirdata}
@@ -455,12 +464,15 @@
 % ------------------------------------------------------------------------------
 \renewcommand{\folhaderostocontent}{%
 
+    % Imprime o nome do autor
     \begin{center}
         {\large\normalfont\scshape\textbf\imprimirautor}
     \end{center}
 
+    % Espaço vertical
     \vspace*{80pt}
 
+    % Imprime o título do trabalho
     \begin{center}
         \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
         \abntex@ifnotempty{\imprimirsubtitulo}{%
@@ -469,6 +481,7 @@
         }
     \end{center}
 
+    % Espaço vertical
     \vspace*{90pt}
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
@@ -506,8 +519,10 @@
         \end{tabular}
     }
 
+    % Espaço vertical
     \vspace*{\fill}
 
+    % Imprime instituição, nome do programa, local e data
     \begin{center}
         \normalfont\scshape{\imprimirinstituicao}\\
         \normalfont\scshape{\imprimirprograma}\\

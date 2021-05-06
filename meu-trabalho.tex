@@ -84,8 +84,19 @@
 
 \imprimircapa                                           % Capa
 \imprimirfolhaderosto*{}                                % Folha de rosto
-\importarfichacatalografica{ficha_catalografica.pdf}    % Ficha catalográfica
-\importarfolhadeaprovacao{folha_aprovacao.pdf}          % Folha de aprovação
+
+% Use o comando abaixo para importar uma a
+% ficha catalográfica fornecida, no formato PDF.
+\importarfichacatalografica{ficha-catalografica.pdf}    % Ficha catalográfica
+
+% Use o comando abaixo para usar um modelo de
+% folha de aprovação.
+\input{elementos-pre-textuais/folha-aprovacao.tex}      % Folha de aprovação
+
+% Use o comando abaixo para importar uma
+% folha de aprovação digitalizada, no formato PDF.
+%\importarfolhadeaprovacao{folha-aprovacao.pdf}         % Folha de aprovação
+
 \input{elementos-pre-textuais/dedicatoria.tex}          % Dedicatória
 \input{elementos-pre-textuais/agradecimentos.tex}       % Agradecimentos
 \input{elementos-pre-textuais/epigrafe.tex}             % Epígrafe

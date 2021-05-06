@@ -412,7 +412,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{\fill}
+        \vspace*{\fill}\vspace*{\fill}
 
         % Imprime o título do trabalho
         \begin{center}
@@ -424,7 +424,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{80pt}
+        \vspace*{\fill}\vspace*{\fill}
 
         % Imprime o nome do autor
         \begin{center}
@@ -432,7 +432,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{10pt}
+        \vspace*{\fill}
 
         % Imprime os orientadores
         \begin{center}
@@ -470,7 +470,7 @@
     \end{center}
 
     % Espaço vertical
-    \vspace*{80pt}
+    \vspace*{\fill}
 
     % Imprime o título do trabalho
     \begin{center}
@@ -482,7 +482,7 @@
     \end{center}
 
     % Espaço vertical
-    \vspace*{90pt}
+    \vspace*{\fill}
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \SingleSpacing

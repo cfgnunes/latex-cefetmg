@@ -437,12 +437,12 @@
         % Imprime os orientadores
         \begin{center}
             \abntex@ifnotempty{\imprimirorientador}{%
-                \small\imprimirorientadorRotulo{} \imprimirorientador \\
+                \small\imprimirorientadorRotulo~\imprimirorientador \\
                 \small\imprimirinstOrientador \\
             }
             \abntex@ifnotempty{\imprimircoorientador}{%
                 \begin{SingleSpacing}\par\end{SingleSpacing}
-                \small\imprimircoorientadorRotulo{} \imprimircoorientador \\
+                \small\imprimircoorientadorRotulo~\imprimircoorientador \\
                 \small\imprimirinstCoorientador
             }
         \end{center}
@@ -484,39 +484,61 @@
     % Espaço vertical
     \vspace*{\fill}
 
+    % Imprime o preambulo
     \abntex@ifnotempty{\imprimirpreambulo}{%
-        \SingleSpacing
-        \begin{tabular}{%
-            p{.24\textwidth}%
-            p{.16\textwidth}%
-            >{\raggedright\arraybackslash}p{.4\textwidth}%
-            }
+        \begin{SingleSpacing}
+            \hspace{.35\textwidth}
+            \begin{minipage}{.55\textwidth}
+                \hyphenpenalty=10000\hbadness=10000%
+                \imprimirpreambulo
+            \end{minipage}
+        \end{SingleSpacing}
+    }
 
-             & \multicolumn{2}{p{.6\textwidth}}
-            {\hyphenpenalty=10000\hbadness=10000\imprimirpreambulo}           \\
-            \\
-            \abntex@ifnotempty{\imprimirareaconcentracao}{%
-             & \multicolumn{2}{p{.6\textwidth}}
-                {\hyphenpenalty=10000\hbadness=10000%
-                    \imprimirareaconcentracaoRotulo\imprimirareaconcentracao} \\
-            \\
-            }
-            \abntex@ifnotempty{\imprimirlinhapesquisa}{%
-             & \multicolumn{2}{p{.6\textwidth}}
-                {\hyphenpenalty=10000\hbadness=10000%
-                    \imprimirlinhapesquisaRotulo\imprimirlinhapesquisa}       \\
-            \\
-            }
-            \abntex@ifnotempty{\imprimirorientador}{%
-             & \imprimirorientadorRotulo        & \imprimirorientador         \\
-             &                                  & \imprimirinstOrientador     \\
-            \\
-            }
-            \abntex@ifnotempty{\imprimircoorientador}{%
-             & \imprimircoorientadorRotulo      & \imprimircoorientador       \\
-             &                                  & \imprimirinstCoorientador   \\
-            }
-        \end{tabular}
+    % Imprime a área de concentração
+    \abntex@ifnotempty{\imprimirareaconcentracao}{%
+        \begin{SingleSpacing}
+            \hspace{.35\textwidth}
+            \begin{minipage}{.55\textwidth}
+                \hyphenpenalty=10000\hbadness=10000%
+                \imprimirareaconcentracaoRotulo~\imprimirareaconcentracao
+            \end{minipage}
+        \end{SingleSpacing}
+    }
+
+    % Imprime a linha de pesquisa
+    \abntex@ifnotempty{\imprimirlinhapesquisa}{%
+        \begin{SingleSpacing}
+            \hspace{.35\textwidth}
+            \begin{minipage}{.55\textwidth}
+                \hyphenpenalty=10000\hbadness=10000%
+                \imprimirlinhapesquisaRotulo~\imprimirlinhapesquisa
+            \end{minipage}
+        \end{SingleSpacing}
+    }
+
+    % Imprime o nome do orientador
+    \abntex@ifnotempty{\imprimirorientador}{%
+        \begin{SingleSpacing}
+            \hspace{.35\textwidth}
+            \begin{minipage}{.55\textwidth}
+                \hyphenpenalty=10000\hbadness=10000%
+                \imprimirorientadorRotulo~\imprimirorientador \\
+                \imprimirinstOrientador
+            \end{minipage}
+        \end{SingleSpacing}
+    }
+
+    % Imprime o nome do coorientador
+    \abntex@ifnotempty{\imprimircoorientador}{%
+        \begin{SingleSpacing}
+            \hspace{.35\textwidth}
+            \begin{minipage}{.55\textwidth}
+                \hyphenpenalty=10000\hbadness=10000%
+                \imprimircoorientadorRotulo~\imprimircoorientador \\
+                \imprimirinstCoorientador
+            \end{minipage}
+        \end{SingleSpacing}
     }
 
     % Espaço vertical

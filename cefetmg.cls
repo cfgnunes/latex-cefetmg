@@ -270,19 +270,18 @@
 
 % Elementos pré-textuais
 \renewcommand{\pretextual}{%
-    \pagenumbering{roman} % Algarismos romanos
-    \aliaspagestyle{chapter}{plain}
+    \pagenumbering{roman}               % Tipo de numeração das páginas
     \pagestyle{plain}
+    \aliaspagestyle{chapter}{plain}
     \aliaspagestyle{cleared}{empty}
     \aliaspagestyle{part}{empty}
 }
 
 % Configura layout para elementos textuais
 \renewcommand{\textual}{%
-    % Escreve a palavra "Capítulo" no início
-    %\chapterstyle{default}\setlength{\beforechapskip}{0pt}
-    % Numeração das páginas em algarismos arábicos, inciando em 1
-    \pagenumbering{arabic}
+    \chapterstyle{abnt}                 % Estilo dos títulos dos capítulos
+    \setlength{\beforechapskip}{0pt}    % Remove espaço antes dos títulos
+    \pagenumbering{arabic}              % Tipo de numeração das páginas
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads

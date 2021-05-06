@@ -20,7 +20,7 @@ Desvantagem:
 
 - só poderá editar seu trabalho se estiver conectado na Internet.
 
-Para utilizar o LaTeX online é necessário que você se registre gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
+Para utilizar o LaTeX online você deve se registrar gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
 Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias.
 
 Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
@@ -58,7 +58,7 @@ make
 Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melhorar o conteúdo, você pode:
 
 - [Abrir um problema](https://github.com/cfgnunes/latex-cefetmg/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
-- Criar um fork do projeto, realizar mudanças, e submeter um pull request.
+- Criar um _fork_ do projeto, realizar mudanças, e submeter um _pull request_.
 
 ## Autores
 

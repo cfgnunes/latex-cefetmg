@@ -58,7 +58,7 @@ sudo apt -y install \
 
 ### Compilar documento
 
-Para compilar o projeto e gerar o documento no formato PDF, execute o seguinte comando no terminal:
+Para compilar o projeto e gerar o documento no formato PDF, você pode executar o seguinte comando no terminal:
 
 ```sh
 make

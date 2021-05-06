@@ -14,50 +14,48 @@
 \makeatletter
 \begin{folhadeaprovacao}
 
+    % Imprime o nome do autor
     \begin{center}
-        % Imprime o nome do autor
-        \begin{center}
-            {\large\normalfont\scshape\textbf\imprimirautor}
-        \end{center}
+        {\large\normalfont\scshape\textbf\imprimirautor}
+    \end{center}
 
-        % Espaço vertical
-        \vspace*{\fill}\vspace*{\fill}
+    % Espaço vertical
+    \vspace*{\fill}\vspace*{\fill}
 
-        % Imprime o título do trabalho
-        \begin{center}
-            \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-            \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {\ABNTEXchapterfont\LARGE\scshape: }%
-                    {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
-            }
-        \end{center}
-
-        % Espaço vertical
-        \vspace*{\fill}\vspace*{\fill}
-
-        % Imprime o preambulo
-        \abntex@ifnotempty{\imprimirpreambulo}{%
-            \hspace{.45\textwidth}
-            \begin{minipage}{.5\textwidth}
-                \imprimirpreambulo
-            \end{minipage}
+    % Imprime o título do trabalho
+    \begin{center}
+        \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
+        \abntex@ifnotempty{\imprimirsubtitulo}{%
+            {\ABNTEXchapterfont\LARGE\scshape: }%
+                {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
         }
+    \end{center}
 
-        % Espaço vertical
-        \vspace*{\fill}
+    % Espaço vertical
+    \vspace*{\fill}\vspace*{\fill}
 
+    % Imprime o preambulo
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+        \hspace{.4\textwidth}
+        \begin{minipage}{.5\textwidth}
+            \imprimirpreambulo
+        \end{minipage}
+    }
+
+    % Espaço vertical
+    \vspace*{\fill}
+
+    \begin{center}
         Trabalho aprovado. \imprimirlocal, 23 de outubro de 2021:
     \end{center}
 
-    % Imprime as assinaturas dos orientadores
-    \abntex@ifnotempty{\imprimirorientador}{\assinatura{\textbf{\imprimirorientador} \\ Orientador}}
-    \abntex@ifnotempty{\imprimircoorientador}{\assinatura{\textbf{\imprimircoorientador} \\ Coorientador}}
-
-    % Outros membros da banca
-    \assinatura{\textbf{Professor} \\ Convidado 1}
-    \assinatura{\textbf{Professor} \\ Convidado 2}
-    %\assinatura{\textbf{Professor} \\ Convidado 3}
-    %\assinatura{\textbf{Professor} \\ Convidado 4}
+    % Imprime os nomes dos membros
+    \abntex@ifnotempty{\imprimirorientador}{\assinatura{\imprimirorientador \\ Instituição do orientador}}
+    \abntex@ifnotempty{\imprimircoorientador}{\assinatura{\imprimircoorientador \\ Instituição do coorientador}}
+    \assinatura{Prof. Nome do convidado 1 \\ Instituição do convidado 1}
+    \assinatura{Prof. Nome do convidado 2 \\ Instituição do convidado 2}
+    %\assinatura{Prof. Nome do convidado 3 \\ Instituição do convidado 3}
+    %\assinatura{Prof. Nome do convidado 4 \\ Instituição do convidado 4}
 
     % Espaço vertical
     \vspace*{\fill}

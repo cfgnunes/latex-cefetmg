@@ -503,7 +503,6 @@
         \normalfont\scshape{\imprimirlocal}\\
         \normalfont\scshape{\imprimirdata}
     \end{center}
-    \PRIVATEclearpageifneeded
 }
 
 % ------------------------------------------------------------------------------

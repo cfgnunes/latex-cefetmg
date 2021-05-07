@@ -412,7 +412,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{\fill}\vspace*{\fill}
+        \vspace*{\stretch{2}}
 
         % Imprime o título do trabalho
         \begin{center}
@@ -424,7 +424,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{\fill}\vspace*{\fill}
+        \vspace*{\stretch{1}}
 
         % Imprime o nome do autor
         \begin{center}
@@ -432,7 +432,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{\fill}
+        \vspace*{\stretch{1}}
 
         % Imprime os orientadores
         \begin{center}
@@ -448,7 +448,7 @@
         \end{center}
 
         % Espaço vertical
-        \vspace*{\fill}
+        \vspace*{\stretch{1}}
 
         % Imprime local e data
         \begin{center}
@@ -470,7 +470,7 @@
     \end{center}
 
     % Espaço vertical
-    \vspace*{\fill}
+    \vspace*{\stretch{1}}
 
     % Imprime o título do trabalho
     \begin{center}
@@ -482,13 +482,13 @@
     \end{center}
 
     % Espaço vertical
-    \vspace*{\fill}
+    \vspace*{\stretch{1}}
 
     % Imprime o preambulo
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \begin{SingleSpacing}
-            \hspace{.35\textwidth}
-            \begin{minipage}{.55\textwidth}
+            \hspace{.3\textwidth}
+            \begin{minipage}{.6\textwidth}
                 \hyphenpenalty=10000\hbadness=10000%
                 \imprimirpreambulo
             \end{minipage}
@@ -498,8 +498,8 @@
     % Imprime a área de concentração
     \abntex@ifnotempty{\imprimirareaconcentracao}{%
         \begin{SingleSpacing}
-            \hspace{.35\textwidth}
-            \begin{minipage}{.55\textwidth}
+            \hspace{.3\textwidth}
+            \begin{minipage}{.6\textwidth}
                 \hyphenpenalty=10000\hbadness=10000%
                 \imprimirareaconcentracaoRotulo~\imprimirareaconcentracao
             \end{minipage}
@@ -509,8 +509,8 @@
     % Imprime a linha de pesquisa
     \abntex@ifnotempty{\imprimirlinhapesquisa}{%
         \begin{SingleSpacing}
-            \hspace{.35\textwidth}
-            \begin{minipage}{.55\textwidth}
+            \hspace{.3\textwidth}
+            \begin{minipage}{.6\textwidth}
                 \hyphenpenalty=10000\hbadness=10000%
                 \imprimirlinhapesquisaRotulo~\imprimirlinhapesquisa
             \end{minipage}
@@ -520,8 +520,8 @@
     % Imprime o nome do orientador
     \abntex@ifnotempty{\imprimirorientador}{%
         \begin{SingleSpacing}
-            \hspace{.35\textwidth}
-            \begin{minipage}{.55\textwidth}
+            \hspace{.3\textwidth}
+            \begin{minipage}{.6\textwidth}
                 \hyphenpenalty=10000\hbadness=10000%
                 \imprimirorientadorRotulo~\imprimirorientador \\
                 \imprimirinstOrientador
@@ -532,8 +532,8 @@
     % Imprime o nome do coorientador
     \abntex@ifnotempty{\imprimircoorientador}{%
         \begin{SingleSpacing}
-            \hspace{.35\textwidth}
-            \begin{minipage}{.55\textwidth}
+            \hspace{.3\textwidth}
+            \begin{minipage}{.6\textwidth}
                 \hyphenpenalty=10000\hbadness=10000%
                 \imprimircoorientadorRotulo~\imprimircoorientador \\
                 \imprimirinstCoorientador
@@ -542,7 +542,7 @@
     }
 
     % Espaço vertical
-    \vspace*{\fill}
+    \vspace*{\stretch{1}}
 
     % Imprime instituição, nome do programa, local e data
     \begin{center}

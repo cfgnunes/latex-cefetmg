@@ -519,7 +519,7 @@
 % ------------------------------------------------------------------------------
 % Folha de aprovação
 % ------------------------------------------------------------------------------
-\newcommand{\imprimirfolhadeaprovacao}[1]{%
+\newcommand{\importarfolhadeaprovacao}[1]{%
     \clearpage%
     \PRIVATEbookmarkthis{\folhadeaprovacaoname}%
     \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
@@ -538,7 +538,7 @@
 % ------------------------------------------------------------------------------
 % Ficha catalográfica
 % ------------------------------------------------------------------------------
-\newcommand{\imprimirfichacatalografica}[1]{%
+\newcommand{\importarfichacatalografica}[1]{%
     \clearpage%
     \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
         \vspace*{\fill}

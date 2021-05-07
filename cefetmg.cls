@@ -114,6 +114,7 @@
     }
 }
 
+% Comandos inseridos ao final do preambulo
 \AfterPreamble{%
     % Colocar rodapés sempre no final da página
     \bottomfootnote

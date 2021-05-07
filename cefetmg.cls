@@ -520,37 +520,38 @@
 % Folha de aprovação
 % ------------------------------------------------------------------------------
 \newcommand{\importarfolhadeaprovacao}[1]{%
-    \clearpage%
-    \PRIVATEbookmarkthis{\folhadeaprovacaoname}%
-    \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
-        \vspace*{\fill}
-        \begin{adjustwidth}{2cm}{2cm}%
-            \begin{center}
-                Coloque o arquivo \textbf{\detokenize{#1}}, fornecido pela
-                instituição, no mesmo diretório do trabalho.
-                Assim, a folha de aprovação será automaticamente inserida aqui.
-            \end{center}
-        \end{adjustwidth}
-    }
-    \PRIVATEclearpageifneeded
+    \begin{folhadeaprovacao}
+        \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
+            \vspace*{\fill}
+            \begin{adjustwidth}{2cm}{2cm}%
+                \begin{center}
+                    Coloque o arquivo \textbf{\detokenize{#1}}, fornecido pela
+                    instituição, no mesmo diretório do trabalho.
+                    Assim, a folha de aprovação será automaticamente
+                    inserida aqui.
+                \end{center}
+            \end{adjustwidth}
+        }
+    \end{folhadeaprovacao}
 }
 
 % ------------------------------------------------------------------------------
 % Ficha catalográfica
 % ------------------------------------------------------------------------------
 \newcommand{\importarfichacatalografica}[1]{%
-    \clearpage%
-    \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
-        \vspace*{\fill}
-        \begin{adjustwidth}{2cm}{2cm}%
-            \begin{center}
-                Coloque o arquivo \textbf{\detokenize{#1}}, fornecido pela
-                instituição, no mesmo diretório do trabalho.
-                Assim, a ficha catalográfica será automaticamente inserida aqui.
-            \end{center}
-        \end{adjustwidth}
-    }
-    \PRIVATEclearpageifneeded
+    \begin{fichacatalografica}
+        \IfFileExists{#1}{\includepdf[pages=last-last]{#1}}{%
+            \vspace*{\fill}
+            \begin{adjustwidth}{2cm}{2cm}%
+                \begin{center}
+                    Coloque o arquivo \textbf{\detokenize{#1}}, fornecido pela
+                    instituição, no mesmo diretório do trabalho.
+                    Assim, a ficha catalográfica será automaticamente
+                    inserida aqui.
+                \end{center}
+            \end{adjustwidth}
+        }
+    \end{fichacatalografica}
 }
 
 % ------------------------------------------------------------------------------

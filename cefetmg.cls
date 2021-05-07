@@ -416,7 +416,7 @@
 
         % Imprime o título do trabalho
         \begin{center}
-            \ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
+            \SingleSpacing\ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
             \abntex@ifnotempty{\imprimirsubtitulo}{%
                 {\ABNTEXchapterfont\HUGE\scshape: }%
                     {\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
@@ -470,11 +470,11 @@
     \end{center}
 
     % Espaço vertical
-    \vspace*{\stretch{1}}
+    \vspace*{\stretch{2}}
 
     % Imprime o título do trabalho
     \begin{center}
-        \ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
+        \SingleSpacing\ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
         \abntex@ifnotempty{\imprimirsubtitulo}{%
             {\ABNTEXchapterfont\LARGE\scshape: }%
                 {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
@@ -482,7 +482,7 @@
     \end{center}
 
     % Espaço vertical
-    \vspace*{\stretch{1}}
+    \vspace*{\stretch{0.5}}
 
     % Imprime o preambulo
     \abntex@ifnotempty{\imprimirpreambulo}{%

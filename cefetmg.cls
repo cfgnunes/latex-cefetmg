@@ -80,9 +80,6 @@
 % Retira o espaço extra desnecessário nas frases
 \frenchspacing
 
-% Aumenta o espaço da largura número da página em TOCs (evitar 'overfull \hbox')
-\renewcommand\@pnumwidth{1.8em}
-
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 
@@ -94,7 +91,15 @@
     \vspace{8pt}
 }
 
-% Posiciona floats sempre no topo da página (em páginas vazias)
+% Aumenta o campo 'número da página' em TOCs, para evitar 'overfull \hbox'
+% (definido como 1.55em na classe 'memoir')
+\renewcommand\@pnumwidth{1.8em}
+
+% Aumenta o campo de assinatura
+% (definido como 8cm na classe 'abntex2')
+\setlength{\ABNTEXsignwidth}{10cm}
+
+% Posiciona floats sempre no topo da página em páginas vazias
 % https://github.com/abntex/abntex2/issues/170
 \setlength{\@fptop}{5pt}
 

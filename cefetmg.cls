@@ -1,7 +1,7 @@
 % ------------------------------------------------------------------------------
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
-% Declaração da classe cefetmg como uma extensao da classe 'memoir' e 'abntex2'
+% Declaração da classe 'cefetmg', uma extenssão das classes 'memoir' e 'abntex2'
 %
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
@@ -10,6 +10,12 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cefetmg}[2021/05/04 v9.0]
+
+% Captura a opção 'nomecapitulo' para imprir a palavra "Capítulo" no início
+\providecommand{\flagnomecapitulo}{false}
+\DeclareOption{nomecapitulo}{
+	\renewcommand{\flagnomecapitulo}{true}
+}
 
 % Repassa os parâmetros à classe 'abntex2'
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
@@ -278,7 +284,11 @@
 % Configura layout para elementos textuais
 % (redefinições da classe 'abntex2')
 \renewcommand{\textual}{%
-    \chapterstyle{abnt}                 % Estilo dos títulos dos capítulos
+    \ifthenelse{\equal{\flagnomecapitulo}{true}}{%
+        \chapterstyle{default}
+    }{%
+        \chapterstyle{abnt}
+    }
     \setlength{\beforechapskip}{-30pt}  % Remove espaço antes dos títulos
     %\pagenumbering{arabic}             % Tipo de numeração das páginas
     \pagestyle{abntheadings}

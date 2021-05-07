@@ -94,8 +94,9 @@
     \vspace{8pt}
 }
 
-% Coloca quadros sempre no topo da página (em páginas vazias)
-\setlength{\@fptop}{0pt}
+% Posiciona floats sempre no topo da página (em páginas vazias)
+% https://github.com/abntex/abntex2/issues/170
+\setlength{\@fptop}{5pt}
 
 % Coloca floats sempre acima do rodapé
 \feetbelowfloat

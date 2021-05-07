@@ -14,7 +14,7 @@
 % Captura a opção 'nomecapitulo' para imprir a palavra "Capítulo" no início
 \providecommand{\flagnomecapitulo}{false}
 \DeclareOption{nomecapitulo}{
-	\renewcommand{\flagnomecapitulo}{true}
+    \renewcommand{\flagnomecapitulo}{true}
 }
 
 % Repassa os parâmetros à classe 'abntex2'
@@ -416,10 +416,10 @@
 
         % Imprime o título do trabalho
         \begin{center}
-            \SingleSpacing\ABNTEXchapterfont\HUGE\scshape\imprimirtitulo
-            \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {\ABNTEXchapterfont\HUGE\scshape: }%
-                    {\ABNTEXchapterfont\Huge\scshape\imprimirsubtitulo}
+            \ABNTEXchapterfont\LARGE\scshape\SingleSpacing{%
+                \imprimirtitulo%
+                \abntex@ifnotempty{\imprimirsubtitulo}{%
+                    {:\\}{\Large\imprimirsubtitulo}}%
             }
         \end{center}
 
@@ -428,7 +428,7 @@
 
         % Imprime o nome do autor
         \begin{center}
-            \large\normalfont\scshape\textbf\imprimirautor
+            \normalfont\large\scshape\textbf\imprimirautor
         \end{center}
 
         % Espaço vertical
@@ -466,7 +466,7 @@
 
     % Imprime o nome do autor
     \begin{center}
-        {\large\normalfont\scshape\textbf\imprimirautor}
+        \normalfont\large\scshape\textbf\imprimirautor
     \end{center}
 
     % Espaço vertical
@@ -474,10 +474,10 @@
 
     % Imprime o título do trabalho
     \begin{center}
-        \SingleSpacing\ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-        \abntex@ifnotempty{\imprimirsubtitulo}{%
-            {\ABNTEXchapterfont\LARGE\scshape: }%
-                {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
+        \ABNTEXchapterfont\LARGE\scshape\SingleSpacing{%
+            \imprimirtitulo%
+            \abntex@ifnotempty{\imprimirsubtitulo}{%
+                {:\\}{\Large\imprimirsubtitulo}}%
         }
     \end{center}
 

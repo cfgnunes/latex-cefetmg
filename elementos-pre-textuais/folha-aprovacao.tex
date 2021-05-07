@@ -16,7 +16,7 @@
 
     % Imprime o nome do autor
     \begin{center}
-        {\large\normalfont\scshape\textbf\imprimirautor}
+        \normalfont\large\scshape\textbf\imprimirautor
     \end{center}
 
     % Espaço vertical
@@ -24,10 +24,10 @@
 
     % Imprime o título do trabalho
     \begin{center}
-        \SingleSpacing\ABNTEXchapterfont\LARGE\scshape\imprimirtitulo
-        \abntex@ifnotempty{\imprimirsubtitulo}{%
-            {\ABNTEXchapterfont\LARGE\scshape: }%
-                {\ABNTEXchapterfont\Large\scshape\imprimirsubtitulo}
+        \ABNTEXchapterfont\LARGE\scshape\SingleSpacing{%
+            \imprimirtitulo%
+            \abntex@ifnotempty{\imprimirsubtitulo}{%
+                {:\\}{\Large\imprimirsubtitulo}}%
         }
     \end{center}
 

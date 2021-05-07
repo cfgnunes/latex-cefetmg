@@ -130,10 +130,10 @@
 % Parágrafos
 % ------------------------------------------------------------------------------
 
-% Tamanho do recuo do parágrafo
+% Define o tamanho do recuo do parágrafo
 \setlength{\parindent}{1.25cm}
 
-% Espaçamento entre um parágrafo e outro
+% Define o espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.0cm}
 
 % ------------------------------------------------------------------------------

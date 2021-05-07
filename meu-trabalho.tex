@@ -50,21 +50,21 @@
 % Configurações gerais
 % ------------------------------------------------------------------------------
 
-% Tamanho do recuo do parágrafo
+% Define o tamanho do recuo do parágrafo
 \setlength{\parindent}{1.25cm}
 
-% Espaçamento entre um parágrafo e outro
+% Define o espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.0cm}
 
 % Define a cor utilizada nos links do PDF
 \definecolor{blue_link}{RGB}{0,80,128}
 
-% Configuração dos metadados do PDF (palavras-chave)
+% Define as palavras-chave nos metadados do PDF
 \hypersetup{pdfkeywords={%
     Palavra-chave 1, Palavra-chave 2, Palavra-chave 3, Palavra-chave 4.
 }}
 
-% Hifenização de palavras que não estão no dicionário
+% Define a hifenização de palavras que não estão no dicionário
 %\hyphenation{%
 %    qua-dros-cha-ve
 %    Kat-sa-gge-los
@@ -80,7 +80,7 @@
 % Início do documento
 \begin{document}
 
-\pretextual % Configura layout para os elementos pré-textuais
+\pretextual % Define o estilo de página para os elementos pré-textuais
 
 \imprimircapa                                           % Capa
 \imprimirfolhaderosto*{}                                % Folha de rosto
@@ -99,7 +99,7 @@
 \input{elementos-pre-textuais/lista-simbolos.tex}       % Lista de símbolos
 \imprimirsumario                                        % Sumário
 
-\textual % Configura layout para os elementos textuais
+\textual % Define o estilo de página para os elementos textuais
 
 \input{elementos-textuais/introducao.tex}               % Introdução
 \input{elementos-textuais/fundamentacao-teorica.tex}    % Fundamentação teórica
@@ -108,7 +108,7 @@
 \input{elementos-textuais/resultados.tex}               % Resultados
 \input{elementos-textuais/conclusao.tex}                % Conclusão
 
-\postextual % Configura layout para os elementos pós-textuais
+\postextual % Define o estilo de página para os elementos pós-textuais
 
 \imprimirreferencias{referencias.bib}                   % Referências
 \input{elementos-pos-textuais/apendices.tex}            % Apêndices

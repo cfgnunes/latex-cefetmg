@@ -244,7 +244,6 @@
     \newcommand{\algoritmoname}{Algoritmo}
     \renewcommand{\listalgorithmcfname}{Lista de Algoritmos}
 
-    \floatname{algocf}{\algoritmoname}
     \newlistof{listofalgoritmos}{loa}{\listalgoritmoname}
     \newlistentry{algocf}{loa}{0}
 

@@ -31,7 +31,7 @@ Desvantagem:
 
 - só poderá editar seu trabalho se estiver conectado na Internet.
 
-Para utilizar o LaTeX online você deve se registrar gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/hsyqwvtprcpt).
+Para utilizar o LaTeX online você deve se registrar gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
 Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias.
 
 Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).

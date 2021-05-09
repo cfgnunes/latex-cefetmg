@@ -216,7 +216,7 @@
 % Comando de figura: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}%
-    {\includegraphics[width={#1}\textwidth]{#2}}}
+    {\includegraphics[height={#1}]{#2}}}
 
 % Comando de listas: Imprimir lista de figuras
 \newcommand{\imprimirlistafiguras}{%

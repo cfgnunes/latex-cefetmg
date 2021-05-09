@@ -1,7 +1,7 @@
 % ------------------------------------------------------------------------------
 % Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
 %
-% Declaração da classe 'cefetmg', uma extenssão das classes 'memoir' e 'abntex2'
+%  Declaração da classe 'cefetmg', uma extensão das classes 'memoir' e 'abntex2'
 %
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
@@ -11,7 +11,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cefetmg}[2021/05/04 v9.0]
 
-% Captura a opção 'nomecapitulo' para imprir a palavra "Capítulo" no início
+% Captura a opção 'nomecapitulo' para imprimir a palavra "Capítulo" no início
 \providecommand{\flagnomecapitulo}{false}
 \DeclareOption{nomecapitulo}{
     \renewcommand{\flagnomecapitulo}{true}
@@ -63,7 +63,7 @@
 % Define a cor utilizada nos links do PDF
 \definecolor{blue_link}{RGB}{0,80,128}
 
-% Configuração dos links do PDF (pacote: hyperref)
+% Configuração dos links do PDF (pacote: 'hyperref')
 \hypersetup{%
     portuguese,
     colorlinks=true,        % true: links coloridos; false: links em caixas
@@ -103,13 +103,13 @@
 % https://github.com/abntex/abntex2/issues/170
 \setlength{\@fptop}{5pt}
 
-% Coloca floats sempre acima do rodapé
+% Posiciona floats sempre acima do rodapé
 \feetbelowfloat
 
 % Macro \autoref para equações
 \def\equationautorefname~#1\null{Equa\c c\~ao~(#1)\null}
 
-% Comando para colocar rodapés sempre no final da página
+% Comando para posicionar rodapés sempre no final da página
 \newcommand{\bottomfootnote}{%
     \renewcommand\footnoterule{%
         \vspace*{\fill}%
@@ -119,13 +119,13 @@
     }
 }
 
-% Comandos inseridos ao final do preambulo
+% Comandos inseridos ao final do preâmbulo
 \AfterPreamble{%
-    % Colocar rodapés sempre no final da página
+    % Posiciona rodapés sempre no final da página
     \bottomfootnote
-    % Para utilizar múltiplas figuras um uma única figura
+    % Para utilizar múltiplas figuras em uma única figura
     \newsubfloat{figure}
-    % Configuração dos metadados do PDF (pacote: hyperref)
+    % Configuração dos metadados do PDF (pacote: 'hyperref')
     \hypersetup{%
         pdftitle={\@title},
         pdfauthor={\@author}
@@ -194,7 +194,7 @@
 \providecommand{\imprimirinstCoorientador}{}
 \newcommand{\instCoorientador}[1]{\renewcommand{\imprimirinstCoorientador}{#1}}
 
-% Comando de dados: Tipo de trabalho acadêmico
+% Comando de dados: Categoria de trabalho acadêmico
 % (tese, dissertação ou projeto de qualificação)
 \providecommand{\imprimirprojeto}{}
 \newcommand{\projeto}[1]{\renewcommand{\imprimirprojeto}{#1}}
@@ -276,19 +276,18 @@
 % Estilo de elementos
 % ------------------------------------------------------------------------------
 
-% Elementos pré-textuais
+% Define o estilo de página para os elementos pré-textuais
 % (redefinições da classe 'abntex2')
 \renewcommand{\pretextual}{%
     % Pela ABNT, NBR 14724/2011, as folhas ou páginas
     % pré-textuais devem ser contadas, mas não numeradas.
-    %\pagenumbering{roman}              % Tipo de numeração das páginas
     \pagestyle{empty}
     \aliaspagestyle{chapter}{empty}
     \aliaspagestyle{cleared}{empty}
     \aliaspagestyle{part}{empty}
 }
 
-% Configura layout para elementos textuais
+% Define o estilo de página para os elementos textuais
 % (redefinições da classe 'abntex2')
 \renewcommand{\textual}{%
     \ifthenelse{\equal{\flagnomecapitulo}{true}}{%
@@ -297,14 +296,13 @@
         \chapterstyle{abnt}
     }
     \setlength{\beforechapskip}{-30pt}  % Remove espaço antes dos títulos
-    %\pagenumbering{arabic}             % Tipo de numeração das páginas
     \pagestyle{abntheadings}
     \aliaspagestyle{chapter}{abntchapfirst}
     \nouppercaseheads
     \bookmarksetup{startatroot}
 }
 
-% Configura layout para elementos pós-textuais
+% Define o estilo de página para os elementos pós-textuais
 % (redefinições da classe 'abntex2')
 \renewcommand{\postextual}{%
     \pagestyle{abntheadings}
@@ -338,19 +336,19 @@
 \setlength{\cftbeforechapterskip}{2.0ex}
 
 % ------------------------------------------------------------------------------
-% Tradução de labels
+% Tradução de nomes
 % ------------------------------------------------------------------------------
 
-% Define os labels para português
+% Redefine nomes para o português
 % (redefinições da classe 'abntex2')
 \addto\captionsbrazil{%
-    % Ajusta nomes padrões do babel
+    % Nomes definidos na classe 'babel'
     \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
     \renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
     \renewcommand{\listfigurename}{Lista de Figuras}
     \renewcommand{\listtablename}{Lista de Tabelas}
     \renewcommand{\indexname}{\'{I}ndice Remissivo}
-    % Ajusta nomes usados com a macro \autoref
+    % Nomes usados com a macro \autoref
     \renewcommand{\pageautorefname}{p\'agina}
     \renewcommand{\sectionautorefname}{Se\c{c}\~ao}
     \renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
@@ -394,7 +392,7 @@
     \cleardoublepage
 }
 
-% Lista de simbolos
+% Lista de símbolos
 % (redefinições da classe 'abntex2')
 \renewenvironment{simbolos}{%
     \pretextualchapter{\listadesimbolosname}
@@ -490,7 +488,7 @@
     % Espaço vertical
     \vspace*{\stretch{0.5}}
 
-    % Imprime o preambulo
+    % Imprime o preâmbulo
     \abntex@ifnotempty{\imprimirpreambulo}{%
         \begin{SingleSpacing}
             \hspace{.3\textwidth}

@@ -124,6 +124,7 @@
     % Posiciona rodapés sempre no final da página
     \bottomfootnote
     % Para utilizar múltiplas figuras em uma única figura
+    \providecommand\subfigureautorefname{\figureautorefname}
     \newsubfloat{figure}
     % Configuração dos metadados do PDF (pacote: 'hyperref')
     \hypersetup{%

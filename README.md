@@ -70,17 +70,3 @@ Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melho
 
 - [Abrir um problema](https://github.com/cfgnunes/latex-cefetmg/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
 - Criar um _fork_ do projeto, realizar mudanças, e submeter um _pull request_.
-
-## Autores
-
-- Cristiano Nunes - _Desenvolvedor_
-- Cristina Murta - _Sugestões e revisão_
-- Henrique Borges - _Sugestões e revisão_
-
-## Agradecimentos
-
-- Denise Souza
-- Guilherme Tonioli
-- Izaquiel Bessas
-- Lauro César
-- Talles Coelho

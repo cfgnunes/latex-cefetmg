@@ -54,7 +54,7 @@ $(OUTPUT_DIR)/$(SRC_COMP).pdf: $(OUTPUT_DIR)/$(SRC).pdf
 		-dSAFER \
 		-dFastWebView \
 		-sDEVICE=pdfwrite \
-		-dPDFSETTINGS=/ebook \
+		-dPDFSETTINGS=/printer \
 		-sOutputFile=$(OUTPUT_DIR)/$(SRC_COMP).pdf \
 		$(OUTPUT_DIR)/$(SRC).pdf 2>/dev/null
 	@touch $(OUTPUT_DIR)/$(SRC_COMP).pdf

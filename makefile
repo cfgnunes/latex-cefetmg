@@ -1,6 +1,5 @@
 SRC = meu-trabalho
-SRC_COMP = meu-trabalho-comptactado
-LATEX = latexmk
+SRC_COMP = meu-trabalho-compactado
 OUTPUT_DIR = latex.out
 
 TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
@@ -14,7 +13,7 @@ default: compress
 
 help:
 	@echo "'make': Gera o documento em PDF."
-	@echo "'make compress': Gera o documento em PDF (comptactado)."
+	@echo "'make compress': Gera o documento em PDF (compactado)."
 	@echo "'make clean': Remove os arquivos gerados."
 	@echo
 
@@ -22,7 +21,11 @@ compile: $(OUTPUT_DIR)/$(SRC).pdf
 
 $(OUTPUT_DIR)/$(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES) $(SVG_FILES:.svg=.pdf)
 	@echo "Compilando o projeto..."
-	@$(LATEX) -pdf -synctex=1 -output-directory=$(OUTPUT_DIR) $(SRC).tex
+	@latexmk \
+		-pdf \
+		-synctex=1 \
+		-output-directory=$(OUTPUT_DIR) \
+		$(SRC).tex 2>/dev/null
 	@touch $(OUTPUT_DIR)/$(SRC).pdf
 	@echo "Pronto!"
 	@echo
@@ -30,7 +33,13 @@ $(OUTPUT_DIR)/$(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES) $(SVG_FILES:.sv
 %.pdf: %.svg
 	@echo "Convertendo imagem SVG para PDF..."
 	@echo " > convertendo '$<'..."
-	@inkscape --without-gui --export-area-drawing --export-pdf-version=1.5 --export-margin=1 --file=$< --export-pdf=$@ 2>/dev/null
+	@inkscape \
+		--without-gui \
+		--export-area-drawing \
+		--export-pdf-version=1.5 \
+		--export-margin=1 \
+		--file=$< \
+		--export-pdf=$@ 2>/dev/null
 	@echo "Pronto!"
 	@echo
 
@@ -38,7 +47,16 @@ compress: $(OUTPUT_DIR)/$(SRC_COMP).pdf
 
 $(OUTPUT_DIR)/$(SRC_COMP).pdf: $(OUTPUT_DIR)/$(SRC).pdf
 	@echo "Compactando o arquivo final..."
-	@gs -q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -sOutputFile=$(OUTPUT_DIR)/$(SRC_COMP).pdf $(OUTPUT_DIR)/$(SRC).pdf
+	@gs \
+		-q \
+		-dNOPAUSE \
+		-dBATCH \
+		-dSAFER \
+		-dFastWebView \
+		-sDEVICE=pdfwrite \
+		-dPDFSETTINGS=/ebook \
+		-sOutputFile=$(OUTPUT_DIR)/$(SRC_COMP).pdf \
+		$(OUTPUT_DIR)/$(SRC).pdf 2>/dev/null
 	@touch $(OUTPUT_DIR)/$(SRC_COMP).pdf
 	@echo "Pronto!"
 	@echo

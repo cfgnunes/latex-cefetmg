@@ -25,18 +25,20 @@
 \usepackage[utf8]{inputenc}         % Codificação do documento
 \usepackage[T1]{fontenc}            % Seleção de código de fonte
 \usepackage{booktabs}               % Réguas horizontais em tabelas
-\usepackage{color, colortbl}        % Controle de cores
+\usepackage{color, colortbl}        % Uso de cores
 \usepackage{graphicx}               % Inclusão de gráficos
 \usepackage{indentfirst}            % Recua o primeiro parágrafo de cada seção
 \usepackage{microtype}              % Melhora a justificação do documento
-\usepackage{multirow, makecell}     % Tabelas com múltiplas linhas e colunas
+\usepackage{makecell}               % Tabelas com múltiplas linhas e colunas
+\usepackage{multirow, multicol}     % Layout em múltiplas linhas e colunas
 \usepackage{verbatim}               % Exibe texto tal como escrito no documento
 \usepackage{icomma}                 % Vírgulas em expressões matemáticas
 \usepackage{subeqnarray}            % Subenumeração de equações
 \usepackage{amsmath}                % Funções matemáticas
-%\usepackage[charter]{mathdesign}   % Utiliza a fonte 'Charter BT' (excelente!)
-\usepackage{newtxtext,newtxmath}    % Utiliza a fonte 'Times New Roman' (clone)
+\usepackage[charter]{mathdesign}    % Utiliza a fonte 'Charter BT'
+%\usepackage{newtxtext, newtxmath}  % Utiliza a fonte 'Times New Roman' (clone)
 %\usepackage{palatino}              % Utiliza a fonte 'Palatino' (clone)
+%\usepackage{lmodern}               % Utiliza a fonte 'Computer Modern'
 %\usepackage{amsfonts}              % Fontes e símbolos matemáticos
 %\usepackage{latexsym}              % Mais símbolos matemáticos
 %\usepackage{xfrac}                 % Escreve frações de forma compacta
@@ -55,7 +57,7 @@
 % Define o espaçamento entre um parágrafo e outro
 \setlength{\parskip}{0.0cm}
 
-% Define a cor utilizada nos links do PDF
+% Define as cores utilizadas no documento
 \definecolor{blue_link}{RGB}{0,80,128}
 
 % Define as palavras-chave nos metadados do PDF

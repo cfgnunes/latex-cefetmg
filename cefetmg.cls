@@ -60,7 +60,7 @@
 % Configurações gerais
 % -----------------------------------------------------------------------------
 
-% Define a cor utilizada nos links do PDF
+% Define as cores utilizadas no documento
 \definecolor{blue_link}{RGB}{0,80,128}
 
 % Configuração dos links do PDF (pacote: 'hyperref')

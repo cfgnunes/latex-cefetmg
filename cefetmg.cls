@@ -5,7 +5,7 @@
 %
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
-% Autor: Cristiano Nunes <cfgnunes@gmail.com>
+% Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}

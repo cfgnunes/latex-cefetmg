@@ -4,6 +4,14 @@ Modelo não-oficial de trabalho acadêmico desenvolvido para os alunos do [CEFET
 Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos (TCC, Dissertação e Tese).
 Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2).
 
+## Apoie esse projeto! 💵
+
+Você pode realizar doações de qualquer banco para a chave Pix:
+
+**565a756e-b163-47a8-8414-efa230057600**
+
+## Normas
+
 Este modelo atende as seguintes normas vigentes da [ABNT](http://www.abnt.org.br/):
 
 - **ABNT NBR 14724:2011**: Trabalhos acadêmicos

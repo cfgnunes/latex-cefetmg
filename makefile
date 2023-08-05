@@ -32,8 +32,8 @@ $(OUTPUT_DIR)/$(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES) $(SVG_FILES:.sv
 	@echo
 
 %.pdf: %.svg
-	@echo "Converting SVG files to PDF format..."
-	@echo " > converting '$<'..."
+	@echo "Converting SVG to PDF..."
+	@echo " > File: '$<'..."
 	@inkscape --export-area-drawing --export-margin=1 --export-filename=$@ $<
 	@echo "Done!"
 	@echo

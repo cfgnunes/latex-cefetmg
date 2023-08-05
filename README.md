@@ -40,7 +40,7 @@ Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overle
 
 ### Pré-requisitos
 
-Esta seção assume o sistema operacional Ubuntu 16.04 (também testado no Ubuntu 20.04), mas o procedimento é semelhante para outras distribuições GNU/Linux.
+Esta seção assume o sistema operacional Ubuntu 16.04 (também testado no Ubuntu 22.04), mas o procedimento é semelhante para outras distribuições GNU/Linux.
 Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh

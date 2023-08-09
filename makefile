@@ -48,7 +48,7 @@ $(OUTPUT_DIR)/$(SRC_COMP).pdf: $(OUTPUT_DIR)/$(SRC).pdf
 		-dBATCH \
 		-dFastWebView \
 		-sDEVICE=pdfwrite \
-		-dPDFSETTINGS=/printer \
+		-dPDFSETTINGS=/ebook \
 		-sOutputFile=$(OUTPUT_DIR)/$(SRC_COMP).pdf \
 		$(OUTPUT_DIR)/$(SRC).pdf
 	@touch $(OUTPUT_DIR)/$(SRC_COMP).pdf

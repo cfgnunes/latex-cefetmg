@@ -1,6 +1,6 @@
-# LaTeX CEFET-MG - Modelo de Trabalhos Acadêmicos
+# LaTeX CEFET-MG - Modelo para trabalhos acadêmicos
 
-Modelo não-oficial de trabalho acadêmico desenvolvido para os alunos do [CEFET-MG](http://www.cefetmg.br/).
+Modelo não-oficial para trabalhos acadêmicos desenvolvido para o [CEFET-MG](http://www.cefetmg.br/).
 Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos (TCC, Dissertação e Tese).
 Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2).
 

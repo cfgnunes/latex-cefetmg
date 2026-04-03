@@ -4,7 +4,7 @@ Modelo não-oficial para trabalhos acadêmicos desenvolvido para o [CEFET-MG](ht
 Este projeto consiste em uma estrutura básica de arquivos em [LaTeX](https://www.latex-project.org/) para o desenvolvimento de trabalhos monográficos (TCC, Dissertação e Tese).
 Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2).
 
-Este modelo atende as seguintes normas vigentes da [ABNT](http://www.abnt.org.br/):
+Este modelo atende as normas oficiais da [Biblioteca Universitária](https://www.bu.cefetmg.br/wp-content-uploads-sites-181-2023-04-manual-de-normalizacao-do-cefet-mg-pdf/) do CEFET-MG e também atende as seguintes normas vigentes da [ABNT](http://www.abnt.org.br/):
 
 - **ABNT NBR 14724:2011**: Trabalhos acadêmicos
 - **ABNT NBR 15287:2011**: Projeto de pesquisa
@@ -17,30 +17,11 @@ Este modelo atende as seguintes normas vigentes da [ABNT](http://www.abnt.org.br
 
 [![exemplo](figuras/figura_exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
 
-É possível utilizar esse modelo online ou instalando o LaTeX em seu computador.
-
-## Utilizando o modelo online
-
-Vantagens:
-
-- não precisa instalar o LaTeX;
-- permite editar seu trabalho em diferentes computadores;
-- permite compartilhar o texto online com outras pessoas de forma simples.
-
-Desvantagem:
-
-- só poderá editar seu trabalho se estiver conectado na Internet.
-
-Para utilizar o LaTeX online você deve se registrar gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
-Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias.
-
-Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
-
 ## Utilizando o modelo em seu computador (usando GNU/Linux)
 
 ### Pré-requisitos
 
-Esta seção assume o sistema operacional Ubuntu 16.04 (também testado no Ubuntu 22.04), mas o procedimento é semelhante para outras distribuições GNU/Linux.
+Esta seção assume o sistema operacional Ubuntu/Debian (testado no Ubuntu 24.04), mas o procedimento é semelhante para outras distribuições GNU/Linux.
 Para poder compilar o documento, basta instalar os seguintes pacotes no terminal:
 
 ```sh
@@ -63,6 +44,11 @@ Para compilar o projeto e gerar o documento no formato PDF, você pode executar 
 ```sh
 make
 ```
+
+## Utilizando o modelo online (via Overleaf)
+
+Para utilizar o LaTeX online você deve se registrar gratuitamente no [Overleaf](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
+Note que existe uma versão paga do Overleaf, que oferece funcionalidades que podem ser desejáveis, mas não são necessárias. Para abrir este modelo diretamente no Overleaf, [clique aqui](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf).
 
 ## Contribuindo
 

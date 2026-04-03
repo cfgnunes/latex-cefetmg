@@ -9,7 +9,7 @@
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2026/04/03 v9.1.1]
+\ProvidesClass{cefetmg}[2026/04/03 v9.2]
 
 % Captura a opção 'nomecapitulo' para imprimir a palavra "Capítulo" no início
 \providecommand{\flagnomecapitulo}{false}

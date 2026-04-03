@@ -16,7 +16,7 @@
 
     % Imprime o nome do autor
     \begin{center}
-        \normalfont\large\scshape\textbf\imprimirautor
+        \MakeTextUppercase{\normalfont\large{\imprimirautor}}
     \end{center}
 
     % Espaço vertical
@@ -24,10 +24,10 @@
 
     % Imprime o título do trabalho
     \begin{center}
-        \ABNTEXchapterfont\Large\SingleSpacing{%
-            \textsc{\imprimirtitulo}%
+        \ABNTEXchapterfont\normalfont\large\SingleSpacing{%
+        \MakeTextUppercase{\textbf{\imprimirtitulo}}%
             \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {:\\}{\normalfont\Large\imprimirsubtitulo}}%
+                {\textbf:\\}{\imprimirsubtitulo}}%
         }
     \end{center}
 

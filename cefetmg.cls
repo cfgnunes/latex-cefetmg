@@ -26,8 +26,12 @@
     openright,             % Capítulos começam sempre em páginas ímpares
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
+    % Se quiser atender a norma da biblioteca universitária do CEFET-MG,
+    % utilize: sumario=abnt-6027-2012
     % Opções da classe 'babel'
     brazil,                % Idioma do documento
+    % Opções de títulos em caxa alta.
+    chapter=TITLE,
 }{abntex2}
 
 \ProcessOptions\relax
@@ -148,14 +152,14 @@
 
 % Redefine tamanho das fontes de capítulos e seções
 % (redefinições da classe 'abntex2')
-\renewcommand{\ABNTEXchapterfont}{\normalfont\scshape\bfseries}
-\renewcommand{\ABNTEXchapterfontsize}{\Large}
+\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\large}
 
 \renewcommand{\ABNTEXpartfont}{\normalfont}
 \renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
 
-\renewcommand{\ABNTEXsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsectionfontsize}{\Large}
+\renewcommand{\ABNTEXsectionfont}{\normalfont\bfseries}
+\renewcommand{\ABNTEXsectionfontsize}{\large}
 
 \renewcommand{\ABNTEXsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsectionfontsize}{\large}
@@ -410,28 +414,28 @@
         % Imprime logo, instituição e o nome do programa
         \begin{center}
             \imprimirlogoinstituicao{} \\
-            \normalfont\scshape\textbf{\imprimirinstituicao} \\
-            \normalfont\scshape\textbf{\imprimirprograma} \\
+            \MakeTextUppercase{\normalfont\textbf{\imprimirinstituicao}}\\
+            \MakeTextUppercase{\normalfont\textbf{\imprimirprograma}}\\
         \end{center}
 
         % Espaço vertical
-        \vspace*{\stretch{2}}
-
-        % Imprime o título do trabalho
-        \begin{center}
-            \ABNTEXchapterfont\Large\SingleSpacing{%
-                \textsc{\imprimirtitulo}%
-                \abntex@ifnotempty{\imprimirsubtitulo}{%
-                    {:\\}{\normalfont\Large\imprimirsubtitulo}}%
-            }
-        \end{center}
-
-        % Espaço vertical
-        \vspace*{\stretch{1}}
+        \vspace*{\stretch{0.5}}
 
         % Imprime o nome do autor
         \begin{center}
-            \normalfont\large\scshape\textbf\imprimirautor
+            \MakeTextUppercase{\normalfont\large{\imprimirautor}}
+        \end{center}
+
+        % Espaço vertical
+        \vspace*{\stretch{0.5}}
+
+        % Imprime o título do trabalho
+        \begin{center}
+            \ABNTEXchapterfont\normalfont\large\SingleSpacing{%
+            \MakeTextUppercase{\textbf{\imprimirtitulo}}%
+                \abntex@ifnotempty{\imprimirsubtitulo}{%
+                    {\textbf:\\}{\imprimirsubtitulo}}%
+            }
         \end{center}
 
         % Espaço vertical
@@ -457,8 +461,8 @@
 
         % Imprime local e data
         \begin{center}
-            \normalfont\scshape\textbf{\imprimirlocal}\\
-            \normalfont\scshape\textbf{\imprimirdata}
+            \MakeTextUppercase{\normalfont{\imprimirlocal}}\\
+            \MakeTextUppercase{\normalfont{\imprimirdata}}
         \end{center}
 
     \end{capa}
@@ -471,7 +475,7 @@
 
     % Imprime o nome do autor
     \begin{center}
-        \normalfont\large\scshape\textbf\imprimirautor
+        \MakeTextUppercase{\normalfont\large{\imprimirautor}}
     \end{center}
 
     % Espaço vertical
@@ -479,10 +483,10 @@
 
     % Imprime o título do trabalho
     \begin{center}
-        \ABNTEXchapterfont\Large\SingleSpacing{%
-            \textsc{\imprimirtitulo}%
+        \ABNTEXchapterfont\normalfont\large\SingleSpacing{%
+        \MakeTextUppercase{\textbf{\imprimirtitulo}}%
             \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {:\\}{\normalfont\Large\imprimirsubtitulo}}%
+                {\textbf:\\}{\imprimirsubtitulo}}%
         }
     \end{center}
 
@@ -549,12 +553,10 @@
     % Espaço vertical
     \vspace*{\stretch{1}}
 
-    % Imprime instituição, nome do programa, local e data
+    % Imprime local e data
     \begin{center}
-        %\normalfont\scshape{\imprimirinstituicao}\\
-        %\normalfont\scshape{\imprimirprograma}\\
-        \normalfont\scshape\textbf{\imprimirlocal}\\
-        \normalfont\scshape\textbf{\imprimirdata}
+        \MakeTextUppercase{\normalfont{\imprimirlocal}}\\
+        \MakeTextUppercase{\normalfont{\imprimirdata}}
     \end{center}
 }
 

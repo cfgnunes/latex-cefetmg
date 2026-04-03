@@ -9,7 +9,7 @@
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cefetmg}[2024/05/01 v9.1]
+\ProvidesClass{cefetmg}[2026/04/03 v9.1.1]
 
 % Captura a opção 'nomecapitulo' para imprimir a palavra "Capítulo" no início
 \providecommand{\flagnomecapitulo}{false}
@@ -49,7 +49,6 @@
     bibjustif,
     recuo=0cm,
     abnt-doi=expand,
-    abnt-url-package=hyperref,
     abnt-refinfo=yes,
     abnt-etal-cite=3,
     abnt-etal-list=3,

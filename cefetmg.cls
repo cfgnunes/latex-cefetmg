@@ -148,7 +148,7 @@
 
 % Redefine tamanho das fontes de capítulos e seções
 % (redefinições da classe 'abntex2')
-\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
+\renewcommand{\ABNTEXchapterfont}{\normalfont\scshape\bfseries}
 \renewcommand{\ABNTEXchapterfontsize}{\Large}
 
 \renewcommand{\ABNTEXpartfont}{\normalfont}
@@ -419,10 +419,10 @@
 
         % Imprime o título do trabalho
         \begin{center}
-            \ABNTEXchapterfont\Large\scshape\SingleSpacing{%
-                \imprimirtitulo%
+            \ABNTEXchapterfont\Large\SingleSpacing{%
+                \textsc{\imprimirtitulo}%
                 \abntex@ifnotempty{\imprimirsubtitulo}{%
-                    {:\\}{\Large\imprimirsubtitulo}}%
+                    {:\\}{\normalfont\Large\imprimirsubtitulo}}%
             }
         \end{center}
 
@@ -479,10 +479,10 @@
 
     % Imprime o título do trabalho
     \begin{center}
-        \ABNTEXchapterfont\Large\scshape\SingleSpacing{%
-            \imprimirtitulo%
+        \ABNTEXchapterfont\Large\SingleSpacing{%
+            \textsc{\imprimirtitulo}%
             \abntex@ifnotempty{\imprimirsubtitulo}{%
-                {:\\}{\Large\imprimirsubtitulo}}%
+                {:\\}{\normalfont\Large\imprimirsubtitulo}}%
         }
     \end{center}
 

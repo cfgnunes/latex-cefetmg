@@ -155,7 +155,7 @@
 \renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
 
 \renewcommand{\ABNTEXsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsectionfontsize}{\large}
+\renewcommand{\ABNTEXsectionfontsize}{\Large}
 
 \renewcommand{\ABNTEXsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsectionfontsize}{\large}

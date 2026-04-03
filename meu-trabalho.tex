@@ -91,18 +91,18 @@
 % ...ou use o comando abaixo para importar a folha digitalizada no formato PDF
 %\importarfolhadeaprovacao{folha-aprovacao.pdf}
 
-\input{elementos-pre-textuais/dedicatoria.tex}          % Dedicatória
-\input{elementos-pre-textuais/agradecimentos.tex}       % Agradecimentos
-\input{elementos-pre-textuais/epigrafe.tex}             % Epígrafe
-\input{elementos-pre-textuais/resumo-pt.tex}            % Resumo
-\input{elementos-pre-textuais/resumo-en.tex}            % Abstract
-\imprimirlistafiguras                                   % Lista de figuras
-\imprimirlistatabelas                                   % Lista de tabelas
-\imprimirlistaquadros                                   % Lista de quadros
-\imprimirlistaalgoritmos                                % Lista de algoritmos
-\input{elementos-pre-textuais/lista-siglas.tex}         % Lista de siglas
-\input{elementos-pre-textuais/lista-simbolos.tex}       % Lista de símbolos
-\imprimirsumario                                        % Sumário
+\input{elementos-pre-textuais/dedicatoria.tex}    % (opcional) Dedicatória
+\input{elementos-pre-textuais/agradecimentos.tex} % (opcional) Agradecimentos
+\input{elementos-pre-textuais/epigrafe.tex}       % (opcional) Epígrafe
+\input{elementos-pre-textuais/resumo-pt.tex}      % Resumo
+\input{elementos-pre-textuais/resumo-en.tex}      % Abstract
+\imprimirlistafiguras                             % (opcional) Lista de figuras
+\imprimirlistatabelas                             % (opcional) Lista de tabelas
+\imprimirlistaquadros                             % (opcional) Lista de quadros
+\imprimirlistaalgoritmos                          % (opcional) Lista de algor.
+\input{elementos-pre-textuais/lista-siglas.tex}   % (opcional) Lista de siglas
+\input{elementos-pre-textuais/lista-simbolos.tex} % (opcional) Lista de símb.
+\imprimirsumario                                  % Sumário
 
 \textual % Define o estilo de página para os elementos textuais
 
@@ -116,8 +116,8 @@
 \postextual % Define o estilo de página para os elementos pós-textuais
 
 \imprimirreferencias{referencias.bib}                   % Referências
-\input{elementos-pos-textuais/apendices.tex}            % Apêndices
-\input{elementos-pos-textuais/anexos.tex}               % Anexos
-\printindex                                             % Índice remissivo
+\input{elementos-pos-textuais/apendices.tex}            % (opcional) Apêndices
+\input{elementos-pos-textuais/anexos.tex}               % (opcional) Anexos
+\printindex                                             % (opcional) Índice
 
 \end{document}

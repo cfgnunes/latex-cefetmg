@@ -149,13 +149,13 @@
 % Redefine tamanho das fontes de capítulos e seções
 % (redefinições da classe 'abntex2')
 \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
-\renewcommand{\ABNTEXchapterfontsize}{\HUGE}
+\renewcommand{\ABNTEXchapterfontsize}{\Large}
 
 \renewcommand{\ABNTEXpartfont}{\normalfont}
 \renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
 
 \renewcommand{\ABNTEXsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsectionfontsize}{\Large}
+\renewcommand{\ABNTEXsectionfontsize}{\large}
 
 \renewcommand{\ABNTEXsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsectionfontsize}{\large}
@@ -438,17 +438,19 @@
         \vspace*{\stretch{1}}
 
         % Imprime os orientadores
-        \begin{center}
-            \abntex@ifnotempty{\imprimirorientador}{%
-                \small\imprimirorientadorRotulo~\imprimirorientador \\
-                \small\imprimirinstOrientador \\
-            }
-            \abntex@ifnotempty{\imprimircoorientador}{%
-                \begin{SingleSpacing}\par\end{SingleSpacing}
-                \small\imprimircoorientadorRotulo~\imprimircoorientador \\
-                \small\imprimirinstCoorientador
-            }
-        \end{center}
+        % NOTA: No manual de normalização dos trabalhos acadêmicos de 2024 do
+        % CEFET-MG não se coloca nomes dos orientadores na capa.
+        %\begin{center}
+        %    \abntex@ifnotempty{\imprimirorientador}{%
+        %        \small\imprimirorientadorRotulo~\imprimirorientador \\
+        %        \small\imprimirinstOrientador \\
+        %    }
+        %    \abntex@ifnotempty{\imprimircoorientador}{%
+        %        \begin{SingleSpacing}\par\end{SingleSpacing}
+        %        \small\imprimircoorientadorRotulo~\imprimircoorientador \\
+        %        \small\imprimirinstCoorientador
+        %    }
+        %\end{center}
 
         % Espaço vertical
         \vspace*{\stretch{1}}
@@ -549,8 +551,8 @@
 
     % Imprime instituição, nome do programa, local e data
     \begin{center}
-        \normalfont\scshape{\imprimirinstituicao}\\
-        \normalfont\scshape{\imprimirprograma}\\
+        %\normalfont\scshape{\imprimirinstituicao}\\
+        %\normalfont\scshape{\imprimirprograma}\\
         \normalfont\scshape{\imprimirlocal}\\
         \normalfont\scshape{\imprimirdata}
     \end{center}

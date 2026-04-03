@@ -6,14 +6,14 @@ Inspirado no projeto [abnTeX2](https://github.com/abntex/abntex2).
 
 Este modelo atende as normas oficiais da [Biblioteca Universitária](https://www.bu.cefetmg.br/wp-content-uploads-sites-181-2023-04-manual-de-normalizacao-do-cefet-mg-pdf/) do CEFET-MG e também atende as seguintes normas vigentes da [ABNT](http://www.abnt.org.br/):
 
-- **ABNT NBR 14724:2011**: Trabalhos acadêmicos
-- **ABNT NBR 15287:2011**: Projeto de pesquisa
-- **ABNT NBR 10520:2002**: Citações
 - **ABNT NBR 6023:2002**: Referências
 - **ABNT NBR 6024:2012**: Numeração progressiva das seções de um documento
 - **ABNT NBR 6027:2012**: Sumário
 - **ABNT NBR 6028:2003**: Resumo
 - **ABNT NBR 6034:2004**: Índice
+- **ABNT NBR 10520:2002**: Citações
+- **ABNT NBR 14724:2011**: Trabalhos acadêmicos
+- **ABNT NBR 15287:2011**: Projeto de pesquisa
 
 [![exemplo](figuras/figura_exemplo.png)](https://www.overleaf.com/latex/templates/latex-cefetmg/vtpykndsqtkf)
 

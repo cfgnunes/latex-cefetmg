@@ -410,8 +410,8 @@
         % Imprime logo, instituição e o nome do programa
         \begin{center}
             \imprimirlogoinstituicao{} \\
-            \normalfont\scshape{\imprimirinstituicao} \\
-            \normalfont\scshape{\imprimirprograma} \\
+            \normalfont\scshape\textbf{\imprimirinstituicao} \\
+            \normalfont\scshape\textbf{\imprimirprograma} \\
         \end{center}
 
         % Espaço vertical
@@ -457,8 +457,8 @@
 
         % Imprime local e data
         \begin{center}
-            \normalfont\scshape{\imprimirlocal}\\
-            \normalfont\scshape{\imprimirdata}
+            \normalfont\scshape\textbf{\imprimirlocal}\\
+            \normalfont\scshape\textbf{\imprimirdata}
         \end{center}
 
     \end{capa}
@@ -553,8 +553,8 @@
     \begin{center}
         %\normalfont\scshape{\imprimirinstituicao}\\
         %\normalfont\scshape{\imprimirprograma}\\
-        \normalfont\scshape{\imprimirlocal}\\
-        \normalfont\scshape{\imprimirdata}
+        \normalfont\scshape\textbf{\imprimirlocal}\\
+        \normalfont\scshape\textbf{\imprimirdata}
     \end{center}
 }
 

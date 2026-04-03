@@ -414,8 +414,8 @@
         % Imprime logo, instituição e o nome do programa
         \begin{center}
             \imprimirlogoinstituicao{} \\
-            \MakeTextUppercase{\normalfont\textbf{\imprimirinstituicao}}\\
-            \MakeTextUppercase{\normalfont\textbf{\imprimirprograma}}\\
+            \MakeTextUppercase{\normalfont\small\textbf{\imprimirinstituicao}}\\
+            \MakeTextUppercase{\normalfont\small\textbf{\imprimirprograma}}
         \end{center}
 
         % Espaço vertical

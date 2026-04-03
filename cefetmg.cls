@@ -419,7 +419,7 @@
 
         % Imprime o título do trabalho
         \begin{center}
-            \ABNTEXchapterfont\LARGE\scshape\SingleSpacing{%
+            \ABNTEXchapterfont\Large\scshape\SingleSpacing{%
                 \imprimirtitulo%
                 \abntex@ifnotempty{\imprimirsubtitulo}{%
                     {:\\}{\Large\imprimirsubtitulo}}%
@@ -479,7 +479,7 @@
 
     % Imprime o título do trabalho
     \begin{center}
-        \ABNTEXchapterfont\LARGE\scshape\SingleSpacing{%
+        \ABNTEXchapterfont\Large\scshape\SingleSpacing{%
             \imprimirtitulo%
             \abntex@ifnotempty{\imprimirsubtitulo}{%
                 {:\\}{\Large\imprimirsubtitulo}}%
